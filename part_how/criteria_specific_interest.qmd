@@ -1,4 +1,4 @@
-## Interesse {#sec-interest}
+## Interesse {#sec-interest author="Anna Müller, Bob Schmidt"}
 
 Allgemeine Einführung/Beschreibung
 
@@ -36,3 +36,5 @@ Ansätze zur Untersuchung der Wirkung (Effect check)
 
 - Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen? 
 
+::: {.sectionrefs}
+:::

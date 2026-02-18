@@ -1,8 +1,8 @@
 ---
 bibliography: ../references.bib
 author: 
-    - name: Lars Höft
-    - name: Gyde Asmussen
+    - name: "Sascha Bernholt"
+    - name: "Ilka Parchmann"
 ---
 
 # Kriterien
@@ -10,6 +10,10 @@ author:
 {{< include criteria_specific_interest.qmd >}}
 
 {{< include criteria_specific_emotions.qmd >}}
+
+# Hallo
+
+Allgemeiner Text @knuth84
 
 ## Quellen
 

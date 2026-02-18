@@ -1,0 +1,6 @@
+title: section-authors
+author: Lars Hoeft
+version: 0.0.1
+contributes:
+  filters:
+    - section-authors.lua

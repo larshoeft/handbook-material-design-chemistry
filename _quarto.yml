@@ -19,15 +19,27 @@ book:
     - part: part_how/_how.qmd
       chapters: 
         - part_how/_frameworks.qmd
+        - part_how/_criteria_general.qmd
         - part_how/_criteria_specific.qmd
     - summary.qmd
 
+
 bibliography: references.bib
 csl: apa.csl
+citeproc: false
+
+section-bibliographies:
+  level: 2 
+  minlevel: 1 
+
+filters: 
+  - at: pre-quarto
+    path: section-authors
+  - at: pre-quarto
+    path: section-bibliographies
 
 format:
   html:
-    section-bibliographies: true
     number-sections: true
     number-depth: 2
     theme:

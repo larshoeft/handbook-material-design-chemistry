@@ -1,4 +1,8 @@
-## Emotionen
+## Emotionen {author="Lars Höft"}
 
 @hidi2006
 
+### Quellen
+
+::: {.sectionrefs}
+:::
