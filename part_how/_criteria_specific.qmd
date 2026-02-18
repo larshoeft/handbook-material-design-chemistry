@@ -1,0 +1,17 @@
+---
+bibliography: ../references.bib
+author: 
+    - name: Lars Höft
+    - name: Gyde Asmussen
+---
+
+# Kriterien
+
+{{< include criteria_specific_interest.qmd >}}
+
+{{< include criteria_specific_emotions.qmd >}}
+
+## Quellen
+
+::: {.refs}
+:::

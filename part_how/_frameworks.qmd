@@ -1,0 +1,11 @@
+# Verfahren und Rahmenmodelle 
+
+asasasas
+
+sadasd s
+
+{{< include frameworks_rec.qmd >}}
+
+{{< include frameworks_udl.qmd >}}
+
+{{< include frameworks_dbr.qmd >}}

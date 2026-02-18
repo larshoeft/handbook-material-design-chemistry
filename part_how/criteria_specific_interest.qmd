@@ -1,0 +1,38 @@
+## Interesse {#sec-interest}
+
+Allgemeine Einführung/Beschreibung
+
+- Was ist unter dem Kriterium zu verstehen? Worauf fokussiert das Kriterium? 
+- Gibt es zentrale Theorien zu dem Kriterium bzw. die dem Kriterium zugrunde liegen? 
+- Gibt es ggf. unterschiedliche Auffassungen oder Schwerpunktlegungen?
+
+Befunde zur Wirkung
+
+- Welche Wirkung wird dem Kriterium zugeschrieben? Gibt es empirische Befunde (Studien, Meta-Analysen) zur Wirkung? Worauf wirkt sich das Kriterium aus? 
+
+Literaturbeispiele zur Umsetzung
+
+- Gibt es größere Projekte/Programme, in denen das Kriterium eine zentrale Rolle spielt? Was sind prototypische Beispiele, die oft in der Literatur herangezogen werden? 
+
+Umsetzungsbeispiel (eigene Projekte/Forschung)
+
+- Projekt, Studienkontext, Zielstellung, kurze Beschreibung, Ergebnisse, Publikationen
+- Lessons learned (Was hätte ich im Nachhinein anders gemacht?)
+
+Umsetzungsfacetten
+
+- Wodurch zeichnet sich eine systematische Umsetzung des Kriteriums aus? Welche unmittelbaren oder ggf. auch peripheren/indirekten Facetten lassen sich als Indikatoren für eine Umsetzung des Kriteriums heranziehen?
+
+Umsetzung im Prozess
+
+- Wie lässt sich der Prozess der Umsetzung systematisieren? Gibt es da spezifische oder generische bzw. fachbezogene Ansätze (Didaktische Rekonstruktion; Design-based Research; …), die sich dazu (erfahrungsgemäß, mit Blick auf Literatur oder auch nur vermutlich) eigenen? 
+- Was sind unterschiedliche relevante Stakeholder und wie lassen sich diese sinnvoll einbinden? Welche Schwerpunkte sind ggf. auch mit bestimmten Stakeholder-Gruppen verbunden? 
+
+Ansätze zur Absicherung der Umsetzung (Implementation-Check)
+
+- Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Kriteriums (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen? 
+
+Ansätze zur Untersuchung der Wirkung (Effect check)
+
+- Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen? 
+

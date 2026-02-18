@@ -1,0 +1,38 @@
+project:
+  type: book
+
+lang: de
+
+book:
+  title: "Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung"
+  author: 
+    - name: "Sascha Bernholt"
+    - name: "Ilka Parchmann"
+  date: today
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: part_why/_why.qmd
+      chapters: 
+        - part_why/_importance.qmd
+        - part_why/_orientations.qmd
+    - part: part_how/_how.qmd
+      chapters: 
+        - part_how/_frameworks.qmd
+        - part_how/_criteria_specific.qmd
+    - summary.qmd
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  html:
+    section-bibliographies: true
+    number-sections: true
+    number-depth: 2
+    theme:
+      - cosmo
+      - brand
+
+editor: source
+
