@@ -1,241 +1,314 @@
---- section-bibliographies - chapter-wise reference sections
+--- section-bibliographies - scope-aware per-section reference sections
 ---
---- Copyright: © 2018 Jesse Rosenthal, 2020–2024 Albert Krewinkel
---- License: MIT – see LICENSE for details
+--- Works with Quarto book chapters where the H1 title is removed from blocks.
+--- Top-level blocks (outside any section div) are treated as a virtual root
+--- section and processed if they contain a sectionrefs div.
 
--- pandoc.utils.citeproc exists since pandoc 2.19.1
 PANDOC_VERSION:must_be_at_least {2,19,1}
 
-local List = require 'pandoc.List'
+local List  = require 'pandoc.List'
 local utils = require 'pandoc.utils'
 local citeproc, sha1, stringify = utils.citeproc, utils.sha1, utils.stringify
-local make_sections = function (doc, opts)
-  return utils.make_sections(opts.number_sections, nil, doc.blocks)
-end
+
+local make_sections
 if PANDOC_VERSION >= '3.0' then
   make_sections = (require 'pandoc.structure').make_sections
+else
+  make_sections = function(doc, opts)
+    return utils.make_sections(opts.number_sections, nil, doc.blocks)
+  end
 end
 
--- Returns true iff a div is a section div.
-local function is_section_div (div)
+-- ---------------------------------------------------------------------------
+-- Helpers
+-- ---------------------------------------------------------------------------
+
+local function is_section_div(div)
   return div.t == 'Div'
     and div.classes[1] == 'section'
     and (div.attributes.number or div.classes:includes 'unnumbered')
 end
 
---- Returns the section heading when given a section div, and nil otherwise.
--- @param div   a pandoc Block element
--- @return heading element or nil
--- @return suffix to be used with identifiers
-local function section_header (div)
+local function section_header(div)
   local header = div.content and div.content[1]
-  local is_header = is_section_div(div)
-    and header
-    and header.t == 'Header'
-
-  if not is_header then
+  if not (is_section_div(div) and header and header.t == 'Header') then
     return nil, nil
   end
-
   local suffix = header.attributes.number or sha1(stringify(header.content))
   return header, '--' .. suffix
 end
 
---- Unwrap and remove section divs
-local function flatten_sections (div)
+local function flatten_sections(div)
   local header = section_header(div)
-  if not header then
-    return nil
-  else
-    header.identifier = div.identifier
-    header.attributes.number = nil
-    div.content[1] = header
-    return div.content
-  end
+  if not header then return nil end
+  header.identifier = div.identifier
+  header.attributes.number = nil
+  div.content[1] = header
+  return div.content
 end
 
-local function adjust_refs_components (div)
-  local header, suffix = section_header(div)
-  if not header then
-    return div
+local function deepcopy(tbl)
+  if type(tbl) ~= 'table' then return tbl end
+  local copy = {}
+  for k, v in pairs(tbl) do copy[k] = deepcopy(v) end
+  return copy
+end
+
+--- A section div is a "refs section" if its only content is [Header, sectionrefs]
+local function is_refs_section(div)
+  if not is_section_div(div) then return false end
+  local c = div.content
+  if #c ~= 2 then return false end
+  if c[1].t ~= 'Header' then return false end
+  if c[2].t ~= 'Div' then return false end
+  return c[2].classes:includes('sectionrefs')
+end
+
+-- ---------------------------------------------------------------------------
+-- Run citeproc on a flat block list containing a sectionrefs div
+-- ---------------------------------------------------------------------------
+local function run_citeproc_for_section(blocks, suffix, meta, references)
+  local renamed = pandoc.Blocks(blocks):walk {
+    Cite = function(cite)
+      cite.citations = cite.citations:map(function(c)
+        c.id = c.id .. suffix
+        return c
+      end)
+      return cite
+    end,
+    Div = function(div)
+      if div.classes:includes('sectionrefs') then
+        div.identifier = 'refs'
+        return div
+      end
+    end,
+  }
+
+  local newmeta = deepcopy(meta)
+  newmeta.bibliography = nil
+  newmeta.nocite = nil
+  newmeta.references = deepcopy(references)
+  for i, ref in ipairs(newmeta.references) do
+    newmeta.references[i].id = ref.id .. suffix
   end
 
-  return div:walk {
-    traverse = 'topdown',
-    Header = function (h)
+  local result = citeproc(pandoc.Pandoc(renamed, newmeta)).blocks
+
+  return result:walk {
+    Header = function(h)
       if h.identifier == 'bibliography' then
         h.identifier = 'bibliography' .. suffix
-        h.level = header.level + 1
         return h
       end
     end,
-    Div = function (d)
+    Div = function(d)
       if d.identifier == 'refs' then
         d.identifier = 'refs' .. suffix
         return d
       end
+    end,
+  }
+end
+
+local function has_sectionrefs(blocks)
+  for _, blk in ipairs(blocks) do
+    if blk.t == 'Div' and blk.classes:includes('sectionrefs') then
+      return true
     end
-  }
+  end
+  return false
 end
 
---- Create a deep copy of a table.
--- Values that aren't tables are returned unchanged.
-local function deepcopy (tbl)
-  if type(tbl) ~= 'table' then
-    return tbl
-  end
-
-  local copy = {}
-  for k, v in pairs(tbl) do
-    copy[k] = deepcopy(v)
-  end
-  return copy
-end
-
--- negate a property
-local negate = function (property)
-  return function (x) return not property(x) end
-end
-
---- Create a bibliography for a given section. This acts on all
--- section divs at or above `opts.level`
-local function create_section_bibliography (meta, opts)
-  local newmeta = deepcopy(meta)
-
-  -- Load bibliography files just once.
-  newmeta.bibliography = deepcopy(opts.bibliography)
-  newmeta.references = deepcopy(opts.references)
-  newmeta.nocite = pandoc.Inlines{
-    pandoc.Cite('@*', {pandoc.Citation('*', 'NormalCitation')})
-  }
-  local references = utils.references(pandoc.Pandoc({}, newmeta))
-  newmeta.bibliography = nil
-  newmeta.nocite = nil
-
-  -- Don't do anything if there is no bibliography
-  if not next(references) then
-    return nil
-  end
-
-  local function section_citeproc(section, suffix)
-    section = pandoc.Blocks(section):walk{
-      Cite = function (cite)
-        cite.citations = cite.citations:map(function(c)
-            c.id = c.id .. suffix
-            return c
-        end)
-        return cite
-      end,
-      Div = function (div)
-        if div.classes:includes 'sectionrefs' then
-          div.identifier = 'refs'
-          return div
-        end
+-- ---------------------------------------------------------------------------
+-- Split content: refs-sections inlined, normal subsections placeholdered
+-- ---------------------------------------------------------------------------
+local function split_content(content)
+  local direct = List{}
+  local subs   = {}
+  local n      = 0
+  for _, blk in ipairs(content) do
+    if is_section_div(blk) then
+      if is_refs_section(blk) then
+        direct:insert(blk.content[2])  -- inline the sectionrefs div
+      else
+        n = n + 1
+        subs[n] = blk
+        direct:insert(pandoc.RawBlock('placeholder', tostring(n)))
       end
-    }
-    newmeta.references = deepcopy(references)
-    for i, ref in ipairs(newmeta.references) do
-      newmeta.references[i].id = ref.id .. suffix
-    end
-    return citeproc(pandoc.Pandoc(section, newmeta)).blocks
-  end
-
-  local process_div
-  process_div = function (div)
-    local header, suffix = section_header(div)
-    if not header or not suffix or opts.level < header.level then
-      -- Don't do anything for deeply-nested sections.
-      return div, false
-    elseif header.level < opts.minlevel then
-      -- Don't process sections above minlevel
-      div.content = div.content:map(process_div)
-      return div, false
-    elseif opts.level == header.level then
-      div.content = section_citeproc(div.content, suffix)
-      return adjust_refs_components(div), false
     else
-      -- Replace subsections, which we don't want to process, with
-      -- placeholder blocks.
-      local subsections = {}
-      local subsection_to_placeholder = function (blk, i)
-        local subh = section_header(blk)
-        if subh and not subh.classes:includes 'sectionbibliography' then
-          subsections[i] = blk
-          return pandoc.RawBlock('placeholder', tostring(i))
-        end
-        return blk
-      end
-      -- replace placeholders with processed subsections
-      local restore_from_placeholder = function (blk)
-        if blk.t == 'RawBlock' and blk.format == 'placeholder' then
-          return process_div(subsections[tonumber(blk.text)])
-        end
-        return blk
-      end
-      div.content = div.content:map(subsection_to_placeholder)
-      div.content = section_citeproc(div.content, suffix)
-      div.content = div.content:map(restore_from_placeholder)
-      return adjust_refs_components(div), false
+      direct:insert(blk)
     end
   end
-
-  return process_div
+  return direct, subs, n
 end
 
---- Filter to the references div and bibliography header added by
---- pandoc-citeproc.
-local remove_pandoc_citeproc_results = {
-  Header = function (header)
-    return header.identifier == 'bibliography'
-      and {}
-      or nil
-  end,
-  Div = function (div)
-    return div.identifier == 'refs'
-      and {}
-      or nil
+-- ---------------------------------------------------------------------------
+-- Main recursive processor (bottom-up)
+-- ---------------------------------------------------------------------------
+local function make_processor(meta, references)
+  local process
+
+  process = function(div)
+    local header, suffix = section_header(div)
+    if not header or not suffix then return div end
+
+    local direct, subs, nsubs = split_content(div.content)
+
+    local processed_subs = {}
+    for i = 1, nsubs do
+      processed_subs[i] = process(subs[i])
+    end
+
+    if has_sectionrefs(direct) then
+      direct = run_citeproc_for_section(direct, suffix, meta, references)
+    end
+
+    div.content = direct:map(function(blk)
+      if blk.t == 'RawBlock' and blk.format == 'placeholder' then
+        return processed_subs[tonumber(blk.text)]
+      end
+      return blk
+    end)
+
+    return div
   end
+
+  -- Also process a flat block list as a virtual root section
+  -- (for Quarto chapters where H1 is stripped into title metadata)
+  local function process_root(blocks, root_suffix)
+    local direct = List{}
+    local subs   = {}
+    local n      = 0
+
+    for _, blk in ipairs(blocks) do
+      if is_section_div(blk) then
+        if is_refs_section(blk) then
+          direct:insert(blk.content[2])
+        else
+          n = n + 1
+          subs[n] = blk
+          direct:insert(pandoc.RawBlock('placeholder', tostring(n)))
+        end
+      else
+        direct:insert(blk)
+      end
+    end
+
+    local processed_subs = {}
+    for i = 1, n do
+      processed_subs[i] = process(subs[i])
+    end
+
+    if has_sectionrefs(direct) then
+      direct = run_citeproc_for_section(direct, root_suffix, meta, references)
+    end
+
+    return direct:map(function(blk)
+      if blk.t == 'RawBlock' and blk.format == 'placeholder' then
+        return processed_subs[tonumber(blk.text)]
+      end
+      return blk
+    end)
+  end
+
+  return process, process_root
+end
+
+-- ---------------------------------------------------------------------------
+-- Cleanup
+-- ---------------------------------------------------------------------------
+local remove_previous_results = {
+  Header = function(h)
+    if h.identifier == 'bibliography' or h.identifier:match('^bibliography%-%-') then
+      return {}
+    end
+  end,
+  Div = function(d)
+    if d.classes:includes('sectionrefs') then
+      d.identifier = ''
+      d.content = pandoc.Blocks{}
+      return d
+    end
+    if d.identifier:match('^ref%-') or d.classes:includes('csl-bib-body') then
+      return {}
+    end
+  end,
 }
 
---- Create an options table from document metadata.
-local function get_options (meta)
+-- ---------------------------------------------------------------------------
+-- Options
+-- ---------------------------------------------------------------------------
+local function get_options(meta)
   local opts = meta['section-bibliographies'] or {}
   opts.bibliography = opts.bibliography
     or meta['section-bibs-bibliography']
     or meta['bibliography']
-  opts.level = tonumber(utils.stringify(opts.level))
-    or tonumber(meta['section-bibs-level'])
-    or 1
-   opts.minlevel = tonumber(utils.stringify(opts.minlevel))
-    or 1
-  opts.references = opts.references
-    or meta['references']
-
-  -- sanity check
-  if opts.level < opts.minlevel then
-    warn('level cannot be smaller than minlevel, setting minlevel = level')
-    opts.minlevel = opts.level
-  end
-
+  opts.references = opts.references or meta['references']
   return opts
 end
 
+-- ---------------------------------------------------------------------------
+-- Entry point
+-- ---------------------------------------------------------------------------
 return {
   {
-    Pandoc = function (doc)
+    Pandoc = function(doc)
       local opts = get_options(doc.meta)
+
       if opts['cleanup-first'] then
-        -- clear results of a previous citeproc run
-        doc = doc:walk(remove_pandoc_citeproc_results)
+        doc = doc:walk(remove_previous_results)
       end
-      -- Setup the document for further processing by wrapping all
-      -- sections in Div elements, but undo that after.
-      doc.blocks = make_sections(doc, {number_sections=true})
-        :walk{
-          traverse = 'topdown',
-          Div = create_section_bibliography(doc.meta, opts)
-        }
-        :walk{Div = flatten_sections}
+
+      -- Pre-load all references once
+      local newmeta = deepcopy(doc.meta)
+      newmeta.bibliography = deepcopy(opts.bibliography)
+      newmeta.references   = deepcopy(opts.references)
+      newmeta.nocite = pandoc.Inlines{
+        pandoc.Cite('@*', {pandoc.Citation('*', 'NormalCitation')})
+      }
+      local references = utils.references(pandoc.Pandoc({}, newmeta))
+      if not next(references) then return doc end
+
+      local process, process_root = make_processor(doc.meta, references)
+
+      -- Build a suffix for the root level from the document title
+      local title = doc.meta.title and stringify(doc.meta.title) or ''
+      local root_suffix = '--' .. (sha1(title .. tostring(os.time())):sub(1,8))
+
+      local sectioned = make_sections(doc, {number_sections = true})
+
+      -- Check if H1 exists: if so, use normal top-down section processing
+      -- If not (Quarto stripped it), use process_root on the flat block list
+      local has_h1 = false
+      for _, blk in ipairs(sectioned) do
+        if is_section_div(blk) then
+          local h = blk.content[1]
+          if h and h.t == 'Header' and h.level == 1 then
+            has_h1 = true
+            break
+          end
+        end
+      end
+
+      if has_h1 then
+        -- Normal processing: top-level section divs are H1 chapters
+        doc.blocks = sectioned
+          :walk {
+            traverse = 'topdown',
+            Div = function(div)
+              if is_section_div(div) then
+                return process(div), false
+              end
+            end
+          }
+          :walk { Div = flatten_sections }
+      else
+        -- Quarto stripped H1: process flat block list as virtual root
+        local result = process_root(sectioned, root_suffix)
+        -- flatten any remaining section divs
+        doc.blocks = pandoc.Blocks(result):walk { Div = flatten_sections }
+      end
+
       return doc
     end
   }

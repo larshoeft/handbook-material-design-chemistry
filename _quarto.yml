@@ -29,10 +29,9 @@ csl: apa.csl
 citeproc: false
 
 section-bibliographies:
-  level: 2 
-  minlevel: 1 
+  cleanup-first: true
 
-filters: 
+filters:
   - at: pre-quarto
     path: section-authors
   - at: pre-quarto
@@ -44,7 +43,7 @@ format:
     number-depth: 2
     theme:
       - cosmo
-      - brand
+      - simplex
 
 editor: source
 

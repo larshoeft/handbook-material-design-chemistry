@@ -1,5 +1,4 @@
 ---
-bibliography: ../references.bib
 author: 
     - name: "Sascha Bernholt"
     - name: "Ilka Parchmann"
@@ -7,15 +6,18 @@ author:
 
 # Kriterien
 
+@knuth84
+
+::: {.sectionrefs}
+:::
+
 {{< include criteria_specific_interest.qmd >}}
 
 {{< include criteria_specific_emotions.qmd >}}
 
-# Hallo
+## Hallo
 
 Allgemeiner Text @knuth84
 
-## Quellen
-
-::: {.refs}
+::: {.sectionrefs}
 :::
