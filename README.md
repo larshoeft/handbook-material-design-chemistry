@@ -10,14 +10,14 @@ This guide explains how to:
 ### Steps
 
 1. **Install software**  
-   Install [Positron](https://positron.posit.co/download.html) or [RStudio](https://posit.co/download/rstudio-desktop/) and [Zotero](https://www.zotero.org/) on your system.
+   Install [Positron](https://positron.posit.co/download.html) or [RStudio](https://posit.co/download/rstudio-desktop/) and (optionally) [Zotero](https://www.zotero.org/) on your system.
 
 2. **Set up the Group Library**  
    In Zotero, get invited to the group and subscribe to the Group Library named **"Handbook"**.  
    [Zotero Groups Documentation](https://www.zotero.org/support/groups)  
    **Note:** Do not sync attachments!
 
-3. **Connect Quarto/Positron or RStudio to Zotero**  
+3. **Connect Positron or RStudio to Zotero (online)**  
 
    - For Positron: [Zotero Citations in the Visual Editor](https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations)  
    - For RStudio (without BetterBibTeX): [RStudio Citation Integration](https://posit.co/blog/rstudio-1-4-preview-citations/)
