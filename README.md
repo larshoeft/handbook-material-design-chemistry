@@ -33,10 +33,10 @@ This guide explains how to:
 5. **Manage references**  
    Ensure that all references used in your brief are included in the **"Handbook"** Group Library.
 
-6. **Export the bibliography**  (ONLY FOR MAINTAINERS)
+6. **Export the bibliography**  (ONLY FOR MAINTAINERS)   
    Export the Group Library as `zotero.bib`. Use the biblatex format and the option `keep updated`
 
-7. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)
+7. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)   
    Use the Python script `clean_references.py` to remove unused references:
 
 ```bash
@@ -56,7 +56,7 @@ pip install pybtex
 python clean_references.py
 ```
 
-8. **Render the book** (ONLY FOR MAINTAINERS)
+8. **Render the book** (ONLY FOR MAINTAINERS)   
 
 ```bash
 quarto render
