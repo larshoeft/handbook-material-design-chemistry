@@ -2,9 +2,9 @@
 
 ## Workflow (Briefs)
 
-This guide explains how to:\
-- Create a brief using the template\
-- Set up your environment and connect Quarto/Positron with Zotero\
+This guide explains how to:
+- Create a brief using the template
+- Set up your environment and connect Quarto/Positron with Zotero
 - Generate a clean bibliography
 
 ### Steps
@@ -13,7 +13,7 @@ This guide explains how to:\
     Install Positron or RStudio and Zotero on your system.
 
 2.  **Set up the Group Library**\
-    In Zotero, get invited to the group and subscribe to the Group Library named **"Handbook"**.\
+    In Zotero, get invited to the group and subscribe to the Group Library named **"Handbook"**.
     [Zotero Groups Documentation](https://www.zotero.org/support/groups)
 
 3.  **Connect Quarto/Positron or RStudio to Zotero**
@@ -53,6 +53,7 @@ pip install pybtex
 
 # Step 4: Run the script
 python clean_references.py
+```
 
 8.  Render the book
 
