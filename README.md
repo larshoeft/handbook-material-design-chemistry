@@ -15,7 +15,7 @@ This guide explains how to:
 2. **Set up the Group Library**  
    In Zotero, get invited to the group and subscribe to the Group Library named **"Handbook"**.  
    [Zotero Groups Documentation](https://www.zotero.org/support/groups)  
-   **Note:** Do not sync attachments!
+   **Note:** Do **not** sync attachments!
 
 3. **Connect Positron or RStudio to Zotero (online)**  
 
@@ -23,12 +23,16 @@ This guide explains how to:
    - For RStudio (without BetterBibTeX): [RStudio Citation Integration](https://posit.co/blog/rstudio-1-4-preview-citations/)
 
 4. **Edit the `.qmd` templates**  
-   Open the template [part_how/criteria_specific_template.qmd](https://cau-git.rz.uni-kiel.de/ipn/che/handbook-material-design-chemistry/-/raw/dev/part_how/criteria_specific_template.qmd?ref_type=heads&inline=false) in Visual Mode and create your content. Update the following:  
+   Open the template [`part_how/criteria_specific_template.qmd`](https://cau-git.rz.uni-kiel.de/ipn/che/handbook-material-design-chemistry/-/raw/dev/part_how/criteria_specific_template.qmd?ref_type=heads&inline=false) in Visual Mode and create your content. Update the following:  
 
    - File name  
    - Title (e.g., `# Title`)  
    - Reference ID (e.g., `#sec-cs-title`)  
    - Author entry: `author="YOUR NAME"`
+
+   **Tip:** Use Reference IDs for tables and figures consistently:  
+   - Tables: `#tbl-cs-title-tablename`  
+   - Figures: `#fig-cs-title-figurename`
 
 5. **Manage references**  
    Ensure that all references used in your brief are included in the **"Handbook"** Group Library.
