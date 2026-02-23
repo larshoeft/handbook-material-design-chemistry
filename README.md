@@ -14,7 +14,8 @@ This guide explains how to:
 
 2. **Set up the Group Library**  
    In Zotero, get invited to the group and subscribe to the Group Library named **"Handbook"**.  
-   [Zotero Groups Documentation](https://www.zotero.org/support/groups)
+   [Zotero Groups Documentation](https://www.zotero.org/support/groups)  
+   **Note:** Do not sync attachments!
 
 3. **Connect Quarto/Positron or RStudio to Zotero**  
 
@@ -22,7 +23,7 @@ This guide explains how to:
    - For RStudio (without BetterBibTeX): [RStudio Citation Integration](https://posit.co/blog/rstudio-1-4-preview-citations/)
 
 4. **Edit the `.qmd` templates**  
-   Open the template (`part_how/criteria_specific_template.qmd`) in Visual Mode and create your content. Update the following:  
+   Open the template [part_how/criteria_specific_template.qmd](https://cau-git.rz.uni-kiel.de/ipn/che/handbook-material-design-chemistry/-/raw/dev/part_how/criteria_specific_template.qmd?ref_type=heads&inline=false) in Visual Mode and create your content. Update the following:  
 
    - File name  
    - Title (e.g., `# Title`)  
@@ -32,10 +33,10 @@ This guide explains how to:
 5. **Manage references**  
    Ensure that all references used in your brief are included in the **"Handbook"** Group Library.
 
-6. **Export the bibliography**  
-   Export the Group Library as `zotero.bib`.
+6. **Export the bibliography**  (ONLY FOR MAINTAINERS)
+   Export the Group Library as `zotero.bib`. Use the biblatex format and the option `keep updated`
 
-7. **Clean the `.bib` file**  
+7. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)
    Use the Python script `clean_references.py` to remove unused references:
 
 ```bash
@@ -55,7 +56,7 @@ pip install pybtex
 python clean_references.py
 ```
 
-8. Render the book
+8. **Render the book** (ONLY FOR MAINTAINERS)
 
 ```bash
 quarto render
