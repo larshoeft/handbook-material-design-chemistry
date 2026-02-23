@@ -63,5 +63,5 @@ quarto render
 
 ### Pipeline
 
-`git merge` **main** → CI builds Docker image → Deploy static website
+`git merge` **main** → CI builds Docker image → Deploy static website   
 *(Optionally via GitHub Actions instead of GitLab CI)*
