@@ -6,27 +6,8 @@ author:
 
 # Kriterien
 
-## Test
-
-@hidi2006
-
-### Quellen
-
-::: {.sectionrefs}
-:::
-
 {{< include criteria_specific_cumulative.qmd >}}
 
 {{< include criteria_specific_interest.qmd >}}
 
 {{< include criteria_specific_emotions.qmd >}}
-
-
-## Hallo
-
-Allgemeiner Text @hidi2006
-
-### Quellen
-
-::: {.sectionrefs}
-:::

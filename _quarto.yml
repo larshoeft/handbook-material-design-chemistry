@@ -35,16 +35,17 @@ section-bibliographies:
 
 filters:
   - at: pre-quarto
-    path: as.lua 
-  - at: pre-quarto
     path: section-authors
   - at: pre-quarto
     path: section-bibliographies
 
 format:
   html:
+    bread-crumbs: false
+    page-navigation: false
     number-sections: true
     number-depth: 2
+    toc-depth: 2
     theme:
       - cosmo
       - simplex

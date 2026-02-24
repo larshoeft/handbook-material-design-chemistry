@@ -1,8 +1,5 @@
 # Verfahren und Rahmenmodelle 
 
-asasasas
-
-sadasd s
 
 {{< include frameworks_rec.qmd >}}
 
