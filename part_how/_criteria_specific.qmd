@@ -6,10 +6,18 @@ author:
 
 # Kriterien
 
-@knuth84
+## Test
+
+@hidi2006
+
+### Quellen
+
+
 
 ::: {.sectionrefs}
 :::
+
+{{< include criteria_specific_cumulative.qmd >}}
 
 {{< include criteria_specific_interest.qmd >}}
 
@@ -17,7 +25,9 @@ author:
 
 ## Hallo
 
-Allgemeiner Text @knuth84
+Allgemeiner Text @baumert1997
+
+### Quellen
 
 ::: {.sectionrefs}
 :::

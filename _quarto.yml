@@ -24,9 +24,11 @@ book:
     - summary.qmd
 
 
-bibliography: references.bib
+bibliography: zotero.bib
 csl: apa.csl
 citeproc: false
+
+reference-section-title: References
 
 section-bibliographies:
   cleanup-first: true

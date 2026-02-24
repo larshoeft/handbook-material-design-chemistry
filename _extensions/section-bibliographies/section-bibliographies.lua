@@ -4,10 +4,10 @@
 --- Top-level blocks (outside any section div) are treated as a virtual root
 --- section and processed if they contain a sectionrefs div.
 
-PANDOC_VERSION:must_be_at_least {2,19,1}
+PANDOC_VERSION:must_be_at_least { 2, 19, 1 }
 
-local List  = require 'pandoc.List'
-local utils = require 'pandoc.utils'
+local List                      = require 'pandoc.List'
+local utils                     = require 'pandoc.utils'
 local citeproc, sha1, stringify = utils.citeproc, utils.sha1, utils.stringify
 
 local make_sections
@@ -25,8 +25,8 @@ end
 
 local function is_section_div(div)
   return div.t == 'Div'
-    and div.classes[1] == 'section'
-    and (div.attributes.number or div.classes:includes 'unnumbered')
+      and div.classes[1] == 'section'
+      and (div.attributes.number or div.classes:includes 'unnumbered')
 end
 
 local function section_header(div)
@@ -123,13 +123,16 @@ end
 -- Split content: refs-sections inlined, normal subsections placeholdered
 -- ---------------------------------------------------------------------------
 local function split_content(content)
-  local direct = List{}
+  local direct = List {}
   local subs   = {}
   local n      = 0
   for _, blk in ipairs(content) do
     if is_section_div(blk) then
       if is_refs_section(blk) then
-        direct:insert(blk.content[2])  -- inline the sectionrefs div
+        local ref_header = blk.content[1]
+        ref_header.attributes.number = nil -- remove make_sections numbering
+        direct:insert(ref_header)          -- inline the section heading
+        direct:insert(blk.content[2])      -- inline the sectionrefs div
       else
         n = n + 1
         subs[n] = blk
@@ -176,13 +179,16 @@ local function make_processor(meta, references)
   -- Also process a flat block list as a virtual root section
   -- (for Quarto chapters where H1 is stripped into title metadata)
   local function process_root(blocks, root_suffix)
-    local direct = List{}
+    local direct = List {}
     local subs   = {}
     local n      = 0
 
     for _, blk in ipairs(blocks) do
       if is_section_div(blk) then
         if is_refs_section(blk) then
+          local ref_header = blk.content[1]
+          ref_header.attributes.number = nil
+          direct:insert(ref_header)
           direct:insert(blk.content[2])
         else
           n = n + 1
@@ -226,7 +232,7 @@ local remove_previous_results = {
   Div = function(d)
     if d.classes:includes('sectionrefs') then
       d.identifier = ''
-      d.content = pandoc.Blocks{}
+      d.content = pandoc.Blocks {}
       return d
     end
     if d.identifier:match('^ref%-') or d.classes:includes('csl-bib-body') then
@@ -241,8 +247,8 @@ local remove_previous_results = {
 local function get_options(meta)
   local opts = meta['section-bibliographies'] or {}
   opts.bibliography = opts.bibliography
-    or meta['section-bibs-bibliography']
-    or meta['bibliography']
+      or meta['section-bibs-bibliography']
+      or meta['bibliography']
   opts.references = opts.references or meta['references']
   return opts
 end
@@ -260,22 +266,22 @@ return {
       end
 
       -- Pre-load all references once
-      local newmeta = deepcopy(doc.meta)
+      local newmeta        = deepcopy(doc.meta)
       newmeta.bibliography = deepcopy(opts.bibliography)
       newmeta.references   = deepcopy(opts.references)
-      newmeta.nocite = pandoc.Inlines{
-        pandoc.Cite('@*', {pandoc.Citation('*', 'NormalCitation')})
+      newmeta.nocite       = pandoc.Inlines {
+        pandoc.Cite('@*', { pandoc.Citation('*', 'NormalCitation') })
       }
-      local references = utils.references(pandoc.Pandoc({}, newmeta))
+      local references     = utils.references(pandoc.Pandoc({}, newmeta))
       if not next(references) then return doc end
 
       local process, process_root = make_processor(doc.meta, references)
 
       -- Build a suffix for the root level from the document title
       local title = doc.meta.title and stringify(doc.meta.title) or ''
-      local root_suffix = '--' .. (sha1(title .. tostring(os.time())):sub(1,8))
+      local root_suffix = '--' .. (sha1(title .. tostring(os.time())):sub(1, 8))
 
-      local sectioned = make_sections(doc, {number_sections = true})
+      local sectioned = make_sections(doc, { number_sections = true })
 
       -- Check if H1 exists: if so, use normal top-down section processing
       -- If not (Quarto stripped it), use process_root on the flat block list
@@ -293,15 +299,15 @@ return {
       if has_h1 then
         -- Normal processing: top-level section divs are H1 chapters
         doc.blocks = sectioned
-          :walk {
-            traverse = 'topdown',
-            Div = function(div)
-              if is_section_div(div) then
-                return process(div), false
+            :walk {
+              traverse = 'topdown',
+              Div = function(div)
+                if is_section_div(div) then
+                  return process(div), false
+                end
               end
-            end
-          }
-          :walk { Div = flatten_sections }
+            }
+            :walk { Div = flatten_sections }
       else
         -- Quarto stripped H1: process flat block list as virtual root
         local result = process_root(sectioned, root_suffix)
