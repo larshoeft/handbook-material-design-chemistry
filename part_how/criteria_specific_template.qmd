@@ -1,5 +1,6 @@
 ---
 editor: visual
+bibliography: dummy.bib
 ---
 
 ## TITEL {#sec-template author="DEIN NAME"}
