@@ -35,6 +35,8 @@ section-bibliographies:
 
 filters:
   - at: pre-quarto
+    path: as.lua 
+  - at: pre-quarto
     path: section-authors
   - at: pre-quarto
     path: section-bibliographies

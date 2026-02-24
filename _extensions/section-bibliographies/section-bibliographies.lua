@@ -54,11 +54,13 @@ local function deepcopy(tbl)
   return copy
 end
 
---- A section div is a "refs section" if its only content is [Header, sectionrefs]
+--- A section div is a "refs section" if its first two children are
+--- [Header, Div(.sectionrefs)] — extra content after the sectionrefs is allowed
+--- (e.g. included files that follow the ::: {.sectionrefs} ::: block).
 local function is_refs_section(div)
   if not is_section_div(div) then return false end
   local c = div.content
-  if #c ~= 2 then return false end
+  if #c < 2 then return false end
   if c[1].t ~= 'Header' then return false end
   if c[2].t ~= 'Div' then return false end
   return c[2].classes:includes('sectionrefs')
@@ -132,7 +134,10 @@ local function split_content(content)
         local ref_header = blk.content[1]
         ref_header.attributes.number = nil -- remove make_sections numbering
         direct:insert(ref_header)          -- inline the section heading
-        direct:insert(blk.content[2])      -- inline the sectionrefs div
+        -- inline sectionrefs and any content that follows (e.g. from includes)
+        for ci = 2, #blk.content do
+          direct:insert(blk.content[ci])
+        end
       else
         n = n + 1
         subs[n] = blk
@@ -161,7 +166,6 @@ local function make_processor(meta, references)
     for i = 1, nsubs do
       processed_subs[i] = process(subs[i])
     end
-
     if has_sectionrefs(direct) then
       direct = run_citeproc_for_section(direct, suffix, meta, references)
     end
@@ -189,7 +193,9 @@ local function make_processor(meta, references)
           local ref_header = blk.content[1]
           ref_header.attributes.number = nil
           direct:insert(ref_header)
-          direct:insert(blk.content[2])
+          for ci = 2, #blk.content do
+            direct:insert(blk.content[ci])
+          end
         else
           n = n + 1
           subs[n] = blk
@@ -228,6 +234,15 @@ local remove_previous_results = {
     if h.identifier == 'bibliography' or h.identifier:match('^bibliography%-%-') then
       return {}
     end
+  end,
+  -- Un-rename cite IDs: @someid--SUFFIX back to @someid
+  Cite = function(cite)
+    cite.citations = cite.citations:map(function(c)
+      -- Strip any suffix added by a previous filter run: id--XXXXXXXX or id--N.N
+      c.id = c.id:gsub('%-%-[%x]+$', ''):gsub('%-%-[%d%.]+$', '')
+      return c
+    end)
+    return cite
   end,
   Div = function(d)
     if d.classes:includes('sectionrefs') then

@@ -2,7 +2,7 @@
 title: "Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?"
 ---
 
-@knuth84
+@hidi2006
 
 ::: {.sectionrefs}
 :::

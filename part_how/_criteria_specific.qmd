@@ -12,8 +12,6 @@ author:
 
 ### Quellen
 
-
-
 ::: {.sectionrefs}
 :::
 
@@ -23,9 +21,10 @@ author:
 
 {{< include criteria_specific_emotions.qmd >}}
 
+
 ## Hallo
 
-Allgemeiner Text @baumert1997
+Allgemeiner Text @hidi2006
 
 ### Quellen
 
