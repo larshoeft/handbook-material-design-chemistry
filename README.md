@@ -34,13 +34,32 @@ This guide explains how to:
    - Tables: `#tbl-cs-title-tablename`  
    - Figures: `#fig-cs-title-figurename`
 
-5. **Manage references**  
+5. **Citation syntax**   
+    Quarto uses standard Pandoc Markdown citation syntax.   
+    
+    - Citations go inside square brackets  
+    - Multiple citations are separated by semicolons  
+    - Each citation key begins with `@`
+
+    Example:
+
+    ```markdown
+    [@smith2020]
+    [@smith2020; @miller2018, p. 23]
+    ```
+
+    - Further documentation:   
+        - [quarto.org](https://quarto.org/docs/authoring/citations.html)
+        - [pandoc.org](https://pandoc.org/demo/example33/8.20-citation-syntax.html) 
+        - [apaquarto](https://wjschne.github.io/apaquarto/writing.html#citations)
+
+6. **Manage references**  
    Ensure that all references used in your brief are included in the **"Handbook"** Group Library.
 
-6. **Export the bibliography**  (ONLY FOR MAINTAINERS)   
+7. **Export the bibliography**  (ONLY FOR MAINTAINERS)   
    Export the Group Library as `zotero.bib`. Use the biblatex format and the option `keep updated`
 
-7. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)   
+8. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)   
    Use the Python script `clean_references.py` to remove unused references:
 
 ```bash
