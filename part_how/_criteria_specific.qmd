@@ -2,12 +2,16 @@
 author: 
     - name: "Sascha Bernholt"
     - name: "Ilka Parchmann"
+date: 2026-04-30
 ---
 
 # Kriterien
 
+
 {{< include criteria_specific_cumulative.qmd >}}
 
-{{< include criteria_specific_interest.qmd >}}
+{{< include criteria_specific_cognitiveload.qmd >}}
 
-{{< include criteria_specific_emotions.qmd >}}
+{{< include criteria_specific_adaptivity.qmd >}}
+
+{{< include criteria_specific_interest.qmd >}}

@@ -2,6 +2,6 @@
 author: "Lars Höft"
 ---
 
-## Design-Based Research
+## Design-Based Research {author="Lars Höft"}
 
 Text

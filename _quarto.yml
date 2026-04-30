@@ -16,7 +16,7 @@ book:
       chapters: 
         - part_why/_importance.qmd
         - part_why/_orientations.qmd
-    - part: part_how/_how.qmd
+    - part: _how.qmd
       chapters: 
         - part_how/_frameworks.qmd
         - part_how/_criteria_general.qmd

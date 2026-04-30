@@ -1,0 +1,41 @@
+## Adaptivität {#sec-adaptivity author="Gyde Asmussen"}
+
+### Allgemeine Einführung/Beschreibung
+
+Adaptivität beschreibt die Anpassung von Lernumgebungen definedndefined \[\^Lernumgebung umfasst hierbei alles von ganzen Unterrichtskursen bis hin zu spezifischen Einzelmaterialien\] an die individuellen Voraussetzungen, Bedürfnisse oder Lernprozesse der Lernenden. Diese Anpassung basiert auf der Annahme, dass Lernen effektiver ist, wenn Lernumgebungen auf die Lernenden zugeschnitten werden: entweder indem der Lernweg und Unterstützungsangebote für das Erreichen eines gemeinsamen Lernziels differenziert werden, oder indem für Lernende, die das Lernziel bereits erreicht haben, anspruchsvollere Lernziele und Lerngelegenheiten bereitgestellt werden, um das volle Lernpotenzial auszuschöpfen [@deunk2015]. Eine solche Anpassung erfordert stets die Erhebung und Nutzung von Lernendendaten, an die die Anpassung stattfinden kann. Hierbei ist zum einen entscheidend an WAS und zum anderen WIE sich die Lernumgebung anpasst.
+
+**WAS:** Es gibt eine Vielzahl an Lernendendaten, an die sich die Lernumgebung anpassen kann. Zu diesen gehören Vorwissen, Wissenszuwachs, Lösungsstrategien, Fehler, Lernstrategien, Einstellungen, Werte, Motivation, Interesse, Kultur, und noch viele weitere [@aleven2025; @plass2020]. Diese können als **kognitive, motivationale, affektive** und **sozio-kulturelle** Variablen zusammengefasst werden [@plass2020].
+
+**WIE:** Lernumgebungen können auf unterschiedlichen Ebenen angepasst werden. @aleven2025 unterscheiden hierbei in **Design-Loop**, **Task-Loop** und **Step-Loop**. In der Design-Loop wird die gesamte Lernumgebung basierend auf vorab erhobenen Lernendendaten entwickelt und auf deren Bedürfnisse abgestimmt. In der Task-Loop werden basierend auf der vorherigen Aufgabenbearbeitung der Lernenden innerhalb der Lernumgebung weitere geeignete instruktionale Aufgaben ausgewählt. In der Step-Loop werden innerhalb der Aufgabenbearbeitung basierend auf der aktuellen Bearbeitung der Lernenden Anpassungen an der Lernumgebung vorgenommen. Bei @plass2020 sind das das **Makro-Level** und **Mikro-Level**. Das Makro-Level beschreibt die Anpassung der Lernumgebung innerhalb der Planung, während das Mikro-Level die Anpassung der Lernumgebung innerhalb der Situation beschreibt.
+
+### Befunde zur Wirkung
+
+Studien zur Effektivität von Adaptivität zeigen insgesamt eine positive Tendenz, allerdings gibt es auch gemischte Befunde. Kulik und Fletcher (2016) haben in ihrer Meta-Analyse zu intelligenten tutoriellen Systemen einen positiven mittleren Effekt berichtet, bei @steenbergen-hu2013 war dieser Effekt klein, mit sehr großen Variationen zwischen den Studien. @letourneau2025 haben ein systematisches Review zu intelligenten tutoriellen Systemen, die AI einsetzen, durchgeführt. Auch hier zeigte sich insgesamt ein positiver Effekt. Allerdings zeigte sich übergreifend, dass die Wirksamkeit von der Umsetzung der Adaptivität und der Art der Messung abhängt.
+
+### Literaturbeispiele zur Umsetzung
+
+Es gibt zahlreiche Beispiele, die Adaptivität innerhalb eines Projekts umgesetzt haben. Die folgenden Beispiele stammen vorwiegend aus der Hochschule, meist aus der organischen Chemie und fokussieren auf kognitive Variablen [@ariely2024; @dood2020; @lieber2022; @martin2026; @young2021].
+
+Im Promotionsprojekt von Gyde Asmussen wurde adaptive Unterstützung für das Problemlösen in der organischen Chemie, speziell für die Reaktionsmechanismen nukleophile Substitution und Eliminierung zweiter Ordnung entwickelt. Die adaptive Unterstützung wurde in Form von gestuften Hilfekarten, die aus Prompts und Informationen zusammengesetzt waren, entwickelt. Der Entwicklung ging eine Studie voraus, in der die Schwierigkeiten von Studierenden mit diesen Reaktionsmechanismen erhoben und systematisiert wurden. Die Entwicklung der Hilfekarten basierte auf dieser Systematik (**kognitive Variablen**). Die Hilfekarten wurden innerhalb einer Interviewstudie erprobt. Die Studierenden erhielten die Hilfekarten, wenn sie im Problemlöseprozess auf Schwierigkeiten stießen (**Step-Loop**). Hierbei wurde der Umgang der Studierenden mit der adaptiven Unterstützung untersucht, um Implikationen für die Entwicklung eines intelligenten tutoriellen Systems abzuleiten. Es hat sich gezeigt, dass die Hilfekarten wirksam waren und von den Studierenden genutzt wurden. Gleichzeitig hat sich auch gezeigt, dass die Analyse der Lernendendaten ein Schlüsselpunkt für die Auswahl geeigneter Unterstützung ist und dass ein intelligentes tutorielles System hoch flexibel sein muss, da die Problemlöseprozesse und die Auswirkung der adaptiven Unterstützung auf diesen sehr unterschiedlich sein kann. Die digitale Umsetzung der Unterstützung erfolgt im Projekt ATP-OC. Bei einer erneuten Entwicklung von adaptiver Unterstützung sollte darauf geachtet werden, dass neben kognitiven Variablen auch auf meta-kognitive Aspekte eingebunden werden. Insbesondere sollte den Lernenden Raum für Selbstreflexion gegeben werden. Dieses wurde bei der beschriebenen Umsetzung von Adaptivität nicht gemacht und hätte den Studierenden an vielen Punkten weitergeholfen. Ganz speziell wären Hilfekarten sinnvoll gewesen, die zur Reflexion der eigenen Lösung, vielleicht sogar mit Beispielen, welche Aspekte der Lösung speziell reflektiert werden sollten, anregen. In folgenden Artikeln können Details der Umsetzung nachgelesen werden [@asmussen2023; @asmussen2025].
+
+### Umsetzungsfacetten
+
+Eine systematische Umsetzung von Adaptivität zeichnet sich durch folgende Indikatoren aus:
+
+- Lernendendaten werden oder wurden in irgendeiner Form (z.B. Lernende dürfen nach eigener Präferenz entscheiden, Lernende füllen einen Vorwissenstest aus usw.) erhoben
+- Lernende erhalten in irgendeiner Form ein unterschiedliches Treatment (der Grad der Differenzierung kann dabei sehr unterschiedlich ausfallen: z.B. zwei vorgefertigte Treatments und Lernende erhalten, je nach genutzten Lernendendaten, das was besser zu ihnen passt; jeder erhält ein individuelles Treatment usw.)
+
+### Umsetzung im Prozess
+
+siehe Design-Loop, Task-Loop, Step-Loop. Makro-Level, Mikro-Level
+
+Ansätze zur Absicherung der Umsetzung (Implementation-Check)
+
+- Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Kriteriums (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
+
+Ansätze zur Untersuchung der Wirkung (Effect check)
+
+- Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
+
+::: sectionrefs
+:::

@@ -1,0 +1,71 @@
+## Kognitive Belastung/ Cognitive Load {#sec-template author="Anja Annemüller"}
+
+### Allgemeine Einführung/Beschreibungmeine Einführung/Beschreibung
+
+Der Begriff Cognitive Load beschreibt die kognitiven Anforderungen, die eine Lernaufgabe an das Arbeitsgedächtnis stellt. Die zugrunde liegende Cognitive Load Theory (CLT) geht davon aus, dass das menschliche Arbeitsgedächtnis nur eine begrenzte Menge an Informationen gleichzeitig verarbeiten kann, während das Langzeitgedächtnis über eine sehr große Kapazität zur Speicherung von Wissensstrukturen verfügt. Lernen wird daher maßgeblich davon beeinflusst, wie stark das Arbeitsgedächtnis durch eine Lernaufgabe beansprucht wird [@sweller1998; @sweller2020]. Ziel instruktionalen Designs ist es daher, dass kognitive Ressourcen effizient genutzt werden und der Aufbau von Wissensstrukturen (Schemas) unterstützt wird.
+
+Die Cognitive Load Theory unterscheidet drei Arten kognitiver Belastung [@sweller1998]:
+
+- Intrinsic cognitive load: ergibt sich aus der inhärenten Komplexität des Lerngegenstands bzw. aus der Anzahl gleichzeitig zu verarbeitender Informationselemente.
+- Extraneous cognitive load: entsteht durch die Art der Präsentation von Informationen oder durch Aufgabenformate, die zusätzliche kognitive Verarbeitung erfordern, ohne direkt zum Lernen beizutragen.
+- Germane cognitive load: bezeichnet kognitive Ressourcen, die tatsächlich für den Aufbau und die Organisation von Wissensstrukturen eingesetzt werden.
+
+Ein zentrales Ziel instruktionalen Designs besteht daher darin, extraneous load zu reduzieren, intrinsic load angemessen zu steuern und germane load zu fördern
+
+### Befunde zur Wirkung
+
+Zahlreiche empirische Studien zeigen, dass instruktionale Designs, die unnötige kognitive Belastung reduzieren, positive Effekte auf Lernerfolg, Problemlösefähigkeit und Wissenstransfer haben. Besonders gut untersucht sind dabei instruktionale Maßnahmen, die Suchprozesse beim Problemlösen reduzieren oder die Aufmerksamkeit gezielt auf relevante Informationen lenken. Ein besonders gut untersuchter Ansatz ist das Lernen mit Worked Examples. Dabei werden Aufgaben gemeinsam mit ihren vollständigen Lösungsschritten präsentiert. Dies reduziert Suchprozesse beim Problemlösen und ermöglicht es Lernenden, sich stärker auf den Aufbau von Problemlöseschemata zu konzentrieren [@renkl2014]. Auch Designprinzipien aus der Multimediaforschung zeigen konsistente Effekte. Beispielsweise konnte gezeigt werden, dass Signalling – also das Hervorheben zentraler Elemente in komplexen Darstellungen – die Aufmerksamkeit von Lernenden gezielt auf relevante Informationen lenkt, extraneous cognitive load reduziert und Lernleistungen verbessert [@rodemer2023]. Gerade in naturwissenschaftlichen Fächern mit komplexen visuellen Darstellungen, wie der Chemie, kann eine gezielte Gestaltung von Lernmaterialien dazu beitragen, dass Lernende relevante Merkmale schneller erkennen und kognitive Ressourcen stärker für konzeptuelles Verständnis genutzt werden.
+
+### Literaturbeispiele zur Umsetzung
+
+Eine Studie von @rodemer2023 untersuchte die Wirkung unterschiedlicher Signalling-Formen in instruktiven Videos zu organischen Reaktionsmechanismen. In einem Eye-Tracking-Experiment mit Studierenden wurden drei Bedingungen verglichen: Videos ohne , mit statischen und mit dynamischen Hervorhebungen. Neben Blickbewegungen wurden auch Lernleistungen sowie subjektiv berichtete kognitive Belastung erhoben. Die Ergebnisse zeigen, dass dynamische Hervorhebungen die Aufmerksamkeit der Lernenden stärker auf relevante Bereiche der Repräsentationen lenken und gleichzeitig extraneous cognitive load reduzieren können. Zudem zeigten Lernende in dieser Bedingung höhere Retentionsleistungen. Die Studie verdeutlicht damit die Bedeutung von instruktionalem Design bei der Arbeit mit komplexen fachlichen Darstellungen und zeigt exemplarisch, wie Prinzipien der Cognitive Load Theory in multimedialen Lernumgebungen umgesetzt werden können
+
+### Umsetzungsbeispiel
+
+Im Rahmen des Forschungsprojekts "Adaptive Unterstützung beim Problemlösen in der Organischen Chemie" (ATP-OC) wurde untersucht, wie unterschiedliche instruktionale Ansätze Lernprozesse bei der Arbeit mit Reaktionsmechanismen beeinflussen und welche Formen instruktionaler Unterstützung das Problemlösen von Studierenden besonders effektiv fördern können. Ausgangspunkt ist die Annahme, dass mechanistisches Problemlösen sowohl hohe repräsentationale Anforderungen als auch hohe kognitive Belastung mit sich bringt. In einer experimentellen Studie mit Studierenden wurden zwei instruktionale Ansätze verglichen: perceptual learning tasks, die darauf abzielen, diagnostisch relevante strukturelle Merkmale in Molekülrepräsentationen schneller zu erkennen, sowie worked examples, die Lösungswege schrittweise darstellen und so Suchprozesse beim Problemlösen reduzieren und den Aufbau von Problemlöseschemata unterstützen. Bei der Entwicklung der Lernmaterialien wurden zentrale Designprinzipien der Cognitive Load Theory berücksichtigt, insbesondere solche, die auf eine Reduktion extraneous cognitive load abzielen (z. B. klare Strukturierung der Materialien, Hervorhebung relevanter Informationen sowie eine schrittweise Darstellung von Lösungsprozessen). Die Materialien wurden in mehreren Iterationsschritten entwickelt und im Rahmen von Expert\*innenbefragungen sowie Testdurchläufen mit der Zielgruppe überprüft und überarbeitet, um potenzielle Verständnishürden zu identifizieren und unnötige kognitive Belastung zu reduzieren.
+
+### Umsetzungsfacetten
+
+Eine systematische Umsetzung von Cognitive-Load-Prinzipien in Lernmaterialien kann sich durch verschiedene Gestaltungsmerkmale auszeichnen:
+
+Reduktion extraneous load:
+
+- klare Strukturierung von Materialien
+- räumliche Nähe zusammengehöriger Informationen
+- Vermeidung redundanter Darstellungen - Hervorhebung relevanter Elemente (Signalling)
+
+Steuerung intrinsic load:
+
+- Segmentierung komplexer Inhalte
+- schrittweiser Aufbau von Lösungsprozessen
+- Anpassung der Aufgabenkomplexität an das Vorwissen der Lernenden Förderung
+
+germane load:
+
+- explizite Darstellung von Lösungsstrategien
+- Nutzung von worked examples
+- Aufgabenformate, die den Aufbau konzeptueller Zusammenhänge unterstützen
+
+Die genannten Gestaltungsprinzipien lassen sich aus zentralen Instructional-Design-Effekten der Cognitive Load Theory ableiten, wie etwa dem worked example effect, split-attention effect oder redundancy effect [@mayer2021; @sweller1998; @sweller2011].
+
+### Umsetzung im Prozess
+
+Die Berücksichtigung kognitiver Belastung kann in verschiedenen Phasen der Materialentwicklung erfolgen. Zunächst kann analysiert werden, welche Aspekte eines Lerngegenstands besonders hohe intrinsic cognitive load erzeugen (z. B. viele miteinander verknüpfte Konzepte oder komplexe Repräsentationen). Darauf aufbauend können Lernmaterialien so gestaltet werden, dass diese Komplexität schrittweise eingeführt wird. Für die Entwicklung entsprechender Materialien eignen sich insbesondere iterative Entwicklungsansätze wie Design-Based Research, bei denen Materialien wiederholt entwickelt, erprobt und überarbeitet werden.
+
+### Ansätze zur Absicherung der Umsetzung
+
+Die Umsetzung von Cognitive-Load-Prinzipien kann auf unterschiedliche Weise überprüft werden, beispielsweise:
+
+- Expertenanalysen von Lernmaterialien, z. B. hinsichtlich der Einhaltung von Multimedia-Designprinzipien
+- Qualitative Nutzungsstudien mit Lernenden (z. B. Think-Aloud-Protokolle während der Bearbeitung), um zu untersuchen, wie Aufgaben verarbeitet werden, welche Informationsquellen genutzt werden und an welchen Stellen unnötige kognitive Belastung oder Verständnisschwierigkeiten entstehen.
+
+### Ansätze zur Untersuchung der Wirkung
+
+- Befragungen von Lernenden zur wahrgenommenen kognitiven Belastung (Kriegelstein)
+- Analyse von Bearbeitungszeiten oder Prozessdaten in digitalen Lernumgebungen
+- Analyse der Lern-Leistung
+
+### Quellen
+
+::: sectionrefs
+:::

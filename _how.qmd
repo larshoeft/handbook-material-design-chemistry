@@ -1,5 +1,7 @@
 ---
 title: "Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?"
+listing:
+    contents: part_how/
 ---
 
 
