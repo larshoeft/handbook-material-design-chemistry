@@ -14,4 +14,8 @@ date: 2026-04-30
 
 {{< include criteria_specific_adaptivity.qmd >}}
 
+{{< include criteria_specific_context.qmd >}}
+
+{{< include criteria_specific_presence.qmd >}}
+
 {{< include criteria_specific_interest.qmd >}}

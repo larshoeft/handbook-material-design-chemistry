@@ -1,3 +1,90 @@
-## Didaktische Rekonstruktion
+## **Fachliche Klärung bzw. Didaktische Rekonstruktion** {author="Jannik Lossjew"}
 
-Text
+### Allgemeine Einführung/Beschreibung
+
+#### *Was ist unter dem Kriterium zu verstehen? Worauf fokussiert das Kriterium?* 
+
+Während die fachliche Klärung v.a. als hermeneutisch-analytische Untersuchung eines Sach- bzw. Fachgegenstandes verstanden werden kann, so stellt die fachliche Klärung nur einen Teil des Mo-dells der Didaktischen Rekonstruktion (MDR) dar (Kattmann et al., 1997). Das Modell umfasst neben der fachlichen Klärung auch das Erfassen von Schülerperspektiven sowie die didaktische Struk-turierung als Verknüpfung der Ergebnisse aus fachlicher Klärung und Erhebung von Schülervorstellungen (ebd.). Die fachliche Klärung beschreibt demnach eine inhaltsanalytisch geprägte Methode, fachwissen-schaftliche Vorstellungen zu einer Thematik – immer vor dem Hintergrund einer Vermittlungsab-sicht – zu erschließen und so Zielformulierungen für Lernende zu erarbeiten.
+
+Die Erfassung von Schülerperspektiven ist genuin empirisch geprägt und betrifft die Erhebung von Lernendenvorstellungen zu einem bestimmten Thema. Die Erhebung erfolgt, insofern nicht bereits umfassende Erkenntnisse zu Vorstellungen zu einem Thema vorliegen, in der Regel über qualitativ-orientierte Fragebogen- und Interviewstudien. Die didaktische Strukturierung stellt schließlich das verknüpfende Element zwischen fachlicher Klärung und der Erfassung von Schülerperspektiven dar und lässt sich als Konstruktion von Unterricht verstehen, wobei Schülerperspektiven als Gegebenheiten angesehen werden, von denen auszuge-hen ist und fachwissenschaftliche Vorstellungen den Zielbereich definieren. Der gesamte Prozess ist aber nicht linear zu denken, sondern ist stets iterativ-wechselseitig. So kann die didaktische Strukturierung dazu führen, dass in der fachlichen Klärung mit Vermittlungsabsicht Unschärfen offengelegt werden, die nachgeschärft werden müssen.
+
+#### *Gibt es zentrale Theorien zu dem Kriterium bzw. die dem Kriterium zugrunde liegen?* 
+
+Das Modell der didaktischen Rekonstruktion fußt auf – bereits zum Zeitpunkt seiner Entwicklung – etablierten fachdidaktischen und allgemeindidaktischen Traditionen der Unterrichtsplanung und der Curriculumsentwicklung. Die wichtigsten sind:
+
+- Didaktische Analyse nach Klafki (1969), insbesondere die didaktische Prägung der Sachana-lyse vor dem Hintergrund einer Elementarisierung (vgl. fachliche Analyse mit Vermittlungs-absicht)
+- Das „Berliner Modell“ nach Heimann, Otto und Schulz (1969), insbesondere der Gedanke einer grundlegenden Interdependenz aller Variablen, die Unterricht bestimmen
+
+Darüber hinaus weist es Prägungen bzw. Parallelen durch bzw. zu folgenden Theorien auf:
+
+- Conceptual Change: enge Anbindung an bzw. Übereinstimmung mit conceptual change The-ory; didaktische Strukturierung ist darauf ausgelegt, Lernumgebungen zu schaffen, die Vor-stellungsänderungen ermöglichen (d.h. Abgrenzung von einem Begriffsverständnis einer simplen Ersetzung von Vorstellungen)
+- Moderater Konstruktivismus (Gerstenmeier und Mandl, 1995)
+
+#### *Gibt es ggf. unterschiedliche Auffassungen oder Schwerpunktlegungen?* 
+
+Die Begründer (Kattmann, Duit, Gropengießer und Komorek) des Modells beschreiben in der zent-ralen Publikation, dass es zwei mögliche Haupteinsatzszenarien (sozusagen zwei Schwerpunkte) gibt:
+
+1.  Die didaktische Rekonstruktion bereits bekannter, curricular verankerter Inhalte
+2.  Die didaktische Rekonstruktion neuer, bisher nicht unterrichteter Themenbereiche Befunde zur Wirkung
+
+### Befunde zur Wirkung
+
+#### Welche Wirkung wird dem Kriterium zugeschrieben? Gibt es empirische Befunde (Studien, Meta-Analysen) zur Wirkung? Worauf wirkt sich das Kriterium aus? 
+
+Prinzipiell ist die Wirkung nicht streng auf bestimmte Zielvariablen beschränkt. Vor dem Hinter-grund der Vermittlungsabsicht und dem Schwerpunkt der Vorstellungsänderung durch didaktisch strukturierte Lernangebote stehen die letztgenannten häufig im Fokus einer mit der DR verbunde-nen Wirkforschung. Insgesamt finden sich folgende Variablen vermehrt in Studien:
+
+- Konzeptverständnis
+  - in Form von (Fach)Wissen
+  - in Form alternativer Vorstellungen
+- Motivation
+- Interesse
+
+Diesbezügliche Studien sind schwer zu bündeln, da sie eine enorme thematische Breite umfassen und fallbezogen sind. Literaturbeispiele werden im Folgenden genannt. Literaturbeispiele zur Umsetzung
+
+#### Gibt es größere Projekte/Programme, in denen das Kriterium eine zentrale Rolle spielt? Was sind prototypische Beispiele, die oft in der Literatur herangezogen werden? 
+
+Kattmann, U., Duit, R., Gropengießer, H., & Komorek, M. (1997). Das Modell der didaktischen Rekon-struktion – Ein Rahmen für naturwissenschaftsdidaktische Forschung und Entwicklung. Zeitschrift für Didaktik der Naturwissenschaften, 3(3), 3–18. https://doi.org/10.25656/01:31502
+
+Komorek, M., Wilbers, J., & Duit, R. (1997). Didaktische Rekonstruktion im Bereich Chaostheorie. In Zur Didaktik der Physik und Chemie: Tagung 1996 (S. 128–130).
+
+Frerichs, V. (1999). Schülervorstellungen und wissenschaftliche Vorstellungen zu den Strukturen und Prozessen der Vererbung: Ein Beitrag zur didaktischen Rekonstruktion \[Dissertation, Carl von Ossietz-ky Universität Oldenburg\]. Didaktisches Zentrum.
+
+Grospietsch, F., & Mayer, J. (2021). Didaktische Rekonstruktion als Planungs- und Forschungsrahmen nutzen: Fachliche Klärung, Gestaltung und Evaluation einer universitären Lehrveranstaltung zum The-ma Gehirn und Lernen. HLZ – Herausforderung Lehrerinnenbildung, 4\*(2), 165–192. https://doi.org/10.11576/hlz-2548
+
+Claussen, C. (2023). Zur Vermittlungsrolle von Naturwissenschaftsdidaktik in der forschungsbasierten Wissenschaftskommunikation: Stakeholderorientierte Weiterentwicklung eines Outreach-Formates für Schulen am Beispiel der Metaorganismus-Forschung \[Dissertation, Christian-Albrechts-Universität zu Kiel\]
+
+### Umsetzungsbeispiel 
+
+#### Projekt, Studienkontext, Zielstellung, kurze Beschreibung, Ergebnisse, Publikationen 
+
+In einem eigenen Projekt (ALICE) wurde das Modell der didaktischen Rekonstruktion genutzt, um das (1) im Sinne der fachlichen Klärung das fachlich-fachdidaktische Wissen darzustellen, das es für den Unterrichtsgegenstand der Reaktionskinetik und dem Chemischen Gleichgewicht braucht und (2) in Verbindung mit gut dokumentierten Lernendenperspektiven (diese wurde nicht eigenständig empirisch erhoben) die didaktische Strukturierung einer digital gestützten Unterrichtseinheit zu realisieren. Ein Überblick findet sich in: Lossjew, J., & Bernholt, S. (2025). Digitale Stützung nach Maß (oder in Maßen) – Konzeption und Eva-luation einer digital gestützten Unterrichtseinheit zur Reaktionskinetik und dem chemischen Gleich-gewicht. CHEMKON, 32(4), 122–131. https://doi.org/10.1002/ckon.202400061
+
+#### Lessons learned (Was hätte ich im Nachhinein anders gemacht?) 
+
+Stärkere und direktere Einbindung von schulischen Akteuren
+
+### Umsetzungsfacetten
+
+#### Wodurch zeichnet sich eine systematische Umsetzung des Kriteriums aus? Welche unmittel-baren oder ggf. auch peripheren/indirekten Facetten lassen sich als Indikatoren für eine Umsetzung des Kriteriums heranziehen? 
+
+Die systematische Umsetzung zeichnet sich explizit durch die iterative Bearbeitung der oben be-schriebenen drei Facetten des fachdidaktischen Tripletts aus. Das Dokumentieren des Entwick-lungsprozesses kann dabei als Indikator für eine systematische Umsetzung verstanden werden. Darüber hinaus können Prozessergebnisse auch weitergehend evaluiert werden – z.B. durch Fach-expert*innen (d.h. Fachwissenschaftler*innen) und fachdidaktische Expert\*innen.
+
+### Umsetzung im Prozess
+
+- Wie lässt sich der Prozess der Umsetzung systematisieren? Gibt es da spezifische oder gene-rische bzw. fachbezogene Ansätze (Didaktische Rekonstruktion; Design-based Research; …), die sich dazu (erfahrungsgemäß, mit Blick auf Literatur oder auch nur vermutlich) eigenen?
+- Was sind unterschiedliche relevante Stakeholder und wie lassen sich diese sinnvoll einbinden? Welche Schwerpunkte sind ggf. auch mit bestimmten Stakeholder-Gruppen verbunden? Fachdidaktische Expert*innen und Lehrer*innen, Fachwissenschaftler*innen, Schüler*innen (vgl. Arbeit von Claussen, 2023).
+
+### Ansätze zur Absicherung der Umsetzung 
+
+#### Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Kriteriums (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen? 
+
+Mit Blick auf das Triplett können unterschiedliche Methoden der Absicherung gewählt werden:
+
+- Fachliche Klärung: Design-Based-Research (mit evaluativen Elementen) durch Fachex-pert*innen und fachdidaktische Expert*innen), Gütekriterien qualitativer Forschung bei materialanalytischem Vorgehen (vgl. hermeneutisch-analytisches Vorgehen)
+- Erhebung von Lernendenperspektiven: Gütekriterien qualitativer (z.B. Transparenz des For-schungs- und Auswertungsvorgehens, Berechnung der intersubjektive Übereinstimmung) oder quantitativer (z.B. psychometrische Gütekriterien zur Testreliabilität) Forschung, je nach Umsetzung der Erfassung
+- Didaktische Strukturierung insgesamt: Strukturindikatoren in der Dokumentation des iterativen Prozesses durch Anwender\*innen aber auch in der Dokumentenanalyse erstellter Produkte, Design-Based-Research (mit evaluativen Elementen)
+
+### Ansätze zur Untersuchung der Wirkung 
+
+- Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprü-fen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür her-anziehen?
+- Befunde zur Wirkung, verschiedene Szenarien sind denkbar: Interventionsdesigns mit Vergleichsgruppe, Prä/Post-Designs mit Erfassung von Fachwissen und/oder alternativen Vorstellungen, Qua-litative Studien zur Materialnutzung etc.

@@ -12,7 +12,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - part: part_why/_why.qmd
+    - part: _why.qmd
       chapters: 
         - part_why/_importance.qmd
         - part_why/_orientations.qmd

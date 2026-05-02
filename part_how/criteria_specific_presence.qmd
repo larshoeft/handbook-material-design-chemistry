@@ -1,0 +1,74 @@
+---
+editor: visual
+---
+
+## Präsenzerleben {#sec-presence author="Leander Mecklenburg"}
+
+### Allgemeine Einführung/Beschreibung
+
+Präsenzerleben (*spatial presence*) beschreibt in Virtual-Reality-Lernumgebungen das subjektive Gefühl, sich in einer virtuellen Umgebung wie in einer echten Umgebung zu befinden (Slater & Wilbur, 1997; Witmer & Singer, 1998) Es wird in zwei Dimensionen unterschieden, dem Gefühl sich in einer virtuellen Umgebung wie in der echten Umgebung zu fühlen (*selflocation)* und mit der Umgebung interagieren zu können (*possible action*) (Wirth et al., 2007). Um diese Gefühle bei den Lernenden zu erzeugen, beschreiben Dalgarno & Lee (2010) zwei Gruppen von Umgebungsmerkmalen der virtuellen Umgebung: realistische Darstellung der Umgebung, flüssige Darstellung von Blickwechseln und Objektbewegungen, konsistentes Verhalten der Objekte, Nutzerdarstellung, räumliches Audio, haptisches Feedback (*representational fidelity*) und Manipulation von Objekten, Navigation, Kontrolle der Umgebung, Kommunikation sowie Konstruktion/Scripting von Objekten (*learner interaction*). Diese *IVR affordances* werden von Makransky & Petersen (2021) im CAMIL-framework als *presence* und *agency* beschrieben
+
+### Befunde zur Wirkung
+
+Im CAMIL-framework (Makransky & Petersen, 2021) werden *immersion*, *control factors* und die *representational fidelity* als die drei technologische Faktoren beschrieben. Diese unterscheiden sich bzw. können manipuliert werden: Zum Beispiel kann der Grad der Immersion für Medienvergleichsstudien variiert werden, in dem eine Version für HMD entwickelt wird und eine andere für 2D Bildschirme; die *control factors* können manipuliert werden, in dem man 360° Videos anstelle von interaktiven Szenarien einsetzt und die *representational fidelity* verändert sich abhängig von der Auflösung der Texturen und 3D Modelle allgemein. Diese technologischen Faktoren nehmen dabei Einfluss auf die vorher beschrieben *IVR affordance presence* und *agency*, welche bei den Usern ausgelöst werden und eine Reihe von affektiven und kognitiven Faktoren beeinflussen (siehe Abb. 1). Diese beeinflussen schlussendlich den Lernerfolg der User (Zusho et al., 2003).
+
+In experimentellen Studien (z. B.Makransky et al., 2019) wurde der Grad der Immersion manipuliert, indem Lernende ein virtuelles Labor entweder am Computerbildschirm oder mit einem VR-Headset durchliefen. Ein typischer Befund ist ein Immersions-Paradox: Das HMD führt zu höherer Präsenz, aber zu geringerem Wissenserwerb und höherer kognitiver Belastung als die Desktop-Bedingung. Dieser Befund motiviert u. a. die Kritik an reinen Media-Comparison-Studien (siehe unten).
+
+### Literaturbeispiele zur Umsetzung
+
+\-
+
+### Umsetzungsbeispiel
+
+Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde ein immersives Virtual Reality Chemielabor (iVRCL) in einer Design-Based-Research Studie (Easterday et al., 2014) basierend auf der Roadmap von Echeverri-Jimenez & Oliver-Hoyo (2024) entwickelt (Mecklenburg & Lenzer, in prep.) um fachspezifische Arbeitsweisen (z.B. Einstellen des pH-Wertes) zu fördern. Dieses iVRCL wurde in einer Interventionsstudie (n=80) mit Erstsemesterstudierenden 2025 eingesetzt und den Einfluss auf Stress und Selbstwirksamkeitserwartungen untersucht (Mecklenburg & Lenzer, in prep.).
+
+### Umsetzungsfacetten
+
+![Der Vergleich des virtuellen Labors (links) mit dem realen Labor (rechts) zeigt eine sehr realistische Darstellung der Umgebung.](/img/criteria_specific_presence_vr.png)
+
+#### **Representational fidelity**
+
+**Realistische Darstellung:** Um eine möglichst realistische Abbildung der Umgebung zu erreichen wurde das Labor fotografiert, alle Objekte ausgemessen und anschließend in einer 3D Modelling Software erstellt (Siehe Abb. X). Die Fotos wurde als Texturen auf die 3D Objekte gelegt, wodurch ein hohes Gefühl von Realismus entsteht. Für den Sound wurden Hintergrundgeräusche aus dem Labor gewählt die vorher aufgenommen und beschrieben wurden.
+
+**Flüssige Darstellung und konsistentes Verhalten der Objekte:** Wurden technische durch eine Optimierung für standalone Headsets umgesetzt und sind größtenteils durch die physikalischen Berechnungen in Unity Game Engine abgedeckt. Das Erstellen von 3D Modelle ist technisch aufwendig und benötigt Erfahrung. Alternativ können viele 3D Modelle online erworben werden oder mit 360° Bildern gearbeitet werden.
+
+**Nutzenden Darstellung** haben wir keine extra eingebaut, weil Nutzende die Umgebung aus Ego-Perspektive wahrnehmen und daher keinen eigenen Avatar benötigen. In vielen Fällen ist die Darstellung eines Körpers in VR auch irreführend, weil er sich nicht wie der echte Körper mitbewegt und daher das Gefühl von Präsenz verringert.
+
+**Räumliches Audio:** In dem iVRCL werden wie bspw. die Brennerflamme von den entsprechenden Objekten abgespielt. Zusätzlich werden Hintergrundgeräusche zu dem Labor abgespielt.
+
+**Haptisches Feedback:** Die Kontroller vibrieren leicht, wenn man das Reagenzglas in der Klemme über den Bunsenbrenner hält
+
+Für **Manipulation von Objekten** wurde auf die physikalische Simulation von Unity in Kombination mit Animationen zurückgegriffen. Für die Messung des pH-Wertes kann man beispielsweise den Glasstab an ein Gefäß halten und erhält visuelles Feedback durch die Verfärbung der Spitze. Anschließend kann man den Glasstab auf ein pH-Papier halten und das Papier verfärbt sich basierend auf dem pH-Wert der Flüssigkeit.
+
+Die **Navigation** in der virtuellen Umgebung war sehr herausfordernd zu implementieren. Zum aktuellen Zeitpunkt gibt es fünf Möglichkeiten die Navigation und Bewegung in der virtuellen Umgebung umzusetzen:
+
+1.  Seated Experience/keine Bewegung: Wird in erster Linie bei 360° Videos/Bildern eingesetzt und benötigt am wenigsten physischen Platz. Mithilfe von Pfeilen oder Bereichen kann man sich durch die virtuelle Umgebung bewegen.
+2.  Bei der Teleportation werden vorher Bereiche festgelegt oder man kann sich an alle Orte auf einer Fläche teleportieren und sich damit durch die virtuelle Umgebung begeben.
+3.  Mithilfe des Joysticks auf dem Kontroller bewegt man sich kontinuierlich durch die Umgebung. Dies ist jedoch insbesondere für unerfahrene Nutzende eine große Herausforderung und kann leicht zu Motionsickness führen.
+4.  Laufmaschinen können genutzt werden, in denen sich der Boden mitbewegt und Nutzende das Gefühl haben sich zu bewegen, aber auf der Stelle gehen. Diese sind in der Regel sehr teuer und die Implementation aufwendig.
+5.  Raumskalierte Lösungen in denen man sich in dem gesamten physischen und virtuellen Raum bewegen kann (wie bspw. im Projekt zum virtuellen Klassenzimmer von Höft & Bernholt), hier benötigt man entsprechend große Räume zur Umsetzung.
+
+Wir haben uns für die Teleportation in vorher festgelegte Bereiche, anfangs hatten wir Bereiche mit einer Größe von 3x4 m, haben aber festgestellt, dass die physischen Räume in der Regel kleiner sind. Und man beim Teleportieren Probleme in der Ausrichtung erhält, wenn man keinen quadratischen Bereich hat. Schlussendlich sind wir auf 2,5x2,5 m gegangen, weil man dadurch einfach die automatischen Bereiche des VR Headsets verwenden kann, nicht jedes Mal den Bereich neu zeichnen muss, weniger physischen Platz bei mehreren Nutzenden in dem gleichen Raum benötigt und es für die meisten Interaktionen vollkommen ausreichend war. Hier sollte man insbesondere die Interaktionen testen, die sich am Rand des 2,5x2,5 Bereichs befinden und eher mit einem Kreis als mit einem Quadrat als Bereich planen. In der Überarbeitung der Anwendung haben wir zusätzlich die Möglichkeit zur Steuerung mittels Joysticks für Nutzende mit Geheinschränkung umgesetzt.
+
+**Kontrolle der Umgebung** und **Kommunikation** wurde nicht eingebaut, weil wir einen digitalen Zwilling der realen Umgebung haben und diese nicht manipulieren wollen und es in der VR Anwendung nicht um die Kommunikation mit anderen ging. Im Projekt des digitalen Klassenzimmers wurde der Schwerpunkt auf Kommunikation gelegt und mittels des TeachR Frameworks umgesetzt.
+
+### Umsetzung im Prozess
+
+Das Kriterium lässt sich auf der Materialebene umsetzen. Dazu sollte von einem Storyboard gearbeitet werden, welches die zentralen Designkriterien, Umgebung und Interaktionen festlegt. Anschließend wird die reale Umgebung so gut wie möglich (z.B., Bilder, Videos, LiDAR Scan) festgehalten und die zentralen Interaktionen videografiert. Bei den zentralen Interaktionen sind uns viele der intuitiven Handgriffe selber nicht mehr bewusst, werden hier aber festgehalten und am Ende dafür sorgen, dass sich die Interaktion auch realistisch anfühlt. In der DBR-Studie (Mecklenburg & Lenzer, in prep.) war die realistische Umgebung anfangs schon sehr gut, aber wir haben viel an den Interaktionen gefeilt und überarbeitet. Dazu wurden Nutzende mit verschiedenen Hintergründen (Novizen, Studierende der Chemie, Forschende in der Chemie und Chemiedidaktik) eingeladen, haben das iVRCL ausprobiert während Bildschirmaufzeichnungen durchgeführt wurden und anschließend dazu interviewed.
+
+### Ansätze zur Absicherung der Umsetzung
+
+Das Präsenzerleben lässt sich quantitativ, qualitativ und physiologisch erfassen (Grassini & Laumann, 2020):
+
+1.  Zur quantitativen Erfassung bieten sich der Presence Questionnaire (Witmer & Singer, 1998), Slather-Usoh-Steed-Fragebogen(Usoh et al., 2000) oder der MEC-SPQ (Vorderer et al., 2004) bzw. die deutsche Kurzversion (Hartmann et al., 2016) an. Die Kurzversion mit acht Items und einer 7-stufigen Likert-Skala wurde in unseren Studien verwendet (siehe Tab. 1).
+2.  Zur qualitativen Erfassung bietet sich die Beschreibung der Erfahrung mit drei Adjektiven (Reeves et al., 2021) und mit offenen Items (z.B. Was hat Ihnen an dem VR Labor gefallen? Was hat Ihnen an dem VR Labor nicht gefallen?) an und kann mittels qualitativer Inhaltsanalyse untersucht werden (siehe Tab. 2).
+3.  Physiologische Daten (z.B. EEGs) können ebenfalls verwendet werden der Aufwand ist für den Einsatz in chemiedidaktischen Praxisstudien jedoch hoch. Für einen Überblick siehe das systematische Review von Grassini & Laumann (2020).
+
+### Ansätze zur Untersuchung der Wirkung (Effect check)
+
+Der Einfluss von Präsenz wurden in zahlreichen Studien untersucht, insbesondere *media-comparison* Studien, in der beispielsweise immersives (head-mounted display) gegen nicht-immersives (PC) Training verglichen wurde (Makransky et al., 2019). Allerdings werden diese *media-comparison* Studien häufig wegen mangelnder Vergleichbarkeit und Erkenntnis kritisiert (Buchner & Mulders, 2026). Daher bietet es sich an, das Präsenzerleben als Mediator in Strukturgleichungsmodelle einzubeziehen, um seine R­­olle im Wirkmechanismus zu prüfen
+
+### Quellen
+
+::: sectionrefs
+:::

@@ -1,7 +1,5 @@
----
-author: "Lars Höft"
----
+## Design-Based Research {author="Leander Mecklenburg"}
 
-## Design-Based Research {author="Lars Höft"}
+### Allgemeine Einführung/Beschreibung
 
-Text
+Design-Based Research (DBR) ist ein Studiendesign, das Design- und wissenschaftliche Methoden integriert, um in realen Lernkontexten (Barab & Squire, 2004) gleichzeitig 1\) praxistaugliche Interventionen und 2\) theoretisch fundierte Wissen zu generieren (Anderson & Shattuck, 2012; Easterday et al., 2014). Ann Brown (1992), die als Begründerin des DBRs gilt schriebt: „an effective intervention should be able to migrate from our experimental classroom to average classrooms operated by and for average students and teachers, supported by realistic technological and personal support” (Brown, 1992) und greift damit ein zentrales Problem der Bildungsforschung auf: Viele Interventionen werden für experimentelle Forschungszwecke konzeptioniert und entwickelt, aber können den Anforderungen regulärer Klassenzimmer nicht standhalten. Durch den iterativen Ansatz unter Einbezug verschiedener Perspektiven sollen Interventionen zur langfristigen Implementation entwickelt werden.
