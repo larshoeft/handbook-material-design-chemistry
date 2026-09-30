@@ -1,18 +1,91 @@
-## Interesse {#sec-interest author="Anna Müller, Bob Schmidt"}
+## Interesse {#sec-interest author="Lars Höft"}
 
-Allgemeine Einführung/Beschreibung
+### Allgemeine Einführung/Beschreibung
 
-- Was ist unter dem Kriterium zu verstehen? Worauf fokussiert das Kriterium? 
-- Gibt es zentrale Theorien zu dem Kriterium bzw. die dem Kriterium zugrunde liegen? 
-- Gibt es ggf. unterschiedliche Auffassungen oder Schwerpunktlegungen?
+In den Naturwissenschaftsdidaktiken sind in aktuellen Forschungsarbeiten zum Interesse die Person-Gegenstands-Theorie des Interesses (*person-object theory of interest*, POI) [@krapp2002; @krapp2002a; @krapp2005; @krapp2007] und das *Four-Phase Model of Interest Development* (FPM) [@hidi2006; @renninger2011; @renninger2019] prävalent [@bernholt2025, S. 101–103]. In beiden Ansätzen umfasst der Interessenbegriff sowohl einen psychologischen Zustand, der in der Auseinandersetzung mit einem Gegenstand hervorgerufen werden kann, als auch eine motivationale Variable, die sich langfristig entwickelt [@renninger2022, S. 3].
 
-Interesse wird in der POI [@krapp2002; @krapp2002; @krapp2005; @krapp2007] und im FPM [@hidi2006; @renninger2011;@renninger2019] als motivationale Variable verstanden, die eine langfristige Entwicklungsdynamik aufweist. Ein Schwerpunkt der POI ist hierbei die theoretische Herausarbeitung des Interesses als sich entwickelnde Relation zwischen Person und Interssenobjekt. Die Entwicklung des Interesses wird in beiden Theorien als phasiert konzeptualiesiert und reicht von einem kurzfristigen, kontextabhängigen *situationalen* Interesse bis hin zu einem langfristig stabilen *individuellen* Interesse, das als relativ dauerhafte Prädisposition aufgefasst wird. Sowohl die POI als auch das FPM nehmen entsprechend @mitchell1993 eine weitere Differenzierung des situationalen Interesses in eine *catch*- und eine *hold*-Phase vor (im FPM als *triggered situational interest* bzw. *maintained situational interest* bezeichnet). Darüber hinaus differenziert das FPM das individuelle Interesse weiter in ein *emerging individual interest* und ein *well-developed individual interest* [@hidi2006]. Beide Theorien schreiben dem Interesse eine affektive sowie eine kognitive-wertbezogene (epistemische) Komponente zu – in der POI teilweise als *Valenzen* bezeichnet [@schiefele2009] – und gehen davon aus, dass sich mit zunehmendem Interesse insbesondere die kognitive-wertbezogene Komponente verändert. Im Unterschied zur POI umfasst das FPM hier unter der kognitiv-wertbezogenen Komponente zudem sich verändernde Wissensstrukturen und somit ein dynamische mentale Repräsentation des Interessenobjekts. Eine weitere theoretische Differenz besteht darin, dass das FPM im Gegensatz zur POI die Interessenentwicklung nicht von der Befriedigung der in der Selbstbestimmungstheorie definierten psychologischen Grundbedürfnisse abhängig macht.
+Interesse im Sinne einer motivationalen Variable wird als Relation zwischen einer Person und einem (Interessen-)Gegenstand aufgefasst, wobei Gegenstand ein Themengebiet, ein Kontext oder eine Tätigkeit sein kann [@krapp2007; @habig2018_context]. In der POI ist diese Relation durch kognitive Merkmale (z. B. hohe Bereitschaft zum Wissenserwerb), emotionale Merkmale (positive Gefühle wie Freude und ein optimales *Arousal*) und wertbezogene Merkmale (herausgehobene persönliche Bedeutung des Gegenstands, *Selbstintentionalität* durch Identifikation) gekennzeichnet [@krapp2007, S. 10–11; vgl. @prenzel1986, S. 166; @krapp2011, S. 31]. Aus dem Zusammenwirken der emotionalen und der wertbezogenen Merkmale, also der positiven Gefühle und der *Selbstintentionalität*, ergibt sich die intrinsische Qualität interessenbasierter Handlungen [@krapp2007, S. 11–12]. Das FPM unterscheidet eine affektive und eine kognitive Komponente, wobei Letztere das gegenstandsbezogene Wissen (*stored knowledge*) und die dem Gegenstand beigemessene Wertschätzung (*stored value*) umfasst [@hidi2006].
 
-Ausreichende empirische Evidenz für eine Interessenentwicklung anhand klar abgrenzbarer Phasen konnte bislang auch aufgrund fehlender Instrumente und theoretischer Unschärfen nicht generiert werden [bspw. @schmidt2020; @tang2022].
+Sowohl die POI als auch das FPM konzeptualisieren die Interessenentwicklung als phasiert, von einem kurzfristigen, kontextabhängigen *situationalen* Interesse bis hin zu einem langfristig stabilen *individuellen* Interesse, das als relativ dauerhafte Prädisposition, sich erneut mit dem Gegenstand auseinanderzusetzen, verstanden wird [@krapp2002a, S. 396–398; @krapp2007, S. 13; @hidi2006]. Das situationale Interesse wird in beiden Ansätzen in Anlehnung an die Unterscheidung von *catch* und *hold* [@mitchell1993] weiter ausdifferenziert [@krapp2005], was im FPM den Phasen des *triggered situational interest* und des *maintained situational interest* entspricht [@hidi2006]. Darüber hinaus unterscheidet das FPM beim individuellen Interesse ein *emerging individual interest* und ein *well-developed individual interest* [@hidi2006], wohingegen die POI keine weitere Ausdifferenzierung vornimmt [@krapp2005]. Über diese Phasen hinweg verändert sich im FPM die relative Gewichtung der affektiven und der kognitiven Komponente. Während in frühen Phasen die affektive Komponente stärker ausgeprägt ist, die Gefühle auch negativ sein können und wenig *stored knowledge* und *stored value* vorausgesetzt werden, bauen sich beide mit fortschreitender Entwicklung gemeinsam auf, wobei positive Gefühle bedeutsam bleiben. Ein *well-developed individual interest* ist demnach durch das Zusammenspiel von *stored knowledge*, *stored value* und positiven Gefühlen gekennzeichnet [@renninger2011, S. 170; @renninger2022, S. 4, 9; @knogler2017]. Eine phasierte Interessenentwicklung ist empirisch bislang nur unzureichend belegt, was auch auf fehlende Instrumente zur Identifikation der Phasen und auf theoretische Unschärfen zurückgeführt wird [@knogler2017; @schmidt2020; @tang2022].
 
-Zugleich definieren sowohl POI als auch FPM einen psychologischen Zustand des Interesses, der unabhängig von der Entwicklung der motivationalen Variablen ist und das aktuelle "Interessiertsein" beschreibt. Dieser Zustand kann in jeder Phase der Interessenentwicklung auftreten und zeichnet sich durch hohe Aufmerksamkeit sowie ein starkes affektives Erleben der Situation aus. Empirisch ließ sich dieser Zustand nicht von dem (getriggerten) situationalen Interesse trennen, weshalb das FPM keine gesonderte Unterscheidung zum *triggered situational interest* mehr vornimmt.
+Von der motivationalen Variable unterscheiden beide Ansätze den psychologischen Zustand des Interesses, der das aktuelle „Interessiertsein“ in der Auseinandersetzung mit einem Gegenstand beschreibt und sich durch hohe Aufmerksamkeit sowie ein starkes affektives Erleben auszeichnet [@krapp2002a; @renninger2015; @knogler2017]. Dieser Zustand resultiert stets aus der Interaktion personaler und situationaler Faktoren, deren Gewichtung jedoch variiert. Wird er vorrangig durch ein bereits weit entwickeltes individuelles Interesse hervorgerufen, spricht die POI von einem *aktualisierten individuellen Interesse*, während er im Fall des situationalen Interesses vorwiegend durch Merkmale der Lernumgebung ausgelöst wird [@krapp2005]. Da aktualisiertes individuelles und situationales Interesse mit demselben psychologischen Zustand einhergehen, kann dieser in jeder Phase der Interessenentwicklung auftreten [@knogler2017]. Empirisch ließ er sich (bislang) weder einer bestimmten Phase zuordnen noch vom *triggered situational interest* trennen, weshalb das FPM beide nicht voneinander abgrenzt [@renninger2015].
 
-Aufgrund der engen theoretischen Verknüpfung mit Wissen wird Interesse häufig gemeinsam mit dem Wissenserwerb erhoben und hinsichtlich gerichteter Effekte zwischen den Variablen untersucht [@rotgans2014; @rotgans2017; @hoft2018; @hoft2021]. Einen weiteren Schwerpunkt der aktuellen Interessenforschung stellt die theoretische und empirische Abgrenzung zur Neugier dar.
+Die Konzeptualisierungen des Interesses in der POI und im FPM teilen wesentliche theoretische Grundannahmen, unterscheiden sich jedoch in einzelnen konzeptuellen Annahmen, die bei der Planung von Studien berücksichtigt werden sollten. Die POI betont vor allem die emotionalen und wertbezogenen Merkmale, deren Ausdifferenzierung mit der Stabilisierung und Internalisierung der Person-Gegenstands-Relation einhergeht, wobei die zunehmend differenzierten gegenstandsspezifischen Wissensstrukturen als Korrelat, nicht aber als konstitutives Merkmal des Interesses gelten [@krapp1999, S. 399; @krapp2002a, S. 396–398; @krapp2007, S. 13; @renninger2022, S. 9]. Im FPM ist dagegen die kognitive Komponente, also die Koordination von *stored knowledge* und *stored value*, für die Interessenentwicklung zentral, sodass veränderliche Wissensstrukturen und eine dynamische mentale Repräsentation des Gegenstands konstitutiver Bestandteil des Interesses sind [@hidi2006; @renninger2022, S. 9]. Ein weiterer Unterschied betrifft das Verhältnis zu den psychologischen Grundbedürfnissen der Selbstbestimmungstheorie (Kompetenz, Autonomie, soziale Eingebundenheit). Die POI versteht deren Befriedigung als Voraussetzung der Interessenentwicklung, die neben bewussten, kognitiv-rationalen Bewertungen vor allem durch unbewusste emotionale Erfahrungen der Bedürfnisbefriedigung gesteuert wird [@krapp2002a, S. 401–403; @krapp2005, S. 383–387]. Das FPM nimmt dagegen ein wechselseitiges Verhältnis an, in dem die Befriedigung der Grundbedürfnisse Interesse fördert, aber auch durch sich entwickelndes Interesse begünstigt werden kann [@renninger2022, S. 9].
+
+### Befunde zur Wirkung
+
+Sowohl die POI als auch das FPM schreiben dem Interesse eine Wirkung in der Lernsituation und über sie hinaus zu: Der psychologische Zustand des Interesses geht mit hoher Aufmerksamkeit und einem starken affektiven Erleben einher [@krapp2002a; @renninger2015; @knogler2017], während das individuelle Interesse als relativ dauerhafte Prädisposition verstanden wird, sich erneut mit dem Gegenstand auseinanderzusetzen [@krapp2007, S. 13; @hidi2006]. Auf die Leistung sollte Interesse über die Quantität (z. B. Anstrengung, Ausdauer) und die Qualität lernbezogener Handlungen (z. B. Lernstrategien) wirken, wobei Interesse vor allem mit tieferem Lernen (*deeper learning*) in Verbindung gebracht wird [@vu2022, S. 43]. Über Merkmale der Lernumgebung soll sich das situationale Interesse fördern und so die Entwicklung individuellen Interesses unterstützen lassen [@hidi2006; @renninger2022].
+
+Für die schulische Leistung ermittelte eine Meta-Analyse zu individuellen, auf ein bestimmtes Fachgebiet gerichteten Interessen über 121 unabhängige Stichproben der Jahrgangsstufen 5 bis 12 eine mittlere Korrelation von *r* = .31, was einer Varianzaufklärung von etwa 10 % entspricht [@schiefele1992, S. 189–190, 198, 203]. Der Zusammenhang fiel für *science* (*r* = .35) und Physik (*r* = .31) höher aus als für Biologie (*r* = .16), für Chemie lag nur eine einzelne Studie vor (*r* = .43), und er war bei Jungen (*r* = .35) stärker als bei Mädchen (*r* = .25) [@schiefele1992, S. 195, 200, 202]. Neuere Arbeiten aus Biologie, Chemie und Physik replizieren die prädiktive Kraft naturwissenschaftsbezogener Interessen für die fachbezogene Leistung [@habig2025, S. 172]. Die Befunde sind korrelativ und lassen die Wirkrichtung offen [@schiefele1992, S. 207]. Längsschnittlich sagte über Motivationskonstrukte hinweg die vorangehende Leistung die spätere Motivation stärker vorher (β = .176) als die Motivation die spätere Leistung (β = .096) [@vu2024, S. 145, 148]. Für *non-self-belief motivation constructs* zeigte sich kein Effekt auf die spätere Leistung (β = −.002), wohl aber ein Effekt der Leistung auf die spätere Motivation (β = .091) [@vu2024, S. 147, 149]. Diese Kategorie bündelt neben Interesse unter anderem intrinsische Motivation, *task values* und Zielorientierungen und wurde nicht nach Konstrukten aufgeschlüsselt [@vu2024, S. 143, 156], der Befund ist daher nicht spezifisch für Interesse im Sinne der POI und des FPM.
+
+Ein eine Woche vor dem Lesen erfasstes Themeninteresse (*topic interest*) sagte bei Studierenden weniger *mind wandering* beim Lesen vorher, das wiederum negativ mit dem Textverständnis zusammenhing, während ein direkter Zusammenhang zwischen Themeninteresse und Textverständnis ausblieb [@gericke2025, S. 1, 9]. Während einer Museumsführung zur Evolution sagte ein höheres *state investigative interest*, das über das Interesse am Thema sowie über Tätigkeiten im Sinne der berufs- und persönlichkeitspsychologischen Interessenforschung erfasst wurde [@roemer2026_state, S. 2, 5], in einzelnen Operationalisierungen einen langsameren Rückgang der Wahrnehmung der Situation als aufgaben- und denkbezogen (*Duty*, *Intellect*) vorher, wohingegen die Situationswahrnehmung die spätere Veränderung des Interesses nicht vorhersagte [@roemer2026_state, S. 8, 10]. Situationales Interesse kann jedoch auch zu einer Leistungsüberschätzung und damit zu einer Verstehensillusion nach dem Bearbeiten von Lernaufgaben führen [@habig2025, S. 188]. Über die Lernsituation hinaus sagte Interesse die Kurswahl in Chemie, Physik und Biologie [@habig2025, S. 184–185], die Bereitschaft zur Teilnahme an naturwissenschaftlichen Wettbewerben [@blankenburg2016_effectiveness, S. 352–355] und den Verbleib in einem Studienfach vorher [@sansone2026_motivating, S. 8–9]. Bei der Planung der Lernzeit orientierten sich Studierende dagegen stärker an der Prüfungsrelevanz als an ihrem Interesse [@schuetze_choosing].
+
+Eine Meta-Analyse zu innovativen Ansätzen im naturwissenschaftlichen und mathematischen Unterricht, die Interesse in Anlehnung an das FPM als individuelles Interesse (*personal interest*) fasst [@savelsbergh2016, S. 160], fand einen kleinen positiven Effekt auf das allgemeine Interesse (*general interest*, *d* = 0.22, 20 Studien), jedoch keinen signifikanten Effekt auf das Interesse im Unterricht (*classroom interest*, *d* = 0.16, 4 Studien) [@savelsbergh2016, S. 167–168]. Für die Einstellung insgesamt (*overall attitude*) unterschieden sich die Unterrichtsansätze nicht, die Effekte nahmen aber mit steigender Jahrgangsstufe ab [@savelsbergh2016, S. 166, 168]. In der Interessenforschung zu Biologie, Chemie und Physik seit 2012, die sich überwiegend auf die POI und das FPM bezieht [@habig2025, S. 176], berichten 113 Untersuchungen positive Effekte oder Zusammenhänge, wobei aktivierende, vom traditionellen Unterricht abweichende Maßnahmen in der Regel das situationsspezifische Interesse erhöhten [@habig2025, S. 178–179]. Für den Zeitraum von 2000 bis 2012 zeigte ein Review, das Interesse, Motivation und Einstellung zusammenfasst, meist positive Effekte forschenden und problembasierten Lernens, nicht aber reiner *hands-on*-Aktivitäten [@potvin2014, S. 103]. Allerdings verzichten Studien an außerschulischen Lernorten meist auf Kontrollgruppen [@habig2025, S. 178], die Maßnahmen werden theoretisch wenig fundiert begründet, und die Ergebnisse folgen vielfach dem Motto „Das Neue war auch interessanter“ [@habig2025, S. 189; vgl. @potvin2014, S. 108–109]. Unter 92 experimentellen Studien zu Motivationsinterventionen bezogen sich nur zwei auf Interesse (*d* = 0.69, 95 %-KI [0.30, 1.08]) [@lazowski2016, S. 616, 625].
+
+Sowohl die POI als auch das FPM fassen die Befriedigung der Grundbedürfnisse der Selbstbestimmungstheorie als Bedingung der Interessenentwicklung auf [@krapp2002a, S. 401–403; @renninger2022, S. 9]. Meta-analytisch erhöhten Wahlmöglichkeiten die intrinsische Motivation (*d* = 0.30), auch wenn diese als selbstberichtetes Interesse an der Aufgabe erfasst wurde (*d* = 0.18), nicht jedoch signifikant das spätere Lernen (*subsequent learning*, *d* = 0.10) [@patall2008, S. 287–289]. Wahlmöglichkeiten ohne Bezug zum Lerninhalt (*instructionally irrelevant choices*, *d* = 0.59) wirkten stärker als inhaltsbezogene (*instructionally relevant choices*, *d* = 0.24) [@patall2008, S. 288]. Auch in neueren Studien erhöhten Wahlmöglichkeiten das situationale Interesse, nicht jedoch die Leistung [@asher2025_using, S. 656–660; @schoenherr2026], wobei weniger die Wahl selbst als die Passung zwischen Kontext und Lernenden ausschlaggebend zu sein scheint [@guth2024_choose]. *Confidence*, also die Überzeugung, erfolgreich sein zu können, und Interesse korrelieren hoch und lassen sich als Moderatoren nur schwer unterscheiden [@hecht2021_role, S. 2], und fachbezogenes Selbstkonzept und Selbstwirksamkeitserwartungen hängen in meist korrelativen Befunden positiv mit dem individuellen Interesse am Fachunterricht zusammen [@habig2025, S. 170–171]. In retrospektiven Interviews mit 22 Schwimmer:innen wurden Rückmeldungen von Trainer:innen, die ein individuelles Verständnis der Stärken und Bedürfnisse erkennen ließen, sowie die Gemeinschaft des Teams als förderlich für die Interessenentwicklung beschrieben [@kloetzer2025, S. 1, 9, 11]. Individuelles Interesse und *need for cognition* sagten das situationale Interesse vorher [@golke2024], wobei eine erfolgreiche Aktivierung des situationalen Interesses durch die Lernumgebung den Einfluss des individuellen Interesses minimierte [@habig2025, S. 172, 180]. Lernende mit geringem individuellem Interesse berichteten bei alltagsnahen, Lernende mit hohem individuellem Interesse bei ungewöhnlichen Kontexten stärker ausgeprägte emotionale Merkmale des situationalen Interesses [@habig2018_context, S. 10–12].
+
+Lernende unterschieden zwischen Interesse als positivem Gefühl und Relevanz als Wichtigkeit und Bedeutsamkeit [@broman2022_relevant, S. 487–488] und bevorzugten Kontexte mit persönlichem Bezug [@broman2022_relevant, S. 488–492]. Kontextorientierte Ansätze ergaben überwiegend positive Zusammenhänge mit Interessenvariablen [@habig2025, S. 179; vgl. @potvin2014, S. 104–105]. Informationen zum Nutzen der Lerninhalte und alltagsnahe Kontexte erhöhten deren wahrgenommene Bedeutsamkeit [@asher2025_using, S. 656–659; @habig2018_context, S. 8–12]. In einem Laborexperiment zur Biologie der Pilze wirkten vorgegebene Informationen zum Nutzen umso positiver auf das Interesse an der Aufgabe (*task interest*), je höher das anfängliche Interesse (*initial interest*) der Studierenden war (β = .16), ein Haupteffekt zeigte sich nicht (β = .01) [@hecht2021_role, S. 4, 6]. Interventionen zum Nützlichkeitswert (*utility value*) stammen aus der Erwartungs-Wert-Theorie, erfassen Interesse jedoch im Sinne des FPM als *triggered* und *maintained situational interest* [@hulleman2010_enhancing, S. 880–883]. Formulierten Studierende den Nutzen des Gelernten in einer Lehrveranstaltung selbst (*self-generated utility value*), stieg das situationale Interesse nur bei schwachen bisherigen Prüfungsleistungen (β = .34), nicht bei guten (β = −.02) [@hulleman2010_enhancing, S. 889–891]. Wurde der Nutzen dagegen im Lernmaterial vorgegeben (*directly communicated utility value*), stieg das *task interest* nur bei hohem individuellem Interesse an Mathematik (β = .35), während bei geringem individuellem Interesse die wahrgenommene Kompetenz (*perceived competence*) sank (β = −.36) [@durik2007_different, S. 604–605]. In einer späteren Studie moderierte die wahrgenommene Kompetenz in Mathematik den Effekt des vorgegebenen Nutzens auf das situationale Interesse auch dann, wenn der mit dem individuellen Interesse geteilte Varianzanteil entfernt war (β = .51), das individuelle Interesse im umgekehrten Fall dagegen nicht (β = −.03), sodass der frühere Befund auf den Zusammenhang beider Merkmale (*r* = .64) zurückgehen könnte [@durik2015_what, S. 107–109]. Für Lernende mit geringer wahrgenommener Kompetenz waren die Verbindung beider Formen sowie vorgegebene Beispiele aus dem Alltag statt aus Beruf und Studium günstig [@canning2015_teach, S. 58–59, 64]. Die Befunde stammen von Studierenden und überwiegend aus Laborexperimenten zu einer Technik des Kopfrechnens [@hulleman2010_enhancing, S. 892; @canning2015_teach, S. 66–67].
+
+
+#### Fazit
+
+Die POI und das FPM schreiben dem Interesse eine Wirkung auf die Aufmerksamkeit, das affektive Erleben und die erneute Auseinandersetzung mit dem Gegenstand zu. Empirisch hängt das individuelle Interesse mit der schulischen Leistung zusammen (*r* = .31), wobei die Befunde korrelativ sind und die Wirkrichtung offenlassen. Darüber hinaus sagte Interesse eine höhere Aufmerksamkeit beim Lesen (weniger *mind wandering*) sowie die Kurswahl, die Bereitschaft zur Teilnahme an Wettbewerben und den Verbleib im Studienfach vorher. Als abhängige Variable ließ sich vor allem das situationale Interesse durch Merkmale der Lernumgebung erhöhen, nämlich durch aktivierende Maßnahmen, Wahlmöglichkeiten, alltagsnahe Kontexte und Informationen zum Nutzen der Lerninhalte. Die meta-analytischen Effekte auf das Interesse sind klein, und Wahlmöglichkeiten erhöhten das Interesse, nicht aber die Leistung. Wie Informationen zum Nutzen wirken, hängt vom individuellen Interesse und von der wahrgenommenen Kompetenz der Lernenden ab sowie davon, ob der Nutzen vorgegeben oder selbst formuliert wird. Eingeschränkt wird die Aussagekraft der Befunde durch fehlende Kontrollgruppen, theoretisch wenig fundiert begründete Maßnahmen und Sammelkonstrukte, in denen Interesse mit anderen Motivationskonstrukten zusammengefasst ist.
+
+### Literaturbeispiele zur Umsetzung (Steigerung des Interesses)
+
+- Wahl zwischen inhaltlich gleichen Lektionen, die sich nur im Datensatz unterscheiden (Medizin, Politik, Psychologie) [@asher2025_using]
+- Wahl zwischen zwei Aufgabenoptionen innerhalb desselben mathematischen Kontexts [@schoenherr2026]
+- Zuweisung oder Wahl von Kontextaufgaben mit Alltagsbezug, ungewöhnlichem Phänomen oder Laborbezug im Chemieunterricht [@guth2024_choose]
+- Einbettung von Sachinformationen in informierende Erzähltexte [@golke2024]
+- Individuell abgestimmtes, spezifisches Feedback von Trainer:innen und Einbindung in die Gemeinschaft des Teams im Schwimmsport [@kloetzer2025, S. 9, 11]
+- Kurzes Video zum beruflichen Nutzen eines Themas [@asher2025_using]
+- In Lernmaterial eingebettete Informationen zum Nutzen und Schreibaufträge zum Nutzen für Gegenwart oder Zukunft [@hecht2021_role, S. 4, 7]
+- Wettbewerbstag mit Quiz und Stationen, gestaltet nach den Grundbedürfnissen der Selbstbestimmungstheorie und dem RIASEC+N-Modell [@blankenburg2016_effectiveness]
+- Kontextaufgaben mit alltagsnahen oder ungewöhnlichen Kontexten sowie Aufgaben in persönlicher, gesellschaftlicher und beruflicher Rahmung [@habig2018_context; @broman2022_relevant]
+- Projektunterricht in fünf Schritten (*Spark*, *Explore*, *Center*, *Deepen*, *Evaluate*), in dem Interessen der Lernenden aufgegriffen, zugespitzt und reflektiert werden [@membrive2026_personalized, S. 8]
+
+POI AUTONOMIE, SElbstwirksamkeit, soziale Eingebundenheit
+
+guth2024_choose \# autonomie utility value interventions
+
+sansone2026_motivating hulleman2025_student hecht2021_role rosenzweig2022_utility asher2025_using
+
+schuetze_choosing
+
+Kontexte Relevanz:
+
+habig2018_context
+
+broman2022_relevant
+
+blankenburg2016_effectiveness
+
+https://www.sciencedirect.com/science/article/pii/S0361476X26000184?casa_token=IpJ8UF0mx04AAAAA:yuSfzecYb5UA0C1DMRgVaH6DZe4PmjdyHbIX0Bz7ibRPbgFo8SAUWfto2R33nHTYxiASsovY_70#f0010
+
+### Umsetzungsbeispiel
+
+
+Als Kriterium für die Gestaltung von Lernmaterial zielt Interesse darauf, in der Auseinandersetzung mit dem Material situationales Interesse hervorzurufen und aufrechtzuerhalten und so die Entwicklung individuellen Interesses zu unterstützen [@hidi2006; @renninger2022]. Gegenstand des Interesses können dabei die fachlichen Inhalte, die Kontexte, in die sie eingebettet sind, sowie die Tätigkeiten sein, die das Material anregt [@habig2018_context].
+
+- Projekt, Studienkontext, Zielstellung, kurze Beschreibung, Ergebnisse, Publikationen
+- Lessons learned (Was hätte ich im Nachhinein anders gemacht?)
+
+### Umsetzungsfacetten
+
+- Wodurch zeichnet sich eine systematische Umsetzung des Kriteriums aus? Welche unmittelbaren oder ggf. auch peripheren/indirekten Facetten lassen sich als Indikatoren für eine Umsetzung des Kriteriums heranziehen?
+
+### Umsetzung im Prozess
+
+- Wie lässt sich der Prozess der Umsetzung systematisieren? Gibt es da spezifische oder generische bzw. fachbezogene Ansätze (Didaktische Rekonstruktion; Design-based Research; …), die sich dazu (erfahrungsgemäß, mit Blick auf Literatur oder auch nur vermutlich) eigenen?
+- Was sind unterschiedliche relevante Stakeholder und wie lassen sich diese sinnvoll einbinden? Welche Schwerpunkte sind ggf. auch mit bestimmten Stakeholder-Gruppen verbunden?
+
+### Ansätze zur Absicherung der Umsetzung (Implementation-Check)
+
+- Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Kriteriums (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
+
+### Ansätze zur Untersuchung der Wirkung (Effect check)
+
+- Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
 
 Quellen für mögliche Instrumente zur Erfassung des situationalen Interesses sind bei @knogler2015, @linnenbrink-garcia2010, @rotgans2011, @rotgans2015, @boeder2021, @potvin2022 zu finden.
 
@@ -20,36 +93,5 @@ In unserer Abteilung wurde ein starker Fokus auf die nuancierte Erfassung von In
 
 Ein empfehlenswerter Sammelband, der sich unter anderem aus der Perspektive der deutschsprachigen naturwissenschaftlichen Fachdidaktiken mit dem Interessenkonstrukt beschäftigt, wurde von @krey2025 herausgegeben.
 
-
-Befunde zur Wirkung
-
-- Welche Wirkung wird dem Kriterium zugeschrieben? Gibt es empirische Befunde (Studien, Meta-Analysen) zur Wirkung? Worauf wirkt sich das Kriterium aus? 
-
-Literaturbeispiele zur Umsetzung
-
-- Gibt es größere Projekte/Programme, in denen das Kriterium eine zentrale Rolle spielt? Was sind prototypische Beispiele, die oft in der Literatur herangezogen werden? 
-
-Umsetzungsbeispiel (eigene Projekte/Forschung)
-
-- Projekt, Studienkontext, Zielstellung, kurze Beschreibung, Ergebnisse, Publikationen
-- Lessons learned (Was hätte ich im Nachhinein anders gemacht?)
-
-Umsetzungsfacetten
-
-- Wodurch zeichnet sich eine systematische Umsetzung des Kriteriums aus? Welche unmittelbaren oder ggf. auch peripheren/indirekten Facetten lassen sich als Indikatoren für eine Umsetzung des Kriteriums heranziehen?
-
-Umsetzung im Prozess
-
-- Wie lässt sich der Prozess der Umsetzung systematisieren? Gibt es da spezifische oder generische bzw. fachbezogene Ansätze (Didaktische Rekonstruktion; Design-based Research; …), die sich dazu (erfahrungsgemäß, mit Blick auf Literatur oder auch nur vermutlich) eigenen? 
-- Was sind unterschiedliche relevante Stakeholder und wie lassen sich diese sinnvoll einbinden? Welche Schwerpunkte sind ggf. auch mit bestimmten Stakeholder-Gruppen verbunden? 
-
-Ansätze zur Absicherung der Umsetzung (Implementation-Check)
-
-- Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Kriteriums (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen? 
-
-Ansätze zur Untersuchung der Wirkung (Effect check)
-
-- Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen? 
-
-::: {.sectionrefs}
+::: sectionrefs
 :::
