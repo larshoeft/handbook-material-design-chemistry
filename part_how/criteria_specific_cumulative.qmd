@@ -52,5 +52,5 @@ Generell werden Interventionsstudien und Längsschnittstudien als mittel der Wah
 
 ### Quellen
 
-::: {.sectionrefs}
+::: sectionrefs
 :::

@@ -1,3 +1,16 @@
+---
+author-meta: "Lars Höft"
+date: 2026-10-01
+
+citation:
+  type: webpage
+  title: "Meine Webseite"
+  author:
+    - name: "Lars Höft"
+  issued: 2026-10-01
+  url: "https://example.com/meine-webseite"
+---
+
 ## Interesse {#sec-interest author="Lars Höft"}
 
 ### Allgemeine Einführung/Beschreibung
