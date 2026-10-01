@@ -1,0 +1,77 @@
+/*-- scss:defaults --*/
+// Farben nach leibniz-ipn.de; Schriften: Source Serif 4 (Text) und
+// Source Sans 3 (Überschriften, Navigation), Code in Source Code Pro.
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap");
+
+// IPN-Blautöne
+$ipn-blue: #003f7d !default;
+$ipn-blue-hover: #00366a !default;
+$ipn-blue-dark: #003263 !default;
+$ipn-blue-mid: #4d79a4 !default;
+$ipn-azure: #007eb1 !default;
+$ipn-cyan: #3dc0e9 !default;
+$ipn-blue-light: #ccd9e5 !default;
+$ipn-blue-pale: #e6ecf2 !default;
+
+$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Source Serif 4", Georgia, serif !default;
+$font-family-base: $font-family-serif !default;
+$font-family-monospace: "Source Code Pro", monospace !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 700 !default;
+$headings-color: $ipn-blue !default;
+
+$font-size-root: 17px !default;
+$font-size-base: 1.1rem !default;
+$line-height-base: 1.6 !default;
+
+$body-color: rgba(0, 0, 0, 0.87) !default;
+$primary: $ipn-blue !default;
+$secondary: $ipn-blue-mid !default;
+$info: $ipn-azure !default;
+$link-color: $ipn-blue !default;
+$link-hover-color: $ipn-blue-hover !default;
+$code-color: $ipn-azure !default;
+$border-color: $ipn-blue-light !default;
+
+/*-- scss:rules --*/
+.sidebar,
+div.quarto-float,
+figcaption,
+span.margin-aside,
+.callout .callout-title-container {
+  font-family: $font-family-sans-serif;
+}
+
+.sidebar-title,
+div.sidebar-item-container .active {
+  color: $ipn-blue;
+  font-weight: 700;
+}
+
+.quarto-title-banner,
+#quarto-header .navbar {
+  background-color: $ipn-blue;
+}
+
+blockquote {
+  border-left-color: $ipn-cyan;
+}
+
+.callout {
+  background-color: $ipn-blue-pale;
+}
+
+// Abschnittsnummern (z. B. 5.1) in Überschriftenfarbe statt Grau
+h1, h2, h3, h4, h5, h6 {
+  .header-section-number {
+    color: inherit;
+  }
+}
+
+// Nummer des aktiven Eintrags in Inhaltsverzeichnis (rechts) und
+// Seitenleiste (links) wie der Eintrag selbst
+nav[role="doc-toc"] a.active .header-section-number,
+.sidebar-item .sidebar-link.active .chapter-number {
+  color: $primary !important;
+}

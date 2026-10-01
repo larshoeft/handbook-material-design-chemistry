@@ -1,6 +1,9 @@
 project:
   type: book
 
+profile:
+  default: default
+
 lang: de
 
 book:
@@ -46,9 +49,6 @@ format:
     number-sections: true
     number-depth: 2
     toc-depth: 2
-    theme:
-      - cosmo
-      - simplex
 
 editor: source
 

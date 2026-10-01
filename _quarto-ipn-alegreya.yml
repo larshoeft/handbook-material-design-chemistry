@@ -1,0 +1,14 @@
+# Vergleichsprofil: IPN-Farben mit Alegreya, Alegreya Sans und
+# Alegreya Sans SC; Abbildungsunterschriften und Fußnoten im Rand wie socviz.co
+# Rendern: quarto render --profile ipn-alegreya
+project:
+  output-dir: _build/ipn-alegreya
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme-ipn/ipn.scss, theme-ipn/font-alegreya.scss]
+      dark: [cosmo, theme-ipn/ipn.scss, theme-ipn/font-alegreya.scss, theme-ipn/ipn-dark.scss]
+    fig-cap-location: margin
+    tbl-cap-location: margin
+    reference-location: margin
