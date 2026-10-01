@@ -10,7 +10,8 @@
 ---
 --- Usage in _quarto.yml:
 ---   filters:
----     - section-authors.lua
+---     - at: pre-quarto
+---       path: section-authors
 ---
 --- Usage in .qmd:
 ---   ## My Section {author="Max Mustermann"}
@@ -126,25 +127,36 @@ local function get_author_labels(meta)
   return single, plural
 end
 
---- Build the Quarto-style RawBlock HTML for one or more author names.
-local function author_html_block(authors, label_single, label_plural)
-  local items = {}
-  for i, name in ipairs(authors) do
-    local margin = (i < #authors) and '.1em' or '1em'
-    items[#items + 1] = string.format(
-      '      <p style="margin-bottom: %s; font-size: .9em;">%s</p>', margin, name)
-  end
+--- Build the author block for one or more author names.
+--- Uses plain Pandoc elements (escaped by the writer, usable in every
+--- output format); HTML styling comes from section-authors.css.
+---@param authors string[] author names
+---@param label_single string label for one author
+---@param label_plural string label for several authors
+---@return Div
+local function author_block(authors, label_single, label_plural)
   local heading = (#authors >= 2) and label_plural or label_single
-  local html = table.concat({
-    '<div>',
-    '  <div style="text-transform: uppercase; margin-top: 1em; font-size: .8em; opacity: .8; font-weight: 400;">' ..
-    heading .. '</div>',
-    '  <div>',
-    table.concat(items, ''),
-    '  </div>',
-    '</div>',
-  }, '\n')
-  return pandoc.RawBlock('html', html)
+  local names = List {}
+  for _, name in ipairs(authors) do
+    names:insert(pandoc.Div(pandoc.Plain(pandoc.Str(name)),
+      pandoc.Attr('', { 'section-authors-name' })))
+  end
+  return pandoc.Div({
+    pandoc.Div(pandoc.Plain(pandoc.Str(heading)),
+      pandoc.Attr('', { 'section-authors-label' })),
+    pandoc.Div(names, pandoc.Attr('', { 'section-authors-names' })),
+  }, pandoc.Attr('', { 'section-authors' }))
+end
+
+--- Register the stylesheet for HTML output.
+local function add_css()
+  if quarto and quarto.doc and quarto.doc.is_format('html') then
+    quarto.doc.add_html_dependency({
+      name = 'section-authors',
+      version = '0.1.0',
+      stylesheets = { 'section-authors.css' },
+    })
+  end
 end
 
 --- Parse a comma-separated author string into a list of trimmed names.
@@ -161,6 +173,7 @@ end
 return {
   {
     Pandoc = function(doc)
+      add_css()
       local label_single, label_plural = get_author_labels(doc.meta)
       local blocks                     = doc.blocks
       local new_blocks                 = List {}
@@ -173,7 +186,7 @@ return {
             local authors = parse_authors(author_attr)
             blk.attributes.author = nil
             new_blocks:insert(blk)
-            new_blocks:insert(author_html_block(authors, label_single, label_plural))
+            new_blocks:insert(author_block(authors, label_single, label_plural))
           else
             new_blocks:insert(blk)
           end

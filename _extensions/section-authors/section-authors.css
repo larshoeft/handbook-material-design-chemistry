@@ -1,7 +1,17 @@
-.section-authors {
-    font-size: 0.9em;
-    color: #666;
-    font-style: italic;
-    margin-top: 0.5em;
-    margin-bottom: 1.5em;
+/* Author block below ## headings (see section-authors.lua) */
+.section-authors-label {
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: .8em;
+  opacity: .8;
+  font-weight: 400;
+}
+
+.section-authors-name {
+  font-size: .9em;
+  margin-bottom: .1em;
+}
+
+.section-authors-name:last-child {
+  margin-bottom: 1em;
 }

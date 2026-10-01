@@ -1,8 +1,32 @@
-﻿PANDOC_VERSION:must_be_at_least { 2, 19, 1 }
+--- section-bibliographies.lua – one bibliography per section
+---
+--- Based on section-bibliographies by Albert Krewinkel
+--- (https://github.com/pandoc-ext/section-bibliographies, MIT License),
+--- adapted for Quarto books: nested sections, Quarto cross-references,
+--- inline citations linking to the nearest ancestor bibliography.
+---
+--- Usage in .qmd: put an empty `::: sectionrefs` div under its own heading
+--- (e.g. `### Quellen`) at the end of the section that should collect the
+--- references of all its subsections.
+
+PANDOC_VERSION:must_be_at_least { 2, 19, 1 }
+
+local EXTENSION_NAME            = 'section-bibliographies'
 
 local List                      = require 'pandoc.List'
 local utils                     = require 'pandoc.utils'
 local citeproc, sha1, stringify = utils.citeproc, utils.sha1, utils.stringify
+
+---Emit a warning prefixed with the extension name.
+---@param message string
+local function log_warning(message)
+  local full_message = '[' .. EXTENSION_NAME .. '] ' .. message
+  if quarto and quarto.log then
+    quarto.log.warning(full_message)
+  else
+    io.stderr:write('WARNING ' .. full_message .. '\n')
+  end
+end
 
 local make_sections
 if PANDOC_VERSION >= '3.0' then
@@ -73,23 +97,6 @@ end
 -- Excludes Quarto cross-reference IDs (sec-, fig-, tbl-, eq-, lst-, thm-)
 -- ---------------------------------------------------------------------------
 local function collect_cite_ids(blocks)
-  local ids = {}
-  pandoc.Blocks(blocks):walk {
-    Cite = function(cite)
-      for _, c in ipairs(cite.citations) do
-        if not is_crossref_id(c.id) then
-          ids[c.id] = true
-        end
-      end
-    end
-  }
-  return ids
-end
-
--- ---------------------------------------------------------------------------
--- Collect all (possibly suffixed) citation IDs from a processed block tree
--- ---------------------------------------------------------------------------
-local function collect_suffixed_ids(blocks)
   local ids = {}
   pandoc.Blocks(blocks):walk {
     Cite = function(cite)
@@ -233,14 +240,18 @@ end
 
 -- ---------------------------------------------------------------------------
 -- Split content: refs-sections inlined, normal subsections placeholdered.
+-- Also reports whether a sectionrefs div sits under its own heading
+-- (e.g. `### Quellen`) rather than loose in the section text.
 -- ---------------------------------------------------------------------------
 local function split_content(content)
-  local direct = List {}
-  local subs   = {}
-  local n      = 0
+  local direct      = List {}
+  local subs        = {}
+  local n           = 0
+  local refs_headed = false
   for _, blk in ipairs(content) do
     if is_section_div(blk) then
       if is_refs_section(blk) then
+        refs_headed = true
         local ref_header = blk.content[1]
         ref_header.attributes.number = nil
         direct:insert(ref_header)
@@ -256,7 +267,7 @@ local function split_content(content)
       direct:insert(blk)
     end
   end
-  return direct, subs, n
+  return direct, subs, n, refs_headed
 end
 
 -- ---------------------------------------------------------------------------
@@ -265,33 +276,38 @@ end
 local function make_processor(meta, references)
   local process
 
-  process = function(div)
+  -- anc_suffix: suffix of the nearest ancestor section that renders a
+  -- bibliography (sectionrefs). Inline citations in sections without their
+  -- own bibliography must use this suffix so that they link to the entries
+  -- of that ancestor's bibliography.
+  process = function(div, anc_suffix)
     local header, suffix = section_header(div)
     if not header or not suffix then return div, {} end
 
-    local direct, subs, nsubs = split_content(div.content)
+    local direct, subs, nsubs, refs_headed = split_content(div.content)
+    local title = stringify(header.content)
 
-    -- Check if any subsection has sectionrefs (so siblings need inline rendering)
-    local any_sub_has_refs = false
-    for i = 1, nsubs do
-      if has_sectionrefs(subs[i].content or {}) then
-        any_sub_has_refs = true
-        break
-      end
+    local here = has_sectionrefs(direct)
+    local target_suffix = here and suffix or anc_suffix
+
+    if here and not refs_headed then
+      log_warning('"::: sectionrefs" in section "' .. title .. '" has no ' ..
+        'heading of its own (e.g. "### Quellen"); the bibliography only ' ..
+        'covers this section, citations in sibling sections will not link.')
     end
 
     -- Process all subsections first (bottom-up), collecting their citation IDs
     local processed_subs = {}
     local sub_ids = {}
     for i = 1, nsubs do
-      local processed_sub, sub_id_set = process(subs[i])
+      local processed_sub, sub_id_set = process(subs[i], target_suffix)
       processed_subs[i] = processed_sub
       for id, _ in pairs(sub_id_set) do
         sub_ids[id] = true
       end
     end
 
-    if has_sectionrefs(direct) then
+    if here then
       -- Rename + run citeproc with full bibliography output.
       direct = run_citeproc_for_section(direct, suffix, meta, references, sub_ids)
 
@@ -302,7 +318,7 @@ local function make_processor(meta, references)
         return blk
       end)
 
-      local all_ids = collect_suffixed_ids(div.content)
+      local all_ids = collect_cite_ids(div.content)
       return div, all_ids
     else
       -- No sectionrefs on this level.
@@ -310,17 +326,24 @@ local function make_processor(meta, references)
       -- been processed (their inline cites rendered) inside process() recursion.
       -- We still need to render inline cites in `direct` (the non-sub content).
       local raw_ids = collect_cite_ids(direct)
+      local link_suffix = target_suffix or suffix
 
       -- If there are inline citations in direct content, run citeproc on them
-      -- (inline-only, no bibliography) so they render as links.
+      -- (inline-only, no bibliography) so they render as links to the
+      -- bibliography of the nearest ancestor with sectionrefs.
       if next(raw_ids) then
-        direct = run_citeproc_inline_only(direct, suffix, meta, references)
+        if not target_suffix then
+          log_warning('citations in section "' .. title .. '" have no ' ..
+            '"::: sectionrefs" bibliography in an enclosing section; ' ..
+            'their links will not resolve.')
+        end
+        direct = run_citeproc_inline_only(direct, link_suffix, meta, references)
       end
 
       -- Build suffixed versions of raw_ids for parent accumulation
       local suffixed_raw_ids = {}
       for id, _ in pairs(raw_ids) do
-        suffixed_raw_ids[id .. suffix] = true
+        suffixed_raw_ids[id .. link_suffix] = true
       end
       -- Also include suffixed IDs from children
       for id, _ in pairs(sub_ids) do
@@ -365,7 +388,8 @@ local function make_processor(meta, references)
     local processed_subs = {}
     local sub_ids = {}
     for i = 1, n do
-      local processed_sub, sub_id_set = process(subs[i])
+      local processed_sub, sub_id_set = process(
+        subs[i], has_sectionrefs(direct) and root_suffix or nil)
       processed_subs[i] = processed_sub
       for id, _ in pairs(sub_id_set) do
         sub_ids[id] = true
