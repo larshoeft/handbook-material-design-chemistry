@@ -109,7 +109,8 @@ Specify the information either as heading attributes or as a metadata block at t
 ---
 sec-interest:
   author: "Max Mustermann"   # or a list of names
-  date: 2026-10-02
+  date: 2026-10-02           # first publication
+  date-modified: 2026-11-15  # optional; last revision ("Zuletzt überarbeitet")
   license: "CC BY-NC"        # CC abbreviations link to the license deed
   citation: true             # optional; or a map with Quarto citation fields
 ---
@@ -119,6 +120,22 @@ sec-interest:
 
 ```markdown
 ## Interesse {#sec-interest author="Max Mustermann" date="2026-10-02"}
+```
+
+Authors may also follow Quarto's author schema. ORCID, affiliations and e-mail are then shown as icons next to the name (the affiliation's name appears as a tooltip and links to its `url`, if given); other keys such as `id` are ignored:
+
+```markdown
+---
+sec-interest:
+  author:
+    - name: "Max Mustermann"
+      email: "mustermann@leibniz-ipn.de"
+      orcid: 0000-0002-1825-0097   # ID or https://orcid.org/… URL
+      affiliation:
+        - name: "IPN"
+          url: "https://www.leibniz-ipn.de"
+    - "Erika Musterfrau"          # a plain name works as well
+---
 ```
 
 Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.

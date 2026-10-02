@@ -1,7 +1,26 @@
 ---
 sec-cumulative:
-  author: "Sascha Bernholt"
+  author: 
+    - name: Sascha Bernholt
+      id: sb
+      orcid: 0000-0003-4045-3795
+      email: bernholt@leibniz-ipn.de
+      affiliation: 
+      - name: IPN
+        city: Kiel
+        state: SH
+        url: https://www.leibniz-ipn.de
+    - name: Lars Höft
+      id: lh
+      orcid: 0000-0003-4045-3795
+      email: bernholt@leibniz-ipn.de
+      affiliation: 
+      - name: IPN
+        city: Kiel
+        state: SH
+        url: https://www.leibniz-ipn.de
   date: 2026-10-02
+  date-modified: 2026-10-03
   license:
     text: "CC BY-NC 3.0 DE"
     url: "https://creativecommons.org/licenses/by-nc/3.0/de/"

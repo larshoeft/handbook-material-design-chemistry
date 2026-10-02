@@ -1,8 +1,8 @@
 --- section-authors.lua
 --- Lua filter for Quarto books that:
----   1. Reads `author`, `date` and `license` for ## section headings, from
----      heading attributes or from a metadata entry named after the
----      heading's id
+---   1. Reads `author`, `date`, `date-modified` and `license` for ## section
+---      headings, from heading attributes or from a metadata entry named
+---      after the heading's id
 ---   2. Inserts a Quarto-style author/date block directly below each ## heading
 ---   3. Adds a "cite as" reference for sections with a `citation` entry in
 ---      their metadata (Quarto's citation fields, formatted with `csl`)
@@ -11,6 +11,7 @@
 --- are derived from:
 ---   1. Overrides under Quarto's `language:` key: title-block-author-single,
 ---      title-block-author-plural, title-block-published,
+---      title-block-modified,
 ---      section-title-citation, section-title-reuse
 ---   2. doc.meta.lang (e.g. lang: de -> "Autor:in" / "Autor:innen")
 ---   3. Fallback: English
@@ -28,12 +29,26 @@
 ---   sec-my-section:
 ---     author: "Max Mustermann"       # or a list of names
 ---     date: 2026-10-02
+---     date-modified: 2026-11-15      # optional, "Zuletzt überarbeitet"
 ---     license: "CC BY-NC"            # CC abbreviations link to the deed
 ---     citation:                      # optional; `true` for defaults only
 ---       type: chapter                # title/author/issued default to the
 ---       container-title: "…"         # heading, author and date above
 ---   ---
 ---   ## My Section {#sec-my-section}
+---
+--- Authors follow Quarto's author schema; name, e-mail, ORCID and
+--- affiliations are shown, other keys (id, …) are ignored:
+---
+---   sec-my-section:
+---     author:
+---       - name: "Anna Müller"
+---         email: "mueller@example.org"
+---         orcid: 0000-0002-1825-0097  # ID or https://orcid.org/… URL
+---         affiliation:               # name, or map with name and url
+---           - name: "IPN"
+---             url: "https://www.leibniz-ipn.de"
+---       - "Bob Schmidt"             # a plain name works as well
 ---
 --- Front matter of {{< include >}}d files is merged into the chapter key
 --- by key (a later file replaces a key, it does not merge into it).
@@ -44,7 +59,7 @@
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.2.0'
+local EXTENSION_VERSION = '0.3.0'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -56,8 +71,12 @@ local utils = require 'pandoc.utils'
 
 --- Keys allowed in a section's metadata entry
 ---@type table<string, boolean>
-local SECTION_KEYS = { author = true, date = true, license = true,
+local SECTION_KEYS = { author = true, date = true,
+                       ['date-modified'] = true, license = true,
                        citation = true }
+
+--- ORCID iD (four blocks of four digits, last check digit may be X)
+local ORCID_PATTERN = '^%d%d%d%d%-%d%d%d%d%-%d%d%d%d%-%d%d%d[%dX]$'
 
 -- Language lookup table for author labels
 -- Covers Quarto's supported languages; extend as needed.
@@ -153,6 +172,13 @@ local PUBLISHED = {
   en = 'Published',
 }
 
+-- Label for `date-modified` per language; extend as needed.
+-- (Quarto's own `title-block-modified` reads "Geändert" / "Modified".)
+local MODIFIED = {
+  de = 'Zuletzt überarbeitet',
+  en = 'Last revised',
+}
+
 -- Long date formats matching Quarto's title block; extend as needed.
 local MONTHS = {
   de = { 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli',
@@ -241,6 +267,8 @@ local function get_labels(meta, base)
                 or AUTHOR_PLURAL[base] or AUTHOR_PLURAL['en'],
     published = override(meta, 'title-block-published')
                 or PUBLISHED[base] or PUBLISHED['en'],
+    modified  = override(meta, 'title-block-modified')
+                or MODIFIED[base] or MODIFIED['en'],
     citation  = override(meta, 'section-title-citation')
                 or CITATION[base] or CITATION['en'],
     license   = override(meta, 'section-title-reuse')
@@ -323,7 +351,7 @@ end
 ---book title and the chapter's (or book's) authors.
 ---@param citation MetaValue|boolean `citation` entry (`true` = defaults)
 ---@param header Header the section heading
----@param authors string[] section authors
+---@param authors table[] section authors (see meta_authors)
 ---@param date string|nil section date as written in the source
 ---@param meta Meta document metadata
 ---@return Blocks|nil formatted reference, nil on failure
@@ -377,30 +405,91 @@ end
 ---One labelled field (label + contents), like Quarto's title block.
 ---@param label string
 ---@param contents Block
+---@param class string|nil class of the field, e.g. for its column
 ---@return Div
-local function field(label, contents)
+local function field(label, contents, class)
   return pandoc.Div({
     pandoc.Div(pandoc.Plain(pandoc.Str(label)),
       pandoc.Attr('', { 'section-authors-label' })),
     contents,
-  })
+  }, pandoc.Attr('', { class }))
+end
+
+---Whether the output is HTML.
+---@return boolean
+local function is_html()
+  return quarto and quarto.doc and quarto.doc.is_format('html') or false
+end
+
+---Contact link after an author name. In HTML an icon (styled by
+---section-authors.css) with the text for screen readers; elsewhere the
+---text itself.
+---@param text string visible text outside HTML
+---Without a URL, a span with the same icon and tooltip (HTML) or the
+---text alone.
+---@param text string visible text outside HTML
+---@param url string|nil link target
+---@param kind string "email", "orcid" or "affiliation"
+---@param label string accessible label / tooltip
+---@return Inline
+local function contact_link(text, url, kind, label)
+  local class = 'section-authors-' .. kind
+  if is_html() then
+    local hidden = pandoc.Span(pandoc.Str(label),
+      pandoc.Attr('', { 'visually-hidden' }))
+    if not url then
+      return pandoc.Span(hidden, pandoc.Attr('', { class },
+        { title = label }))
+    end
+    return pandoc.Link(hidden, url, label, pandoc.Attr('', { class }))
+  end
+  if not url then return pandoc.Str(text) end
+  return pandoc.Link(pandoc.Str(text), url, label, pandoc.Attr('', { class }))
+end
+
+---Inlines for one author: name, then icons from the person outward
+---(ORCID = who, affiliation = where, e-mail = contact).
+---@param author table author record (see meta_authors)
+---@return Inlines
+local function author_inlines(author)
+  local inlines = pandoc.Inlines { pandoc.Str(author.name) }
+  if author.orcid then
+    inlines:insert(pandoc.Space())
+    inlines:insert(contact_link('ORCID ' .. author.orcid,
+      'https://orcid.org/' .. author.orcid, 'orcid',
+      'ORCID ' .. author.orcid))
+  end
+  for _, aff in ipairs(author.affiliations or {}) do
+    inlines:insert(pandoc.Space())
+    inlines:insert(contact_link(aff.name, aff.url, 'affiliation', aff.name))
+  end
+  if author.email then
+    inlines:insert(pandoc.Space())
+    inlines:insert(contact_link(author.email, 'mailto:' .. author.email,
+      'email', author.email))
+  end
+  return inlines
 end
 
 ---Build the author/date block for a section.
 ---Uses plain Pandoc elements (escaped by the writer, usable in every
 ---output format); HTML styling comes from section-authors.css.
----@param authors string[] author names (may be empty)
----@param date string|nil date as written in the source
+---The two-column grid keeps authors and license on the left, the
+---publication and revision dates on the right.
+---@param authors table[] author records (may be empty)
+---@param date string|nil formatted publication date
+---@param modified string|nil formatted revision date
 ---@param labels table labels from get_labels
 ---@param reference Blocks|nil formatted citation
 ---@param license Inlines|nil license text or link
 ---@return Div
-local function author_block(authors, date, labels, reference, license)
+local function author_block(authors, date, modified, labels, reference,
+                            license)
   local fields = List {}
   if #authors > 0 then
     local names = List {}
-    for _, name in ipairs(authors) do
-      names:insert(pandoc.Div(pandoc.Plain(pandoc.Str(name)),
+    for _, author in ipairs(authors) do
+      names:insert(pandoc.Div(pandoc.Plain(author_inlines(author)),
         pandoc.Attr('', { 'section-authors-name' })))
     end
     local label = (#authors >= 2) and labels.plural or labels.single
@@ -410,12 +499,18 @@ local function author_block(authors, date, labels, reference, license)
   if date then
     fields:insert(field(labels.published,
       pandoc.Div(pandoc.Plain(pandoc.Str(date)),
-        pandoc.Attr('', { 'section-authors-date' }))))
+        pandoc.Attr('', { 'section-authors-date' })), 'section-authors-right'))
   end
   if license then
     fields:insert(field(labels.license,
       pandoc.Div(pandoc.Plain(license),
         pandoc.Attr('', { 'section-authors-license' }))))
+  end
+  if modified then
+    fields:insert(field(labels.modified,
+      pandoc.Div(pandoc.Plain(pandoc.Str(modified)),
+        pandoc.Attr('', { 'section-authors-modified' })),
+      'section-authors-right'))
   end
   if reference then
     local cite = field(labels.citation,
@@ -428,7 +523,7 @@ end
 
 ---Register the stylesheet for HTML output.
 local function add_css()
-  if quarto and quarto.doc and quarto.doc.is_format('html') then
+  if is_html() then
     quarto.doc.add_html_dependency({
       name = EXTENSION_NAME,
       version = EXTENSION_VERSION,
@@ -437,31 +532,104 @@ local function add_css()
   end
 end
 
----Parse a comma-separated author string into a list of trimmed names.
+---Parse a comma-separated author string into a list of author records
+---(names only).
 ---@param str string
----@return string[]
+---@return table[]
 local function parse_authors(str)
-  local names = {}
+  local authors = {}
   for name in str:gmatch('[^,]+') do
     name = name:match('^%s*(.-)%s*$')
-    if name ~= '' then names[#names + 1] = name end
+    if name ~= '' then authors[#authors + 1] = { name = name } end
   end
-  return names
+  return authors
 end
 
----Author names from a metadata value: a list of names (or of maps with
----`name`, as in Quarto's `author`) or a comma-separated string.
+---Affiliations from Quarto's `affiliation(s)`: a name, a map with
+---`name` and `url`, or a list of either. URLs without a scheme
+---("www.example.org") get "https://".
 ---@param value MetaValue|nil
----@return string[]
-local function meta_authors(value)
+---@return table[] records with name and url
+local function affiliation_list(value)
   if value == nil then return {} end
-  if utils.type(value) == 'List' then
-    local names = {}
-    for _, item in ipairs(value) do
-      local name = utils.type(item) == 'table' and item.name or item
-      if name then names[#names + 1] = utils.stringify(name) end
+  local kind = utils.type(value)
+  if kind ~= 'List' then value = { value } end  -- one name or map
+  local result = {}
+  for _, item in ipairs(value) do
+    local name, url
+    if utils.type(item) == 'table' then
+      name = item.name and utils.stringify(item.name)
+      url  = item.url and utils.stringify(item.url)
+      if url and not url:match('^%a[%w+.-]*:') then
+        url = 'https://' .. url  -- "www.example.org" -> absolute link
+      end
+    else
+      name = utils.stringify(item)
     end
-    return names
+    if name and name ~= '' then
+      result[#result + 1] = { name = name, url = url }
+    end
+  end
+  return result
+end
+
+---Author record from a map in Quarto's author schema: `name`, plus
+---optional `email`, `orcid` (ID or https://orcid.org/… URL) and
+---`affiliation(s)` (names or maps with `name` and `url`).
+---Other keys (`id`, …) are accepted and not shown.
+---@param item table author map
+---@param id string section id, for warnings
+---@return table|nil record with name, email, orcid, affiliations
+local function author_record(item, id)
+  if not item.name then
+    warn('author without "name" in metadata "' .. id .. '"')
+    return nil
+  end
+  local author = { name = utils.stringify(item.name) }
+  if item.email then
+    author.email = utils.stringify(item.email)
+  end
+  if item.orcid then
+    local orcid = utils.stringify(item.orcid)
+                  :gsub('^https?://orcid%.org/', ''):upper()
+    if not orcid:match(ORCID_PATTERN) then
+      warn('ORCID "' .. orcid .. '" of ' .. author.name .. ' in #' .. id
+           .. ' is not 0000-0000-0000-0000; ignored')
+    else
+      author.orcid = orcid
+    end
+  end
+  author.affiliations = affiliation_list(item.affiliation
+                                         or item.affiliations)
+  return author
+end
+
+---Author records from a metadata value: a name, a Quarto author map,
+---a list of either, or a comma-separated string.
+---@param value MetaValue|nil
+---@param id string section id, for warnings
+---@return table[]
+local function meta_authors(value, id)
+  if value == nil then return {} end
+  local kind = utils.type(value)
+  if kind == 'table' then value = { value } end  -- one author map
+  if kind == 'List' or kind == 'table' then
+    local authors = {}
+    for _, item in ipairs(value) do
+      local author
+      if utils.type(item) == 'table' then
+        author = author_record(item, id)
+      else
+        local name = utils.stringify(item)
+        if name:match('@') or name:match(ORCID_PATTERN) then
+          warn('author "' .. name .. '" in #' .. id .. ' looks like an '
+               .. 'e-mail or ORCID; use "name:", "email:" and "orcid:"')
+        end
+        author = { name = name }
+      end
+      if author then authors[#authors + 1] = author end
+    end
+    return authors
   end
   return parse_authors(utils.stringify(value))
 end
@@ -488,18 +656,20 @@ local function validate_entry(id, entry)
   for key in pairs(entry) do
     if not SECTION_KEYS[key] then
       warn('unknown key "' .. key .. '" in metadata "' .. id
-           .. '"; supported: author, date, license, citation')
+           .. '"; supported: author, date, date-modified, license, '
+           .. 'citation')
     end
   end
 end
 
----Author names, date, citation metadata and license for a ## heading.
+---Author names, dates, citation metadata and license for a ## heading.
 ---Heading attributes take precedence over the metadata entry for the
 ---heading's id; the citation comes from the metadata only.
 ---@param blk Header
 ---@param meta Meta document metadata
----@return string[] authors
+---@return table[] authors
 ---@return string|nil date
+---@return string|nil modified
 ---@return MetaValue|nil citation
 ---@return Inlines|nil license
 local function section_info(blk, meta)
@@ -508,19 +678,31 @@ local function section_info(blk, meta)
   local attrs   = blk.attributes
   local authors = (attrs.author and attrs.author ~= '')
                   and parse_authors(attrs.author)
-                  or meta_authors(entry.author)
-  local date    = (attrs.date and attrs.date ~= '') and attrs.date
-                  or (entry.date and utils.stringify(entry.date))
-  if date and not date:match('^%d%d%d%d%-%d%d%-%d%d$') then
-    warn('date "' .. date .. '" of #' .. blk.identifier
-         .. ' is not YYYY-MM-DD; shown as written')
+                  or meta_authors(entry.author, blk.identifier)
+  local function date_of(key)
+    local value = (attrs[key] and attrs[key] ~= '') and attrs[key]
+                  or (entry[key] and utils.stringify(entry[key]))
+    if value then
+      -- Accept unpadded month/day ("2026-10-3" -> "2026-10-03")
+      local y, m, d = value:match('^(%d%d%d%d)%-(%d%d?)%-(%d%d?)$')
+      if y then
+        value = string.format('%s-%02d-%02d', y, tonumber(m), tonumber(d))
+      else
+        warn(key .. ' "' .. value .. '" of #' .. blk.identifier
+             .. ' is not YYYY-MM-DD; shown as written')
+      end
+    end
+    attrs[key] = nil
+    return value
   end
+  local date     = date_of('date')
+  local modified = date_of('date-modified')
   local license = (attrs.license and attrs.license ~= '') and attrs.license
                   or entry.license
   attrs.author  = nil
-  attrs.date    = nil
   attrs.license = nil
-  return authors, date, entry.citation, license and license_inlines(license)
+  return authors, date, modified, entry.citation,
+         license and license_inlines(license)
 end
 
 -- ---------------------------------------------------------------------------
@@ -546,14 +728,16 @@ return {
         local blk = blocks[i]
         if blk.t == 'Header' and blk.level == 2 then
           seen[blk.identifier] = true
-          local authors, date, citation, license =
+          local authors, date, modified, citation, license =
             section_info(blk, doc.meta)
           local reference = citation
             and format_citation(citation, blk, authors, date, doc.meta)
           new_blocks:insert(blk)
-          if #authors > 0 or date or reference or license then
+          if #authors > 0 or date or modified or reference or license then
             new_blocks:insert(author_block(authors,
-              date and format_date(date, base), labels, reference, license))
+              date and format_date(date, base),
+              modified and format_date(modified, base),
+              labels, reference, license))
           end
         else
           new_blocks:insert(blk)
