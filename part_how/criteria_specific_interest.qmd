@@ -1,17 +1,16 @@
 ---
-author-meta: "Lars Höft"
-date: 2026-10-01
-
-citation:
-  type: webpage
-  title: "Meine Webseite"
-  author:
-    - name: "Lars Höft"
-  issued: 2026-10-01
-  url: "https://example.com/meine-webseite"
+sec-interest:
+  author: "Lars Höft"
+  date: 2026-10-02
+  license:
+    text: "CC BY-NC 3.0 DE"
+    url: "https://creativecommons.org/licenses/by-nc/3.0/de/"
+  citation:
+    type: webpage
+    url: "https://example.com/meine-webseite"
 ---
 
-## Interesse {#sec-interest author="Lars Höft"}
+## Interesse {#sec-interest}
 
 ### Allgemeine Einführung/Beschreibung
 
