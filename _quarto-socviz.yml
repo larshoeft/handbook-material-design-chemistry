@@ -1,0 +1,13 @@
+# Vergleichsprofil im Stil von socviz.co (Cosmo, angepasst)
+# Rendern: quarto render --profile socviz
+project:
+  output-dir: _build/socviz
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme-socviz/socviz.scss]
+      dark: [cosmo, theme-socviz/socviz.scss, theme-socviz/socviz-dark.scss]
+    fig-cap-location: margin
+    tbl-cap-location: margin
+    reference-location: margin

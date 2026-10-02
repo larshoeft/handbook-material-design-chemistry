@@ -1,0 +1,6 @@
+# Standard-Theme (wird ohne --profile verwendet)
+format:
+  html:
+    theme:
+      - cosmo
+      - simplex

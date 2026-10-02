@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+// Schriftvariante zu ipn.scss: Alegreya (Text), Alegreya Sans
+// (Überschriften, Navigation) und Alegreya Sans SC (Kapitälchen für
+// Beschriftungen). Wird nach ipn.scss geladen und überschreibt dessen
+// Schrift-Variablen.
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,700&family=Alegreya+Sans+SC:wght@500;700&display=swap");
+
+$font-family-sans-serif: "Alegreya Sans", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Alegreya", Georgia, serif !default;
+$font-family-base: $font-family-serif !default;
+$headings-font-weight: 800 !default;
+// Alegreya hat eine kleine x-Höhe, daher etwas größer
+$font-size-base: 1.15rem !default;
+$font-family-smallcaps: "Alegreya Sans SC", "Alegreya Sans", sans-serif !default;
+
+/*-- scss:rules --*/
+// Kapitälchen für Beschriftungen
+#toc-title,
+.quarto-title-meta-heading,
+.callout .callout-title-container,
+.sidebar-item-section > .sidebar-item-container .sidebar-item-text,
+.quarto-float-caption-margin,
+.margin-caption {
+  font-family: $font-family-smallcaps;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+#toc-title {
+  font-weight: 700;
+}
