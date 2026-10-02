@@ -1,8 +1,14 @@
 ---
-editor: visual
+sec-cumulative:
+  author: "Sascha Bernholt"
+  date: 2026-10-02
+  license:
+    text: "CC BY-NC 3.0 DE"
+    url: "https://creativecommons.org/licenses/by-nc/3.0/de/"
+  citation: true
 ---
 
-## Kumulatives Lernen {#sec-cumulative author="Sascha Bernholt"}
+## Kumulatives Lernen {#sec-cumulative}
 
 ### Allgemeine Einführung/Beschreibung
 

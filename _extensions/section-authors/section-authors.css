@@ -1,4 +1,12 @@
-/* Author block below ## headings (see section-authors.lua) */
+/* Author/date block below ## headings (see section-authors.lua),
+   laid out like Quarto's chapter title block */
+.section-authors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
+  margin-bottom: 1em;
+}
+
 .section-authors-label {
   text-transform: uppercase;
   margin-top: 1em;
@@ -7,11 +15,21 @@
   font-weight: 400;
 }
 
-.section-authors-name {
+.section-authors-name,
+.section-authors-date,
+.section-authors-license {
   font-size: .9em;
   margin-bottom: .1em;
 }
 
-.section-authors-name:last-child {
-  margin-bottom: 1em;
+.section-authors-wide {
+  grid-column: 1 / -1;
+}
+
+.section-authors-citation {
+  font-size: .9em;
+}
+
+.section-authors-citation p {
+  margin-bottom: 0;
 }
