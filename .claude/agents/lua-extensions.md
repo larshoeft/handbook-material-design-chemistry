@@ -25,7 +25,7 @@ Im Code stehen möglichst wenige und nur sehr knappe Kommentare. Fordere deshalb
 - `_extension.yml` hat `title`, `version` mit semantischer Versionierung und `quarto-required`.
 - Die Version in `_extension.yml` stimmt mit einer eventuellen Konstante im Lua-Code überein.
 - Die Extension ist im Abschnitt „Extensions“ der `README.md` beschrieben.
-- Gemeinsam genutzte Hilfsfunktionen stehen in einem Modul statt doppelt im Code. Module werden über `quarto.utils.resolve_path()` und `require()` geladen, das zweite Ergebnis von `gsub` wird mit Klammern abgefangen.
+- Gemeinsam genutzte Hilfsfunktionen stehen in einem Modul statt doppelt im Code. Module werden über `quarto.utils.resolve_path()` und `require()` geladen.
 
 **Reihenfolge in der Lua-Datei**
 1. `EXTENSION_NAME`
@@ -38,7 +38,7 @@ Im Code stehen möglichst wenige und nur sehr knappe Kommentare. Fordere deshalb
 
 **Konfiguration**
 - Optionen stehen unter `extensions:` und dann dem Namen der Extension. Nackte Schlüssel auf oberster Ebene können mit Quarto oder anderen Extensions kollidieren.
-- Vorrang gilt in der Reihenfolge Standardwert, Metadaten, Argumente. Standardwerte werden vorher in eine neue Tabelle kopiert.
+- Vorrang gilt in der Reihenfolge Standardwert, Metadaten, Argumente.
 - Werte werden mit `pandoc.utils.stringify()` gelesen und gegen die erlaubten Werte geprüft.
 
 **Fehler und Formate**
@@ -47,8 +47,8 @@ Im Code stehen möglichst wenige und nur sehr knappe Kommentare. Fordere deshalb
 - Ungültige Eingaben führen zu einer Meldung und einem sicheren Standardwert.
 
 **Meldungen**
-- Genutzt werden `quarto.log.warning` und `quarto.log.error`, für Debug-Ausgaben `quarto.log.output`. Kein nacktes `print`.
-- Jede Meldung beginnt mit dem Namen der Extension und nennt, was zu tun ist.
+- Genutzt werden `quarto.log.warning` und `quarto.log.error`, für Debug-Ausgaben `quarto.log.output`.
+- Jede Meldung beginnt mit dem Namen der Extension.
 - Umbenannte Optionen funktionieren weiter und erzeugen einen Hinweis auf den neuen Namen.
 
 **Release**
@@ -61,6 +61,9 @@ Kennzeichne diese Punkte im Bericht als eigene Einschätzung.
 - Die Reihenfolge der Filter in `_quarto.yml` passt zu ihren Abhängigkeiten.
 - Filter arbeiten deterministisch. Melde Zeitstempel oder Zufallswerte in IDs.
 - Es gibt einen nachvollziehbaren Test, zum Beispiel ein kleines Beispieldokument.
+- Standardwerte werden vor dem Überschreiben in eine neue Tabelle kopiert.
+- Das zweite Ergebnis von `gsub` wird beim Laden von Modulen mit Klammern abgefangen.
+- Es gibt kein nacktes `print`, und Meldungen nennen, was zu tun ist.
 
 ## Bericht
 

@@ -9,7 +9,7 @@ Du prüfst formale Einheitlichkeit und änderst nichts. Lies zuerst `CLAUDE.md`,
 ## Prüfpunkte
 
 - **Einbindung:** Die Datei ist in einem Hauptkapitel eingebunden und steht in `STATUS.md`.
-- **Abschnitte:** Namen und Reihenfolge entsprechen der Vorlage. Leere Abschnitte sind erlaubt. Am Ende steht `### Quellen` mit `::: sectionrefs`.
+- **Abschnitte:** Die Reihenfolge entspricht der Vorlage. Kurzformen, leere Abschnitte und das Fehlen von „Einsatzbedingungen/Umsetzungswissen“ und „Transferwissen“ sind keine Befunde. Am Ende steht `### Quellen` mit `::: sectionrefs`.
 - **Überschrift:** Genau eine `##`-Überschrift mit `sec-`-ID. IDs sind im Buch eindeutig.
 - **Metadaten:** Block `sec-…` passt zur ID und enthält `author`, `date`, `license` und `citation`. Personen stehen in `book.author` oder `contributors`.
 - **Querverweise:** Jedes `@sec-…`, `@fig-…` und `@tbl-…` hat ein Ziel.
