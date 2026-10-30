@@ -8,24 +8,91 @@ lang: de
 
 book:
   title: "Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung"
-  author: 
+  author:
     - name: "Sascha Bernholt"
-    - name: "Ilka Parchmann"
+      id: sb
+      orcid: 0000-0003-4045-3795
+      email: bernholt@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Stefanie Lenzer"
+      id: sl
+      orcid: 0000-0002-4024-6473
+      email: lenzers@staff.uni-marburg.de
+      affiliation:
+        - ref: marburg
+    - name: "Leander Mecklenburg"
+      id: lm
+      orcid: 0009-0008-5724-3798
+      email: mecklenburg@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Jannik Lossjew"
+      id: jl
+      orcid: 0009-0005-1942-7121
+      email: jannik.lossjew@uni-tuebingen.de
+      affiliation:
+        - ref: tuebingen
+    - name: "Lars Höft"
+      id: lh
+      orcid: 0000-0002-9040-8995
+      email: hoeft@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Maximilian Traub"
+      id: mt
+      orcid: 0009-0009-4244-8958
+      email: traub@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Johannes Kröger"
+      id: jk
+      orcid: 0009-0001-5489-3372
+      email: kroeger@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Clemens Frank"
+      id: cf
+      orcid: 0009-0001-3742-147X
+      email: frank@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Anja Annemüller"
+      id: aa
+      orcid: 0009-0008-8762-1243
+      email: annemueller@leibniz-ipn.de
+      affiliation:
+        - ref: ipn
+    - name: "Gyde Asmussen"
+      id: ga
+      orcid: 0000-0001-6935-2563
+      affiliation:
+        - ref: ipn
   date: today
   chapters:
     - index.qmd
     - intro.qmd
     - part: _why.qmd
-      chapters: 
+      chapters:
         - part_why/_importance.qmd
         - part_why/_orientations.qmd
     - part: _how.qmd
-      chapters: 
+      chapters:
         - part_how/_frameworks.qmd
         - part_how/_criteria_general.qmd
         - part_how/_criteria_specific.qmd
     - summary.qmd
 
+affiliations:
+  - id: ipn
+    name: IPN
+    url: https://www.leibniz-ipn.de
+  - id: marburg
+    name: Philipps-Universität Marburg
+    url: https://www.uni-marburg.de
+  - id: tuebingen
+    name: Eberhard Karls Universität Tübingen
+    url: https://uni-tuebingen.de
 
 bibliography: zotero.bib
 csl: apa.csl
@@ -44,6 +111,8 @@ filters:
 
 format:
   html:
+    template-partials:
+      - _extensions/section-authors/title-metadata.html
     bread-crumbs: false
     page-navigation: false
     number-sections: true
@@ -51,4 +120,3 @@ format:
     toc-depth: 2
 
 editor: source
-

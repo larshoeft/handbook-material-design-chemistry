@@ -1,7 +1,6 @@
 ---
 author: 
     - name: "Sascha Bernholt"
-    - name: "Ilka Parchmann"
 date: 2026-04-30
 ---
 

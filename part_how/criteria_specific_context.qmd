@@ -2,7 +2,7 @@
 editor: visual
 ---
 
-## Kontextualisierung {#sec-context author="Max Traub"}
+## Kontextualisierung {#sec-context author="mt"}
 
 ### Allgemeine Einführung/Beschreibung
 

@@ -1,4 +1,4 @@
-## Adaptivität {#sec-adaptivity author="Gyde Asmussen"}
+## Adaptivität {#sec-adaptivity author="ga"}
 
 ### Allgemeine Einführung/Beschreibung
 

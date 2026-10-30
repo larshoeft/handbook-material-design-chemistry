@@ -140,6 +140,25 @@ sec-interest:
 
 Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.
 
+People with an `id` in `book.author` and affiliations with an `id` in the top-level `affiliations` of `_quarto.yml` only need to be defined once. Sections then refer to them, and an unknown `ref` produces a warning:
+
+```markdown
+---
+sec-interest:
+  author:
+    - ref: lh                     # or short: author: "lh, sb"
+    - name: "Erika Musterfrau"
+      affiliation:
+        - ref: ipn
+---
+```
+
+```markdown
+## Interesse {#sec-interest author="lh"}
+```
+
+The book's title page shows `book.author` with the same icons. It uses the template partial `_extensions/section-authors/title-metadata.html`, registered under `template-partials` in `_quarto.yml`.
+
 #### `section-bibliographies`
 
 Creates a separate reference list per section instead of one for the whole book (based on [pandoc-ext/section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)). For this reason `citeproc: false` is set in `_quarto.yml`. At the end of your section, add a heading with an empty `sectionrefs` div. It collects the references of all subsections:

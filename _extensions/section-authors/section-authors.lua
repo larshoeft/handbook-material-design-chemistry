@@ -38,7 +38,7 @@
 ---   ## My Section {#sec-my-section}
 ---
 --- Authors follow Quarto's author schema; name, e-mail, ORCID and
---- affiliations are shown, other keys (id, …) are ignored:
+--- affiliations are shown, other keys are ignored:
 ---
 ---   sec-my-section:
 ---     author:
@@ -50,6 +50,16 @@
 ---             url: "https://www.leibniz-ipn.de"
 ---       - "Bob Schmidt"             # a plain name works as well
 ---
+--- People with an `id` in `book.author` and affiliations with an `id` in
+--- the top-level `affiliations` of _quarto.yml can be referred to:
+---
+---   sec-my-section:
+---     author:
+---       - ref: am                   # or short: author: "am, bs"
+---       - name: "Bob Schmidt"
+---         affiliation:
+---           - ref: ipn
+---
 --- Front matter of {{< include >}}d files is merged into the chapter key
 --- by key (a later file replaces a key, it does not merge into it).
 --- Hence one top-level key per section: it neither overrides the
@@ -59,7 +69,7 @@
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.3.0'
+local EXTENSION_VERSION = '0.4.0'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -532,21 +542,27 @@ local function add_css()
   end
 end
 
----Parse a comma-separated author string into a list of author records
----(names only).
----@param str string
----@return table[]
-local function parse_authors(str)
-  local authors = {}
-  for name in str:gmatch('[^,]+') do
-    name = name:match('^%s*(.-)%s*$')
-    if name ~= '' then authors[#authors + 1] = { name = name } end
+--- Maps with an `id` in `book.author` and `affiliations`, by id
+local known_authors = {}
+local known_affiliations = {}
+
+---Index the maps of a metadata list by their `id`.
+---@param value MetaValue|nil
+---@return table<string, table>
+local function index_by_id(value)
+  local index = {}
+  if utils.type(value) ~= 'List' then return index end
+  for _, item in ipairs(value) do
+    if utils.type(item) == 'table' and item.id then
+      index[utils.stringify(item.id)] = item
+    end
   end
-  return authors
+  return index
 end
 
 ---Affiliations from Quarto's `affiliation(s)`: a name, a map with
----`name` and `url`, or a list of either. URLs without a scheme
+---`name` and `url` or `ref` (id in `affiliations`), or a list of these.
+---URLs without a scheme
 ---("www.example.org") get "https://".
 ---@param value MetaValue|nil
 ---@return table[] records with name and url
@@ -558,6 +574,13 @@ local function affiliation_list(value)
   for _, item in ipairs(value) do
     local name, url
     if utils.type(item) == 'table' then
+      if item.ref then
+        local ref = utils.stringify(item.ref)
+        if not known_affiliations[ref] then
+          warn('unknown affiliation ref "' .. ref .. '"')
+        end
+        item = known_affiliations[ref] or {}
+      end
       name = item.name and utils.stringify(item.name)
       url  = item.url and utils.stringify(item.url)
       if url and not url:match('^%a[%w+.-]*:') then
@@ -604,8 +627,34 @@ local function author_record(item, id)
   return author
 end
 
----Author records from a metadata value: a name, a Quarto author map,
----a list of either, or a comma-separated string.
+---Author record for an id in `book.author`.
+---@param ref string the id
+---@param id string section id, for warnings
+---@return table|nil
+local function known_author(ref, id)
+  local item = known_authors[ref]
+  return item and author_record(item, id)
+end
+
+---Parse a comma-separated author string into a list of author records
+---(ids in `book.author` or plain names).
+---@param str string
+---@param id string section id, for warnings
+---@return table[]
+local function parse_authors(str, id)
+  local authors = {}
+  for name in str:gmatch('[^,]+') do
+    name = name:match('^%s*(.-)%s*$')
+    if name ~= '' then
+      authors[#authors + 1] = known_author(name, id) or { name = name }
+    end
+  end
+  return authors
+end
+
+---Author records from a metadata value: a name or id, a Quarto author
+---map, a `ref` map (id in `book.author`), a list of these, or a
+---comma-separated string.
 ---@param value MetaValue|nil
 ---@param id string section id, for warnings
 ---@return table[]
@@ -617,7 +666,13 @@ local function meta_authors(value, id)
     local authors = {}
     for _, item in ipairs(value) do
       local author
-      if utils.type(item) == 'table' then
+      if utils.type(item) == 'table' and item.ref then
+        local ref = utils.stringify(item.ref)
+        author = known_author(ref, id)
+        if not author then
+          warn('unknown author ref "' .. ref .. '" in #' .. id)
+        end
+      elseif utils.type(item) == 'table' then
         author = author_record(item, id)
       else
         local name = utils.stringify(item)
@@ -625,13 +680,13 @@ local function meta_authors(value, id)
           warn('author "' .. name .. '" in #' .. id .. ' looks like an '
                .. 'e-mail or ORCID; use "name:", "email:" and "orcid:"')
         end
-        author = { name = name }
+        author = known_author(name, id) or { name = name }
       end
       if author then authors[#authors + 1] = author end
     end
     return authors
   end
-  return parse_authors(utils.stringify(value))
+  return parse_authors(utils.stringify(value), id)
 end
 
 ---Metadata entry for a section id: a map under that top-level key, or
@@ -677,7 +732,7 @@ local function section_info(blk, meta)
   validate_entry(blk.identifier, entry)
   local attrs   = blk.attributes
   local authors = (attrs.author and attrs.author ~= '')
-                  and parse_authors(attrs.author)
+                  and parse_authors(attrs.author, blk.identifier)
                   or meta_authors(entry.author, blk.identifier)
   local function date_of(key)
     local value = (attrs[key] and attrs[key] ~= '') and attrs[key]
@@ -713,6 +768,9 @@ return {
   {
     Pandoc = function(doc)
       add_css()
+      local book = doc.meta.book
+      known_authors = index_by_id(utils.type(book) == 'table' and book.author)
+      known_affiliations = index_by_id(doc.meta.affiliations)
       if doc.meta['section-meta'] then
         warn('"section-meta" is deprecated: put each entry at top level, '
              .. 'e.g. "sec-my-section:" (entries of included files '

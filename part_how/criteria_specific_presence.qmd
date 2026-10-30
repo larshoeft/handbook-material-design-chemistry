@@ -2,7 +2,7 @@
 editor: visual
 ---
 
-## Präsenzerleben {#sec-presence author="Leander Mecklenburg"}
+## Präsenzerleben {#sec-presence author="lm"}
 
 ### Allgemeine Einführung/Beschreibung
 
