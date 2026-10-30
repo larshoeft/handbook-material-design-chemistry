@@ -1,5 +1,9 @@
 # Handbook
 
+## Contributing
+
+Rules for structure, citations and writing are in [CLAUDE.md](CLAUDE.md) (in German). The state of each text is in [STATUS.md](STATUS.md). Claude Code picks up the agents and skills in `.claude/` automatically.
+
 ## Workflow (Briefs)
 
 This guide explains how to:  
@@ -26,13 +30,13 @@ This guide explains how to:
    Open the template [`part_how/criteria_specific_template.qmd`](https://cau-git.rz.uni-kiel.de/ipn/che/handbook-material-design-chemistry/-/raw/dev/part_how/criteria_specific_template.qmd?ref_type=heads&inline=false) in Visual Mode and create your content. Update the following:  
 
    - File name  
-   - Title (e.g., `# Title`)  
-   - Reference ID (e.g., `#sec-cs-title`)  
-   - Author entry: `author="YOUR NAME"` (or a metadata block, see [Extensions](#extensions))
+   - Title (e.g., `## Title`)  
+   - Reference ID (e.g., `#sec-title`)  
+   - Metadata block `sec-title:` with your ID from `_quarto.yml` (see [Extensions](#extensions))
 
    **Tip:** Use Reference IDs for tables and figures consistently:  
-   - Tables: `#tbl-cs-title-tablename`  
-   - Figures: `#fig-cs-title-figurename`
+   - Tables: `#tbl-title-tablename`  
+   - Figures: `#fig-title-figurename`
 
 5. **Citation syntax**   
     Quarto uses standard Pandoc Markdown citation syntax.   
@@ -57,7 +61,7 @@ This guide explains how to:
    Ensure that all references used in your brief are included in the **"Handbook"** Group Library.
 
 7. **Export the bibliography**  (ONLY FOR MAINTAINERS)   
-   Export the Group Library as `zotero.bib`. Use the biblatex format and the option `keep updated`
+   Export the Group Library as `zotero.bib` by hand, in biblatex format and without `keep updated`. Citation keys are pinned and use the Better BibTeX formula in [CLAUDE.md](CLAUDE.md). Check the export with the skill `literatur-pruefen` before committing.
 
 8. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)   
    Use the Python script `clean_references.py` to remove unused references:
@@ -97,7 +101,7 @@ quarto render
 
 ### Extensions
 
-The book uses two custom Lua filters in `_extensions/`. Both are registered in `_quarto.yml` (`filters:` with `at: pre-quarto`).
+The book uses three custom Lua filters in `_extensions/`. All are registered in `_quarto.yml` (`filters:` with `at: pre-quarto`).
 
 #### `section-authors`
 
@@ -122,7 +126,7 @@ sec-interest:
 ## Interesse {#sec-interest author="Max Mustermann" date="2026-10-02"}
 ```
 
-Authors may also follow Quarto's author schema. ORCID, affiliations and e-mail are then shown as icons next to the name (the affiliation's name appears as a tooltip and links to its `url`, if given); other keys such as `id` are ignored:
+Authors may also follow Quarto's author schema. ORCID, affiliations and e-mail are then shown as icons next to the name (the affiliation's name appears as a tooltip and links to its `url`, if given):
 
 ```markdown
 ---
@@ -140,7 +144,7 @@ sec-interest:
 
 Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.
 
-People with an `id` in `book.author` and affiliations with an `id` in the top-level `affiliations` of `_quarto.yml` only need to be defined once. Sections then refer to them, and an unknown `ref` produces a warning:
+Editors are listed in `book.author`, all other people in the top-level `contributors` of `_quarto.yml`, and affiliations in `affiliations`. Each needs an `id` and is defined once. Sections then refer to them. An unknown `ref` or a single unknown word produces a warning:
 
 ```markdown
 ---
@@ -157,7 +161,7 @@ sec-interest:
 ## Interesse {#sec-interest author="lh"}
 ```
 
-The book's title page shows `book.author` with the same icons. It uses the template partial `_extensions/section-authors/title-metadata.html`, registered under `template-partials` in `_quarto.yml`.
+The book's title page shows `book.author` as editors with the same icons, and section citations name them as editors of the book. It uses the template partial `_extensions/section-authors/title-metadata.html`, registered under `template-partials` in `_quarto.yml`.
 
 #### `section-bibliographies`
 
@@ -174,9 +178,11 @@ Inline citations link to the nearest reference list. Quarto cross-references (`@
 
 **Note:** Both filters only run when the whole book is rendered. They are not used by `render_docx.ps1`.
 
-### Website themes
+#### `german-quotes`
 
-> **Note:** The theme profiles currently live on the branch `theming` and are not yet merged.
+Pandoc writes English quotation marks even with `lang: de`. For German documents this filter turns straight quotes in the source (`"…"`, `'…'`) into „…“ and ‚…‘. It also runs in `render_docx.ps1`.
+
+### Website themes
 
 The look of the website is defined by [Quarto profiles](https://quarto.org/docs/projects/profiles.html). `_quarto.yml` holds the shared settings, and each profile adds a theme via `_quarto-<profile>.yml`:
 
@@ -202,5 +208,4 @@ The `_build/` folder is ignored by git. It only holds output for comparing the v
 
 ### Pipeline
 
-`git merge` **main** → CI builds Docker image → Deploy static website   
-*(Optionally via GitHub Actions instead of GitLab CI)*
+Work happens on cau-git. The website is rendered on GitHub by `.github/workflows/publish.yml` when `dev` is pushed there.
