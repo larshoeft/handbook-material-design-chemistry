@@ -10,3 +10,11 @@ _build/
 /.luarc.json
 .positai
 _docx/
+
+# Lokale Arbeitsquellen und Einstellungen
+_quellen_docx/
+_quellen_pdf/
+.claude/settings.local.json
+.claude/review-*.md
+missing_keys.txt
+venv/
