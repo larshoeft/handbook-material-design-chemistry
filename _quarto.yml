@@ -15,59 +15,18 @@ book:
       email: bernholt@leibniz-ipn.de
       affiliation:
         - ref: ipn
-    - name: "Stefanie Lenzer"
-      id: sl
-      orcid: 0000-0002-4024-6473
-      email: lenzers@staff.uni-marburg.de
-      affiliation:
-        - ref: marburg
-    - name: "Leander Mecklenburg"
-      id: lm
-      orcid: 0009-0008-5724-3798
-      email: mecklenburg@leibniz-ipn.de
-      affiliation:
-        - ref: ipn
-    - name: "Jannik Lossjew"
-      id: jl
-      orcid: 0009-0005-1942-7121
-      email: jannik.lossjew@uni-tuebingen.de
-      affiliation:
-        - ref: tuebingen
     - name: "Lars Höft"
       id: lh
       orcid: 0000-0002-9040-8995
       email: hoeft@leibniz-ipn.de
       affiliation:
         - ref: ipn
-    - name: "Maximilian Traub"
-      id: mt
-      orcid: 0009-0009-4244-8958
-      email: traub@leibniz-ipn.de
+    - name: "Stefanie Lenzer"
+      id: sl
+      orcid: 0000-0002-4024-6473
+      email: lenzers@staff.uni-marburg.de
       affiliation:
-        - ref: ipn
-    - name: "Johannes Kröger"
-      id: jk
-      orcid: 0009-0001-5489-3372
-      email: kroeger@leibniz-ipn.de
-      affiliation:
-        - ref: ipn
-    - name: "Clemens Frank"
-      id: cf
-      orcid: 0009-0001-3742-147X
-      email: frank@leibniz-ipn.de
-      affiliation:
-        - ref: ipn
-    - name: "Anja Annemüller"
-      id: aa
-      orcid: 0009-0008-8762-1243
-      email: annemueller@leibniz-ipn.de
-      affiliation:
-        - ref: ipn
-    - name: "Gyde Asmussen"
-      id: ga
-      orcid: 0000-0001-6935-2563
-      affiliation:
-        - ref: ipn
+        - ref: marburg
   date: today
   chapters:
     - index.qmd
@@ -82,6 +41,49 @@ book:
         - part_how/_criteria_general.qmd
         - part_how/_criteria_specific.qmd
     - summary.qmd
+
+contributors:
+  - name: "Leander Mecklenburg"
+    id: lm
+    orcid: 0009-0008-5724-3798
+    email: mecklenburg@leibniz-ipn.de
+    affiliation:
+      - ref: ipn
+  - name: "Jannik Lossjew"
+    id: jl
+    orcid: 0009-0005-1942-7121
+    email: jannik.lossjew@uni-tuebingen.de
+    affiliation:
+      - ref: tuebingen
+  - name: "Maximilian Traub"
+    id: mt
+    orcid: 0009-0009-4244-8958
+    email: traub@leibniz-ipn.de
+    affiliation:
+      - ref: ipn
+  - name: "Johannes Kröger"
+    id: jk
+    orcid: 0009-0001-5489-3372
+    email: kroeger@leibniz-ipn.de
+    affiliation:
+      - ref: ipn
+  - name: "Clemens Frank"
+    id: cf
+    orcid: 0009-0001-3742-147X
+    email: frank@leibniz-ipn.de
+    affiliation:
+      - ref: ipn
+  - name: "Anja Annemüller"
+    id: aa
+    orcid: 0009-0008-8762-1243
+    email: annemueller@leibniz-ipn.de
+    affiliation:
+      - ref: ipn
+  - name: "Gyde Asmussen"
+    id: ga
+    orcid: 0000-0001-6935-2563
+    affiliation:
+      - ref: ipn
 
 affiliations:
   - id: ipn
@@ -108,6 +110,8 @@ filters:
     path: section-authors
   - at: pre-quarto
     path: section-bibliographies
+  - at: pre-quarto
+    path: german-quotes
 
 format:
   html:

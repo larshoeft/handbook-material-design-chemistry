@@ -18,6 +18,7 @@ New-Item -ItemType Directory -Path $tmp | Out-Null
 
 Copy-Item $quelle (Join-Path $tmp "$name.qmd")
 Copy-Item (Join-Path $root "zotero.bib"), (Join-Path $root "apa.csl") $tmp
+Copy-Item (Join-Path $root "_extensions\german-quotes\german-quotes.lua") $tmp
 if (Test-Path (Join-Path $root "img")) { Copy-Item -Recurse (Join-Path $root "img") $tmp }
 
 @"
@@ -25,6 +26,8 @@ lang: de
 bibliography: zotero.bib
 csl: apa.csl
 reference-section-title: Literatur
+filters:
+  - german-quotes.lua
 format: docx
 "@ | Set-Content -Encoding utf8 (Join-Path $tmp "_quarto.yml")
 

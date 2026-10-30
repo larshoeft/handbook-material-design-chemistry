@@ -1,8 +1,4 @@
----
-author: Sascha Bernholt
----
-
-# Verfahren und Rahmenmodelle 
+# Verfahren und Rahmenmodelle
 
 
 {{< include frameworks_rec.qmd >}}

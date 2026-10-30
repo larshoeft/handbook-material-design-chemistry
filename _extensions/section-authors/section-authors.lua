@@ -50,8 +50,8 @@
 ---             url: "https://www.leibniz-ipn.de"
 ---       - "Bob Schmidt"             # a plain name works as well
 ---
---- People with an `id` in `book.author` and affiliations with an `id` in
---- the top-level `affiliations` of _quarto.yml can be referred to:
+--- People with an `id` in `book.author` or `contributors` and affiliations
+--- with an `id` in `affiliations` can be referred to:
 ---
 ---   sec-my-section:
 ---     author:
@@ -69,7 +69,7 @@
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.4.0'
+local EXTENSION_VERSION = '0.5.0'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -358,7 +358,7 @@ end
 ---document's `csl` and `lang`). Missing title, author and issued are
 ---taken from the heading, the section authors and the section date;
 ---for `type: chapter`, missing container-title and editor from the
----book title and the chapter's (or book's) authors.
+---book title and `book.author`.
 ---@param citation MetaValue|boolean `citation` entry (`true` = defaults)
 ---@param header Header the section heading
 ---@param authors table[] section authors (see meta_authors)
@@ -377,12 +377,11 @@ local function format_citation(citation, header, authors, date, meta)
 
   item.author = csl_names(item.author or authors)
 
-  -- A chapter belongs to the book: default to the book title and the
-  -- chapter's authors (or the book's) as editors.
+  -- `book.author` holds the book's editors
   if item.type == 'chapter' then
     local book = utils.type(meta.book) == 'table' and meta.book or {}
     item['container-title'] = item['container-title'] or book.title
-    item.editor = csl_names(item.editor or meta.author or book.author)
+    item.editor = csl_names(item.editor or book.author)
   end
 
   local cite_meta = {
@@ -542,15 +541,11 @@ local function add_css()
   end
 end
 
---- Maps with an `id` in `book.author` and `affiliations`, by id
 local known_authors = {}
 local known_affiliations = {}
 
----Index the maps of a metadata list by their `id`.
----@param value MetaValue|nil
----@return table<string, table>
-local function index_by_id(value)
-  local index = {}
+local function index_by_id(value, index)
+  index = index or {}
   if utils.type(value) ~= 'List' then return index end
   for _, item in ipairs(value) do
     if utils.type(item) == 'table' and item.id then
@@ -627,17 +622,23 @@ local function author_record(item, id)
   return author
 end
 
----Author record for an id in `book.author`.
----@param ref string the id
----@param id string section id, for warnings
----@return table|nil
 local function known_author(ref, id)
   local item = known_authors[ref]
   return item and author_record(item, id)
 end
 
----Parse a comma-separated author string into a list of author records
----(ids in `book.author` or plain names).
+-- A single unknown word is likely a mistyped id
+local function author_from_string(name, id)
+  local author = known_author(name, id)
+  if author then return author end
+  if not name:match('%s') then
+    warn('author "' .. name .. '" in #' .. id .. ' is no known id and no '
+         .. 'full name; check "book.author" and "contributors"')
+  end
+  return { name = name }
+end
+
+---Parse a comma-separated author string into a list of author records.
 ---@param str string
 ---@param id string section id, for warnings
 ---@return table[]
@@ -646,15 +647,14 @@ local function parse_authors(str, id)
   for name in str:gmatch('[^,]+') do
     name = name:match('^%s*(.-)%s*$')
     if name ~= '' then
-      authors[#authors + 1] = known_author(name, id) or { name = name }
+      authors[#authors + 1] = author_from_string(name, id)
     end
   end
   return authors
 end
 
 ---Author records from a metadata value: a name or id, a Quarto author
----map, a `ref` map (id in `book.author`), a list of these, or a
----comma-separated string.
+---map, a `ref` map, a list of these, or a comma-separated string.
 ---@param value MetaValue|nil
 ---@param id string section id, for warnings
 ---@return table[]
@@ -680,7 +680,7 @@ local function meta_authors(value, id)
           warn('author "' .. name .. '" in #' .. id .. ' looks like an '
                .. 'e-mail or ORCID; use "name:", "email:" and "orcid:"')
         end
-        author = known_author(name, id) or { name = name }
+        author = author_from_string(name, id)
       end
       if author then authors[#authors + 1] = author end
     end
@@ -769,7 +769,9 @@ return {
     Pandoc = function(doc)
       add_css()
       local book = doc.meta.book
-      known_authors = index_by_id(utils.type(book) == 'table' and book.author)
+      known_authors = index_by_id(
+        utils.type(book) == 'table' and book.author or nil)
+      index_by_id(doc.meta.contributors, known_authors)
       known_affiliations = index_by_id(doc.meta.affiliations)
       if doc.meta['section-meta'] then
         warn('"section-meta" is deprecated: put each entry at top level, '
