@@ -27,7 +27,7 @@ Skript: `.claude/skills/docx-einarbeiten/scripts/docx_vergleich.py`
 
 8. **Wortvergleich.** `python <skript> vergleich "<datei>" <qmd> --aenderungen <wahl> --zitate` ausführen. Mit `--ohne-kopf <n>` werden die Wörter einer Word-Kopfzeile übersprungen. Exit-Code 1 bedeutet Abweichungen. Jede Abweichung korrigieren oder begründen, bis nur erklärte übrig sind. Die Zitatlisten beider Seiten vergleichen, weil der Textvergleich Zitate ausblendet.
 
-9. **Abschluss.** `quarto render` ausführen und `STATUS.md` aktualisieren. Nicht ohne Anweisung committen.
+9. **Abschluss.** `quarto render` ausführen und `STATUS.md` aktualisieren. Abweichungen von den Schreibregeln bleiben im Text und werden dort unter „Nach dem Import über alle Texte vereinheitlichen“ ergänzt, falls noch nicht aufgeführt. Nicht ohne Anweisung committen.
 
 ## Bericht
 

@@ -60,6 +60,7 @@ Beim Word-Import gelten diese Regeln nicht, dort bleibt der Wortlaut unveränder
 - Sätze ausformulieren statt Halbsätze mit Doppelpunkt anzuhängen. Ausnahme ist der Doppelpunkt vor einer Aufzählung.
 - Gleiche Satzanfänge vermeiden, Autor (Jahr) ist auch als Satzanfang möglich.
 - Gender mit Doppelpunkt, zum Beispiel `Autor:innen`.
+- Statistische Symbole kursiv, zum Beispiel `*N*`.
 - Begriffe der jeweiligen Quelle übernehmen und Konstrukte nicht vermischen.
 - Im Kriterium Interesse meint „Interesse“ nur POI und FPM. Vocational Interest und Intrinsic Value der Erwartungs-Wert-Theorie werden mit dem Begriff ihrer Quelle benannt. Einschränkungen werden im Text genannt, statt den Befund zu streichen.
 
