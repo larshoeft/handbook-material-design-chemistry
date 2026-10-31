@@ -19,7 +19,7 @@ Skript: `.claude/skills/docx-einarbeiten/scripts/docx_vergleich.py`
 
 4. **Überschriften.** Ohne Word-Formatvorlagen die Kandidaten aus der Analyse den Abschnitten der Vorlage zuordnen und bestätigen lassen. Abschnittsnamen bleiben wie in Word. Abweichungen von der Vorlage werden gemeldet, nicht geändert. Eine Kopfzeile wie „Kontextualisierung -- Maximilian Traub“ wird zu Titel und Person und im Bericht genannt.
 
-5. **Zitate.** Für Zotero-Felder gilt die Zuordnung aus der Analyse. Sonst Textzitat und Literaturliste gegen `zotero.bib` abgleichen. Nur eindeutige Treffer werden zu `[@key]`, unsichere werden gemeldet und nie geraten. Fehlt die Quelle, bleibt das Textzitat stehen, und die Angaben aus Word kommen in `STATUS.md`. Das Word-Literaturverzeichnis wird nicht übernommen.
+5. **Zitate.** Für Zotero-Felder gilt die Zuordnung aus der Analyse. Sonst Textzitat und Literaturliste gegen `zotero.bib` abgleichen. Nur eindeutige Treffer werden zu `[@key]`, unsichere werden gemeldet und nie geraten. Fehlt die Quelle, bleibt das Textzitat stehen, und die Angaben aus Word kommen in `STATUS.md`. Das Word-Literaturverzeichnis wird nicht übernommen. Vollständige Literaturangaben im Fließtext werden zu `[@key]`, weil die Liste unter `### Quellen` automatisch entsteht. Das gilt als erklärte Abweichung im Wortvergleich.
 
 6. **Weitere Inhalte.** Bilder nach `img/` kopieren, mit Dateiname `<ziel>_<name>`. Fußnoten übernehmen. Tabellen möglichst als Pipe-Tabellen, sonst melden.
 

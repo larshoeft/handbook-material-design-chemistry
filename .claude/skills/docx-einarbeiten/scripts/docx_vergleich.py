@@ -169,7 +169,7 @@ def document_tokens(source, source_format, changes='accept'):
     for block in blocks:
         text = []
         inline_text(block, text, [])
-        if ''.join(text).strip().lower() in REFERENCE_HEADINGS:
+        if ''.join(text).strip().rstrip(':').lower() in REFERENCE_HEADINGS:
             break
         inline_text(block, out, keys)
     return mask_citations(normalize_characters(''.join(out))), keys

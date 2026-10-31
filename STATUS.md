@@ -9,7 +9,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 | Design-Based Research | `part_how/frameworks_dbr.qmd` | `4_Verfahren und Modelle/Steckbrief_DesignBasedResearch_Leander.docx` | nein | 11 Einfügungen, 11 Löschungen, 11 Kommentare | noch nicht geprüft |
 | Didaktische Rekonstruktion | `part_how/frameworks_rec.qmd` | `4_Verfahren und Modelle/Steckbrief_Didaktische Rekonstruktion.docx` | nein | | noch nicht geprüft |
 | Universal Design for Learning | `part_how/frameworks_udl.qmd` | keine | | | |
-| Adaptivität | `part_how/criteria_specific_adaptivity.qmd` | `6_Kriterien/Steckbrief_Adaptivität_Gyde.docx` | nein | | noch nicht geprüft |
+| Adaptivität | `part_how/criteria_specific_adaptivity.qmd` | `6_Kriterien/Steckbrief_Adaptivität_Gyde.docx` | ja, 31.10.2026 | | 2, siehe unten |
 | Kognitive Belastung | `part_how/criteria_specific_cognitiveload.qmd` | `6_Kriterien/Steckbrief_Cognitive_load_Anja.docx` | ja, 30.10.2026 | 2 Einfügungen, 2 Löschungen (angenommen), 8 Kommentare, 2 Markierungen | 3, siehe unten |
 | Interesse | `part_how/criteria_specific_interest.qmd` | `6_Kriterien/Steckbrief_Interesse_Lars.docx` | nein | 159 Einfügungen, 143 Löschungen, 12 Kommentare | noch nicht geprüft |
 | Kontextualisierung | `part_how/criteria_specific_context.qmd` | `6_Kriterien/Steckbrief_Kontextualisierung_Max.docx` | nein | | noch nicht geprüft |
@@ -42,4 +42,6 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 | Kumulatives Lernen | SINUS (o.D.), Modul 5. Zotero `sinus1999_modul` hat 1999 | (SINUS, o.D.) |
 | Kumulatives Lernen | Hattie (2008), Visible learning. Zotero `hattie2009_visible` hat 2009, Ausgabe unklar | Hattie (2008) |
 | Kumulatives Lernen | Bruner (1970), Der Prozess der Erziehung. Berlin-Verlag. Zotero `bruner1980_prozess` hat 1980 | Bruner (1970) |
+| Adaptivität | Aleven, McLaughlin, Glenn & Koedinger (2017), Instruction based on adaptive learning technologies. In Mayer & Alexander, Handbook of research on learning and instruction. Zotero `aleven2025_instruction` hat 2025 | (Aleven et al., 2017; Plass and Pawar, 2020), Aleven et al. (2017) |
+| Adaptivität | Martin, Kubsch, Yik, Burlingham & Graulich (2025), Adaptive, but Equitable? Science Education. DOI 10.1002/sce.70042. Zotero `martin2026_adaptive` hat 2026 | (Martin et al., 2025) |
 | Kumulatives Lernen | Renkl (2010), Lehren und Lernen. In Tippelt & Schmidt, Handbuch Bildungsforschung. DOI 10.1007/978-3-531-92015-3_39. Zotero `renkl2002_lehren` hat 2002 | (Renkl, 2010) |
