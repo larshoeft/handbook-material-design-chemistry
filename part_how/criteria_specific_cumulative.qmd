@@ -8,7 +8,7 @@ sec-cumulative:
 
 ## Kumulatives Lernen {#sec-cumulative}
 
-### Allgemeine Einführung und Beschreibung
+### Allgemeine Einführung/Beschreibung
 
 Unter kumulativem Lernen versteht man einen Lernprozess, bei dem neues Wissen systematisch auf bereits vorhandenem Wissen aufbaut, dieses vertieft, erweitert und vernetzt [@bransford2000_how]. Es ist das Gegenteil von "punktuellem" oder "episodischem" Lernen, bei dem Lerninhalte isoliert nebeneinanderstehen und nach der Prüfung oft wieder vergessen werden ("Bulimie-Lernen").
 
@@ -47,7 +47,7 @@ Bei der Konzeption eines Spiralcurriculums bzw. eines Lernpfads muss die Sachstr
 
 Relevante Stakeholder sind in diesem Kontext natürlich Schüler:innen und Lehrkräfte, ggf. auch Schulleitungen oder Mitglieder von Fachkommissionen (bspw. zur Überarbeitung von Lehrplänen). Schüler:innen kommt dabei in erster Linie eine evaluative Rolle zu (mit Blick auf "üblichen" Unterricht oder zur Einschätzung einer Intervention), während die anderen Gruppen (auch) in Planungs- und Reflexionsprozesse kumulativer Lernpfade oder Curricula eingebunden werden können.
 
-### Ansätze zur Absicherung der Umsetzung (Evaluation)
+### Ansätze zur Absicherung der Umsetzung (Implementation-Check)
 
 Um zu prüfen, ob und inwieweit kumulativ unterrichtet wird, finden sich in der Literatur unterschiedliche Ansätze:
 
@@ -56,7 +56,7 @@ Um zu prüfen, ob und inwieweit kumulativ unterrichtet wird, finden sich in der 
 3.  Concept Maps: Visualisierung der Wissensstruktur von Lernenden zu verschiedenen Zeitpunkten.
 4.  Unterrichtsbeobachtungen: Häufigkeit von Rückbezügen im Unterrichtsgespräch; Qualität der Aufgabenstellungen (beziehen diese explizit Wissen aus dem Vorthema/Vorjahr ein?)
 
-### Ansätze zur Untersuchung der Wirkung (Forschung)
+### Ansätze zur Untersuchung der Wirkung (Effect-Check)
 
 Generell werden Interventionsstudien und Längsschnittstudien als Mittel der Wahl angegeben. Aufgrund der Zeitskala sind diese aber i. d. R. sehr aufwändig und daher entsprechend selten. Beispiele für einen Interventionsansatz sind Studien zum IQUEST-Curriculum, in denen eine "kumulative" Unterrichtseinheit gegen "traditionellen" Unterricht verglichen wurde [@krajcik2008_learninggoalsdriven]. Unterschiedliche "kumulative" Ansätze wurden im Projekt Elevate [@fortus2019_systems] verglichen. Längsschnittuntersuchungen im Chemieunterricht finden sich bei @bernholt2020_entwicklung oder @fischer2013_nwuessen. Hier wurde vor allem versucht, durch Konzept- bzw. Kompetenztests die Lernentwicklung über mehrere Schuljahre abzubilden. "Kürzere" Studien versuchen Effekte kumulativen Lernens durch Transfertests zu untersuchen. @kehne2019_analyse hat dies auf Basis unterschiedlich kontextualisierter Unterrichtseinheiten analysiert.
 

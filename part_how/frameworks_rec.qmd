@@ -44,7 +44,7 @@ Die Begründer des Modells beschreiben in der zentralen Publikation [@kattmann19
 
 (2) Die didaktische Rekonstruktion neuer, bisher nicht unterrichteter Themenbereiche
 
-### Befunde zur Wirkung
+### Befunde zur Zielsetzung
 
 Im Vergleich zu den Qualitätskriterien des Handbuchs ist die Wirkung von entwicklungsleitenden Verfahren und Modellen, wie der hier präsentierten didaktischen Rekonstruktion, prinzipiell nicht streng auf bestimmte Zielvariablen beschränkt. Vor dem Hintergrund der Vermittlungsabsicht und dem Schwerpunkt der Vorstellungsänderung durch didaktisch strukturierte Lernangebote stehen die letztgenannten häufig im Fokus einer mit der Didaktischen Rekonstruktion verbundenen Wirkforschung. Insgesamt finden sich folgende Variablen vermehrt in Studien:
 
@@ -93,7 +93,7 @@ Mit Blick auf das Triplett können unterschiedliche Methoden der Absicherung gew
 
 - **Didaktische Strukturierung insgesamt:** Strukturindikatoren in der Dokumentation des iterativen Prozesses durch Anwender:innen, aber auch in der Dokumentenanalyse erstellter Produkte, Design-Based-Research (mit evaluativen Elementen)
 
-### Ansätze zur Untersuchung der Wirkung (Effect check)
+### Ansätze zur Untersuchung der Zielsetzung (Effect-Check)
 
 Wie bereits angedeutet, kann die anvisierte Wirkforschung mit Bezug zu Materialien, die einer Didaktischen Rekonstruktion entstammen, sehr breitgefächert sein. Dies liegt u. a. auch daran, dass aus diesem Prozess in der Regel nicht ein einzelnes Material, sondern vielmehr ein Pool an Materialien entsteht. Diese Materialien können dabei auch unterschiedliche Qualitätskriterien fokussieren. Es sind demnach verschiedene Szenarien denkbar. Einige Beispiele sind im Folgenden beschrieben:
 

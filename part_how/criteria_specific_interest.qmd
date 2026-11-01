@@ -52,13 +52,13 @@ Weitere Beispiele zur (kurzfristigen) Interessenförderung sind Wahlmöglichkeit
 
 In Interventionen zur Interessenförderung wird als Ansatzpunkt zudem häufig der wahrgenommene Nützlichkeitswert (*utility-value interventions*) herangezogen, welcher gesteigert werden soll, indem Lernende die Relevanz von Kursinhalten durchdenken und (selbständig) formulieren [@hecht2021_role; @hulleman2010_enhancing; @sansone2026_motivating, S. 1].
 
-### Umsetzungsbeispiel
+### Umsetzungsbeispiel (eigene Projekte/Forschung)
 
 In unserer Abteilung wurde ein starker Fokus auf die nuancierte Erfassung von Interesse an Tätigkeiten gelegt, wofür das RIASEC+N-Modell entwickelt, validiert und eingesetzt wurde [@blankenburg2015_fostering; @blankenburg2016_effectiveness; @dierks2014_profiling; @dierks2016_interest; @habig2018_context; @hoffler2019_scientists].
 
 Im Projekt *NaWigator* wurde in unserer Abteilung ein Projekttag ("Wettbewerbstag") für die sechste Jahrgangsstufe entwickelt, der Schüler:innen an naturwissenschaftliche Wettbewerbe heranführen und ihre Bereitschaft zur Teilnahme erhöhen sollte [@blankenburg2016_effectiveness, S. 342, 344]. Die Gestaltung wurde aus der Selbstbestimmungstheorie, aus Merkmalen, die situationales Interesse anregen, und aus dem RIASEC+N-Modell abgeleitet. In einem Quiz wählen Teams Kategorien und Schwierigkeitsgrade der Aufgaben, an Stationen bearbeiten sie frühere Wettbewerbsaufgaben nach ihren individuellen Interessen und ohne Zeitvorgabe [@blankenburg2016_effectiveness, S. 345--347]. In einer Fragebogenstudie mit Prä-, Post- und Follow-up-Messung (*N* = 474) war die Bereitschaft zur Teilnahme nach dem Wettbewerbstag in beiden Interventionsgruppen höher als in der Kontrollgruppe (*d* = 0.40 und *d* = 0.66). Neun Wochen später lag sie in der Gruppe, die anschließend an einem fiktiven Wettbewerb teilgenommen hatte, weiterhin über der Kontrollgruppe (*d* = 0.55) [@blankenburg2016_effectiveness, S. 348--349, 352]. Einschränkend war keine randomisierte Zuweisung möglich, und erfasst wurde nur die berichtete Bereitschaft, nicht die tatsächliche Teilnahme an Wettbewerben und nicht das situationale Interesse während des Wettbewerbstags [@blankenburg2016_effectiveness, S. 347, 350, 355].
 
-### Umsetzungsfacetten 
+### Umsetzungsfacetten
 
 Als Kriterium für die Gestaltung von Lernmaterial zielt Interesse darauf, in der Auseinandersetzung mit dem Material situationales Interesse hervorzurufen und aufrechtzuerhalten und so die Entwicklung individuellen Interesses zu unterstützen [@hidi2006_fourphase; @renninger2022_interest]. Eine systematische Umsetzung könnte sich durch folgende Indikatoren auszeichnen:
 
@@ -66,15 +66,15 @@ Als Kriterium für die Gestaltung von Lernmaterial zielt Interesse darauf, in de
 - Bestimmung von relevanten **Triggern**, die das *triggered situational* *interest* auslösen (z. B. überraschende Informationen, persönliche Relevanz), und die das *maintained situational interest* aufrechterhalten (Bedeutsamkeit der Aufgaben, persönliche Involviertheit) [@hidi2006_fourphase, S. 114], aber Verzicht auf dekorative Elemente (*seductive details*), die situationales Interesse zwar auslösen, aber nicht halten und Lernende mit wenig entwickeltem individuellem Interesse vom Lernen ablenken [@renninger2015_power, S. 103--104]. Schwierigkeit: Passung zu den Lernenden, da Trigger je nach Merkmalen der Lernenden unterschiedlich wahrgenommen und aufrechterhalten werden [@ochsen2023_interestingness, S. 398; @renninger2019_triggering, S. 8--9]; Trigger setzen hinreichendes Vorwissen voraus, und Lernende mit wenig entwickeltem individuellem Interesse benötigen mehr Struktur als Lernende mit stabilerem individuellem Interesse [@renninger2015_power, S. 57--58, 101].
 - POI: Unterstützung der Grundbedürfnisse, etwa durch eine angemessene Aufgabenschwierigkeit (Kompetenz), die Auswahl aus Themen und Tätigkeiten (Autonomie) und die Arbeit in Teams (soziale Eingebundenheit) [@blankenburg2016_effectiveness, S. 346].
 
-### Umsetzung im Prozess 
+### Umsetzung im Prozess
 
-### Ansätze zur Absicherung der Umsetzung
+### Ansätze zur Absicherung der Umsetzung (Implementation-Check)
 
 1.  Selbstberichte der Lernenden zur Manipulation: wahrgenommene Relevanz des Kontexts/Inhalts [@hecht2021_role, S. 4--6] oder wahrgenommene Autonomie (*perceived autonomy*) [@asher2025_using, S. 652--653].
 2.  Analyse von Artefakten [@hulleman2010_enhancing, S. 884, 888].
 3.  Analyse von Prozess- und Beobachtungsdaten wie Meldehäufigkeiten etc. [@ochsen2020_mikroanalyse, S. 5--7; @renninger2019_triggering, S. 7--8]. Beobachtungsdaten ergänzen Selbstberichte, weil Lernenden nicht notwendigerweise bewusst ist, dass bei ihnen der psychologische Zustand des Interesses ausgelöst wurde [@renninger2015_studying, S. 59, 62].
 
-### Ansätze zur Untersuchung der Wirkung
+### Ansätze zur Untersuchung der Wirkung (Effect-Check)
 
 - Selbstberichte: Instrumente zur Erfassung des situationalen Interesses finden sich bei @knogler2015_how, @linnenbrink-garcia2010_measuring, @rotgans2011_situational und @potvin2022_development, für das individuelle Interesse bei @rotgans2015_validation und für die Phasen der Interessenentwicklung bei @boeder2021_construction. Für wiederholte Messungen während des Unterrichts eignen sich kurze Skalen, etwa eine Skala mit sechs Items zum aktuellen situationalen Interesse, die Wissensdrang, Freude, Interessantheit, erwartete Bewältigung, Konzentration und (umgepolt) Langeweile erfasst [@rotgans2011_role, S. 39].
 - Verhaltensindikatoren: Erfasst wurde etwa, ob Lernende nach der Sitzung weiterführende Informationen zum Thema anforderten [@asher2025_using, S. 652]. Für die Entwicklung des individuellen Interesses werden vier Indikatoren vorgeschlagen, nämlich wie häufig, wie vertieft, wie freiwillig und wie selbstständig sich Lernende erneut mit dem Gegenstand auseinandersetzen. Ob Lernende einen Inhalt mögen (*liking*), unterscheidet dagegen nicht zwischen den Phasen. In großen Stichproben kann die Unterscheidung zwischen weniger und weiter entwickeltem individuellem Interesse genügen [@renninger2015_power, S. 59--61, 64].

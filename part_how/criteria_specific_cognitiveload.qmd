@@ -84,7 +84,7 @@ Die Umsetzung von Cognitive-Load-Prinzipien kann auf unterschiedliche Weise übe
 - Expert:innenanalysen von Lernmaterialien, z. B. hinsichtlich der Einhaltung von Multimedia-Designprinzipien
 - Qualitative Nutzungsstudien mit Lernenden (z. B. Think-Aloud-Protokolle während der Bearbeitung), um zu untersuchen, wie Aufgaben verarbeitet werden, welche Informationsquellen genutzt werden und an welchen Stellen unnötige kognitive Belastung oder Verständnisschwierigkeiten entstehen.
 
-### Ansätze zur Untersuchung der Wirkung (Effect check)
+### Ansätze zur Untersuchung der Wirkung (Effect-Check)
 
 - Befragungen von Lernenden zur wahrgenommenen kognitiven Belastung (Krieglstein)
 - Analyse von Bearbeitungszeiten oder Prozessdaten in digitalen Lernumgebungen

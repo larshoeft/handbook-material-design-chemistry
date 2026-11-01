@@ -42,7 +42,7 @@ sec-template:
 
 - Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Kriteriums (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
 
-### Ansätze zur Untersuchung der Wirkung (Effect check)
+### Ansätze zur Untersuchung der Wirkung (Effect-Check)
 
 - Wie lässt sich die Wirkung der Kriteriumsumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
 

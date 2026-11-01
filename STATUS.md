@@ -23,7 +23,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 
 Der Word-Import ändert den Wortlaut nicht. Diese Punkte werden erst danach in einem eigenen Schritt angeglichen, und der Skill `docx-einarbeiten` ergänzt hier neue Fälle.
 
-- Namen der `###`-Abschnitte, soweit gewünscht
+- derzeit nichts offen
 
 ## Für Zotero offene Quellen
 

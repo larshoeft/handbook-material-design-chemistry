@@ -138,7 +138,7 @@ Das Präsenzerleben lässt sich quantitativ, qualitativ und physiologisch erfass
 
 3\. Physiologische Daten (z. B. EEGs) können ebenfalls verwendet werden, der Aufwand ist für den Einsatz in chemiedidaktischen Praxisstudien jedoch hoch. Für einen Überblick siehe das systematische Review von @grassini2020_questionnaire.
 
-### Ansätze zur Untersuchung der Wirkung (Effect check)
+### Ansätze zur Untersuchung der Wirkung (Effect-Check)
 
 Der Einfluss von Präsenz wurde in zahlreichen Studien untersucht, insbesondere in *media-comparison*-Studien, in denen beispielsweise immersives (head-mounted display) gegen nicht-immersives (PC) Training verglichen wurde [@makransky2019_adding]. Allerdings werden diese *media-comparison*-Studien häufig wegen mangelnder Vergleichbarkeit und Erkenntnis kritisiert [@buchner2026_still]. Daher bietet es sich an, das Präsenzerleben als Mediator in Strukturgleichungsmodelle einzubeziehen, um seine Rolle im Wirkmechanismus zu prüfen.
 

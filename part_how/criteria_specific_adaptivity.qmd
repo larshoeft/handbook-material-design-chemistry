@@ -8,7 +8,7 @@ sec-adaptivity:
 
 ## Adaptivität {#sec-adaptivity}
 
-### Allgemeine Einführung
+### Allgemeine Einführung/Beschreibung
 
 Adaptivität beschreibt die Anpassung von Lernumgebungen[^adaptivity-lernumgebung] an die individuellen Voraussetzungen, Bedürfnisse oder Lernprozesse der Lernenden. Diese Anpassung basiert auf der Annahme, dass Lernen effektiver ist, wenn Lernumgebungen auf die Lernenden zugeschnitten werden: entweder indem der Lernweg und Unterstützungsangebote für das Erreichen eines gemeinsamen Lernziels differenziert werden, oder indem für Lernende, die das Lernziel bereits erreicht haben, anspruchsvollere Lernziele und Lerngelegenheiten bereitgestellt werden, um das volle Lernpotenzial auszuschöpfen [@deunk2015_differentiation]. Eine solche Anpassung erfordert stets die Erhebung und Nutzung von Lernendendaten, an die die Anpassung stattfinden kann. Hierbei ist zum einen entscheidend an WAS und zum anderen WIE sich die Lernumgebung anpasst.
 
@@ -26,7 +26,7 @@ Studien zur Effektivität von Adaptivität zeigen insgesamt eine positive Tenden
 
 Es gibt zahlreiche Beispiele, die Adaptivität innerhalb eines Projekts umgesetzt haben. Die folgenden Beispiele stammen vorwiegend aus der Hochschule, meist aus der organischen Chemie und fokussieren auf kognitive Variablen [@ariely2024_causalmechanical; @dood2020_using; @lieber2022_closing; @young2021_tired; @martin2026_adaptive].
 
-### Umsetzungsbeispiel
+### Umsetzungsbeispiel (eigene Projekte/Forschung)
 
 Im Promotionsprojekt von Gyde Asmussen wurde adaptive Unterstützung für das Problemlösen in der organischen Chemie, speziell für die Reaktionsmechanismen nukleophile Substitution und Eliminierung zweiter Ordnung, entwickelt. Die adaptive Unterstützung wurde in Form von gestuften Hilfekarten, die aus Prompts und Informationen zusammengesetzt waren, entwickelt. Der Entwicklung ging eine Studie voraus, in der die Schwierigkeiten von Studierenden mit diesen Reaktionsmechanismen erhoben und systematisiert wurden. Die Entwicklung der Hilfekarten basierte auf dieser Systematik (**kognitive Variablen**). Die Hilfekarten wurden innerhalb einer Interviewstudie erprobt. Die Studierenden erhielten die Hilfekarten, wenn sie im Problemlöseprozess auf Schwierigkeiten stießen (**Step-Loop**). Hierbei wurde der Umgang der Studierenden mit der adaptiven Unterstützung untersucht, um Implikationen für die Entwicklung eines intelligenten tutoriellen Systems abzuleiten. Es hat sich gezeigt, dass die Hilfekarten wirksam waren und von den Studierenden genutzt wurden. Gleichzeitig hat sich auch gezeigt, dass die Analyse der Lernendendaten ein Schlüsselpunkt für die Auswahl geeigneter Unterstützung ist und dass ein intelligentes tutorielles System hoch flexibel sein muss, da die Problemlöseprozesse und die Auswirkung der adaptiven Unterstützung auf diese sehr unterschiedlich sein kann. Die digitale Umsetzung der Unterstützung erfolgt im Projekt ATP-OC.
 

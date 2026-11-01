@@ -42,7 +42,7 @@ sec-template-framework:
 
 - Wie lässt sich der Grad bzw. Erfolg der Umsetzung des Verfahrens/Modells (individuell oder inter-subjektiv) evaluieren? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
 
-### Ansätze zur Untersuchung der Zielsetzung (Effect check)
+### Ansätze zur Untersuchung der Zielsetzung (Effect-Check)
 
 - Wie lässt sich die Zielerreichung der Verfahrens- bzw. Modellumsetzung (im Sinne einer Intervention) überprüfen? Welche methodische Herangehensweise und welche Indikatoren lassen sich dafür heranziehen?
 
