@@ -1,0 +1,15 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\definecolor{dunkel}{HTML}{1F3A5F}
+\definecolor{mittel}{HTML}{5B7FA6}
+\definecolor{hell}{HTML}{DCE6F0}
+\definecolor{text}{HTML}{222222}
+\tikzset{
+  every node/.style={text=text},
+  pfeil/.style={line width=2pt,draw=dunkel,-{Triangle[length=3.5mm,width=4mm]}},
+  doppelpfeil/.style={line width=4pt,draw=dunkel,{Triangle[length=4mm,width=7mm]}-{Triangle[length=4mm,width=7mm]}},
+  duennpfeil/.style={line width=1pt,draw=mittel,{Stealth[length=2.5mm]}-{Stealth[length=2.5mm]}},
+}

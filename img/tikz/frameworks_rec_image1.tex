@@ -1,0 +1,27 @@
+\documentclass[tikz,border=2mm]{standalone}
+\input{stil}
+\begin{document}
+\begin{tikzpicture}[font=\Large]
+  \fill[top color=dunkel,bottom color=hell!40,draw=dunkel,line width=0.8pt]
+    (0,0) .. controls (3.2,0.2) and (3.6,2.6) .. (3.7,4.6) -- (2.5,4.6) -- (5,7.2)
+    -- (7.5,4.6) -- (6.3,4.6) .. controls (6.4,2.6) and (6.8,0.2) .. (10,0) -- cycle;
+
+  \fill[top color=white,bottom color=dunkel,draw=dunkel,line width=0.6pt]
+    (4.15,5.2) .. controls (4.15,3.4) and (3.8,2.3) .. (3.0,1.75)
+    -- (3.25,1.45) -- (2.3,1.1) -- (2.55,2.15) -- (2.75,1.95)
+    .. controls (3.4,2.5) and (3.65,3.6) .. (3.65,5.2) -- cycle;
+  \fill[top color=white,bottom color=dunkel,draw=dunkel,line width=0.6pt]
+    (5.85,5.2) .. controls (5.85,3.4) and (6.2,2.3) .. (7.0,1.75)
+    -- (6.75,1.45) -- (7.7,1.1) -- (7.45,2.15) -- (7.25,1.95)
+    .. controls (6.6,2.5) and (6.35,3.6) .. (6.35,5.2) -- cycle;
+
+  \fill[left color=dunkel,right color=white,draw=dunkel,line width=0.6pt]
+    (2.4,-1.2) -- (3.3,-0.6) -- (3.3,-0.95) -- (6.9,-0.95) -- (6.9,-1.45) -- (3.3,-1.45) -- (3.3,-1.8) -- cycle;
+  \fill[left color=white,right color=dunkel,draw=dunkel,line width=0.6pt]
+    (7.6,-2.1) -- (6.7,-1.5) -- (6.7,-1.85) -- (3.1,-1.85) -- (3.1,-2.35) -- (6.7,-2.35) -- (6.7,-2.7) -- cycle;
+
+  \node at (5,7.75) {Didaktische Strukturierung};
+  \node[align=left,anchor=east] at (2.1,-1.65) {Fachliche\\Klärung};
+  \node[align=left,anchor=west] at (7.9,-1.65) {Erfassen von\\Lernenden-\\perspektiven};
+\end{tikzpicture}
+\end{document}
