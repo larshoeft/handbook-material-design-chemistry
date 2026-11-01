@@ -26,7 +26,8 @@ return {
       end
       local alt = img.attributes['fig-alt'] or img.attributes['alt'] or pandoc.utils.stringify(img.caption)
       svg = svg:gsub('<%?xml.-%?>', ''):gsub('<!%-%-.-%-%->', '')
-      svg = svg:gsub('<svg ', '<svg role="img" aria-label="' .. escape(alt) .. '" class="svg-inline" style="max-width:100%;height:auto" ', 1)
+      local attrs = 'role="img" aria-label="' .. escape(alt) .. '" class="svg-inline" style="max-width:100%;height:auto" '
+      svg = svg:gsub('<svg ', function() return '<svg ' .. attrs end, 1)
       return pandoc.RawInline('html', svg)
     end,
   },
