@@ -23,7 +23,7 @@ Bis zur Umstellung auf Git gilt die Word-Fassung in `_quellen_docx/`. Der Ordner
 - Ein Kriterium oder Verfahren ist eine eigene Datei mit `##`-Überschrift und `sec-`-ID.
 - Die Vorlagen [criteria_specific_template.qmd](../part_how/criteria_specific_template.qmd) und [frameworks_template.qmd](../part_how/frameworks_template.qmd) dienen der Orientierung. Kurzformen der Abschnittsnamen sind erlaubt, und „Einsatzbedingungen/Umsetzungswissen“ und „Transferwissen“ sind optional. Am Ende steht immer `### Quellen` mit `::: sectionrefs`.
 - Tabellen und Abbildungen tragen IDs wie `#tbl-…` und `#fig-…`, Abbildungen zusätzlich einen Alt-Text.
-- Gezeichnete Abbildungen liegen als TikZ in `img/tikz/`. `python img/tikz/build.py` erzeugt daraus PDF und SVG in `img/`, eingebunden wird die SVG.
+- Gezeichnete Abbildungen liegen als TikZ in `img/tikz/`. `python img/tikz/build.py` erzeugt daraus PDF und SVG in `img/`, eingebunden wird die SVG. Die TikZ-Dateien nutzen nur die Farben aus `img/tikz/stil.tex`, die Themes setzen sie als `--fig-…`.
 
 ## Metadaten und Personen
 

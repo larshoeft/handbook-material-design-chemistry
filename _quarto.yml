@@ -119,6 +119,8 @@ filters:
     path: section-bibliographies
   - at: pre-quarto
     path: german-quotes
+  - at: post-quarto
+    path: svg-inline
 
 format:
   html:

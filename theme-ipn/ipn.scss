@@ -34,6 +34,11 @@ $link-hover-color: $ipn-blue-hover !default;
 $code-color: $ipn-azure !default;
 $border-color: $ipn-blue-light !default;
 
+$fig-dunkel: $ipn-blue !default;
+$fig-mittel: $ipn-blue-mid !default;
+$fig-hell: $ipn-blue-light !default;
+$fig-blass: $ipn-blue-pale !default;
+
 /*-- scss:rules --*/
 .sidebar,
 div.quarto-float,
@@ -74,4 +79,14 @@ h1, h2, h3, h4, h5, h6 {
 nav[role="doc-toc"] a.active .header-section-number,
 .sidebar-item .sidebar-link.active .chapter-number {
   color: $primary !important;
+}
+
+// Farben der TikZ-Abbildungen, siehe img/tikz/
+:root {
+  --fig-dunkel: #{$fig-dunkel};
+  --fig-mittel: #{$fig-mittel};
+  --fig-hell: #{$fig-hell};
+  --fig-blass: #{$fig-blass};
+  --fig-schrift: #{$body-color};
+  --fig-grund: #{$body-bg};
 }

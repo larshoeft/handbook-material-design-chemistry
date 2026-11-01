@@ -182,6 +182,10 @@ Inline citations link to the nearest reference list. Quarto cross-references (`@
 
 Pandoc writes English quotation marks even with `lang: de`. For German documents this filter turns straight quotes in the source (`"…"`, `'…'`) into „…“ and ‚…‘. It also runs in `render_docx.ps1`.
 
+#### `svg-inline`
+
+In HTML output this filter embeds local SVG images directly in the page instead of linking them with `<img>`. The figures drawn with TikZ in `img/tikz/` use the CSS variables `--fig-dunkel`, `--fig-mittel`, `--fig-hell`, `--fig-blass`, `--fig-schrift` and `--fig-grund`, which the themes set, so the figures follow the active theme and its dark mode. Without a theme value the IPN colors apply. Rebuild the figures with `python img/tikz/build.py`.
+
 ### Website themes
 
 The look of the website is defined by [Quarto profiles](https://quarto.org/docs/projects/profiles.html). `_quarto.yml` holds the shared settings, and each profile adds a theme via `_quarto-<profile>.yml`:

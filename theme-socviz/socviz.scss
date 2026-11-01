@@ -23,6 +23,11 @@ $danger: #fc2290;
 $link-color: $primary;
 $code-color: #7d12ba;
 
+$fig-dunkel: #343a40 !default;
+$fig-mittel: $primary !default;
+$fig-hell: #dee2e6 !default;
+$fig-blass: #f1f3f5 !default;
+
 /*-- scss:rules --*/
 .sidebar,
 div.quarto-float,
@@ -34,4 +39,14 @@ span.margin-aside,
 
 div.sidebar-item-container .active {
   font-weight: bold;
+}
+
+// Farben der TikZ-Abbildungen, siehe img/tikz/
+:root {
+  --fig-dunkel: #{$fig-dunkel};
+  --fig-mittel: #{$fig-mittel};
+  --fig-hell: #{$fig-hell};
+  --fig-blass: #{$fig-blass};
+  --fig-schrift: #{$body-color};
+  --fig-grund: #{$body-bg};
 }
