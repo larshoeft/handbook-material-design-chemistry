@@ -1,5 +1,6 @@
 project:
   type: book
+  post-render: _scripts/float_numbers.lua
 
 profile:
   default: default

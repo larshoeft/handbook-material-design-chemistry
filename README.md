@@ -156,7 +156,7 @@ Creates a separate reference list per section instead of one for the whole book 
 :::
 ```
 
-Inline citations link to the nearest reference list. Quarto cross-references (`@sec-…`, `@fig-…`, `@tbl-…`) are left to Quarto.
+Inline citations link to the nearest reference list. Quarto cross-references (`@sec-…`, `@fig-…`, `@tbl-…` and the other Quarto prefixes) are left to Quarto. If a section cites nothing, its reference list and heading are left out.
 
 **Note:** Both filters only run when the whole book is rendered. They are not used by `render_docx.ps1`.
 
@@ -181,7 +181,9 @@ The look of the website is defined by [Quarto profiles](https://quarto.org/docs/
 
 All profiles except `default` have a light and a dark mode. They also place figure captions, table captions and footnotes in the margin.
 
-All profiles share `styles.css` (wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and `toc-in-sidebar.html`. Below 992 px Quarto hides the page's table of contents; the script copies it, collapsed, below the active chapter in the sidebar.
+Figures, tables and other floats are numbered per `##` section (e.g. Tabelle 4.6.2) instead of per chapter. Quarto has no option for this, so the Lua script `_scripts/float_numbers.lua` runs after rendering (`project: post-render`, executed by Quarto itself, no Python needed) and rewrites captions, cross-references and the search index.
+
+All profiles share `styles.css` (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and `toc-in-sidebar.html`. Below 992 px Quarto hides the page's table of contents; the script copies it, collapsed, below the active chapter in the sidebar.
 
 Render with a profile:
 
