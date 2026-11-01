@@ -14,7 +14,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 | Interesse | `part_how/criteria_specific_interest.qmd` | `6_Kriterien/Steckbrief_Interesse_Lars.docx` | nein | 159 Einfügungen, 143 Löschungen, 12 Kommentare | noch nicht geprüft |
 | Kontextualisierung | `part_how/criteria_specific_context.qmd` | `6_Kriterien/Steckbrief_Kontextualisierung_Max.docx` | ja, 31.10.2026 | | 24, siehe unten |
 | Kumulatives Lernen | `part_how/criteria_specific_cumulative.qmd` | `6_Kriterien/Steckbrief_Kumulatives Lernen_Sascha.docx` | ja, 30.10.2026 | 10 Kommentare | 9, siehe unten |
-| Präsenzerleben | `part_how/criteria_specific_presence.qmd` | `6_Kriterien/Steckbrief_Präsenz Erleben_Leander_2.docx` | nein | 117 Einfügungen, 111 Löschungen, 3 Verschiebungen, 10 Kommentare | noch nicht geprüft |
+| Präsenzerleben | `part_how/criteria_specific_presence.qmd` | `6_Kriterien/Steckbrief_Präsenz Erleben_Leander_2.docx` | ja, 01.11.2026 | 117 Einfügungen, 111 Löschungen, Verschiebungen (angenommen), 10 Kommentare | 17, siehe unten |
 | Emotionen | `part_how/criteria_specific_emotions.qmd` | keine | | noch nicht ins Buch eingebunden | |
 
 ## Nach dem Import über alle Texte vereinheitlichen
@@ -91,3 +91,20 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 | Design-Based Research | Hartmann, Wirth, Schramm, Klimmt, Vorderer, Gysbers, Böcking, Ravaja, Laarni, Saari, Gouveia, Maria Sacau (2016). The Spatial Presence Experience Scale (SPES): A Short Self-Report Measure for Diverse Media Settings. DOI 10.1027/1864-1105/a000137 | Hartmann 2016 |
 | Design-Based Research | Reeves, Crippen, McCray (2021). The varied experience of undergraduate students learning chemistry in virtual reality laboratories. DOI 10.1016/j.compedu.2021.104320 | Reeves 2021 |
 | Design-Based Research | Mecklenburg & Lenzer (in prep.). Keine vollständige Angabe in Word | (Mecklenburg & Lenzer, in prep.) |
+| Präsenzerleben | Slater, Wilbur (1997). A Framework for Immersive Virtual Environments (FIVE): Speculations on the Role of Presence in Virtual Environments. DOI 10.1162/pres.1997.6.6.603 | Slater 1997 |
+| Präsenzerleben | Witmer, Singer (1998). Measuring Presence in Virtual Environments: A Presence Questionnaire. DOI 10.1162/105474698565686 | Witmer 1998 |
+| Präsenzerleben | Wirth, Hartmann, Böcking, Vorderer, Klimmt, Schramm, Saari, Laarni, Ravaja, Gouveia, Biocca, Sacau, Jäncke, Baumgartner, Jäncke (2007). A Process Model of the Formation of Spatial Presence Experiences. DOI 10.1080/15213260701283079 | Wirth 2007 |
+| Präsenzerleben | Makransky, Petersen (2021). The Cognitive Affective Model of Immersive Learning (CAMIL): a Theoretical Research-Based Model of Learning in Immersive Virtual Reality. DOI 10.1007/s10648-020-09586-2 | Makransky 2021 |
+| Präsenzerleben | Buchner, Mulders (2026). Still trapped in media comparison? A systematic review of comparative research on immersive virtual reality in education. DOI 10.1080/10494820.2026.2617986 | Buchner 2026 |
+| Präsenzerleben | Zusho, Pintrich, Coppola (2003). Skill and will: The role of motivation and cognition in the learning of college chemistry. DOI 10.1080/0950069032000052207 | Zusho 2003 |
+| Präsenzerleben | Makransky, Terkildsen, Mayer (2019). Adding immersive virtual reality to a science lab simulation causes more presence but less learning. DOI 10.1016/j.learninstruc.2017.12.007 | Makransky 2019 |
+| Präsenzerleben | Easterday, Rees Lewis, Gerber (2014). Design-based research process: Problems, phases, and applications. | Easterday 2014 |
+| Präsenzerleben | Echeverri-Jimenez, Oliver-Hoyo (2024). A Roadmap to Support the Development of Chemistry Virtual Reality Learning Environments Merging Chemical Pedagogy and Educational Technology Design. DOI 10.1021/acs.jchemed.3c01205 | Echeverri-Jimenez 2024 |
+| Präsenzerleben | Grassini, Laumann (2020). Questionnaire Measures and Physiological Correlates of Presence: A Systematic Review. DOI 10.3389/fpsyg.2020.00349 | Grassini 2020 |
+| Präsenzerleben | Usoh, Catena, Arman, Slater (2000). Using Presence Questionnaires in Reality. DOI 10.1162/105474600566989 | Usoh 2000 |
+| Präsenzerleben | Vorderer, Wirth, Gouveia, Biocca, Saari, Jäncke, Böcking, Schramm, Gysbers, Hartmann, Klimmt, Ravaja, Sacau, Baumgartner, Jäncke (2004). MEC Spatial Presence Questionnaire (MEC-SPQ). | Vorderer 2004 |
+| Präsenzerleben | Hartmann, Wirth, Schramm, Klimmt, Vorderer, Gysbers, Böcking, Ravaja, Laarni, Saari, Gouveia, Maria Sacau (2016). The Spatial Presence Experience Scale (SPES): A Short Self-Report Measure for Diverse Media Settings. DOI 10.1027/1864-1105/a000137 | Hartmann 2016 |
+| Präsenzerleben | Reeves, Crippen, McCray (2021). The varied experience of undergraduate students learning chemistry in virtual reality laboratories. DOI 10.1016/j.compedu.2021.104320 | Reeves 2021 |
+| Präsenzerleben | Lee (2004). Keine vollständige Angabe in Word | Lee 2004 |
+| Präsenzerleben | Dalgarno & Lee (2010). Keine vollständige Angabe in Word | Dalgarno & Lee (2010), Dalgarno & Lee, 2010 |
+| Präsenzerleben | Mecklenburg & Lenzer (in prep.). Keine vollständige Angabe in Word | (Mecklenburg & Lenzer, in prep.) |
