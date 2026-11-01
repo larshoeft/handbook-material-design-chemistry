@@ -11,7 +11,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 | Universal Design for Learning | `part_how/frameworks_udl.qmd` | keine | | | |
 | Adaptivität | `part_how/criteria_specific_adaptivity.qmd` | `6_Kriterien/Steckbrief_Adaptivität_Gyde.docx` | ja, 31.10.2026 | | 2, siehe unten |
 | Kognitive Belastung | `part_how/criteria_specific_cognitiveload.qmd` | `6_Kriterien/Steckbrief_Cognitive_load_Anja.docx` | ja, 30.10.2026 | 2 Einfügungen, 2 Löschungen (angenommen), 8 Kommentare, 2 Markierungen | 3, siehe unten |
-| Interesse | `part_how/criteria_specific_interest.qmd` | `6_Kriterien/Steckbrief_Interesse_Lars.docx` | nein | 159 Einfügungen, 143 Löschungen, 12 Kommentare | noch nicht geprüft |
+| Interesse | `part_how/criteria_specific_interest.qmd` | `6_Kriterien/Steckbrief_Interesse_Lars.docx` | ja, 01.11.2026 | 159 Einfügungen, 143 Löschungen (angenommen), 12 Kommentare | 2, siehe unten |
 | Kontextualisierung | `part_how/criteria_specific_context.qmd` | `6_Kriterien/Steckbrief_Kontextualisierung_Max.docx` | ja, 31.10.2026 | | 24, siehe unten |
 | Kumulatives Lernen | `part_how/criteria_specific_cumulative.qmd` | `6_Kriterien/Steckbrief_Kumulatives Lernen_Sascha.docx` | ja, 30.10.2026 | 10 Kommentare | 9, siehe unten |
 | Präsenzerleben | `part_how/criteria_specific_presence.qmd` | `6_Kriterien/Steckbrief_Präsenz Erleben_Leander_2.docx` | ja, 01.11.2026 | 117 Einfügungen, 111 Löschungen, Verschiebungen (angenommen), 10 Kommentare | 17, siehe unten |
@@ -108,3 +108,5 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 | Präsenzerleben | Lee (2004). Keine vollständige Angabe in Word | Lee 2004 |
 | Präsenzerleben | Dalgarno & Lee (2010). Keine vollständige Angabe in Word | Dalgarno & Lee (2010), Dalgarno & Lee, 2010 |
 | Präsenzerleben | Mecklenburg & Lenzer (in prep.). Keine vollständige Angabe in Word | (Mecklenburg & Lenzer, in prep.) |
+| Interesse | Schraw & Lehman (2001). Keine vollständige Angabe in Word | (Schraw & Lehman, 2001; Ainley 2006) |
+| Interesse | Ainley (2006). Keine vollständige Angabe in Word | (Schraw & Lehman, 2001; Ainley 2006) |
