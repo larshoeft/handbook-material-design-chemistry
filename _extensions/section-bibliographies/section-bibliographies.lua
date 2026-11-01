@@ -92,6 +92,27 @@ local function is_refs_section(div)
   return c[2].classes:includes('sectionrefs')
 end
 
+-- Hides cross-references from citeproc, which would report them as missing
+local function citeproc_without_crossrefs(doc)
+  local kept = {}
+  local hidden = doc:walk {
+    Cite = function(cite)
+      for _, c in ipairs(cite.citations) do
+        if not is_crossref_id(c.id) then return nil end
+      end
+      kept[#kept + 1] = cite
+      return pandoc.RawInline('crossref-placeholder', tostring(#kept))
+    end,
+  }
+  return citeproc(hidden):walk {
+    RawInline = function(raw)
+      if raw.format == 'crossref-placeholder' then
+        return kept[tonumber(raw.text)]
+      end
+    end,
+  }
+end
+
 -- ---------------------------------------------------------------------------
 -- Collect raw citation IDs from a block list (recursively)
 -- Excludes Quarto cross-reference IDs (sec-, fig-, tbl-, eq-, lst-, thm-)
@@ -158,7 +179,7 @@ local function run_citeproc_for_section(blocks, suffix, meta, references, extra_
     end
   end
 
-  local result = citeproc(pandoc.Pandoc(renamed, newmeta)).blocks
+  local result = citeproc_without_crossrefs(pandoc.Pandoc(renamed, newmeta)).blocks
 
   return result:walk {
     Header = function(h)
@@ -203,7 +224,7 @@ local function run_citeproc_inline_only(blocks, suffix, meta, references)
 
   -- Run citeproc – this resolves inline Cite nodes to formatted links.
   -- citeproc will also produce a bibliography div, but we strip it afterwards.
-  local result = citeproc(pandoc.Pandoc(renamed, newmeta)).blocks
+  local result = citeproc_without_crossrefs(pandoc.Pandoc(renamed, newmeta)).blocks
 
   -- Remove any generated bibliography divs and the References header
   -- (we don't want them here – bibliography appears only in sectionrefs)
