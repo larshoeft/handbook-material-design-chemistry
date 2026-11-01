@@ -201,6 +201,8 @@ The look of the website is defined by [Quarto profiles](https://quarto.org/docs/
 
 All profiles except `default` have a light and a dark mode. They also place figure captions, table captions and footnotes in the margin.
 
+All profiles share `styles.css` (wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and `toc-in-sidebar.html`. Below 992 px Quarto hides the page's table of contents; the script copies it, collapsed, below the active chapter in the sidebar.
+
 Render with a profile:
 
 ```bash

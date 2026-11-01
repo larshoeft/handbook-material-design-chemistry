@@ -124,6 +124,8 @@ filters:
 
 format:
   html:
+    css: styles.css
+    include-after-body: toc-in-sidebar.html
     template-partials:
       - _extensions/section-authors/title-metadata.html
     bread-crumbs: false
