@@ -4,6 +4,7 @@ date: 2026-04-30
 
 # Kriterien
 
+{{< include criteria_specific_structure.qmd >}}
 
 {{< include criteria_specific_cumulative.qmd >}}
 

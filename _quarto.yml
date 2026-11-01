@@ -34,11 +34,11 @@ book:
     - part: _why.qmd
       chapters:
         - part_why/_importance.qmd
-        - part_why/_orientations.qmd
+        # - part_why/_orientations.qmd
     - part: _how.qmd
       chapters:
         - part_how/_frameworks.qmd
-        - part_how/_criteria_general.qmd
+        # - part_how/_criteria_general.qmd
         - part_how/_criteria_specific.qmd
     - summary.qmd
 

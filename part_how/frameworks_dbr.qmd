@@ -10,7 +10,7 @@ sec-dbr:
 
 ### Allgemeine Einführung/Beschreibung
 
-Design-Based Research (DBR) ist ein Studiendesign, das Design- und wissenschaftliche Methoden integriert, um in realen Lernkontexten [@barab2004_designbased] gleichzeitig 1) praxistaugliche Interventionen und 2) theoretisch fundiertes Wissen zu generieren [Easterday et al., 2014\; @anderson2012_designbased]. Ann @brown1992_design, die als Begründerin des DBR gilt, schrieb: *"an effective intervention should be able to migrate from our experimental classroom to average classrooms operated by and for average students and teachers, supported by realistic technological and personal support"* [@brown1992_design] und greift damit ein zentrales Problem der Bildungsforschung auf: Viele Interventionen werden für experimentelle Forschungszwecke konzeptioniert und entwickelt, aber können den Anforderungen regulärer Klassenzimmer nicht standhalten. Durch den iterativen Ansatz unter Einbezug verschiedener Perspektiven sollen Interventionen zur langfristigen Implementation entwickelt werden.
+Design-Based Research (DBR) ist ein Studiendesign, das Design- und wissenschaftliche Methoden integriert, um in realen Lernkontexten [@barab2004_designbased] gleichzeitig 1) praxistaugliche Interventionen und 2) theoretisch fundiertes Wissen zu generieren [@easterday2014_designbased; @anderson2012_designbased]. Ann @brown1992_design, die als Begründerin des DBR gilt, schrieb: *"an effective intervention should be able to migrate from our experimental classroom to average classrooms operated by and for average students and teachers, supported by realistic technological and personal support"* [@brown1992_design] und greift damit ein zentrales Problem der Bildungsforschung auf: Viele Interventionen werden für experimentelle Forschungszwecke konzeptioniert und entwickelt, aber können den Anforderungen regulärer Klassenzimmer nicht standhalten. Durch den iterativen Ansatz unter Einbezug verschiedener Perspektiven sollen Interventionen zur langfristigen Implementation entwickelt werden.
 
 ![Design-Based-Research-Zyklus mit a) Design, b) Evaluation und c) Analyse.](../img/frameworks_dbr_image1.svg){#fig-dbr-zyklus fig-alt="Design-Based-Research-Zyklus mit a) Design, b) Evaluation und c) Analyse."}
 
@@ -29,7 +29,7 @@ Im Projekt DiVEx wurde ein immersives Virtual-Reality-Chemielabor (iVRCL) in ein
 Neben den Interviews wurden quantitativ die kognitive Belastung [@krieglstein2023_development], Präsenzerleben [@hartmann2016_spatial] und Erfahrung im VR-Labor [@reeves2021_varied] erfasst. Aufgrund der geringen Stichprobe und der Veränderung der VR-Umgebung über die Iterationen konnten diese Daten am Ende nicht ausgewertet werden.
 
 |  |  | Version of iVRCL | Participants' feedback | Commented storyboard |
-|---|---|---|---|---|
+|:--|:--|:----|:----|:----|
 | 1 | F | Virtual lab with cupboards, fume hood, glass rod, beaker, pH-paper | Realistic environment; watch glass missing; no liquids visible | Add a watch glass and shaders for liquids |
 |  | I | One-button interactions with glass rod and pH-paper (steps 5+6) | Interactions feel constrained and sometimes complicated | Extend interaction, add transfer of liquid and collect base |
 |  | G | Basic audio and text instructions | Instructions sometimes unclear; limited feedback | Improve guidance; add pH-paper with different colors (visual feedback) |
@@ -40,13 +40,13 @@ Neben den Interviews wurden quantitativ die kognitive Belastung [@krieglstein202
 |  | I | Two-button interactions for pH-measurement (steps 1 -- 8) | Two-button interactions occasionally unclear, but functional | Add videos and introduction outside of iVRCL |
 |  | G | Flowchart with step-by-step instructions; videos for VR controller | More guidance (highlighting of objects) for the interactions | Scaffolding system with fading highlights of objects; revised guidance and quiz |
 
-: Tab. 1: Übersicht über die Entwicklung des iVRCL über drei Iterationen mit dem Fokus auf die Designkriterien fidelity (F), interactivity (I) und guidance (G).
+: Übersicht über die Entwicklung des iVRCL über drei Iterationen mit dem Fokus auf die Designkriterien fidelity (F), interactivity (I) und guidance (G). {#tbl-dbr-iterationen tbl-colwidths="[6,6,29,30,29]"}
 
 ### Umsetzungsfacetten
 
 Die systematische Umsetzung zeichnet sich in erster Linie durch den hohen Praxisbezug aus. Ziel ist es, Interventionen zu entwickeln, die auf die Bedürfnisse der Zielgruppe zugeschnitten sind und eine langfristige Implementation in die Praxis ermöglichen. Zentral ist dafür der Einbezug verschiedener Perspektiven -- von Lernenden, Lehrenden, Forschenden und weiteren Stakeholdern wie Softwareentwickler:innen [@anderson2012_designbased]. Dieser kooperative Ansatz unterscheidet DBR von Ansätzen, in denen Interventionen nur untersucht, aber nicht langfristig implementiert werden [@anderson2012_designbased].
 
-Dazu werden die Versionen früh und niedrigschwellig evaluiert [Easterday et al., 2014\; @mundy2024_designbased]. Mittels qualitativer Methoden wie Interviews, Bildschirmaufzeichnungen und Inhaltsanalyse [@mayring2010_qualitative] können die Perspektiven erfasst und die Usability der Intervention getestet werden. Mit quantitativen Methoden kann die Wirkung der Intervention anschließend überprüft werden [Easterday et al., 2014\; @anderson2012_designbased].
+Dazu werden die Versionen früh und niedrigschwellig evaluiert [@easterday2014_designbased; @mundy2024_designbased]. Mittels qualitativer Methoden wie Interviews, Bildschirmaufzeichnungen und Inhaltsanalyse [@mayring2010_qualitative] können die Perspektiven erfasst und die Usability der Intervention getestet werden. Mit quantitativen Methoden kann die Wirkung der Intervention anschließend überprüft werden [@easterday2014_designbased; @anderson2012_designbased].
 
 Dabei wird die Komplexität der realen Lernsituationen (z. B. Klassenzimmer, Labor) nicht reduziert, sondern als Teil einer Feldstudie berücksichtigt. Des Weiteren werden technische und organisatorische Herausforderungen und deren Lösungen für eine langfristige Implementation und möglichen Transfer an andere Institutionen dokumentiert.
 

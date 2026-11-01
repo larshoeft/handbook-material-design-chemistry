@@ -1,0 +1,21 @@
+## Aufbau der Steckbriefe {#sec-criteria-structure}
+
+Jedes Kriterium in diesem Kapitel wird in einem Steckbrief beschrieben. Alle Steckbriefe folgen derselben Gliederung, damit sich die Kriterien vergleichen lassen und Leser:innen gezielt einzelne Aspekte nachschlagen können. Die Leitfragen in @tbl-steckbrief-aufbau geben an, worauf ein Abschnitt eingeht. Sie sind als Anregung gedacht, nicht jeder Steckbrief beantwortet alle Fragen.
+
+| Abschnitt | Leitfragen |
+|:--|:----|
+| Allgemeine Einführung/Beschreibung | Was ist unter dem Kriterium zu verstehen, und welche Theorien liegen ihm zugrunde? Gibt es unterschiedliche Auffassungen oder Schwerpunkte? |
+| Befunde zur Wirkung | Welche Wirkung wird dem Kriterium zugeschrieben, und welche empirischen Befunde aus Studien und Meta-Analysen gibt es dazu? |
+| Literaturbeispiele zur Umsetzung | Welche Projekte oder Programme setzen das Kriterium zentral um, und welche prototypischen Beispiele werden in der Literatur herangezogen? |
+| Umsetzungsbeispiel (eigene Projekte/Forschung) | Wie wurde das Kriterium in einem eigenen Projekt umgesetzt? Beschrieben werden Studienkontext, Zielstellung, Ergebnisse, Publikationen und Lessons learned. |
+| Umsetzungsfacetten | Woran zeigt sich eine systematische Umsetzung des Kriteriums, und welche Facetten eignen sich als Indikatoren? |
+| Umsetzung im Prozess | Wie lässt sich der Prozess der Umsetzung systematisieren, etwa mit Didaktischer Rekonstruktion oder Design-Based Research? Welche Stakeholder werden wie eingebunden? |
+| Ansätze zur Absicherung der Umsetzung (Implementation-Check) | Wie lässt sich prüfen, in welchem Grad das Kriterium umgesetzt wurde, und welche Methoden und Indikatoren eignen sich dafür? |
+| Ansätze zur Untersuchung der Wirkung (Effect-Check) | Wie lässt sich die Wirkung der Umsetzung überprüfen, und welche Methoden und Indikatoren eignen sich dafür? |
+| Einsatzbedingungen/Umsetzungswissen | Welche Voraussetzungen müssen bei Lehrenden, Lernenden und Lernumgebung erfüllt sein, und welche Phasen des Einsatzes sind kritisch? |
+| Transferwissen | Für welche Unterrichtssituationen sind die Materialien gedacht, und wie lassen sich ihre nachhaltige Nutzung, die Erprobung und die gemeinsame Reflexion unterstützen? |
+| Quellen | Literatur des Steckbriefs |
+
+: Abschnitte eines Steckbriefs mit Leitfragen {#tbl-steckbrief-aufbau tbl-colwidths="[30,70]"}
+
+Die Abschnitte "Einsatzbedingungen/Umsetzungswissen" und "Transferwissen" sind optional. Jeder Steckbrief endet mit seinen Quellen.
