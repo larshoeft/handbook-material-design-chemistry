@@ -14,7 +14,7 @@ Adaptivität beschreibt die Anpassung von Lernumgebungen[^adaptivity-lernumgebun
 
 [^adaptivity-lernumgebung]: Lernumgebung umfasst hierbei alles von ganzen Unterrichtskursen bis hin zu spezifischen Einzelmaterialien
 
-**WAS:** Es gibt eine Vielzahl an Lernendendaten, an die sich die Lernumgebung anpassen kann. Zu diesen gehören Vorwissen, Wissenszuwachs, Lösungsstrategien, Fehler, Lernstrategien, Einstellungen, Werte, Motivation, Interesse, Kultur und noch viele weitere (Aleven et al., 2017; Plass and Pawar, 2020). Diese können als **kognitive, motivationale, affektive** und **sozio-kulturelle** Variablen zusammengefasst werden [@plass2020_taxonomy].
+**WAS:** Es gibt eine Vielzahl an Lernendendaten, an die sich die Lernumgebung anpassen kann. Zu diesen gehören Vorwissen, Wissenszuwachs, Lösungsstrategien, Fehler, Lernstrategien, Einstellungen, Werte, Motivation, Interesse, Kultur und noch viele weitere [Aleven et al., 2017\; @plass2020_taxonomy]. Diese können als **kognitive, motivationale, affektive** und **sozio-kulturelle** Variablen zusammengefasst werden [@plass2020_taxonomy].
 
 **WIE:** Lernumgebungen können auf unterschiedlichen Ebenen angepasst werden. Aleven et al. (2017) unterscheiden hierbei in **Design-Loop**, **Task-Loop** und **Step-Loop**. In der Design-Loop wird die gesamte Lernumgebung basierend auf vorab erhobenen Lernendendaten entwickelt und auf deren Bedürfnisse abgestimmt. In der Task-Loop werden basierend auf der vorherigen Aufgabenbearbeitung der Lernenden innerhalb der Lernumgebung weitere geeignete instruktionale Aufgaben ausgewählt. In der Step-Loop werden innerhalb der Aufgabenbearbeitung basierend auf der aktuellen Bearbeitung der Lernenden Anpassungen an der Lernumgebung vorgenommen. Bei @plass2020_taxonomy sind das das **Makro-Level** und **Mikro-Level**. Das Makro-Level beschreibt die Anpassung der Lernumgebung innerhalb der Planung, während das Mikro-Level die Anpassung der Lernumgebung innerhalb der Situation beschreibt.
 
@@ -24,7 +24,7 @@ Studien zur Effektivität von Adaptivität zeigen insgesamt eine positive Tenden
 
 ### Literaturbeispiele zur Umsetzung
 
-Es gibt zahlreiche Beispiele, die Adaptivität innerhalb eines Projekts umgesetzt haben. Die folgenden Beispiele stammen vorwiegend aus der Hochschule, meist aus der organischen Chemie und fokussieren auf kognitive Variablen [@ariely2024_causalmechanical; @dood2020_using; @lieber2022_closing; @young2021_tired] (Martin et al., 2025).
+Es gibt zahlreiche Beispiele, die Adaptivität innerhalb eines Projekts umgesetzt haben. Die folgenden Beispiele stammen vorwiegend aus der Hochschule, meist aus der organischen Chemie und fokussieren auf kognitive Variablen [@ariely2024_causalmechanical; @dood2020_using; @lieber2022_closing; @young2021_tired; @martin2026_adaptive].
 
 ### Umsetzungsbeispiel
 

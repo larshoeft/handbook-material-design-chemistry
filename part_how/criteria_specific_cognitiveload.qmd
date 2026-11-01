@@ -10,7 +10,7 @@ sec-load:
 
 ### Allgemeine Einführung/Beschreibung
 
-Der Begriff Cognitive Load beschreibt die kognitiven Anforderungen, die eine Lernaufgabe an das Arbeitsgedächtnis stellt. Die zugrunde liegende Cognitive Load Theory (CLT) geht davon aus, dass das menschliche Arbeitsgedächtnis nur eine begrenzte Menge an Informationen gleichzeitig verarbeiten kann, während das Langzeitgedächtnis über eine sehr große Kapazität zur Speicherung von Wissensstrukturen verfügt. Lernen wird daher maßgeblich davon beeinflusst, wie stark das Arbeitsgedächtnis durch eine Lernaufgabe beansprucht wird (Sweller et al., 1998, 2019).
+Der Begriff Cognitive Load beschreibt die kognitiven Anforderungen, die eine Lernaufgabe an das Arbeitsgedächtnis stellt. Die zugrunde liegende Cognitive Load Theory (CLT) geht davon aus, dass das menschliche Arbeitsgedächtnis nur eine begrenzte Menge an Informationen gleichzeitig verarbeiten kann, während das Langzeitgedächtnis über eine sehr große Kapazität zur Speicherung von Wissensstrukturen verfügt. Lernen wird daher maßgeblich davon beeinflusst, wie stark das Arbeitsgedächtnis durch eine Lernaufgabe beansprucht wird [@sweller1998_cognitive; @sweller2019_cognitive].
 
 Ziel instruktionalen Designs ist es daher, dass kognitive Ressourcen effizient genutzt werden und der Aufbau von Wissensstrukturen (Schemas) unterstützt wird.
 
@@ -28,13 +28,13 @@ Zahlreiche empirische Studien zeigen, dass instruktionale Designs, die unnötige
 
 Ein besonders gut untersuchter Ansatz ist das Lernen mit Worked Examples. Dabei werden Aufgaben gemeinsam mit ihren vollständigen Lösungsschritten präsentiert. Dies reduziert Suchprozesse beim Problemlösen und ermöglicht es Lernenden, sich stärker auf den Aufbau von Problemlöseschemata zu konzentrieren [@renkl2014_instructionally].
 
-Auch Designprinzipien aus der Multimediaforschung zeigen konsistente Effekte. Beispielsweise konnte gezeigt werden, dass Signalling -- also das Hervorheben zentraler Elemente in komplexen Darstellungen -- die Aufmerksamkeit von Lernenden gezielt auf relevante Informationen lenkt, extraneous cognitive load reduziert und Lernleistungen verbessert (Rodemer et al., 2022).
+Auch Designprinzipien aus der Multimediaforschung zeigen konsistente Effekte. Beispielsweise konnte gezeigt werden, dass Signalling -- also das Hervorheben zentraler Elemente in komplexen Darstellungen -- die Aufmerksamkeit von Lernenden gezielt auf relevante Informationen lenkt, extraneous cognitive load reduziert und Lernleistungen verbessert [@rodemer2022_dynamic].
 
 Gerade in naturwissenschaftlichen Fächern mit komplexen visuellen Darstellungen, wie der Chemie, kann eine gezielte Gestaltung von Lernmaterialien dazu beitragen, dass Lernende relevante Merkmale schneller erkennen und kognitive Ressourcen stärker für konzeptuelles Verständnis genutzt werden.
 
 ### Literaturbeispiele zur Umsetzung
 
-Eine Studie von Rodemer et al. (2022) untersuchte die Wirkung unterschiedlicher Signalling-Formen in instruktionalen Videos zu organischen Reaktionsmechanismen. In einem Eye-Tracking-Experiment mit Studierenden wurden drei Bedingungen verglichen: Videos ohne, mit statischen und mit dynamischen Hervorhebungen. Neben Blickbewegungen wurden auch Lernleistungen sowie subjektiv berichtete kognitive Belastung erhoben. Die Ergebnisse zeigen, dass dynamische Hervorhebungen die Aufmerksamkeit der Lernenden stärker auf relevante Bereiche der Repräsentationen lenken und gleichzeitig extraneous cognitive load reduzieren können. Zudem zeigten Lernende in dieser Bedingung höhere Retentionsleistungen. Die Studie verdeutlicht damit die Bedeutung von instruktionalem Design bei der Arbeit mit komplexen fachlichen Darstellungen und zeigt exemplarisch, wie Prinzipien der Cognitive Load Theory in multimedialen Lernumgebungen umgesetzt werden können.
+Eine Studie von @rodemer2022_dynamic untersuchte die Wirkung unterschiedlicher Signalling-Formen in instruktionalen Videos zu organischen Reaktionsmechanismen. In einem Eye-Tracking-Experiment mit Studierenden wurden drei Bedingungen verglichen: Videos ohne, mit statischen und mit dynamischen Hervorhebungen. Neben Blickbewegungen wurden auch Lernleistungen sowie subjektiv berichtete kognitive Belastung erhoben. Die Ergebnisse zeigen, dass dynamische Hervorhebungen die Aufmerksamkeit der Lernenden stärker auf relevante Bereiche der Repräsentationen lenken und gleichzeitig extraneous cognitive load reduzieren können. Zudem zeigten Lernende in dieser Bedingung höhere Retentionsleistungen. Die Studie verdeutlicht damit die Bedeutung von instruktionalem Design bei der Arbeit mit komplexen fachlichen Darstellungen und zeigt exemplarisch, wie Prinzipien der Cognitive Load Theory in multimedialen Lernumgebungen umgesetzt werden können.
 
 ### Umsetzungsbeispiel (eigene Projekte/Forschung)
 
@@ -67,7 +67,7 @@ Förderung germane load:
 - Nutzung von worked examples
 - Aufgabenformate, die den Aufbau konzeptueller Zusammenhänge unterstützen
 
-Die genannten Gestaltungsprinzipien lassen sich aus zentralen Instructional-Design-Effekten der Cognitive Load Theory ableiten, wie etwa dem worked example effect, split-attention effect oder redundancy effect (Mayer, 2021; Sweller et al., 1998, 2011).
+Die genannten Gestaltungsprinzipien lassen sich aus zentralen Instructional-Design-Effekten der Cognitive Load Theory ableiten, wie etwa dem worked example effect, split-attention effect oder redundancy effect [@mayer2020_multimedia; @sweller1998_cognitive; @sweller2011_cognitiveloadtheory].
 
 ### Umsetzung im Prozess
 

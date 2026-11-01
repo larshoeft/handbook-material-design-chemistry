@@ -36,6 +36,7 @@ Bis zur Umstellung auf Git gilt die Word-Fassung in `_quellen_docx/`. Der Ordner
 
 - Quellen liegen in der Zotero-Gruppenbibliothek `Handbook`. Better BibTeX nutzt die Formel `auth.lower + year + "_" + shorttitle(1,0).lower`, zum Beispiel `putwain2018_controlvalue`.
 - Keys werden gepinnt, auch bei neuen Einträgen vor dem Export.
+- Deutsche Einträge bekommen in Zotero die Sprache `de`, sonst schreibt Better BibTeX den Titel groß wie einen englischen.
 - Eine benannte Person exportiert `zotero.bib` von Hand, ohne „keep updated“. Die Datei wird nie von Hand geändert.
 - Vor jedem Commit von `zotero.bib` läuft der Skill `literatur-pruefen`.
 - Im Text steht `[@key]`. Textzitate sind nur erlaubt, solange die Quelle in Zotero fehlt.
@@ -80,8 +81,10 @@ Beim Word-Import gelten diese Regeln nicht, dort bleibt der Wortlaut unveränder
 | `docx-einarbeiten` | Skill | Word-Text wortgetreu importieren |
 | `kriterium-aktualisieren` | Skill | Bestehenden Text systematisch überarbeiten |
 | `kriterium-anlegen` | Skill | Neuen Text aus der Vorlage anlegen |
+| `quellen-nachtragen` | Skill | Quellen per DOI in Zotero eintragen, Zitate umstellen |
 | `literatur-pruefen` | Skill | Keys und Zitate prüfen, Keys migrieren |
 | `quellenpruefung` | Agent | Aussagen am Volltext prüfen |
+| `quellen-abgleich` | Agent | Export, Zitate und Literaturlisten abgleichen |
 | `fachredaktion` | Agent | Fachliche Sicht |
 | `struktur-konsistenz` | Agent | Abgleich mit Vorlagen und anderen Texten |
 | `build-technik` | Agent | Rendern und Ausgabe prüfen |

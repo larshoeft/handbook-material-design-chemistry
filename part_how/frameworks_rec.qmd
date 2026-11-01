@@ -20,7 +20,7 @@ Die *didaktische Strukturierung* stellt schließlich das verknüpfende Element z
 
 Der gesamte Prozess ist aber nicht linear zu denken, sondern ist stets iterativ-wechselseitig. So kann die didaktische Strukturierung dazu führen, dass in der fachlichen Klärung mit Vermittlungsabsicht Unschärfen offengelegt werden, die nachgeschärft werden müssen (vgl. @fig-rec-modell).
 
-![Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)](../img/frameworks_rec_image1.png){#fig-rec-modell fig-alt="Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)"}
+![Modell der didaktischen Rekonstruktion nach @kattmann1997_modell](../img/frameworks_rec_image1.png){#fig-rec-modell fig-alt="Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)"}
 
 #### Prägungen und zentrale Theorien
 
@@ -65,11 +65,11 @@ Diesbezügliche Studien sind schwer zu bündeln, da sie eine enorme thematische 
 ### Literaturbeispiele zur Umsetzung
 
 - @kattmann1997_modell
-- Komorek, M., Wilbers, J., & Duit, R. (1997). Didaktische Rekonstruktion im Bereich Chaostheorie. In Zur Didaktik der Physik und Chemie: Tagung 1996 (S. 128--130).
-- Frerichs, V. (1999). Schülervorstellungen und wissenschaftliche Vorstellungen zu den Strukturen und Prozessen der Vererbung: Ein Beitrag zur didaktischen Rekonstruktion \[Dissertation, Carl von Ossietzky Universität Oldenburg\]. Didaktisches Zentrum.
-- Grospietsch, F., & Mayer, J. (2021). Didaktische Rekonstruktion als Planungs- und Forschungsrahmen nutzen: Fachliche Klärung, Gestaltung und Evaluation einer universitären Lehrveranstaltung zum Thema Gehirn und Lernen. HLZ -- Herausforderung Lehrerinnenbildung, 4(2), 165--192. <https://doi.org/10.11576/hlz-2548>
-- Claussen, C. (2023). Zur Vermittlungsrolle von Naturwissenschaftsdidaktik in der forschungsbasierten Wissenschaftskommunikation: Stakeholderorientierte Weiterentwicklung eines Outreach-Formates für Schulen am Beispiel der Metaorganismus-Forschung \[Dissertation, Christian-Albrechts-Universität zu Kiel\].
-- Reimann, M., Herzog, S., Parchmann, I., & Schwarzer, S. (2020). Wirksamkeit der schulischen Vor- und Nachbereitung eines Schülerlaborbesuches. In Zeitschrift für Didaktik der Naturwissenschaften, 26(1), 227--240. <https://doi.org/10.1007/s40573-020-00121-y>
+- @komorek1997_didaktische
+- @frerichs1999_schuelervorstellungen
+- @grospietsch2021_didaktische
+- @claussen2023_zur
+- @reimann2020_wirksamkeit
 
 ### Umsetzungsbeispiel (eigene Projekte/Forschung)
 

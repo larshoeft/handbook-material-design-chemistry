@@ -10,21 +10,21 @@ sec-presence:
 
 ### Allgemeine Einführung/Beschreibung
 
-Präsenzerleben beschreibt in Virtual-Reality-Lernumgebungen das Gefühl, sich in einer virtuellen Umgebung wie in einer echten Umgebung zu fühlen (Slater & Wilbur, 1997; Witmer & Singer, 1998). Es wird nach Lee 2004 in drei Dimensionen unterschieden: physische, soziale und Selbstpräsenz. Physische Präsenz beschreibt die Wahrnehmung von Objekten als real, soziale Präsenz die Wahrnehmung als soziale Akteure und Selbstpräsenz als Wahrnehmung des virtuellen Selbst als eigenes Selbst. Die physische Präsenz, auch *spatial presence* (Wirth et al., 2007), kann in die Dimensionen *self location* -- sich fühlen, als wäre man in der realen Umgebung -- und *possible action* -- sich fühlen, als könnte man wie in der realen Umgebung interagieren -- unterteilt werden.
+Präsenzerleben beschreibt in Virtual-Reality-Lernumgebungen das Gefühl, sich in einer virtuellen Umgebung wie in einer echten Umgebung zu fühlen [@slater1997_framework; @witmer1998_measuring]. Es wird nach @lee2004_presence in drei Dimensionen unterschieden: physische, soziale und Selbstpräsenz. Physische Präsenz beschreibt die Wahrnehmung von Objekten als real, soziale Präsenz die Wahrnehmung als soziale Akteure und Selbstpräsenz als Wahrnehmung des virtuellen Selbst als eigenes Selbst. Die physische Präsenz, auch *spatial presence* [@wirth2007_process], kann in die Dimensionen *self location* -- sich fühlen, als wäre man in der realen Umgebung -- und *possible action* -- sich fühlen, als könnte man wie in der realen Umgebung interagieren -- unterteilt werden.
 
-Präsenz wird durch die drei technischen Faktoren Immersion, Kontrollfaktoren und Darstellungstreue (*representational fidelity*) moderiert (Makransky & Petersen, 2021): Immersion beschreibt die technische Umsetzung bzw. Darstellung (d. h. geringe Immersion ist die Umsetzung auf 2D-Bildschirmen, hohe Immersion die Umsetzung mit VR-Headsets). Die Kontrollfaktoren können nach Dalgarno & Lee (2010) durch Manipulation von Objekten, Navigation, Kontrolle der Umgebung, Kommunikation sowie Konstruktion/Scripting von Objekten beschrieben werden. Die Darstellungstreue umfasst realistische Darstellung, flüssige Blickwechsel und Objektbewegungen, konsistentes Verhalten der Objekte, Nutzendendarstellung, räumliches Audio, haptisches Feedback.
+Präsenz wird durch die drei technischen Faktoren Immersion, Kontrollfaktoren und Darstellungstreue (*representational fidelity*) moderiert [@makransky2021_cognitive]: Immersion beschreibt die technische Umsetzung bzw. Darstellung (d. h. geringe Immersion ist die Umsetzung auf 2D-Bildschirmen, hohe Immersion die Umsetzung mit VR-Headsets). Die Kontrollfaktoren können nach @dalgarno2010_what durch Manipulation von Objekten, Navigation, Kontrolle der Umgebung, Kommunikation sowie Konstruktion/Scripting von Objekten beschrieben werden. Die Darstellungstreue umfasst realistische Darstellung, flüssige Blickwechsel und Objektbewegungen, konsistentes Verhalten der Objekte, Nutzendendarstellung, räumliches Audio, haptisches Feedback.
 
 ### Befunde zur Wirkung
 
-Die technischen Faktoren (Immersion, Kontrollfaktoren, Darstellungstreue) können manipuliert werden: Der Grad der Immersion wird beispielsweise in Medienvergleichsstudien (Buchner & Mulders, 2026) variiert, indem eine Version für ein VR-Headset entwickelt wird und eine andere Version für 2D-Bildschirme. In den Studien wird verglichen, wie sich der Grad der Immersion auf die Variablen auswirkt. Die Kontrollfaktoren können manipuliert werden, indem der Umfang der Interaktionen manipuliert wird und die Lernenden unterschiedlich viele Interaktionen durchführen können. Die Darstellungstreue verändert sich abhängig von der Auflösung der Texturen und 3D-Modelle allgemein.
+Die technischen Faktoren (Immersion, Kontrollfaktoren, Darstellungstreue) können manipuliert werden: Der Grad der Immersion wird beispielsweise in Medienvergleichsstudien [@buchner2026_still] variiert, indem eine Version für ein VR-Headset entwickelt wird und eine andere Version für 2D-Bildschirme. In den Studien wird verglichen, wie sich der Grad der Immersion auf die Variablen auswirkt. Die Kontrollfaktoren können manipuliert werden, indem der Umfang der Interaktionen manipuliert wird und die Lernenden unterschiedlich viele Interaktionen durchführen können. Die Darstellungstreue verändert sich abhängig von der Auflösung der Texturen und 3D-Modelle allgemein.
 
-Die technologischen Faktoren nehmen dabei Einfluss auf das Präsenzerleben, welche bei den verschiedenen affektiven und kognitiven Faktoren moderieren und dadurch Einfluss auf den Lernerfolg nehmen können (Zusho et al., 2003). Der CAMIL-framework stellt eine ...
+Die technologischen Faktoren nehmen dabei Einfluss auf das Präsenzerleben, welche bei den verschiedenen affektiven und kognitiven Faktoren moderieren und dadurch Einfluss auf den Lernerfolg nehmen können [@zusho2003_skill]. Der CAMIL-framework stellt eine ...
 
-In experimentellen Studien (z. B. Makransky et al., 2019) wurde der Grad der Immersion manipuliert, indem Lernende ein virtuelles Labor entweder am Computerbildschirm oder mit einem VR-Headset durchliefen. Ein typischer Befund ist ein Immersions-Paradox: Das HMD führt zu höherer Präsenz, aber zu geringerem Wissenserwerb und höherer kognitiver Belastung als die Desktop-Bedingung. Dieser Befund motiviert u. a. die Kritik an reinen Media-Comparison-Studien (siehe unten).
+In experimentellen Studien [z. B. @makransky2019_adding] wurde der Grad der Immersion manipuliert, indem Lernende ein virtuelles Labor entweder am Computerbildschirm oder mit einem VR-Headset durchliefen. Ein typischer Befund ist ein Immersions-Paradox: Das HMD führt zu höherer Präsenz, aber zu geringerem Wissenserwerb und höherer kognitiver Belastung als die Desktop-Bedingung. Dieser Befund motiviert u. a. die Kritik an reinen Media-Comparison-Studien (siehe unten).
 
 ### Umsetzungsbeispiel (eigene Projekte/Forschung)
 
-Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde ein immersives Virtual-Reality-Chemielabor (iVRCL) in einer Design-Based-Research-Studie (Easterday et al., 2014) entwickelt, in dem fachspezifische Arbeitsweisen (z. B. Einstellen des pH-Wertes) trainiert werden können, bevor Lernende in das reale Labor gehen. Für die Entwicklung wurden die Designkriterien Darstellungstreue, Interaktion und Guidance berücksichtigt (Echeverri-Jimenez & Oliver-Hoyo, 2024). Dieses iVRCL wurde in einer Interventionsstudie (*n* = 80) mit Erstsemesterstudierenden 2025 eingesetzt und der Einfluss auf Stress und Selbstwirksamkeitserwartungen untersucht (Mecklenburg & Lenzer, under review).
+Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde ein immersives Virtual-Reality-Chemielabor (iVRCL) in einer Design-Based-Research-Studie [@easterday2014_designbased] entwickelt, in dem fachspezifische Arbeitsweisen (z. B. Einstellen des pH-Wertes) trainiert werden können, bevor Lernende in das reale Labor gehen. Für die Entwicklung wurden die Designkriterien Darstellungstreue, Interaktion und Guidance berücksichtigt [@echeverri-jimenez2024_roadmap]. Dieses iVRCL wurde in einer Interventionsstudie (*n* = 80) mit Erstsemesterstudierenden 2025 eingesetzt und der Einfluss auf Stress und Selbstwirksamkeitserwartungen untersucht (Mecklenburg & Lenzer, under review).
 
 ### Umsetzungsfacetten
 
@@ -70,9 +70,9 @@ Das Kriterium lässt sich auf der Materialebene umsetzen. Dazu sollte mit einem 
 
 ### Ansätze zur Absicherung der Umsetzung (Implementation-Check)
 
-Das Präsenzerleben lässt sich quantitativ, qualitativ und physiologisch erfassen (Grassini & Laumann, 2020):
+Das Präsenzerleben lässt sich quantitativ, qualitativ und physiologisch erfassen [@grassini2020_questionnaire]:
 
-1\. Zur quantitativen Erfassung bieten sich der Presence Questionnaire (Witmer & Singer, 1998), Slater-Usoh-Steed-Fragebogen (Usoh et al., 2000) oder der MEC-SPQ (Vorderer et al., 2004) bzw. die deutsche Kurzversion (Hartmann et al., 2016) an. Die Kurzversion mit acht Items und einer 7-stufigen Likert-Skala wurde in unseren Studien verwendet (siehe Tab. 1).
+1\. Zur quantitativen Erfassung bieten sich der Presence Questionnaire [@witmer1998_measuring], Slater-Usoh-Steed-Fragebogen [@usoh2000_using] oder der MEC-SPQ [@vorderer2004_mec] bzw. die deutsche Kurzversion [@hartmann2016_spatial] an. Die Kurzversion mit acht Items und einer 7-stufigen Likert-Skala wurde in unseren Studien verwendet (siehe Tab. 1).
 
 +-----------------+---------------------------------------------------------------------------------------------------+
 | Konstrukt       | Frage                                                                                             |
@@ -94,9 +94,9 @@ Das Präsenzerleben lässt sich quantitativ, qualitativ und physiologisch erfass
 |                 | Es kam mir so vor, als ob ich in der dargestellten Umgebung tun und lassen konnte, was ich wollte |
 +-----------------+---------------------------------------------------------------------------------------------------+
 
-: Tabelle 1: Kurzversion zur Erfassung des Präsenzerlebens (Hartmann et al., 2016).
+: Tabelle 1: Kurzversion zur Erfassung des Präsenzerlebens [@hartmann2016_spatial].
 
-2\. Zur qualitativen Erfassung bietet sich die Beschreibung der Erfahrung mit drei Adjektiven (Reeves et al., 2021) und mit offenen Items (z. B. Was hat Ihnen an dem VR-Labor gefallen? Was hat Ihnen an dem VR-Labor nicht gefallen?) an und kann mittels qualitativer Inhaltsanalyse untersucht werden (siehe Tab. 2).
+2\. Zur qualitativen Erfassung bietet sich die Beschreibung der Erfahrung mit drei Adjektiven [@reeves2021_varied] und mit offenen Items (z. B. Was hat Ihnen an dem VR-Labor gefallen? Was hat Ihnen an dem VR-Labor nicht gefallen?) an und kann mittels qualitativer Inhaltsanalyse untersucht werden (siehe Tab. 2).
 
 +---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | **Nr.** | **Main** **Category**                                                                                                                                                                                                   | **Nr.** | **Sub Category**              | **Description**                                                                                                                       |
@@ -124,11 +124,11 @@ Das Präsenzerleben lässt sich quantitativ, qualitativ und physiologisch erfass
 
 : Tabelle 2: Kategorien zur qualitativen Inhaltsanalyse zum Präsenzerleben angelehnt an die Kategorien von Dalgarno & Lee, 2010.
 
-3\. Physiologische Daten (z. B. EEGs) können ebenfalls verwendet werden, der Aufwand ist für den Einsatz in chemiedidaktischen Praxisstudien jedoch hoch. Für einen Überblick siehe das systematische Review von Grassini & Laumann (2020).
+3\. Physiologische Daten (z. B. EEGs) können ebenfalls verwendet werden, der Aufwand ist für den Einsatz in chemiedidaktischen Praxisstudien jedoch hoch. Für einen Überblick siehe das systematische Review von @grassini2020_questionnaire.
 
 ### Ansätze zur Untersuchung der Wirkung (Effect check)
 
-Der Einfluss von Präsenz wurde in zahlreichen Studien untersucht, insbesondere in *media-comparison*-Studien, in denen beispielsweise immersives (head-mounted display) gegen nicht-immersives (PC) Training verglichen wurde (Makransky et al., 2019). Allerdings werden diese *media-comparison*-Studien häufig wegen mangelnder Vergleichbarkeit und Erkenntnis kritisiert (Buchner & Mulders, 2026). Daher bietet es sich an, das Präsenzerleben als Mediator in Strukturgleichungsmodelle einzubeziehen, um seine Rolle im Wirkmechanismus zu prüfen.
+Der Einfluss von Präsenz wurde in zahlreichen Studien untersucht, insbesondere in *media-comparison*-Studien, in denen beispielsweise immersives (head-mounted display) gegen nicht-immersives (PC) Training verglichen wurde [@makransky2019_adding]. Allerdings werden diese *media-comparison*-Studien häufig wegen mangelnder Vergleichbarkeit und Erkenntnis kritisiert [@buchner2026_still]. Daher bietet es sich an, das Präsenzerleben als Mediator in Strukturgleichungsmodelle einzubeziehen, um seine Rolle im Wirkmechanismus zu prüfen.
 
 ### Quellen
 
