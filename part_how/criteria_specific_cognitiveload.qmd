@@ -34,7 +34,7 @@ Im Rahmen des Forschungsprojekts "Adaptive Unterstützung beim Problemlösen in 
 
 In einer experimentellen Studie mit Studierenden wurden zwei instruktionale Ansätze verglichen: perceptual learning tasks, die darauf abzielen, diagnostisch relevante strukturelle Merkmale in Molekülrepräsentationen schneller zu erkennen, sowie worked examples, die Lösungswege schrittweise darstellen und so Suchprozesse beim Problemlösen reduzieren und den Aufbau von Problemlöseschemata unterstützen.
 
-Bei der Entwicklung der Lernmaterialien wurden zentrale Designprinzipien der Cognitive Load Theory berücksichtigt, insbesondere solche, die auf eine Reduktion von extraneous cognitive load abzielen (z. B. klare Strukturierung der Materialien, Hervorhebung relevanter Informationen sowie eine schrittweise Darstellung von Lösungsprozessen). Die Materialien wurden in mehreren Iterationsschritten entwickelt und im Rahmen von Expert\*innenbefragungen sowie Testdurchläufen mit der Zielgruppe überprüft und überarbeitet, um potenzielle Verständnishürden zu identifizieren und unnötige kognitive Belastung zu reduzieren.
+Bei der Entwicklung der Lernmaterialien wurden zentrale Designprinzipien der Cognitive Load Theory berücksichtigt, insbesondere solche, die auf eine Reduktion von extraneous cognitive load abzielen (z. B. klare Strukturierung der Materialien, Hervorhebung relevanter Informationen sowie eine schrittweise Darstellung von Lösungsprozessen). Die Materialien wurden in mehreren Iterationsschritten entwickelt und im Rahmen von Expert:innenbefragungen sowie Testdurchläufen mit der Zielgruppe überprüft und überarbeitet, um potenzielle Verständnishürden zu identifizieren und unnötige kognitive Belastung zu reduzieren.
 
 ### Umsetzungsfacetten
 
