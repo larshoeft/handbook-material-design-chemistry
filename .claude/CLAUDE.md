@@ -6,7 +6,7 @@ Deutschsprachiges Quarto-Buch zur Entwicklung qualitätsvoller Lehr-Lernmaterial
 
 ## Arbeitsablauf
 
-- Gearbeitet wird auf cau-git mit Branch und Merge Request, Editor:innen prüfen vor dem Merge. GitHub dient nur dem Rendern der Webseite.
+- Gearbeitet wird auf cau-git mit Branch und Merge Request, Editor:innen prüfen vor dem Merge. GitHub dient nur dem Rendern der Webseite, die aus dem Branch `publish` entsteht (`git push origin dev:publish`).
 - Commit und Push nur auf ausdrückliche Anweisung.
 
 ## Übergangsphase: Word ist führend

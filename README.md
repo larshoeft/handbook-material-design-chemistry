@@ -214,4 +214,8 @@ The `_build/` folder is ignored by git. It only holds output for comparing the v
 
 ### Pipeline
 
-Work happens on cau-git. The website is rendered on GitHub by `.github/workflows/publish.yml` when `dev` is pushed there.
+Work happens on cau-git, which mirrors all branches to GitHub. The website is rendered with the `ipn` profile by `.github/workflows/publish.yml` when the branch `publish` changes. To release the current state of `dev`:
+
+```bash
+git push origin dev:publish
+```

@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    branches: dev
+    branches: publish
 
 name: Quarto Publish
 
@@ -23,3 +23,4 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUARTO_PROFILE: ipn
