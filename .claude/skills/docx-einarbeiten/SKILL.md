@@ -21,7 +21,7 @@ Skript: `.claude/skills/docx-einarbeiten/scripts/docx_vergleich.py`
 
 5. **Zitate.** Für Zotero-Felder gilt die Zuordnung aus der Analyse. Sonst Textzitat und Literaturliste gegen `zotero.bib` abgleichen. Nur eindeutige Treffer werden zu `[@key]`, unsichere werden gemeldet und nie geraten. Fehlt die Quelle, bleibt das Textzitat stehen, und die Angaben aus Word kommen in `STATUS.md`. Das Word-Literaturverzeichnis wird nicht übernommen. Vollständige Literaturangaben im Fließtext werden zu `[@key]`, weil die Liste unter `### Quellen` automatisch entsteht. Das gilt als erklärte Abweichung im Wortvergleich.
 
-6. **Weitere Inhalte.** Bilder nach `img/` kopieren, mit Dateiname `<ziel>_<name>`. Fußnoten übernehmen. Tabellen möglichst als Pipe-Tabellen, sonst melden.
+6. **Weitere Inhalte.** Bilder nach `img/` kopieren, mit Dateiname `<ziel>_<name>`. Bei Diagrammen danach `.venv/Scripts/python scripts/hintergrund_transparent.py img/<datei>` ausführen und das Ergebnis auf hellem und dunklem Grund ansehen, Fotos überspringt das Skript. Fußnoten übernehmen. Tabellen möglichst als Pipe-Tabellen, sonst melden.
 
 7. **Ersetzen.** Text in der Zieldatei ersetzen, weil Word führend ist. `sec-…`-Block, ID und `### Quellen` bleiben. Die wegfallenden Passagen aus dem Diff gehören in den Bericht.
 

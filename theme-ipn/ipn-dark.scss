@@ -9,3 +9,10 @@ $code-color: #3dc0e9;
 $ipn-blue-pale: #0b2440;
 $ipn-blue: #7fb3dc;
 $fig-hell: #1b3d61;
+
+/*-- scss:rules --*/
+// Rastergrafiken mit transparentem Hintergrund bleiben lesbar
+.quarto-figure img:not(.svg-inline) {
+  background-color: #f5f5f5;
+  border-radius: 0.25rem;
+}
