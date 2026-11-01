@@ -6,7 +6,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 |---|---|---|---|---|---|
 | Relevanz | `part_why/_importance.qmd` | `2_Relevanz/Entwurf_Einleitung_Relevanz_v2.docx` | nein | | noch nicht geprüft |
 | Ausrichtungen | `part_why/_orientations.qmd` | keine | | | |
-| Design-Based Research | `part_how/frameworks_dbr.qmd` | `4_Verfahren und Modelle/Steckbrief_DesignBasedResearch_Leander.docx` | nein | 11 Einfügungen, 11 Löschungen, 11 Kommentare | noch nicht geprüft |
+| Design-Based Research | `part_how/frameworks_dbr.qmd` | `4_Verfahren und Modelle/Steckbrief_DesignBasedResearch_Leander.docx` | ja, 01.11.2026 | 11 Einfügungen, 11 Löschungen (angenommen), 11 Kommentare | 11, siehe unten |
 | Didaktische Rekonstruktion | `part_how/frameworks_rec.qmd` | `4_Verfahren und Modelle/Steckbrief_Didaktische Rekonstruktion.docx` | ja, 01.11.2026 | | 8, siehe unten |
 | Universal Design for Learning | `part_how/frameworks_udl.qmd` | keine | | | |
 | Adaptivität | `part_how/criteria_specific_adaptivity.qmd` | `6_Kriterien/Steckbrief_Adaptivität_Gyde.docx` | ja, 31.10.2026 | | 2, siehe unten |
@@ -79,3 +79,14 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 | Didaktische Rekonstruktion | Klafki (1969). Keine vollständige Angabe in Word | Klafki (1969) |
 | Didaktische Rekonstruktion | Heimann, Otto & Schulz (1969). Keine vollständige Angabe in Word | Heimann, Otto und Schulz (1969) |
 | Didaktische Rekonstruktion | Gerstenmeier & Mandl (1995). Keine vollständige Angabe in Word | (Gerstenmeier und Mandl, 1995) |
+| Design-Based Research | Barab, Squire (2004). Design-Based Research: Putting a Stake in the Ground. DOI 10.1207/s15327809jls1301_1 | Barab 2004 |
+| Design-Based Research | Anderson, Shattuck (2012). Design-Based Research:A Decade of Progress in Education Research?. DOI 10.3102/0013189X11428813 | Anderson 2012 |
+| Design-Based Research | Easterday, Rees Lewis, Gerber (2014). Design-based research process: Problems, phases, and applications. | Easterday 2014 |
+| Design-Based Research | Brown (1992). Design Experiments: Theoretical and Methodological Challenges in Creating Complex Interventions in Classroom Settings. | Brown 1992 |
+| Design-Based Research | Mundy, Potgieter, Seery (2024). A design-based research approach to improving pedagogy in the teaching laboratory. DOI 10.1039/D3RP00134B | Mundy 2024 |
+| Design-Based Research | Echeverri-Jimenez, Oliver-Hoyo (2024). A Roadmap to Support the Development of Chemistry Virtual Reality Learning Environments Merging Chemical Pedagogy and Educational Technology Design. DOI 10.1021/acs.jchemed.3c01205 | Echeverri-Jimenez 2024 |
+| Design-Based Research | Mayring (2010). Qualitative Inhaltsanalyse. DOI 10.1007/978-3-531-92052-8_42 | Mayring 2010 |
+| Design-Based Research | Krieglstein, Beege, Rey, Sanchez-Stockhammer, Schneider (2023). Development and Validation of a Theory-Based Questionnaire to Measure Different Types of Cognitive Load. DOI 10.1007/s10648-023-09738-0 | Krieglstein 2023 |
+| Design-Based Research | Hartmann, Wirth, Schramm, Klimmt, Vorderer, Gysbers, Böcking, Ravaja, Laarni, Saari, Gouveia, Maria Sacau (2016). The Spatial Presence Experience Scale (SPES): A Short Self-Report Measure for Diverse Media Settings. DOI 10.1027/1864-1105/a000137 | Hartmann 2016 |
+| Design-Based Research | Reeves, Crippen, McCray (2021). The varied experience of undergraduate students learning chemistry in virtual reality laboratories. DOI 10.1016/j.compedu.2021.104320 | Reeves 2021 |
+| Design-Based Research | Mecklenburg & Lenzer (in prep.). Keine vollständige Angabe in Word | (Mecklenburg & Lenzer, in prep.) |
