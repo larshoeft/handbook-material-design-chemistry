@@ -1,0 +1,47 @@
+/* Shared by all profiles, on top of the themes */
+
+/* Wide tables scroll on their own on narrow screens */
+.quarto-float-tbl > div {
+  overflow-x: auto;
+  min-width: 0;
+}
+
+/* Collapsible sidebar on phones: wrap entries instead of overflowing */
+#quarto-sidebar {
+  max-width: 100vw;
+}
+
+#quarto-sidebar .sidebar-menu-container {
+  white-space: normal;
+}
+
+/* Page TOC in the sidebar on narrow screens, see toc-in-sidebar.html */
+@media (min-width: 992px) {
+  .sidebar-page-toc,
+  .sidebar-page-toc-toggle {
+    display: none !important;
+  }
+}
+
+.sidebar-page-toc,
+.sidebar-page-toc ul {
+  list-style: none;
+  padding-left: 1em;
+  font-size: .9em;
+}
+
+.sidebar-page-toc a {
+  display: block;
+  padding: .2em 0;
+}
+
+/* Long words and links such as DOIs may break */
+h1, h2, h3, h4 {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.csl-entry a,
+.section-authors-citation a {
+  overflow-wrap: anywhere;
+}

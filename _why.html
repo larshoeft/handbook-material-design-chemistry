@@ -80,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -375,6 +376,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script>
+// Narrow screens hide the page TOC; copy it, collapsed, below the active chapter in the sidebar
+document.addEventListener('DOMContentLoaded', () => {
+  const toc = document.querySelector('#TOC > ul');
+  const active = document.querySelector('#quarto-sidebar .sidebar-link.active');
+  if (!toc || !active) return;
+  const copy = toc.cloneNode(true);
+  copy.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+  copy.id = 'sidebar-page-toc';
+  copy.className = 'collapse list-unstyled sidebar-page-toc';
+  const toggle = document.createElement('a');
+  toggle.className = 'sidebar-item-toggle text-start sidebar-page-toc-toggle';
+  toggle.setAttribute('data-bs-toggle', 'collapse');
+  toggle.setAttribute('data-bs-target', '#sidebar-page-toc');
+  toggle.setAttribute('role', 'button');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-label', 'Abschnitte dieser Seite');
+  toggle.innerHTML = '<i class="bi bi-chevron-right ms-2"></i>';
+  active.closest('.sidebar-item-container').appendChild(toggle);
+  active.closest('li.sidebar-item').appendChild(copy);
+  copy.addEventListener('click', event => {
+    if (event.target.closest('a')) document.querySelector('.quarto-btn-toggle')?.click();
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
