@@ -16,3 +16,5 @@ date: 2026-04-30
 {{< include criteria_specific_presence.qmd >}}
 
 {{< include criteria_specific_interest.qmd >}}
+
+{{< include criteria_specific_oer.qmd >}}

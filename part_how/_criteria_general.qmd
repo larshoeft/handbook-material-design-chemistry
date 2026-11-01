@@ -1,4 +1,3 @@
 ---
-title: "Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien -- Warum?"
-autor: "Lars Höft"
+title: "Qualitätskriterien -- welche?"
 ---

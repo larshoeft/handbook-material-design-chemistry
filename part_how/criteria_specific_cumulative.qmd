@@ -2,7 +2,6 @@
 sec-cumulative:
   author:
     - ref: sb
-    - ref: lh
   date: 2026-10-02
   date-modified: 2026-10-03
   license:

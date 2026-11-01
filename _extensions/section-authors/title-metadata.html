@@ -2,7 +2,7 @@
 
   $if(by-author)$
   <div>
-    <div class="quarto-title-meta-heading">Herausgeber:innen</div>
+    <div class="quarto-title-meta-heading">$labels.authors$</div>
     <div class="quarto-title-meta-contents">
       $for(by-author)$
       <p class="author">$by-author.name.literal$$if(by-author.orcid)$ <a href="https://orcid.org/$by-author.orcid$" class="section-authors-orcid" title="ORCID $by-author.orcid$"><span class="visually-hidden">ORCID $by-author.orcid$</span></a>$endif$$for(by-author.affiliations)$ $if(it.url)$<a href="$it.url$" class="section-authors-affiliation" title="$it.name$"><span class="visually-hidden">$it.name$</span></a>$else$<span class="section-authors-affiliation" title="$it.name$"><span class="visually-hidden">$it.name$</span></span>$endif$$endfor$$if(by-author.email)$ <a href="mailto:$by-author.email$" class="section-authors-email" title="$by-author.email$"><span class="visually-hidden">$by-author.email$</span></a>$endif$</p>

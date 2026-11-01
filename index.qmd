@@ -1,3 +1,9 @@
+---
+language:
+  title-block-author-single: "Herausgeber:in"
+  title-block-author-plural: "Herausgeber:innen"
+---
+
 # Vorwort {.unnumbered}
 
 This is a Quarto book.
