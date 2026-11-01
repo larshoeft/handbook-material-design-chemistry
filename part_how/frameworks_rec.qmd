@@ -2,7 +2,7 @@
 
 ### Allgemeine Einführung/Beschreibung
 
-Während die fachliche Klärung v.a. als hermeneutisch-analytische Untersuchung eines Sach- bzw. Fachgegenstandes verstanden werden kann, so stellt sie nur einen Teil des Modells der Didaktischen Rekonstruktion (MDR) dar [@kattmann1997_modell]. Das Modell umfasst neben der fachlichen Klärung auch das Erfassen von Lernendenperspektiven sowie die didaktische Strukturierung als Verknüpfung der Ergebnisse aus fachlicher Klärung und Erhebung von Schülervorstellungen (ebd.).
+Während die fachliche Klärung v.a. als hermeneutisch-analytische Untersuchung eines Sach- bzw. Fachgegenstandes verstanden werden kann, so stellt sie nur einen Teil des Modells der Didaktischen Rekonstruktion (MDR) dar [@kattmann1997_modell]. Das Modell umfasst neben der fachlichen Klärung auch das Erfassen von Lernendenperspektiven sowie die didaktische Strukturierung als Verknüpfung der Ergebnisse aus fachlicher Klärung und Erhebung von Lernendenvorstellungen (ebd.).
 
 Die *fachliche Klärung* beschreibt demnach eine inhaltsanalytisch geprägte Methode, fachwissenschaftliche Vorstellungen zu einer Thematik -- immer vor dem Hintergrund einer Vermittlungsabsicht -- zu erschließen und so Zielformulierungen für Lernende zu erarbeiten.
 
@@ -10,9 +10,9 @@ Die *Erfassung von Lernendenperspektiven* ist genuin empirisch geprägt und betr
 
 Die *didaktische Strukturierung* stellt schließlich das verknüpfende Element zwischen fachlicher Klärung und der Erfassung von Lernendenperspektiven dar und lässt sich als Konstruktion von Unterricht verstehen, wobei Lernendenperspektiven als Gegebenheiten angesehen werden, von denen auszugehen ist und fachwissenschaftliche Vorstellungen den Zielbereich definieren.
 
-Der gesamte Prozess ist aber nicht linear zu denken, sondern ist stets iterativ-wechselseitig. So kann die didaktische Strukturierung dazu führen, dass in der fachlichen Klärung mit Vermittlungsabsicht Unschärfen offengelegt werden, die nachgeschärft werden müssen (vgl. Abb. 1).
+Der gesamte Prozess ist aber nicht linear zu denken, sondern ist stets iterativ-wechselseitig. So kann die didaktische Strukturierung dazu führen, dass in der fachlichen Klärung mit Vermittlungsabsicht Unschärfen offengelegt werden, die nachgeschärft werden müssen (vgl. @fig-rec-modell).
 
-![Abbildung : Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)](../img/frameworks_rec_image1.png){fig-alt="Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)"}
+![Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)](../img/frameworks_rec_image1.png){#fig-rec-modell fig-alt="Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)"}
 
 #### Prägungen und zentrale Theorien
 

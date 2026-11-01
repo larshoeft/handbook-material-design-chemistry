@@ -4,7 +4,7 @@
 
 Präsenzerleben beschreibt in Virtual-Reality-Lernumgebungen das Gefühl, sich in einer virtuellen Umgebung wie in einer echten Umgebung zu fühlen (Slater & Wilbur, 1997; Witmer & Singer, 1998). Es wird nach Lee 2004 in drei Dimensionen unterschieden: Physische, Sozial und Selbstpräsenz. Physisch beschreibt die Wahrnehmung von Objekten als real, Sozial beschreibt die Wahrnehmung als soziale Akteure und Selbstpräsenz als Wahrnehmung des virtuellen selbst als eigenes Selbst. Die physische Präsenz auch *spatial presence* (Wirth et al., 2007) kann in die Dimensionen *self location* -- sich fühlen als wäre man in der realen Umgebung -- und *possible action* -- sich fühlen als könnte man wie in der realen Umgebung interagieren.
 
-Präsenz wird durch die drei technischen Faktoren Immersion, Kontrollfaktoren und Darstellungstreue (*representational fidelity*) moderiert (Makransky & Petersen, 2021): Immersion beschreibt die technische Umsetzung bzw. Darstellung (d.h. geringe Immersion ist die Umsetzung auf 2D Bildschirmen, hohe Immersion die Umsetzung mit VR Headsets). Die Kontrollfaktoren können nach Dalgarno & Lee (2010) durch Manipulation von Objekten, Navigation, Kontrolle der Umgebung, Kommunikation sowie Konstruktion/Scripting von Objekten beschrieben werden. Die Darstellungstreue umfasst realistische Darstellung, flüssige Blickwechsel und Objektbewegungen, konsistentes Verhalten der Objekte, Nutzerdarstellung, räumliches Audio, haptisches Feedback.
+Präsenz wird durch die drei technischen Faktoren Immersion, Kontrollfaktoren und Darstellungstreue (*representational fidelity*) moderiert (Makransky & Petersen, 2021): Immersion beschreibt die technische Umsetzung bzw. Darstellung (d.h. geringe Immersion ist die Umsetzung auf 2D Bildschirmen, hohe Immersion die Umsetzung mit VR Headsets). Die Kontrollfaktoren können nach Dalgarno & Lee (2010) durch Manipulation von Objekten, Navigation, Kontrolle der Umgebung, Kommunikation sowie Konstruktion/Scripting von Objekten beschrieben werden. Die Darstellungstreue umfasst realistische Darstellung, flüssige Blickwechsel und Objektbewegungen, konsistentes Verhalten der Objekte, Nutzendendarstellung, räumliches Audio, haptisches Feedback.
 
 ~~zwei Gruppen von Umgebungsmerkmalen der virtuellen Umgebung:~~
 
@@ -22,7 +22,7 @@ Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde
 
 ### Umsetzungsfacetten
 
-![Abbildung 2: Der Vergleich des virtuellen Labors (links) mit dem realen Labor (rechts) zeigt eine sehr realistische Darstellung der Umgebung.](../img/criteria_specific_presence_image2.png){fig-alt="Der Vergleich des virtuellen Labors (links) mit dem realen Labor (rechts) zeigt eine sehr realistische Darstellung der Umgebung."}
+![Der Vergleich des virtuellen Labors (links) mit dem realen Labor (rechts) zeigt eine sehr realistische Darstellung der Umgebung.](../img/criteria_specific_presence_image2.png){#fig-presence-vergleich fig-alt="Der Vergleich des virtuellen Labors (links) mit dem realen Labor (rechts) zeigt eine sehr realistische Darstellung der Umgebung."}
 
 #### Darstellungstreue
 
@@ -36,7 +36,7 @@ Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde
 
 **Haptisches Feedback:** Die Kontroller vibrieren leicht, wenn man das Reagenzglas in der Klemme über den Bunsenbrenner hält
 
-![Abbildung 3: Umsetzung der Interaktion zum Einstellen des pH-Wertes (links) im Vergleich zu dem Video aus dem realen Labor (rechts).](../img/criteria_specific_presence_image3.png){fig-alt="Umsetzung der Interaktion zum Einstellen des pH-Wertes (links) im Vergleich zu dem Video aus dem realen Labor (rechts)."}
+![Umsetzung der Interaktion zum Einstellen des pH-Wertes (links) im Vergleich zu dem Video aus dem realen Labor (rechts).](../img/criteria_specific_presence_image3.png){#fig-presence-interaktion fig-alt="Umsetzung der Interaktion zum Einstellen des pH-Wertes (links) im Vergleich zu dem Video aus dem realen Labor (rechts)."}
 
 #### Kontrollfaktoren
 
@@ -60,7 +60,7 @@ Wir haben uns für die Teleportation in vorher festgelegte Bereiche, anfangs hat
 
 ### Umsetzung im Prozess
 
-Das Kriterium lässt sich auf der Materialebene umsetzen. Dazu sollte von einem Storyboard gearbeitet werden, welches die zentralen Designkriterien, Umgebung und Interaktionen festlegt. Anschließend wird die reale Umgebung so gut wie möglich (z.B., Bilder, Videos, LiDAR Scan) festgehalten und die zentralen Interaktionen videografiert. Bei den zentralen Interaktionen sind uns viele der intuitiven Handgriffe selber nicht mehr bewusst, werden hier aber festgehalten und am Ende dafür sorgen, dass sich die Interaktion auch realistisch anfühlt. In der DBR-Studie (Mecklenburg & Lenzer, in prep.) war die realistische Umgebung anfangs schon sehr gut, aber wir haben viel an den Interaktionen gefeilt und überarbeitet. Dazu wurden Nutzende mit verschiedenen Hintergründen (Novizen, Studierende der Chemie, Forschende in der Chemie und Chemiedidaktik) eingeladen, haben das iVRCL ausprobiert während Bildschirmaufzeichnungen durchgeführt wurden und anschließend dazu interviewed.
+Das Kriterium lässt sich auf der Materialebene umsetzen. Dazu sollte von einem Storyboard gearbeitet werden, welches die zentralen Designkriterien, Umgebung und Interaktionen festlegt. Anschließend wird die reale Umgebung so gut wie möglich (z.B., Bilder, Videos, LiDAR Scan) festgehalten und die zentralen Interaktionen videografiert. Bei den zentralen Interaktionen sind uns viele der intuitiven Handgriffe selber nicht mehr bewusst, werden hier aber festgehalten und am Ende dafür sorgen, dass sich die Interaktion auch realistisch anfühlt. In der DBR-Studie (Mecklenburg & Lenzer, in prep.) war die realistische Umgebung anfangs schon sehr gut, aber wir haben viel an den Interaktionen gefeilt und überarbeitet. Dazu wurden Nutzende mit verschiedenen Hintergründen (Noviz:innen, Studierende der Chemie, Forschende in der Chemie und Chemiedidaktik) eingeladen, haben das iVRCL ausprobiert während Bildschirmaufzeichnungen durchgeführt wurden und anschließend dazu interviewed.
 
 ### Ansätze zur Absicherung der Umsetzung (Implementation-Check)
 

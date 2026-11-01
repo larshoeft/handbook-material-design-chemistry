@@ -73,7 +73,7 @@ Für die Entwicklung entsprechender Materialien eignen sich insbesondere iterati
 
 Die Umsetzung von Cognitive-Load-Prinzipien kann auf unterschiedliche Weise überprüft werden, beispielsweise:
 
-- Expertenanalysen von Lernmaterialien, z. B. hinsichtlich der Einhaltung von Multimedia-Designprinzipien
+- Expert:innenanalysen von Lernmaterialien, z. B. hinsichtlich der Einhaltung von Multimedia-Designprinzipien
 - Qualitative Nutzungsstudien mit Lernenden (z. B. Think-Aloud-Protokolle während der Bearbeitung), um zu untersuchen, wie Aufgaben verarbeitet werden, welche Informationsquellen genutzt werden und an welchen Stellen unnötige kognitive Belastung oder Verständnisschwierigkeiten entstehen.
 
 ### Ansätze zur Untersuchung der Wirkung (Effect check)
