@@ -108,3 +108,5 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 | Präsenzerleben | Mecklenburg & Lenzer (in prep.). Keine vollständige Angabe in Word | (Mecklenburg & Lenzer, in prep.) |
 | Interesse | Schraw & Lehman (2001). Keine vollständige Angabe in Word | (Schraw & Lehman, 2001; Ainley 2006) |
 | Interesse | Ainley (2006). Keine vollständige Angabe in Word | (Schraw & Lehman, 2001; Ainley 2006) |
+| Interesse | Ryan & Deci (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. American Psychologist, 55(1), 68-78. DOI 10.1037/0003-066X.55.1.68. Fehlt in Zotero | (SDT; Ryan & Deci, 2000) |
+| Interesse | Ainley, Hidi & Berndorff (2002). Interest, learning, and the psychological processes that mediate their relationship. Journal of Educational Psychology, 94(3), 545-561. DOI 10.1037/0022-0663.94.3.545. Fehlt in Zotero | (Ainley et al., 2002) |

@@ -10,7 +10,7 @@ sec-presence:
 
 ### Allgemeine Einführung/Beschreibung
 
-Präsenzerleben beschreibt in Virtual-Reality-Lernumgebungen das Gefühl, sich in einer virtuellen Umgebung wie in einer echten Umgebung zu fühlen (Slater & Wilbur, 1997; Witmer & Singer, 1998). Es wird nach Lee 2004 in drei Dimensionen unterschieden: physische, soziale und Selbstpräsenz. Physische Präsenz beschreibt die Wahrnehmung von Objekten als real, soziale Präsenz die Wahrnehmung als soziale Akteure und Selbstpräsenz als Wahrnehmung des virtuellen Selbst als eigenes Selbst. Die physische Präsenz, auch *spatial presence* (Wirth et al., 2007), kann in die Dimensionen *self location* -- sich fühlen, als wäre man in der realen Umgebung -- und *possible action* -- sich fühlen, als könnte man wie in der realen Umgebung interagieren.
+Präsenzerleben beschreibt in Virtual-Reality-Lernumgebungen das Gefühl, sich in einer virtuellen Umgebung wie in einer echten Umgebung zu fühlen (Slater & Wilbur, 1997; Witmer & Singer, 1998). Es wird nach Lee 2004 in drei Dimensionen unterschieden: physische, soziale und Selbstpräsenz. Physische Präsenz beschreibt die Wahrnehmung von Objekten als real, soziale Präsenz die Wahrnehmung als soziale Akteure und Selbstpräsenz als Wahrnehmung des virtuellen Selbst als eigenes Selbst. Die physische Präsenz, auch *spatial presence* (Wirth et al., 2007), kann in die Dimensionen *self location* -- sich fühlen, als wäre man in der realen Umgebung -- und *possible action* -- sich fühlen, als könnte man wie in der realen Umgebung interagieren -- unterteilt werden.
 
 Präsenz wird durch die drei technischen Faktoren Immersion, Kontrollfaktoren und Darstellungstreue (*representational fidelity*) moderiert (Makransky & Petersen, 2021): Immersion beschreibt die technische Umsetzung bzw. Darstellung (d. h. geringe Immersion ist die Umsetzung auf 2D-Bildschirmen, hohe Immersion die Umsetzung mit VR-Headsets). Die Kontrollfaktoren können nach Dalgarno & Lee (2010) durch Manipulation von Objekten, Navigation, Kontrolle der Umgebung, Kommunikation sowie Konstruktion/Scripting von Objekten beschrieben werden. Die Darstellungstreue umfasst realistische Darstellung, flüssige Blickwechsel und Objektbewegungen, konsistentes Verhalten der Objekte, Nutzendendarstellung, räumliches Audio, haptisches Feedback.
 
@@ -18,7 +18,7 @@ Präsenz wird durch die drei technischen Faktoren Immersion, Kontrollfaktoren un
 
 Die technischen Faktoren (Immersion, Kontrollfaktoren, Darstellungstreue) können manipuliert werden: Der Grad der Immersion wird beispielsweise in Medienvergleichsstudien (Buchner & Mulders, 2026) variiert, indem eine Version für ein VR-Headset entwickelt wird und eine andere Version für 2D-Bildschirme. In den Studien wird verglichen, wie sich der Grad der Immersion auf die Variablen auswirkt. Die Kontrollfaktoren können manipuliert werden, indem der Umfang der Interaktionen manipuliert wird und die Lernenden unterschiedlich viele Interaktionen durchführen können. Die Darstellungstreue verändert sich abhängig von der Auflösung der Texturen und 3D-Modelle allgemein.
 
-Die technologischen Faktoren nehmen dabei Einfluss auf das Präsenzerleben, welche bei den verschiedenen affektiven und kognitiven Faktoren moderieren und dadurch Einfluss auf den Lernerfolg nehmen können (Zusho et al., 2003). Der CAMIL-framework stellt eine
+Die technologischen Faktoren nehmen dabei Einfluss auf das Präsenzerleben, welche bei den verschiedenen affektiven und kognitiven Faktoren moderieren und dadurch Einfluss auf den Lernerfolg nehmen können (Zusho et al., 2003). Der CAMIL-framework stellt eine ...
 
 In experimentellen Studien (z. B. Makransky et al., 2019) wurde der Grad der Immersion manipuliert, indem Lernende ein virtuelles Labor entweder am Computerbildschirm oder mit einem VR-Headset durchliefen. Ein typischer Befund ist ein Immersions-Paradox: Das HMD führt zu höherer Präsenz, aber zu geringerem Wissenserwerb und höherer kognitiver Belastung als die Desktop-Bedingung. Dieser Befund motiviert u. a. die Kritik an reinen Media-Comparison-Studien (siehe unten).
 
@@ -38,7 +38,7 @@ Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde
 
 **Nutzendendarstellung** haben wir keine extra eingebaut, weil Nutzende die Umgebung aus Ego-Perspektive wahrnehmen und daher keinen eigenen Avatar benötigen. In vielen Fällen ist die Darstellung eines Körpers in VR auch irreführend, weil er sich nicht wie der echte Körper mitbewegt und daher das Gefühl von Präsenz verringert.
 
-**Räumliches Audio:** In dem iVRCL werden wie bspw. die Brennerflamme von den entsprechenden Objekten abgespielt. Zusätzlich werden Hintergrundgeräusche zu dem Labor abgespielt.
+**Räumliches Audio:** In dem iVRCL werden Geräusche wie bspw. die Brennerflamme von den entsprechenden Objekten abgespielt. Zusätzlich werden Hintergrundgeräusche zu dem Labor abgespielt.
 
 **Haptisches Feedback:** Die Controller vibrieren leicht, wenn man das Reagenzglas in der Klemme über den Bunsenbrenner hält.
 
