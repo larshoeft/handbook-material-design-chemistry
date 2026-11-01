@@ -16,5 +16,4 @@ _quellen_docx/
 _quellen_pdf/
 .claude/settings.local.json
 .claude/review-*.md
-missing_keys.txt
 venv/

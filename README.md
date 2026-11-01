@@ -63,33 +63,13 @@ This guide explains how to:
 7. **Export the bibliography**  (ONLY FOR MAINTAINERS)   
    Export the Group Library as `zotero.bib` by hand, in biblatex format and without `keep updated`. Citation keys are pinned and use the Better BibTeX formula in [CLAUDE.md](.claude/CLAUDE.md). Check the export with the skill `literatur-pruefen` before committing.
 
-8. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)   
-   Use the Python script `clean_references.py` to remove unused references:
-
-```bash
-# Step 1: Create a virtual environment
-python -m venv venv
-
-# Step 2: Activate the virtual environment
-# macOS / Linux
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
-
-# Step 3: Install dependencies
-pip install pybtex
-
-# Step 4: Run the script
-python clean_references.py
-```
-
-9. **Render the book** (ONLY FOR MAINTAINERS)   
+8. **Render the book** (ONLY FOR MAINTAINERS)   
 
 ```bash
 quarto render
 ```
 
-10. **Export a single chapter as Word (`.docx`)**   
+9. **Export a single chapter as Word (`.docx`)**   
     Use the PowerShell script `render_docx.ps1` to render one chapter file on its own, e.g. to share it for review. Run it from the project root:
 
 ```powershell
@@ -186,7 +166,7 @@ Pandoc writes English quotation marks even with `lang: de`. For German documents
 
 #### `svg-inline`
 
-In HTML output this filter embeds local SVG images directly in the page instead of linking them with `<img>`. The figures drawn with TikZ in `img/tikz/` use the CSS variables `--fig-dunkel`, `--fig-mittel`, `--fig-hell`, `--fig-blass`, `--fig-schrift` and `--fig-grund`, which the themes set, so the figures follow the active theme and its dark mode. Without a theme value the IPN colors apply. Rebuild the figures with `python img/tikz/build.py`.
+In HTML output this filter embeds local SVG images directly in the page instead of linking them with `<img>`. The figures drawn with TikZ in `img/tikz/` use the CSS variables `--fig-dunkel`, `--fig-mittel`, `--fig-hell`, `--fig-blass`, `--fig-schrift` and `--fig-grund`, which the themes set, so the figures follow the active theme and its dark mode. Without a theme value the IPN colors apply. Rebuild the figures with `python img/tikz/build.py`. The filter prefixes the ids inside each SVG with its file name, so several figures can share a page, and keeps `width`, classes and the alt text (`fig-alt`) of the image.
 
 ### Website themes
 

@@ -41,15 +41,17 @@ end
 -- Helpers
 -- ---------------------------------------------------------------------------
 
--- Returns true if the citation ID is a Quarto cross-reference, not a
--- bibliography key. Cross-refs start with sec-, fig-, tbl-, eq-, lst-, thm-
+-- Quarto cross-reference prefixes; such citation IDs are not bibliography keys
+local CROSSREF_PREFIXES = {
+  sec = true, fig = true, tbl = true, eq = true, lst = true,
+  thm = true, lem = true, cor = true, prp = true, cnj = true, def = true,
+  exm = true, exr = true, sol = true, rem = true,
+  nte = true, tip = true, wrn = true, imp = true, cau = true,
+}
+
 local function is_crossref_id(id)
-  return id:match('^sec%-')
-      or id:match('^fig%-')
-      or id:match('^tbl%-')
-      or id:match('^eq%-')
-      or id:match('^lst%-')
-      or id:match('^thm%-')
+  local prefix = id:match('^(%a+)%-')
+  return prefix ~= nil and CROSSREF_PREFIXES[prefix] == true
 end
 
 local function is_section_div(div)
@@ -275,6 +277,8 @@ local function split_content(content)
         refs_headed = true
         local ref_header = blk.content[1]
         ref_header.attributes.number = nil
+        -- make_sections moved the id to the section div
+        if ref_header.identifier == '' then ref_header.identifier = blk.identifier end
         direct:insert(ref_header)
         for ci = 2, #blk.content do
           direct:insert(blk.content[ci])
@@ -383,28 +387,7 @@ local function make_processor(meta, references)
   end
 
   local function process_root(blocks, root_suffix)
-    local direct = List {}
-    local subs   = {}
-    local n      = 0
-
-    for _, blk in ipairs(blocks) do
-      if is_section_div(blk) then
-        if is_refs_section(blk) then
-          local ref_header = blk.content[1]
-          ref_header.attributes.number = nil
-          direct:insert(ref_header)
-          for ci = 2, #blk.content do
-            direct:insert(blk.content[ci])
-          end
-        else
-          n = n + 1
-          subs[n] = blk
-          direct:insert(pandoc.RawBlock('placeholder', tostring(n)))
-        end
-      else
-        direct:insert(blk)
-      end
-    end
+    local direct, subs, n = split_content(blocks)
 
     local processed_subs = {}
     local sub_ids = {}

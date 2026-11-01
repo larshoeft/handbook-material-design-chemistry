@@ -1,82 +1,14 @@
 --- section-authors.lua
---- Lua filter for Quarto books that:
----   1. Reads `author`, `date`, `date-modified` and `license` for ## section
----      headings, from heading attributes or from a metadata entry named
----      after the heading's id
----   2. Inserts a Quarto-style author/date block directly below each ## heading
----   3. Adds a "cite as" reference for sections with a `citation` entry in
----      their metadata (Quarto's citation fields, formatted with `csl`)
----
---- The labels ("Autor:in", "Veröffentlichungsdatum", "Zitat", "Lizenz")
---- are derived from:
----   1. Overrides under Quarto's `language:` key: title-block-author-single,
----      title-block-author-plural, title-block-published,
----      title-block-modified,
----      section-title-citation, section-title-reuse
----   2. doc.meta.lang (e.g. lang: de -> "Autor:in" / "Autor:innen")
----   3. Fallback: English
----
---- Usage in _quarto.yml:
----   filters:
----     - at: pre-quarto
----       path: section-authors
----
---- Usage in .qmd (heading attributes take precedence over metadata):
----   ## My Section {author="Max Mustermann" date="2026-10-02"}
----   ## Collaborative Section {author="Anna Müller, Bob Schmidt"}
----
----   ---
----   sec-my-section:
----     author: "Max Mustermann"       # or a list of names
----     date: 2026-10-02
----     date-modified: 2026-11-15      # optional, "Zuletzt überarbeitet"
----     license: "CC BY-NC"            # CC abbreviations link to the deed
----     citation:                      # optional; `true` for defaults only
----       type: chapter                # title/author/issued default to the
----       container-title: "…"         # heading, author and date above
----   ---
----   ## My Section {#sec-my-section}
----
---- Authors follow Quarto's author schema; name, e-mail, ORCID and
---- affiliations are shown, other keys are ignored:
----
----   sec-my-section:
----     author:
----       - name: "Anna Müller"
----         email: "mueller@example.org"
----         orcid: 0000-0002-1825-0097  # ID or https://orcid.org/… URL
----         affiliation:               # name, or map with name and url
----           - name: "IPN"
----             url: "https://www.leibniz-ipn.de"
----       - "Bob Schmidt"             # a plain name works as well
----
---- People with an `id` in `book.author` or `contributors` and affiliations
---- with an `id` in `affiliations` can be referred to:
----
----   sec-my-section:
----     author:
----       - ref: am                   # or short: author: "am, bs"
----       - name: "Bob Schmidt"
----         affiliation:
----           - ref: ipn
----
---- `extensions.section-authors.citation: true` gives every section with
---- authors a citation; `citation: false` in its entry turns it off.
---- `extensions.section-authors.license` is their default license.
----
---- A `::: section-authors-all` div lists everyone in `book.author` and
---- `contributors` in the title block, sorted by family name.
----
---- Front matter of {{< include >}}d files is merged into the chapter key
---- by key (a later file replaces a key, it does not merge into it).
---- Hence one top-level key per section: it neither overrides the
---- chapter's own `author` / `date` nor another section's entry.
+--- Author/date block, license and citation below each ## heading of a
+--- Quarto book, from heading attributes or a `sec-…:` metadata entry.
+--- `::: section-authors-all` lists all people in the title block.
+--- Usage and options: see README.md.
 
 --- Extension name, used for log messages and the HTML dependency
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.8.0'
+local EXTENSION_VERSION = '0.8.1'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -437,12 +369,9 @@ local function is_html()
   return quarto and quarto.doc and quarto.doc.is_format('html') or false
 end
 
----Contact link after an author name. In HTML an icon (styled by
----section-authors.css) with the text for screen readers; elsewhere the
----text itself.
----@param text string visible text outside HTML
----Without a URL, a span with the same icon and tooltip (HTML) or the
----text alone.
+---Contact link after an author name: in HTML an icon (styled by
+---section-authors.css) with the label for screen readers, elsewhere the
+---text. Without a URL a span with the same icon (HTML) or the text alone.
 ---@param text string visible text outside HTML
 ---@param url string|nil link target
 ---@param kind string "email", "orcid" or "affiliation"
@@ -731,18 +660,13 @@ local function all_authors(meta, base)
   }
 end
 
----Metadata entry for a section id: a map under that top-level key, or
----(deprecated) under `section-meta`.
+---Metadata entry for a section id (a map under that top-level key).
 ---@param meta Meta document metadata
 ---@param id string section id
 ---@return table|nil
 local function section_entry(meta, id)
   if id == '' then return nil end
   local entry = meta[id]
-  if utils.type(entry) ~= 'table'
-      and utils.type(meta['section-meta']) == 'table' then
-    entry = meta['section-meta'][id]
-  end
   return utils.type(entry) == 'table' and entry or nil
 end
 
@@ -822,11 +746,6 @@ return {
       default_citation = options and options.citation or nil
       default_license = options and options.license or nil
       known_affiliations = index_by_id(doc.meta.affiliations)
-      if doc.meta['section-meta'] then
-        warn('"section-meta" is deprecated: put each entry at top level, '
-             .. 'e.g. "sec-my-section:" (entries of included files '
-             .. 'otherwise replace each other)')
-      end
       local base         = lang_base(doc.meta)
       local labels       = get_labels(doc.meta, base)
       local blocks       = doc.blocks

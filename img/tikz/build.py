@@ -19,9 +19,8 @@ def lang(hexwert):
 farben = {lang(h): n for n, h in re.findall(r'\\definecolor\{(\w+)\}\{HTML\}\{(\w{6})\}', (hier / 'stil.tex').read_text(encoding='utf-8'))}
 
 
-def tag(m, name):
-    t = re.sub(r"\b(id=')", rf'\1{name}-', m.group(0))
-    t = re.sub(r"(url\(#|href='#)", rf'\1{name}-', t)
+def tag(m):
+    t = m.group(0)
     stile = []
     for attr, wert in re.findall(r"\b(fill|stroke|stop-color)='\s*#(\w+)\s*'", t):
         if lang(wert) in farben:
@@ -42,6 +41,6 @@ for name in namen:
         svg = pathlib.Path(tmp, f'{name}.svg')
         subprocess.run(['dvisvgm', '--no-fonts', '--exact-bbox', '--optimize', '-o', str(svg),
                         str(pathlib.Path(tmp, f'{name}.dvi'))], check=True, stderr=subprocess.DEVNULL)
-        text = re.sub(r'<[^!?][^>]*>', lambda m: tag(m, name), svg.read_text(encoding='utf-8'))
+        text = re.sub(r'<[^!?][^>]*>', tag, svg.read_text(encoding='utf-8'))
         (ziel / f'{name}.svg').write_text(text, encoding='utf-8', newline='\n')
     print(name)
