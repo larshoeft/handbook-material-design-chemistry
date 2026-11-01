@@ -1,4 +1,12 @@
-## Kontextualisierung {#sec-context author="mt" date="2026-11-01"}
+---
+sec-context:
+  author:
+    - ref: mt
+  date: 2026-11-01
+  date-modified: 2026-11-01
+---
+
+## Kontextualisierung {#sec-context}
 
 ### Allgemeine Einführung/Beschreibung
 

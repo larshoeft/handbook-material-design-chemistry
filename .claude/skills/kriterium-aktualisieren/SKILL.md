@@ -13,7 +13,7 @@ description: Überarbeitet ein bestehendes Kriterium oder Verfahren systematisch
 
 3. **Vorlegen.** Befunde zu einer nummerierten Änderungsliste zusammenfassen, nach Gewicht sortiert und jeweils mit Stelle, Vorschlag und Quelle. Noch nichts ändern und je Punkt die Freigabe einholen.
 
-4. **Umsetzen.** Nur freigegebene Punkte umsetzen, nach den Schreibregeln in `CLAUDE.md`. Zeichen des Textes auf die einfachen Formen umstellen. Neue Aussagen brauchen eine geprüfte Quelle, neue Quellen kommen auf die Liste in `STATUS.md`, falls sie in Zotero fehlen.
+4. **Umsetzen.** Nur freigegebene Punkte umsetzen, nach den Schreibregeln in `.claude/CLAUDE.md`. Zeichen des Textes auf die einfachen Formen umstellen. Neue Aussagen brauchen eine geprüfte Quelle, neue Quellen kommen auf die Liste in `STATUS.md`, falls sie in Zotero fehlen.
 
 5. **Abschließen.** `date-modified` setzen, `quarto render` ausführen, `STATUS.md` aktualisieren. Nicht ohne Anweisung committen.
 

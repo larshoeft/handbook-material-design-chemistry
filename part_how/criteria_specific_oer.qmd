@@ -3,9 +3,7 @@ sec-oer:
   author:
     - ref: cf
   date: 2026-11-01
-  license:
-    text: "CC BY-NC 3.0 DE"
-    url: "https://creativecommons.org/licenses/by-nc/3.0/de/"
+  date-modified: 2026-11-01
 ---
 
 <!-- Leitfragen sind Anregungen. Abschnitte dürfen leer bleiben. -->

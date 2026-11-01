@@ -1,4 +1,12 @@
-## Fachliche Klärung und Didaktische Rekonstruktion {#sec-rec author="jl" date="2026-11-01"}
+---
+sec-rec:
+  author:
+    - ref: jl
+  date: 2026-11-01
+  date-modified: 2026-11-01
+---
+
+## Fachliche Klärung und Didaktische Rekonstruktion {#sec-rec}
 
 ### Allgemeine Einführung/Beschreibung
 

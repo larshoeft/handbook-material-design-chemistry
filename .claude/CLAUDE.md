@@ -15,19 +15,20 @@ Bis zur Umstellung auf Git gilt die Word-Fassung in `_quellen_docx/`. Der Ordner
 
 - Reihenfolge ist immer erst importieren, dann aktualisieren.
 - Änderungen, die nur im Repo stehen, gehen beim nächsten Import dieses Textes verloren. Inhaltliche Änderungen vor dem Import gehören deshalb in die Word-Fassung.
-- Den Stand je Text führt [STATUS.md](STATUS.md).
+- Den Stand je Text führt [STATUS.md](../STATUS.md).
 
 ## Struktur
 
 - Hauptkapitel sind `part_*/_*.qmd` und binden ihre Texte per `{{< include >}}` ein, zum Beispiel `part_how/_criteria_specific.qmd`. Die Kriterien werden später auf mehrere Hauptkapitel aufgeteilt.
 - Ein Kriterium oder Verfahren ist eine eigene Datei mit `##`-Überschrift und `sec-`-ID.
-- Die Vorlagen [criteria_specific_template.qmd](part_how/criteria_specific_template.qmd) und [frameworks_template.qmd](part_how/frameworks_template.qmd) dienen der Orientierung. Kurzformen der Abschnittsnamen sind erlaubt, und „Einsatzbedingungen/Umsetzungswissen“ und „Transferwissen“ sind optional. Am Ende steht immer `### Quellen` mit `::: sectionrefs`.
+- Die Vorlagen [criteria_specific_template.qmd](../part_how/criteria_specific_template.qmd) und [frameworks_template.qmd](../part_how/frameworks_template.qmd) dienen der Orientierung. Kurzformen der Abschnittsnamen sind erlaubt, und „Einsatzbedingungen/Umsetzungswissen“ und „Transferwissen“ sind optional. Am Ende steht immer `### Quellen` mit `::: sectionrefs`.
 - Tabellen und Abbildungen tragen IDs wie `#tbl-…` und `#fig-…`, Abbildungen zusätzlich einen Alt-Text.
 
 ## Metadaten und Personen
 
-- Angaben stehen im Block `sec-…:` am Dateianfang (`author`, `date`, `date-modified`, `license`).
+- Angaben stehen im Block `sec-…:` am Dateianfang (`author`, `date`, `date-modified`).
 - Jeder Abschnitt mit Autor:in bekommt automatisch einen Zitiervorschlag (`extensions.section-authors.citation` in `_quarto.yml`). `citation: false` im Block schaltet ihn ab.
+- Die Lizenz gilt zentral (`extensions.section-authors.license`, CC BY-NC 4.0) und steht nicht im Block.
 - Personen werden per ID aufgerufen. Herausgeber:innen stehen in `book.author`, alle anderen Beitragenden in `contributors` in `_quarto.yml`. Affiliationen stehen in `affiliations`.
 - E-Mail und ORCID werden nur mit Einverständnis der Person eingetragen.
 
@@ -70,7 +71,7 @@ Beim Word-Import gelten diese Regeln nicht, dort bleibt der Wortlaut unveränder
 - Rendern mit `quarto render`, nicht parallel zu `quarto preview`.
 - Zeilenenden sind LF.
 - Im Code stehen möglichst wenige und nur sehr knappe Kommentare.
-- Filter liegen in `_extensions/` und sind im [README](README.md) beschrieben.
+- Filter liegen in `_extensions/` und sind im [README](../README.md) beschrieben.
 
 ## Skills und Agenten
 

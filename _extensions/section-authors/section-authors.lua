@@ -62,6 +62,7 @@
 ---
 --- `extensions.section-authors.citation: true` gives every section with
 --- authors a citation; `citation: false` in its entry turns it off.
+--- `extensions.section-authors.license` is their default license.
 ---
 --- Front matter of {{< include >}}d files is merged into the chapter key
 --- by key (a later file replaces a key, it does not merge into it).
@@ -72,7 +73,7 @@
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.6.0'
+local EXTENSION_VERSION = '0.7.0'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -547,6 +548,7 @@ end
 local known_authors = {}
 local known_affiliations = {}
 local default_citation = nil
+local default_license = nil
 
 local function index_by_id(value, index)
   index = index or {}
@@ -758,6 +760,7 @@ local function section_info(blk, meta)
   local modified = date_of('date-modified')
   local license = (attrs.license and attrs.license ~= '') and attrs.license
                   or entry.license
+                  or (next(authors) and default_license)
   attrs.author  = nil
   attrs.license = nil
   local citation = entry.citation
@@ -781,6 +784,7 @@ return {
       local options = doc.meta.extensions
                       and doc.meta.extensions[EXTENSION_NAME]
       default_citation = options and options.citation or nil
+      default_license = options and options.license or nil
       known_affiliations = index_by_id(doc.meta.affiliations)
       if doc.meta['section-meta'] then
         warn('"section-meta" is deprecated: put each entry at top level, '

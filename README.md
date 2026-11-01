@@ -2,7 +2,7 @@
 
 ## Contributing
 
-Rules for structure, citations and writing are in [CLAUDE.md](CLAUDE.md) (in German). The state of each text is in [STATUS.md](STATUS.md). Claude Code picks up the agents and skills in `.claude/` automatically.
+Rules for structure, citations and writing are in [CLAUDE.md](.claude/CLAUDE.md) (in German). The state of each text is in [STATUS.md](STATUS.md). Claude Code picks up the agents and skills in `.claude/` automatically.
 
 ## Workflow (Briefs)
 
@@ -61,7 +61,7 @@ This guide explains how to:
    Ensure that all references used in your brief are included in the **"Handbook"** Group Library.
 
 7. **Export the bibliography**  (ONLY FOR MAINTAINERS)   
-   Export the Group Library as `zotero.bib` by hand, in biblatex format and without `keep updated`. Citation keys are pinned and use the Better BibTeX formula in [CLAUDE.md](CLAUDE.md). Check the export with the skill `literatur-pruefen` before committing.
+   Export the Group Library as `zotero.bib` by hand, in biblatex format and without `keep updated`. Citation keys are pinned and use the Better BibTeX formula in [CLAUDE.md](.claude/CLAUDE.md). Check the export with the skill `literatur-pruefen` before committing.
 
 8. **Clean the `.bib` file**  (ONLY FOR MAINTAINERS)   
    Use the Python script `clean_references.py` to remove unused references:
@@ -142,7 +142,7 @@ sec-interest:
 ---
 ```
 
-Sections with authors get a "cite as" reference by default (`extensions: section-authors: citation: true` in `_quarto.yml`). Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.
+Sections with authors get a "cite as" reference and a license by default (`extensions: section-authors:` with `citation` and `license` in `_quarto.yml`). Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.
 
 Editors are listed in `book.author`, all other people in the top-level `contributors` of `_quarto.yml`, and affiliations in `affiliations`. Each needs an `id` and is defined once. Sections then refer to them. An unknown `ref` or a single unknown word produces a warning:
 

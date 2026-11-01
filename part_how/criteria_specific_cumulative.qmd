@@ -4,9 +4,6 @@ sec-cumulative:
     - ref: sb
   date: 2026-10-02
   date-modified: 2026-10-03
-  license:
-    text: "CC BY-NC 3.0 DE"
-    url: "https://creativecommons.org/licenses/by-nc/3.0/de/"
 ---
 
 ## Kumulatives Lernen {#sec-cumulative}

@@ -8,7 +8,7 @@ Du prüfst, ob die Aussagen eines Handbuchtextes durch die zitierten Quellen ged
 
 ## Vorgehen
 
-1. Lies den Text und `CLAUDE.md`. Liste jede prüfbare Aussage mit ihrem Key auf, zuerst Kennwerte, Effektstärken und Stichproben.
+1. Lies den Text und `.claude/CLAUDE.md`. Liste jede prüfbare Aussage mit ihrem Key auf, zuerst Kennwerte, Effektstärken und Stichproben.
 2. Suche den Volltext zuerst über die Zotero-Werkzeuge, falls sie verfügbar sind, sonst im lokalen Ordner `_quellen_pdf/`. Volltexte werden nicht geteilt, nicht jede Person hat alle.
 3. Prüfe jede Aussage am Volltext und notiere die Seite.
 

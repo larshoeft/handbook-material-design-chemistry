@@ -1,4 +1,12 @@
-## Design-Based Research {#sec-dbr author="lm" date="2026-11-01"}
+---
+sec-dbr:
+  author:
+    - ref: lm
+  date: 2026-11-01
+  date-modified: 2026-11-01
+---
+
+## Design-Based Research {#sec-dbr}
 
 ### Allgemeine Einführung/Beschreibung
 

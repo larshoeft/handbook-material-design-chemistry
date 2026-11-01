@@ -1,4 +1,12 @@
-## Präsenzerleben {#sec-presence author="lm" date="2026-11-01"}
+---
+sec-presence:
+  author:
+    - ref: lm
+  date: 2026-11-01
+  date-modified: 2026-11-01
+---
+
+## Präsenzerleben {#sec-presence}
 
 ### Allgemeine Einführung/Beschreibung
 

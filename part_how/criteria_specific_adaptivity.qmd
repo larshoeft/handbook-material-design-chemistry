@@ -1,4 +1,12 @@
-## Adaptivität {#sec-adaptivity author="ga" date="2026-11-01"}
+---
+sec-adaptivity:
+  author:
+    - ref: ga
+  date: 2026-11-01
+  date-modified: 2026-11-01
+---
+
+## Adaptivität {#sec-adaptivity}
 
 ### Allgemeine Einführung
 

@@ -5,7 +5,7 @@ description: Arbeitet einen Word-Text aus _quellen_docx/ wortgetreu in eine .qmd
 
 # Word-Text einarbeiten
 
-Der Wortlaut bleibt unverändert, auch bei Tippfehlern und Stilproblemen. Erlaubt sind nur Markdown-Formatierung, die Zeichentabelle aus `CLAUDE.md` und Zitate als `[@key]`.
+Der Wortlaut bleibt unverändert, auch bei Tippfehlern und Stilproblemen. Erlaubt sind nur Markdown-Formatierung, die Zeichentabelle aus `.claude/CLAUDE.md` und Zitate als `[@key]`.
 
 Skript: `.claude/skills/docx-einarbeiten/scripts/docx_vergleich.py`
 
