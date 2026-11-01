@@ -18,7 +18,7 @@ In experimentellen Studien (z. B.(Makransky et al., 2019) wurde der Grad der Imm
 
 ### Umsetzungsbeispiel (eigene Projekte/Forschung)
 
-Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde ein immersives Virtual Reality Chemielabor (iVRCL) in einer Design-Based-Research Studie (Easterday et al., 2014) entwickelt, in der die fachspezifische Arbeitsweisen (z.B. Einstellen des pH-Wertes) trainiert werden können, bevor Lernende in das reale Labor gehen. Für die Entwicklung wurden die Designkriterien Darstellungstreue, Interaktion und Guidance berücksichtigt (Echeverri-Jimenez & Oliver-Hoyo, 2024). Dieses iVRCL wurde in einer Interventionsstudie (n=80) mit Erstsemesterstudierenden 2025 eingesetzt und der Einfluss auf Stress und Selbstwirksamkeitserwartungen untersucht (Mecklenburg & Lenzer, under reivew).
+Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde ein immersives Virtual Reality Chemielabor (iVRCL) in einer Design-Based-Research Studie (Easterday et al., 2014) entwickelt, in der die fachspezifische Arbeitsweisen (z.B. Einstellen des pH-Wertes) trainiert werden können, bevor Lernende in das reale Labor gehen. Für die Entwicklung wurden die Designkriterien Darstellungstreue, Interaktion und Guidance berücksichtigt (Echeverri-Jimenez & Oliver-Hoyo, 2024). Dieses iVRCL wurde in einer Interventionsstudie (*n*=80) mit Erstsemesterstudierenden 2025 eingesetzt und der Einfluss auf Stress und Selbstwirksamkeitserwartungen untersucht (Mecklenburg & Lenzer, under reivew).
 
 ### Umsetzungsfacetten
 

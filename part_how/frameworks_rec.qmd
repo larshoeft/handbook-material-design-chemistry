@@ -69,21 +69,21 @@ In einem eigenen Projekt (ALICE) wurde das Modell der didaktischen Rekonstruktio
 
 #### Lessons learned
 
-Zur Erstellung der Lernumgebung wurden verschiedene Expert\*innen des Chemieunterrichts sowie eine Pilotierungsklasse einbezogen. Es zeigte sich jedoch im Projektverlauf, dass die vielschichtigen Perspektiven aller teilnehmenden Lehrkräfte und ihrer Lernenden nur bedingt durch diese Maßnahmen antizipiert werden konnten. Für einen gelingenden Einsatz des Konzeptes in der Entwicklung für die Schule ist insbesondere das Einbeziehen von Lehrenden zielführend. Neben der *fachlichen Klärung* und den *Lernendenperspektiven* kann gewinnbringend die Lehrendenperspektive gestellt werden. Hierbei können sich unterschiedliche ko-konstruktive Formate eignen, wie beispielsweise *Co-Design* oder *Design Based Research*, die letztlich auch den iterativ-wechselseitigen Anspruchs des Modells der Didaktischen Rekonstruktion abbilden.
+Zur Erstellung der Lernumgebung wurden verschiedene Expert:innen des Chemieunterrichts sowie eine Pilotierungsklasse einbezogen. Es zeigte sich jedoch im Projektverlauf, dass die vielschichtigen Perspektiven aller teilnehmenden Lehrkräfte und ihrer Lernenden nur bedingt durch diese Maßnahmen antizipiert werden konnten. Für einen gelingenden Einsatz des Konzeptes in der Entwicklung für die Schule ist insbesondere das Einbeziehen von Lehrenden zielführend. Neben der *fachlichen Klärung* und den *Lernendenperspektiven* kann gewinnbringend die Lehrendenperspektive gestellt werden. Hierbei können sich unterschiedliche ko-konstruktive Formate eignen, wie beispielsweise *Co-Design* oder *Design Based Research*, die letztlich auch den iterativ-wechselseitigen Anspruchs des Modells der Didaktischen Rekonstruktion abbilden.
 
 ### Umsetzungsfacetten und Umsetzung im Prozess
 
-Die systematische Umsetzung zeichnet sich explizit durch die skizzierte iterativ-wechselseitige Bearbeitung der oben beschriebenen drei Facetten des fachdidaktischen Tripletts aus. Das Dokumentieren des Entwicklungsprozesses kann dabei als Indikator für eine systematische Umsetzung verstanden werden und gleichzeitig Forschungsergebnisse generieren. Darüber hinaus können Prozessergebnisse auch weitergehend evaluiert werden -- z.B. durch Fachexpert\*innen (d.h. Fachwissenschaftler\*innen) und fachdidaktische Expert\*innen aber auch durch Lehrkräfte und Lernende. Je nach Fragestellung und Ziel können die genannten Stakeholder unterschiedlich stark eingebunden werden.
+Die systematische Umsetzung zeichnet sich explizit durch die skizzierte iterativ-wechselseitige Bearbeitung der oben beschriebenen drei Facetten des fachdidaktischen Tripletts aus. Das Dokumentieren des Entwicklungsprozesses kann dabei als Indikator für eine systematische Umsetzung verstanden werden und gleichzeitig Forschungsergebnisse generieren. Darüber hinaus können Prozessergebnisse auch weitergehend evaluiert werden -- z.B. durch Fachexpert:innen (d.h. Fachwissenschaftler:innen) und fachdidaktische Expert:innen aber auch durch Lehrkräfte und Lernende. Je nach Fragestellung und Ziel können die genannten Stakeholder unterschiedlich stark eingebunden werden.
 
 ### Ansätze zur Absicherung der Umsetzung (Implementation-Check)
 
 Mit Blick auf das Triplett können unterschiedliche Methoden der Absicherung gewählt werden:
 
-- **Fachliche Klärung:** Design-Based-Research (mit evaluativen Elementen) durch Fachexpert\*innen und fachdidaktische Expert\*innen), Gütekriterien qualitativer Forschung bei materialanalytischem Vorgehen (vgl. hermeneutisch-analytisches Vorgehen)
+- **Fachliche Klärung:** Design-Based-Research (mit evaluativen Elementen) durch Fachexpert:innen und fachdidaktische Expert:innen), Gütekriterien qualitativer Forschung bei materialanalytischem Vorgehen (vgl. hermeneutisch-analytisches Vorgehen)
 
 - **Erhebung von Lernendenperspektiven:** Je nach Umsetzung der Erfassung/des Forschungsstandes: Gütekriterien qualitativer (z.B. Dokumentatorische Transparenz des Forschungs- und Auswertungsvorgehens, Berechnung der intersubjektiven Übereinstimmung) oder quantitativer (z.B. psychometrische Gütekriterien zur Testreliabilität) Forschung
 
-- **Didaktische Strukturierung insgesamt:** Strukturindikatoren in der Dokumentation des iterativen Prozesses durch Anwender\*innen aber auch in der Dokumentenanalyse erstellter Produkte, Design-Based-Research (mit evaluativen Elementen)
+- **Didaktische Strukturierung insgesamt:** Strukturindikatoren in der Dokumentation des iterativen Prozesses durch Anwender:innen aber auch in der Dokumentenanalyse erstellter Produkte, Design-Based-Research (mit evaluativen Elementen)
 
 ### Ansätze zur Untersuchung der Wirkung (Effect check)
 

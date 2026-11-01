@@ -23,8 +23,6 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 
 Der Word-Import ändert den Wortlaut nicht. Diese Punkte werden erst danach in einem eigenen Schritt angeglichen, und der Skill `docx-einarbeiten` ergänzt hier neue Fälle.
 
-- Gender mit Doppelpunkt: `Schüler*innen` zu `Schüler:innen`, `Expert*innen` zu `Expert:innen`
-- Statistische Symbole kursiv: `N` zu `*N*`
 - Namen der `###`-Abschnitte, soweit gewünscht
 - Abbildungen als echte Abbildungen mit `#fig-`-ID und Bildunterschrift, statt Bild und Text "Abb. 1: ..." getrennt
 - Personenbezeichnungen ohne Gendern, zum Beispiel `Schüler`
