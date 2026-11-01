@@ -1,4 +1,4 @@
-## Kognitive Belastung/ Cognitive Load {#sec-load author="aa" date="2026-11-01"}
+## Kognitive Belastung/Cognitive Load {#sec-load author="aa" date="2026-11-01"}
 
 ### Allgemeine Einführung/Beschreibung
 
@@ -78,9 +78,9 @@ Die Umsetzung von Cognitive-Load-Prinzipien kann auf unterschiedliche Weise übe
 
 ### Ansätze zur Untersuchung der Wirkung (Effect check)
 
-- Befragungen von Lernenden zur wahrgenommenen kognitiven Belastung (Kriegelstein)
+- Befragungen von Lernenden zur wahrgenommenen kognitiven Belastung (Krieglstein)
 - Analyse von Bearbeitungszeiten oder Prozessdaten in digitalen Lernumgebungen
-- Analyse der Lern-Leistung
+- Analyse der Lernleistung
 
 ### Quellen
 

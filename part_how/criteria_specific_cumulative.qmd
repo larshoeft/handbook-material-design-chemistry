@@ -19,13 +19,13 @@ Kumulatives Lernen basiert auf der Annahme, dass Wissen aktiv in bestehende kogn
 
 ### Befunde zur Wirkung
 
-Kumulatives Lernen gilt als entscheidender Faktor für den Aufbau von anschlussfähigem Wissen und die Vermeidung der Anhäufung vom "trägem" Wissen (Renkl, 2010). Ein Fokus der Wirkungsforschung liegt daher auf der Förderung des Wissenstransfers auf neue Anwendungskontexte und langfristige Behaltensleistung.
+Kumulatives Lernen gilt als entscheidender Faktor für den Aufbau von anschlussfähigem Wissen und die Vermeidung der Anhäufung von "trägem" Wissen (Renkl, 2010). Ein Fokus der Wirkungsforschung liegt daher auf der Förderung des Wissenstransfers auf neue Anwendungskontexte und langfristige Behaltensleistung.
 
 Die PISA- und TIMSS-Studien zeigten für Deutschland Defizite im kumulativen Wissensaufbau (besonders in den Naturwissenschaften; Baumert et al., 1997). Die Wirksamkeit kumulativ abgestimmter Lerngelegenheiten wird auch von Hattie (2008) hervorgehoben, dort unter den Stichworten "prior achievement" (als individueller Prädiktor) und "integrative models" (als Interventionsansatz). Neuere Meta-Analysen deuten darauf hin, dass die prädiktive Wirkung des Vorwissens steigt, je spezifischer dieses Vorwissen ist (Simonsmeier et al., 2022). Auch Längsschnittstudien zeigen, dass Lernende, die Vernetzungen aktiv herstellen, in späteren Lernphasen deutlich schneller neue Konzepte integrieren können (allerdings gibt es nur sehr wenige; Bernholt et al. 2020).
 
 ### Literaturbeispiele zur Umsetzung
 
-Ein Fokus auf kumulatives Lernen findet sich in vielen Reformprojekten. Im SINUS-Programm (Steigerung der Effizienz des mathematisch-naturwissenschaftlichen Unterrichts) war "Kumulatives Lernen" eines der zentralen Module zur Unterrichtsentwicklung (SINUS, o.D.). In Kontextorientierten Ansätze wie *Chemie im Kontext* (ChiK) sollten Basiskonzepte kumulative Lernpfade über verschiedene Kontexte hinweg strukturieren [was aber nur wenig untersucht wurde\; @demuth2008_chemie]. Die Forschergruppe Naturwissenschaftlicher Unterricht (NWU) an der Universität Duisburg-Essen hat Wirkungen vertikaler Vernetzungen in mehreren, koordinierten Forschungsarbeiten untersucht [@neumann2008_vertikale; @fischer2013_nwuessen]. Neuere Ansätze werden unter dem Ansatz der Learning Progressions durchgeführt [@duschl2011_learning; @bernholt2018_learninga].
+Ein Fokus auf kumulatives Lernen findet sich in vielen Reformprojekten. Im SINUS-Programm (Steigerung der Effizienz des mathematisch-naturwissenschaftlichen Unterrichts) war "Kumulatives Lernen" eines der zentralen Module zur Unterrichtsentwicklung (SINUS, o.D.). In kontextorientierten Ansätzen wie *Chemie im Kontext* (ChiK) sollten Basiskonzepte kumulative Lernpfade über verschiedene Kontexte hinweg strukturieren [was aber nur wenig untersucht wurde\; @demuth2008_chemie]. Die Forschergruppe Naturwissenschaftlicher Unterricht (NWU) an der Universität Duisburg-Essen hat Wirkungen vertikaler Vernetzungen in mehreren, koordinierten Forschungsarbeiten untersucht [@neumann2008_vertikale; @fischer2013_nwuessen]. Neuere Ansätze werden unter dem Ansatz der Learning Progressions durchgeführt [@duschl2011_learning; @bernholt2018_learninga].
 
 ### Umsetzungsbeispiel (eigene Projekte/Forschung)
 
@@ -35,7 +35,7 @@ Im Rahmen des ALICE-Projekts wurde im Teilprojekt Chemie [@lossjew2025_learning]
 
 Eine systematische Umsetzung kumulativer Lernansätze zeichnet sich durch folgende Indikatoren aus:
 
-- Fokus auf zentrale Konzepte oder Kompetenzen (die je nach Fach, Land oder Forschungsrichtung in den jeweiligen Publikationen als Basiskonzepte, Leitideen, Big Ideas, Cross-cutting Concepts o.ä. bezeichnet werden), die als roter Faden dienen.
+- Fokus auf zentrale Konzepte oder Kompetenzen (die je nach Fach, Land oder Forschungsrichtung in den jeweiligen Publikationen als Basiskonzepte, Leitideen, Big Ideas, Cross-cutting Concepts o. Ä. bezeichnet werden), die als roter Faden dienen.
 - Systematische Aufgaben zur Vorwissensaktivierung, um wiederholt und explizit Rückbezüge auf früher gelernte Inhalte zu Beginn neuer Sequenzen oder im Verlauf der Lerneinheit herzustellen (vertikale Vernetzung) und/oder wiederholte Herstellung von Querbezügen (horizontal) und die vertiefende Weiterführung (vertikal).
 - Seltener: Förderung metakognitiver Fähigkeiten, um Lernende darin zu unterstützen, selbst zu reflektieren, wie neues Wissen mit altem zusammenhängt (bspw. Maßnahmen zur Zielklärung, zum Umgang mit Feedback, zur Selbsteinschätzung).
 
@@ -43,10 +43,10 @@ Eine systematische Umsetzung kumulativer Lernansätze zeichnet sich durch folgen
 
 Der Prozess der Umsetzung kann auf mehreren Ebenen betrachtet werden:
 
-1.  Curriculare Ebene: Erstellung längerfristiger Curricula oder Lehrpläne, die Progressionen festlegen, die über längere Zeiträume (Monate bis mehrere Schuljahre) umfassen.
+1.  Curriculare Ebene: Erstellung längerfristiger Curricula oder Lehrpläne, die Progressionen festlegen, die längere Zeiträume (Monate bis mehrere Schuljahre) umfassen.
 2.  Unterrichtsebene: Planung von Unterrichtseinheiten als "Lernpfade", die ein Thema (selten auch mehrere Themen) systematisch erschließen und dabei Vorwissen und Vorbereitung nachfolgender Themen berücksichtigen.
 
-Bei der Konzeption eines Spiralcurriculums bzw. eines Lernpfads muss die Sachstruktur des jeweiligen Fachs (oder, im Fall vertikaler Vernetzung, der jeweiligen Fächer) in eine Sachstruktur des Unterrichts überführt werden; dabei müssen zentrale Bezüge zwischen den Inhalten herausgearbeitet werden. Im Unterricht müssen diese Bezüge dann sinnhaft hergestellt werden. Dabei kommt Basiskonzepten (bzw. Leitideen, ...) als von außen in den Prozess der Wissensaneignung eingebrachte Elemente, die in optimaler Weise zum kumulativen Aufbau neuer Wissensstrukturen beitragen sollen, ein besondere Bedeutung bei. Dieser Prozess der Analyse der Sachstruktur und ihrer Rekonstruktion wird auch als Elementarisierung [z.B. @reinhold2006_elementarisierung] oder didaktische Rekonstruktion [@kattmann1997_modell] bezeichnet.
+Bei der Konzeption eines Spiralcurriculums bzw. eines Lernpfads muss die Sachstruktur des jeweiligen Fachs (oder, im Fall vertikaler Vernetzung, der jeweiligen Fächer) in eine Sachstruktur des Unterrichts überführt werden; dabei müssen zentrale Bezüge zwischen den Inhalten herausgearbeitet werden. Im Unterricht müssen diese Bezüge dann sinnhaft hergestellt werden. Dabei kommt Basiskonzepten (bzw. Leitideen, ...) als von außen in den Prozess der Wissensaneignung eingebrachte Elemente, die in optimaler Weise zum kumulativen Aufbau neuer Wissensstrukturen beitragen sollen, eine besondere Bedeutung bei. Dieser Prozess der Analyse der Sachstruktur und ihrer Rekonstruktion wird auch als Elementarisierung [z. B. @reinhold2006_elementarisierung] oder didaktische Rekonstruktion [@kattmann1997_modell] bezeichnet.
 
 Relevante Stakeholder sind in diesem Kontext natürlich Schüler:innen und Lehrkräfte, ggf. auch Schulleitungen oder Mitglieder von Fachkommissionen (bspw. zur Überarbeitung von Lehrplänen). Schüler:innen kommt dabei in erster Linie eine evaluative Rolle zu (mit Blick auf "üblichen" Unterricht oder zur Einschätzung einer Intervention), während die anderen Gruppen (auch) in Planungs- und Reflexionsprozesse kumulativer Lernpfade oder Curricula eingebunden werden können.
 
@@ -55,13 +55,13 @@ Relevante Stakeholder sind in diesem Kontext natürlich Schüler:innen und Lehrk
 Um zu prüfen, ob und inwieweit kumulativ unterrichtet wird, finden sich in der Literatur unterschiedliche Ansätze:
 
 1.  Curriculum-Analysen: Abgleich der Unterrichtspläne auf Redundanzen und Progressionslücken.
-2.  Fidelity-Checks: Beobachtung oder Befragung (i.d.R. von Schüler:innen, manchmal auch von Lehrkräften), ob Vorwissen tatsächlich aktiv verknüpft wird.
+2.  Fidelity-Checks: Beobachtung oder Befragung (i. d. R. von Schüler:innen, manchmal auch von Lehrkräften), ob Vorwissen tatsächlich aktiv verknüpft wird.
 3.  Concept Maps: Visualisierung der Wissensstruktur von Lernenden zu verschiedenen Zeitpunkten.
 4.  Unterrichtsbeobachtungen: Häufigkeit von Rückbezügen im Unterrichtsgespräch; Qualität der Aufgabenstellungen (beziehen diese explizit Wissen aus dem Vorthema/Vorjahr ein?)
 
 ### Ansätze zur Untersuchung der Wirkung (Forschung)
 
-Generell werden Interventionsstudien und Längsschnittstudien als mittel der Wahl angegeben. Aufgrund der Zeitskala sind diese aber i.d.R. sehr aufwändig und daher entsprechend selten. Beispiel für einen Interventionsansatz sind Studien zum IQUEST-Curriculum, in denen eine "kumulative" Unterrichtseinheit gegen "traditionellen" Unterricht verglichen wurde (Krajcik et al., 2008). Unterschiedliche "kumulative" Ansätze wurden im Projekt Elevate [@fortus2019_systems] verglichen. Längsschnittuntersuchungen im Chemieunterricht finden sich bei Bernholt et al. (2020) oder @fischer2013_nwuessen. Hier wurde vor allem versucht, durch Konzept- bzw. Kompetenztests die Lernentwicklung über mehrere Schuljahre abzubilden. "Kürzere" Studien versuchen Effekte kumulativen Lernens durch Transfertests zu untersuchen. @kehne2019_analyse hat dies auf Basis unterschiedlich kontextualisierter Unterrichtseinheiten analysiert.
+Generell werden Interventionsstudien und Längsschnittstudien als Mittel der Wahl angegeben. Aufgrund der Zeitskala sind diese aber i. d. R. sehr aufwändig und daher entsprechend selten. Beispiele für einen Interventionsansatz sind Studien zum IQUEST-Curriculum, in denen eine "kumulative" Unterrichtseinheit gegen "traditionellen" Unterricht verglichen wurde (Krajcik et al., 2008). Unterschiedliche "kumulative" Ansätze wurden im Projekt Elevate [@fortus2019_systems] verglichen. Längsschnittuntersuchungen im Chemieunterricht finden sich bei Bernholt et al. (2020) oder @fischer2013_nwuessen. Hier wurde vor allem versucht, durch Konzept- bzw. Kompetenztests die Lernentwicklung über mehrere Schuljahre abzubilden. "Kürzere" Studien versuchen Effekte kumulativen Lernens durch Transfertests zu untersuchen. @kehne2019_analyse hat dies auf Basis unterschiedlich kontextualisierter Unterrichtseinheiten analysiert.
 
 Generelle Indikatoren sind häufig (höhere) Lernzuwächse, Transferraten oder die Stabilität des Wissens über die Zeit (follow-up tests), manchmal auch inhaltliche Indikatoren wie die Komplexität/Vernetztheit kognitiver (konzeptbezogener) Strukturen auf Basis von Interviews, offener Antworten oder Concept Maps.
 

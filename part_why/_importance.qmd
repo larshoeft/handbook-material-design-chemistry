@@ -16,7 +16,7 @@ Der Einsatz evidenzbasierter Qualitätskriterien fungiert hierbei als Brücke. E
 
 Die Berücksichtigung von Befunden aus der Lehr-Lern-Forschung und der Fachdidaktik ist aus drei Gründen essenziell:
 
-1.  **Kognitive Entlastung & Fokussierung:** Chemie ist ein abstraktes Fach. Evidenzbasierte Kriterien (z.B. auf Basis der *Cognitive Load Theory*) helfen uns, Materialien so zu gestalten, dass die begrenzte Arbeitsgedächtniskapazität der Lernenden für das eigentliche fachliche Problem genutzt wird und nicht für das Entschlüsseln unklarer Instruktionen.
+1.  **Kognitive Entlastung & Fokussierung:** Chemie ist ein abstraktes Fach. Evidenzbasierte Kriterien (z. B. auf Basis der *Cognitive Load Theory*) helfen uns, Materialien so zu gestalten, dass die begrenzte Arbeitsgedächtniskapazität der Lernenden für das eigentliche fachliche Problem genutzt wird und nicht für das Entschlüsseln unklarer Instruktionen.
 2.  **Diagnose und individuelle Förderung:** Qualitätsvolle Materialien enthalten "eingebaute" Diagnoseelemente. Sie machen Fehlvorstellungen sichtbar und bieten gestufte Hilfen an, sodass Lehrkräfte im Unterricht stärker in die Rolle der Lernbegleitung schlüpfen können.
 3.  **Professionalisierung der Materialerstellung:** Durch die Orientierung an klaren Kriterien wird die Erstellung von Material von einer individuellen "Kunstform" zu einem transparenten Entwicklungsprozess, der auch im Team (z. B. in Fachschaften oder Arbeitsgruppen) diskutiert und evaluiert werden kann.
 
