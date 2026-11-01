@@ -4,7 +4,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 
 | Text | Datei im Repo | Word-Datei | Importiert | Word-Stand | Offene Quellen |
 |---|---|---|---|---|---|
-| Relevanz | `part_why/_importance.qmd` | `2_Relevanz/Entwurf_Einleitung_Relevanz_v2.docx` | nein | | noch nicht geprüft |
+| Relevanz | `part_why/_importance.qmd` | `2_Relevanz/Entwurf_Einleitung_Relevanz_v2.docx` | ja, 01.11.2026 | | 1, siehe unten |
 | Ausrichtungen | `part_why/_orientations.qmd` | keine | | | |
 | Design-Based Research | `part_how/frameworks_dbr.qmd` | `4_Verfahren und Modelle/Steckbrief_DesignBasedResearch_Leander.docx` | ja, 01.11.2026 | 11 Einfügungen, 11 Löschungen (angenommen), 11 Kommentare | 11, siehe unten |
 | Didaktische Rekonstruktion | `part_how/frameworks_rec.qmd` | `4_Verfahren und Modelle/Steckbrief_Didaktische Rekonstruktion.docx` | ja, 01.11.2026 | | 8, siehe unten |
@@ -33,6 +33,7 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 
 | Text | Quelle | Betroffene Zitate |
 |---|---|---|
+| Relevanz | Holzaepfel et al. (2020). Keine vollständige Angabe in Word. Zotero `holzapfel2024_qualitatsvoll` hat 2024, im Repo war dieser Key zitiert | (u. a. Holzaepfel et al., 2020) |
 | Kognitive Belastung | Sweller, Van Merriënboer & Paas (2019). Cognitive Architecture and Instructional Design: 20 Years Later. Educational Psychology Review. DOI 10.1007/s10648-019-09465-5 | (Sweller et al., 1998, 2019) |
 | Kognitive Belastung | Rodemer, Lindner, Eckhard, Graulich & Bernholt (2022). Dynamic signals in instructional videos support students to navigate through complex representations: An eye-tracking study. Applied Cognitive Psychology. DOI 10.1002/acp.3973 | (Rodemer et al., 2022), Rodemer et al. (2022) |
 | Kognitive Belastung | Mayer (2021). Multimedia learning. Cambridge University Press | (Mayer, 2021; Sweller et al., 1998, 2011) |
