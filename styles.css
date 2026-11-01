@@ -1,5 +1,24 @@
 /* Shared by all profiles, on top of the themes */
 
+/* Reserve the scrollbar so columns do not shift between short and long pages */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Pages without a page TOC use Quarto's slimcontent grid too, so the
+   columns stay in place from page to page */
+@media (min-width: 992px) {
+  body.floating:not(.slimcontent) .page-columns {
+    grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] 50px [page-start-inset] minmax(50px, 150px) [body-start-outset] 50px [body-start] 1.5em [body-content-start] minmax(450px, calc(750px - 3em)) [body-content-end] 1.5em [body-end] 50px [body-end-outset] minmax(50px, 150px) [page-end-inset] 50px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body.floating:not(.slimcontent) .page-columns {
+    grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start page-start-inset body-start-outset body-start] 1em [body-content-start] minmax(500px, calc(750px - 3em)) [body-content-end] 1.5em [body-end] 35px [body-end-outset] minmax(75px, 145px) [page-end-inset] 35px [page-end] 4fr [screen-end-inset] 1.5em [screen-end];
+  }
+}
+
 /* Wide tables scroll on their own on narrow screens */
 .quarto-float-tbl > div {
   overflow-x: auto;
