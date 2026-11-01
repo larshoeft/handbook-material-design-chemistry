@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sascha Bernholt">
-<meta name="author" content="Ilka Parchmann">
+<meta name="author" content="Lars Höft">
+<meta name="author" content="Stefanie Lenzer">
 
 <title>Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</title>
 <style>
@@ -44,11 +45,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7741c9497ded6f164aa9d4ab05091169.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-ab93bbb9cc213802251985f1bbb41122.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7741c9497ded6f164aa9d4ab05091169.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-028bc4f2fcb235fa2cd2f5b39c028cba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/section-authors-0.2.0/section-authors.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b6bacc4077cb26d3a1aedc547e2ca1ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-43fa15964fcb154118dc49390a3ce332.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b6bacc4077cb26d3a1aedc547e2ca1ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/section-authors-0.8.0/section-authors.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,7 +85,169 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -105,6 +272,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -129,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./_why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzten und evaluieren – Warum?</span></a>
+ <span class="menu-text">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -139,12 +309,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./part_why/_importance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./part_why/_orientations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Welche Ausrichtungen lassen sich mit den Qualitätskriterien fokussieren?</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,19 +325,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./part_how/_frameworks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Verfahren und Rahmenmodelle</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./part_how/_criteria_general.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Warum?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Verfahren und Rahmenmodelle</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./part_how/_criteria_specific.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a>
   </div>
 </li>
       </ul>
@@ -181,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
   </div>
 </li>
     </ul>
@@ -201,33 +359,41 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</h1>
 </div>
 
 
-
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Autor:innen</div>
+    <div class="quarto-title-meta-heading">Herausgeber:innen</div>
     <div class="quarto-title-meta-contents">
-             <p>Sascha Bernholt </p>
-             <p>Ilka Parchmann </p>
+            <p class="author">Sascha Bernholt <a href="https://orcid.org/0000-0003-4045-3795" class="section-authors-orcid" title="ORCID 0000-0003-4045-3795"><span class="visually-hidden">ORCID 0000-0003-4045-3795</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:bernholt@leibniz-ipn.de" class="section-authors-email" title="bernholt@leibniz-ipn.de"><span class="visually-hidden">bernholt@leibniz-ipn.de</span></a></p>
+            <p class="author">Lars Höft <a href="https://orcid.org/0000-0002-9040-8995" class="section-authors-orcid" title="ORCID 0000-0002-9040-8995"><span class="visually-hidden">ORCID 0000-0002-9040-8995</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:hoeft@leibniz-ipn.de" class="section-authors-email" title="hoeft@leibniz-ipn.de"><span class="visually-hidden">hoeft@leibniz-ipn.de</span></a></p>
+            <p class="author">Stefanie Lenzer <a href="https://orcid.org/0000-0002-4024-6473" class="section-authors-orcid" title="ORCID 0000-0002-4024-6473"><span class="visually-hidden">ORCID 0000-0002-4024-6473</span></a> <a href="https://www.uni-marburg.de" class="section-authors-affiliation" title="Philipps-Universität Marburg"><span class="visually-hidden">Philipps-Universität Marburg</span></a> <a href="mailto:lenzers@staff.uni-marburg.de" class="section-authors-email" title="lenzers@staff.uni-marburg.de"><span class="visually-hidden">lenzers@staff.uni-marburg.de</span></a></p>
           </div>
   </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
+  
+    <div class="section-authors-all">
+    <div class="quarto-title-meta-heading">Autor:innen</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2. Oktober 2026</p>
+      <p><span class="section-authors-name">Anja Annemüller <a href="https://orcid.org/0009-0008-8762-1243" class="section-authors-orcid" title="ORCID 0009-0008-8762-1243"><span class="visually-hidden">ORCID 0009-0008-8762-1243</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:annemueller@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">annemueller@leibniz-ipn.de</span></a></span>, <span class="section-authors-name">Gyde Asmussen <a href="https://orcid.org/0000-0001-6935-2563" class="section-authors-orcid" title="ORCID 0000-0001-6935-2563"><span class="visually-hidden">ORCID 0000-0001-6935-2563</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a></span>, <span class="section-authors-name">Sascha Bernholt <a href="https://orcid.org/0000-0003-4045-3795" class="section-authors-orcid" title="ORCID 0000-0003-4045-3795"><span class="visually-hidden">ORCID 0000-0003-4045-3795</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:bernholt@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">bernholt@leibniz-ipn.de</span></a></span>, <span class="section-authors-name">Clemens Frank <a href="https://orcid.org/0009-0001-3742-147X" class="section-authors-orcid" title="ORCID 0009-0001-3742-147X"><span class="visually-hidden">ORCID 0009-0001-3742-147X</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:frank@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">frank@leibniz-ipn.de</span></a></span>, <span class="section-authors-name">Lars Höft <a href="https://orcid.org/0000-0002-9040-8995" class="section-authors-orcid" title="ORCID 0000-0002-9040-8995"><span class="visually-hidden">ORCID 0000-0002-9040-8995</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:hoeft@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">hoeft@leibniz-ipn.de</span></a></span>, <span class="section-authors-name">Johannes Kröger <a href="https://orcid.org/0009-0001-5489-3372" class="section-authors-orcid" title="ORCID 0009-0001-5489-3372"><span class="visually-hidden">ORCID 0009-0001-5489-3372</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:kroeger@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">kroeger@leibniz-ipn.de</span></a></span>, <span class="section-authors-name">Stefanie Lenzer <a href="https://orcid.org/0000-0002-4024-6473" class="section-authors-orcid" title="ORCID 0000-0002-4024-6473"><span class="visually-hidden">ORCID 0000-0002-4024-6473</span></a> <a href="https://www.uni-marburg.de" class="section-authors-affiliation" title="Philipps-Universität Marburg"><span class="visually-hidden">Philipps-Universität Marburg</span></a> <a href="mailto:lenzers@staff.uni-marburg.de" class="section-authors-email"><span class="visually-hidden">lenzers@staff.uni-marburg.de</span></a></span>, <span class="section-authors-name">Jannik Lossjew <a href="https://orcid.org/0009-0005-1942-7121" class="section-authors-orcid" title="ORCID 0009-0005-1942-7121"><span class="visually-hidden">ORCID 0009-0005-1942-7121</span></a> <a href="https://uni-tuebingen.de" class="section-authors-affiliation" title="Eberhard Karls Universität Tübingen"><span class="visually-hidden">Eberhard Karls Universität Tübingen</span></a> <a href="mailto:jannik.lossjew@uni-tuebingen.de" class="section-authors-email"><span class="visually-hidden">jannik.lossjew@uni-tuebingen.de</span></a></span>, <span class="section-authors-name">Leander Mecklenburg <a href="https://orcid.org/0009-0008-5724-3798" class="section-authors-orcid" title="ORCID 0009-0008-5724-3798"><span class="visually-hidden">ORCID 0009-0008-5724-3798</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:mecklenburg@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">mecklenburg@leibniz-ipn.de</span></a></span>, <span class="section-authors-name">Maximilian Traub <a href="https://orcid.org/0009-0009-4244-8958" class="section-authors-orcid" title="ORCID 0009-0009-4244-8958"><span class="visually-hidden">ORCID 0009-0009-4244-8958</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:traub@leibniz-ipn.de" class="section-authors-email"><span class="visually-hidden">traub@leibniz-ipn.de</span></a></span></p>
     </div>
   </div>
   
-    
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1. November 2026</p>
+    </div>
   </div>
   
+  
+  </div>
+
 
 
 </header>
@@ -235,8 +401,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="vorwort" class="level1 unnumbered">
 <h1 class="unnumbered">Vorwort</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
 
 </section>
@@ -244,6 +409,19 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

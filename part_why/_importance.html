@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Sascha Bernholt">
 
 <title>2&nbsp; Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien – Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</title>
 <style>
@@ -26,27 +27,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -62,11 +43,15 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7741c9497ded6f164aa9d4ab05091169.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ab93bbb9cc213802251985f1bbb41122.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7741c9497ded6f164aa9d4ab05091169.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-028bc4f2fcb235fa2cd2f5b39c028cba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/section-authors-0.2.0/section-authors.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b6bacc4077cb26d3a1aedc547e2ca1ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-43fa15964fcb154118dc49390a3ce332.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b6bacc4077cb26d3a1aedc547e2ca1ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/section-authors-0.8.0/section-authors.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,7 +83,169 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -123,6 +270,9 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -147,7 +297,7 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../_why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzten und evaluieren – Warum?</span></a>
+ <span class="menu-text">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -157,12 +307,6 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../part_why/_importance.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part_why/_orientations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Welche Ausrichtungen lassen sich mit den Qualitätskriterien fokussieren?</span></span></a>
   </div>
 </li>
       </ul>
@@ -179,19 +323,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part_how/_frameworks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Verfahren und Rahmenmodelle</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part_how/_criteria_general.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Warum?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Verfahren und Rahmenmodelle</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part_how/_criteria_specific.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,7 +337,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
   </div>
 </li>
     </ul>
@@ -213,7 +351,7 @@ div.csl-indent {
    
   <ul class="collapse">
   <li><a href="#die-brücke-zwischen-forschung-und-praxis" id="toc-die-brücke-zwischen-forschung-und-praxis" class="nav-link active" data-scroll-target="#die-brücke-zwischen-forschung-und-praxis"><span class="header-section-number">2.1</span> Die Brücke zwischen Forschung und Praxis</a></li>
-  <li><a href="#die-fünf-kernprinzipien-für-qualitätsvollen-unterricht" id="toc-die-fünf-kernprinzipien-für-qualitätsvollen-unterricht" class="nav-link" data-scroll-target="#die-fünf-kernprinzipien-für-qualitätsvollen-unterricht"><span class="header-section-number">2.2</span> Die fünf Kernprinzipien für qualitätsvollen Unterricht</a></li>
+  <li><a href="#die-fünf-kernprinzipien-für-qualitätsvollen-chemieunterricht" id="toc-die-fünf-kernprinzipien-für-qualitätsvollen-chemieunterricht" class="nav-link" data-scroll-target="#die-fünf-kernprinzipien-für-qualitätsvollen-chemieunterricht"><span class="header-section-number">2.2</span> Die fünf Kernprinzipien für qualitätsvollen Chemieunterricht</a></li>
   <li><a href="#von-der-theorie-zur-gestaltung" id="toc-von-der-theorie-zur-gestaltung" class="nav-link" data-scroll-target="#von-der-theorie-zur-gestaltung"><span class="header-section-number">2.3</span> Von der Theorie zur Gestaltung</a></li>
   <li><span class="header-section-number">2.4</span> Quellen</li>
   </ul>
@@ -222,78 +360,98 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block"><span id="sec-importance" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien</span></span></h1>
 </div>
 
 
-
 <div class="quarto-title-meta">
 
-    
-  
-    
+    <div>
+    <div class="quarto-title-meta-heading">Autor:in</div>
+    <div class="quarto-title-meta-contents">
+            <p class="author">Sascha Bernholt</p>
+          </div>
   </div>
   
+  
+  
+  
+  </div>
+
 
 
 </header>
 
 
-<p>Nationale und internationale Leistungsstudien wie PISA, TIMSS oder der IQB-Bildungstrend verdeutlichen seit Jahren eine besorgniserregende Stagnation naturwissenschaftlicher Kompetenzen bei Schüler*innen in Deutschland. Parallel dazu liegen aus den Fachdidaktiken und der Bildungsforschung fundierte empirische Erkenntnisse vor, wie Lernprozesse wirksam unterstützt werden können. Dieser Widerspruch verdeutlicht, dass Forschungsergebnisse nicht ausreichend in der unterrichtlichen Praxis ankommen und es dringender denn je ist, diesen “Evidence-Practice Gap” zu schließen. Dies gilt dabei nicht nur für den Schulunterricht, sondern auch für die universitäre Lehre.</p>
-<p>Die Entwicklung von Unterrichtsmaterialien in der Chemie gleicht oft einer Gratwanderung: Einerseits sollen die Materialien fachlich präzise und aktuell sein, andererseits müssen sie die kognitiven und motivationalen Bedürfnisse der Schüler*innen treffen, die zunehmend heterogener zusammengesetzt sind. Bei der Gestaltung von Unterrichtsmaterialien spielen entsprechend viele Aspekte eine Rolle, deren Berücksichtigung im Lernmaterial aber häufig einer “didaktischen Intuition” oder dem Ziel ästhetisch ansprechend gestalteter Materialien folgt. Erfahrungswissen ist dabei zweifellos eine wertvolle Ressource, aber um die Lernwirksamkeit im Chemieunterricht systematisch zu steigern, bedarf es einer systematischeren Herangehensweise.</p>
-<p>Um eine kohärente und verlässliche naturwissenschaftliche Grundbildung zu sichern, benötigt die Unterrichtsentwicklung einen gemeinsamen Bezugsrahmen. Orientiert an den QuaMath-Prinzipien <span class="citation" data-cites="holzapfel2024--2e822381">(u. a. <a href="#ref-holzapfel2024--2e822381" role="doc-biblioref">Holzäpfel et al., 2024</a>)</span> schlägt diese Handreichung fünf fachübergreifende Prinzipien als “Common Ground” vor. Diese dienen als Kompass für die Materialentwicklung und Lehrkräftebildung, um vertieftes fachliches Denken anzuregen und den Kompetenzaufbau systematisch zu unterstützen.</p>
+<p>Nationale und internationale Leistungsstudien wie PISA, TIMSS oder der IQB-Bildungstrend verdeutlichen seit Jahren eine besorgniserregende Stagnation naturwissenschaftlicher Kompetenzen bei Schüler:innen in Deutschland. Parallel dazu liegen aus den Fachdidaktiken und der Bildungsforschung fundierte empirische Erkenntnisse vor, wie Lernprozesse wirksam unterstützt werden können. Dieser Widerspruch verdeutlicht, dass Forschungsergebnisse nicht ausreichend in der unterrichtlichen Praxis ankommen und es dringender denn je ist, diesen „Evidence-Practice Gap“ zu schließen. Dies gilt dabei nicht nur für den Schulunterricht, sondern auch für die universitäre Lehre.</p>
+<p>Die Entwicklung von Unterrichtsmaterialien für Chemieunterricht gleicht oft einer Gratwanderung: Einerseits sollen die Materialien fachlich präzise und aktuell sein, andererseits müssen sie die kognitiven und motivationalen Bedürfnisse der Schüler:innen treffen, die zunehmend heterogener zusammengesetzt sind. Bei der Gestaltung von Unterrichtsmaterialien spielen entsprechend viele Aspekte eine Rolle, deren Berücksichtigung im Lernmaterial aber häufig einer „didaktischen Intuition“ oder dem Ziel ästhetisch ansprechend gestalteter Materialien folgt. Erfahrungswissen ist dabei zweifellos eine wertvolle Ressource, aber um die Lernwirksamkeit im Unterricht systematisch zu steigern, bedarf es einer systematischeren Herangehensweise.</p>
 <section id="die-brücke-zwischen-forschung-und-praxis" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="die-brücke-zwischen-forschung-und-praxis"><span class="header-section-number">2.1</span> Die Brücke zwischen Forschung und Praxis</h2>
-<p>Der Einsatz evidenzbasierter Qualitätskriterien fungiert hierbei als Brücke. Er stellt sicher, dass Materialien nicht nur “funktionieren”, weil die Lernenden beschäftigt sind, sondern dass sie Lernprozesse dort auslösen, wo sie am dringendsten benötigt werden: bei der Verknüpfung von Phänomenebene und Teilchenebene, beim Verständnis experimenteller Untersuchungen und Ergebnisse oder beim Aufbau einer tragfähigen Fachsprache. Die Berücksichtigung von Befunden aus der Lehr-Lern-Forschung und der Fachdidaktik ist aus drei Gründen essenziell:</p>
+<p>Um eine kohärente und verlässliche naturwissenschaftliche Grundbildung zu sichern, benötigt die Unterrichtsentwicklung einen gemeinsamen Bezugsrahmen. Orientiert an den QuaMath-Prinzipien (u. a. Holzaepfel et al., 2020) schlägt diese Handreichung fünf fachübergreifende Prinzipien als „Common Ground“ vor. Diese dienen als Kompass für die Materialentwicklung, um vertieftes fachliches Denken anzuregen und den Kompetenzaufbau systematisch zu unterstützen.</p>
+<p>Der Einsatz evidenzbasierter Qualitätskriterien fungiert hierbei als Brücke. Er stellt sicher, dass Materialien nicht nur „funktionieren“, weil die Lernenden beschäftigt sind, sondern dass sie Lernprozesse dort auslösen, wo sie am dringendsten benötigt werden: bei der Verknüpfung von Phänomenebene und Teilchenebene, beim Verständnis experimenteller Untersuchungen und Ergebnisse oder beim Aufbau einer tragfähigen Fachsprache.</p>
+<p>Die Berücksichtigung von Befunden aus der Lehr-Lern-Forschung und der Fachdidaktik ist aus drei Gründen essenziell:</p>
 <ol type="1">
-<li><strong>Kognitive Entlastung &amp; Fokussierung:</strong> Chemie ist ein abstraktes Fach. Evidenzbasierte Kriterien (z.B. auf Basis der Cognitive Load Theory) helfen uns, Materialien so zu gestalten, dass die begrenzte Arbeitsgedächtniskapazität der Lernenden für das eigentliche fachliche Problem genutzt wird und nicht für das Entschlüsseln unklarer Instruktionen.</li>
-<li><strong>Diagnose und individuelle Förderung:</strong> Qualitätsvolle Materialien enthalten “eingebaute” Diagnoseelemente. Sie machen Fehlvorstellungen sichtbar und bieten gestufte Hilfen an, sodass Lehrkräfte im Unterricht stärker in die Rolle der Lernbegleitung schlüpfen können.</li>
-<li><strong>Professionalisierung der Materialerstellung:</strong> Durch die Orientierung an klaren Kriterien wird die Erstellung von Material von einer individuellen “Kunstform” zu einem transparenten Entwicklungsprozess, der auch im Team (z. B. in Fachschaften oder Arbeitsgruppen) diskutiert und evaluiert werden kann.</li>
+<li><strong>Kognitive Entlastung &amp; Fokussierung:</strong> Chemie ist ein abstraktes Fach. Evidenzbasierte Kriterien (z. B. auf Basis der <em>Cognitive Load Theory</em>) helfen uns, Materialien so zu gestalten, dass die begrenzte Arbeitsgedächtniskapazität der Lernenden für das eigentliche fachliche Problem genutzt wird und nicht für das Entschlüsseln unklarer Instruktionen.</li>
+<li><strong>Diagnose und individuelle Förderung:</strong> Qualitätsvolle Materialien enthalten „eingebaute“ Diagnoseelemente. Sie machen Fehlvorstellungen sichtbar und bieten gestufte Hilfen an, sodass Lehrkräfte im Unterricht stärker in die Rolle der Lernbegleitung schlüpfen können.</li>
+<li><strong>Professionalisierung der Materialerstellung:</strong> Durch die Orientierung an klaren Kriterien wird die Erstellung von Material von einer individuellen „Kunstform“ zu einem transparenten Entwicklungsprozess, der auch im Team (z. B. in Fachschaften oder Arbeitsgruppen) diskutiert und evaluiert werden kann.</li>
 </ol>
 </section>
-<section id="die-fünf-kernprinzipien-für-qualitätsvollen-unterricht" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="die-fünf-kernprinzipien-für-qualitätsvollen-unterricht"><span class="header-section-number">2.2</span> Die fünf Kernprinzipien für qualitätsvollen Unterricht</h2>
+<section id="die-fünf-kernprinzipien-für-qualitätsvollen-chemieunterricht" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="die-fünf-kernprinzipien-für-qualitätsvollen-chemieunterricht"><span class="header-section-number">2.2</span> Die fünf Kernprinzipien für qualitätsvollen Chemieunterricht</h2>
 <p>Die folgenden Prinzipien bilden das Rückgrat dieser Handreichung. Sie transformieren abstrakte Qualitätskriterien in handlungsleitende Strategien für die Materialgestaltung:</p>
-<ol type="1">
-<li><p>Verstehensorientierung: Konzepte und Verfahren fundieren Naturwissenschaftliche Grundbildung entsteht nicht durch das Auswendiglernen von Fakten, sondern durch die aktive Auseinandersetzung mit Konzepten. Lehrmaterialien sollen Lernende dazu anregen, Phänomene in sinnstiftenden Kontexten zu erschließen und dabei fachinhaltliches mit fachmethodischem Verständnis zu verknüpfen.</p>
+<section id="verstehensorientierung-konzepte-und-verfahren-fundieren" class="level3">
+<h3 class="anchored" data-anchor-id="verstehensorientierung-konzepte-und-verfahren-fundieren">1. Verstehensorientierung: Konzepte und Verfahren fundieren</h3>
+<p>Naturwissenschaftliche Grundbildung entsteht nicht durch das Auswendiglernen von Fakten, sondern durch die aktive Auseinandersetzung mit Konzepten. Lehrmaterialien sollen Lernende dazu anregen, Phänomene in sinnstiftenden Kontexten zu erschließen und dabei fachinhaltliches mit fachmethodischem Verständnis zu verknüpfen.</p>
 <ul>
 <li><strong>Vernetzung:</strong> Fokus auf den Wechsel zwischen Repräsentationsformen (Modelle, Formeln, Fachsprache).</li>
-<li><strong>Reflexion:</strong> Explizites Thematisieren der Beziehungen zwischen Konzepten, um oberflächliches “Rezeptwissen” zu vermeiden.</li>
-</ul></li>
-<li><p>Durchgängigkeit und Vernetzung: Langfristiges Lernen sichern Lernen ist ein kumulativer Prozess. Das Prinzip der Durchgängigkeit (Spiralprinzip) stellt sicher, dass Inhalte über Schuljahre hinweg anschlussfähig bleiben.</p>
+<li><strong>Reflexion:</strong> Explizites Thematisieren der Beziehungen zwischen Konzepten, um oberflächliches „Rezeptwissen“ zu vermeiden.</li>
+</ul>
+</section>
+<section id="durchgängigkeit-und-vernetzung-langfristiges-lernen-sichern" class="level3">
+<h3 class="anchored" data-anchor-id="durchgängigkeit-und-vernetzung-langfristiges-lernen-sichern">2. Durchgängigkeit und Vernetzung: Langfristiges Lernen sichern</h3>
+<p>Lernen ist ein kumulativer Prozess. Das Prinzip der Durchgängigkeit (Spiralprinzip) stellt sicher, dass Inhalte über Schuljahre hinweg anschlussfähig bleiben.</p>
 <ul>
 <li><strong>Anknüpfung:</strong> Gezieltes Aufgreifen von Vorwissen und explizite Verknüpfung mit neuen Lernzielen.</li>
-<li><strong>Anschlussfähigkeit:</strong> Auswahl von Inhalten, die eine tragfähige Basis für spätere Lernstufen bilden. <strong>Aufarbeitung:</strong> Frühzeitige Diagnose und Schließung von Verstehenslücken.</li>
-</ul></li>
-<li><p>Kognitive und motivationale Aktivierung: Aktive Denkprozesse anregen Ein hoher Beschäftigungsgrad im Unterricht garantiert noch keinen Lernerfolg. Entscheidend ist die Tiefe der kognitiven Verarbeitung.</p>
+<li><strong>Anschlussfähigkeit:</strong> Auswahl von Inhalten, die eine tragfähige Basis für spätere Lernstufen bilden.</li>
+<li><strong>Aufarbeitung:</strong> Frühzeitige Diagnose und Schließung von Verstehenslücken.</li>
+</ul>
+</section>
+<section id="kognitive-und-motivationale-aktivierung-aktive-denkprozesse-anregen" class="level3">
+<h3 class="anchored" data-anchor-id="kognitive-und-motivationale-aktivierung-aktive-denkprozesse-anregen">3. Kognitive und motivationale Aktivierung: Aktive Denkprozesse anregen</h3>
+<p>Ein hoher Beschäftigungsgrad im Unterricht garantiert noch keinen Lernerfolg. Entscheidend ist die Tiefe der kognitiven Verarbeitung.</p>
 <ul>
 <li><strong>Forschend-entdeckendes Lernen:</strong> Lehrmaterialien sollten komplexe Phänomene so aufbereiten, dass Zusammenhänge selbstständig entdeckt werden können.</li>
 <li><strong>Produktives Üben:</strong> Statt repetitiver Aufgaben fördern Transferleistungen, Begründungen und Vergleiche ein flexibles, vernetztes Wissen.</li>
-</ul></li>
-<li><p>Lernenden-Orientierung und Adaptivität: Lernstände als Ausgangspunkt Wirksamer Unterricht ist adaptiv – er passt sich der Heterogenität der Lernenden an. Materialien müssen so konzipiert sein, dass sie unterschiedliche Lernwege ermöglichen.</p>
+</ul>
+</section>
+<section id="lernenden-orientierung-und-adaptivität-lernstände-als-ausgangspunkt" class="level3">
+<h3 class="anchored" data-anchor-id="lernenden-orientierung-und-adaptivität-lernstände-als-ausgangspunkt">4. Lernenden-Orientierung und Adaptivität: Lernstände als Ausgangspunkt</h3>
+<p>Wirksamer Unterricht ist adaptiv – er passt sich der Heterogenität der Lernenden an. Materialien müssen so konzipiert sein, dass sie unterschiedliche Lernwege ermöglichen.</p>
 <ul>
 <li><strong>Diagnosegeleitetheit:</strong> Systematisches Aufgreifen typischer Fehlvorstellungen und individueller Lernstände.</li>
 <li><strong>Differenzierung:</strong> Bereitstellung von gestuften Hilfen (Scaffolding), Visualisierungshilfen und unterschiedlichen Anforderungsprofilen, um Barrieren abzubauen und individuelle Lernpfade zu unterstützen.</li>
-</ul></li>
-<li><p>Kommunikationsförderung: Fachsprache als Werkzeug des Denkens Der Austausch über Naturwissenschaften ist sowohl Methode als auch Lernziel. Nur wer über Phänomene präzise sprechen kann, durchdringt sie geistig.</p>
+</ul>
+</section>
+<section id="kommunikationsförderung-fachsprache-als-werkzeug-des-denkens" class="level3">
+<h3 class="anchored" data-anchor-id="kommunikationsförderung-fachsprache-als-werkzeug-des-denkens">5. Kommunikationsförderung: Fachsprache als Werkzeug des Denkens</h3>
+<p>Der Austausch über Naturwissenschaften ist sowohl Methode als auch Lernziel. Nur wer über Phänomene präzise sprechen kann, durchdringt sie geistig.</p>
 <ul>
 <li><strong>Lernen durch Austausch:</strong> Förderung von Argumentation und Perspektivwechsel im sozialen Miteinander.</li>
 <li><strong>Sprachbildung:</strong> Sukzessiver Aufbau von der Alltagssprache zur Fachsprache durch explizite Hilfsmittel, um gesellschaftliche Teilhabe und fachliche Vertiefung zu ermöglichen.</li>
-</ul></li>
-</ol>
+</ul>
+</section>
 </section>
 <section id="von-der-theorie-zur-gestaltung" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="von-der-theorie-zur-gestaltung"><span class="header-section-number">2.3</span> Von der Theorie zur Gestaltung</h2>
-<p>Diese Handreichung möchte Sie dabei unterstützen, diese abstrakten Prinzipien in konkretes Handeln zu übersetzen. Im folgenden Abschnitt finden Sie deshalb einen detaillierten Katalog von Gestaltungskriterien. Diese sind kein starres Regelwerk, sondern vielmehr eine Checkliste für die Qualitätsentwicklung, die Ihnen hilft, Ihre Materialien kritisch zu prüfen und gezielt zu optimieren. Denn am Ende zählt nicht, wie viel Stoff wir “behandelt” haben, sondern was in den Köpfen der Lernenden tatsächlich hängen geblieben ist.</p>
+<p>Diese Handreichung möchte Sie dabei unterstützen, diese abstrakten Prinzipien in konkretes Handeln zu übersetzen. Im folgenden Abschnitt finden Sie deshalb einen detaillierten Katalog von Gestaltungskriterien. Diese sind kein starres Regelwerk, sondern vielmehr eine Checkliste für die Qualitätsentwicklung, die Ihnen hilft, Ihre Materialien kritisch zu prüfen und gezielt zu optimieren. Denn am Ende zählt nicht, wie viel Stoff wir „behandelt“ haben, sondern was in den Köpfen der Lernenden tatsächlich hängen geblieben ist.</p>
 </section>
 <section class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id=""><span class="header-section-number">2.4</span> Quellen</h2>
-<div id="refs--2e822381" class="sectionrefs references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-holzapfel2024--2e822381" class="csl-entry" role="listitem">
-Holzäpfel, L., Prediger, S., Götze, D., Rösken-Winter, B., &amp; Selter, C. (2024). Qualitätsvoll <span>Mathematik</span> Unterrichten: <span>Fünf Prinzipien</span>. <em>Mathematik lehren</em>, <em>2024</em>(242), 2–9.
-</div>
+<div id="refs--774421db" class="sectionrefs">
+
 </div>
 
 
@@ -302,6 +460,19 @@ Holzäpfel, L., Prediger, S., Götze, D., Rösken-Winter, B., &amp; Selter, C. (
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
