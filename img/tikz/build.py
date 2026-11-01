@@ -1,4 +1,4 @@
-"""Erzeugt aus img/tikz/*.tex je eine PDF für den Druck und eine SVG für das Web in img/."""
+"""Builds a PDF for print and an SVG for the web in img/ from each img/tikz/*.tex."""
 import pathlib
 import re
 import shutil

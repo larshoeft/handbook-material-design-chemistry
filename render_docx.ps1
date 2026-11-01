@@ -1,6 +1,6 @@
-# Rendert eine einzelne Kapiteldatei als docx, unabhängig vom Book-Projekt.
-# Aufruf:  .\render_docx.ps1 part_how\criteria_specific_interest.qmd
-# Ergebnis: _docx\<dateiname>.docx
+# Renders a single chapter file as docx, independent of the book project.
+# Usage:  .\render_docx.ps1 part_how\criteria_specific_interest.qmd
+# Output: _docx\<file name>.docx
 
 param(
   [Parameter(Mandatory = $true)][string]$Datei
@@ -11,7 +11,7 @@ $root = $PSScriptRoot
 $quelle = Resolve-Path $Datei
 $name = [IO.Path]::GetFileNameWithoutExtension($quelle)
 
-# Temporärer Ordner außerhalb des Projekts, damit _quarto.yml des Buchs nicht greift
+# Temporary folder outside the project so the book's _quarto.yml does not apply
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "render_docx_$name"
 if (Test-Path $tmp) { Remove-Item -Recurse -Force $tmp }
 New-Item -ItemType Directory -Path $tmp | Out-Null

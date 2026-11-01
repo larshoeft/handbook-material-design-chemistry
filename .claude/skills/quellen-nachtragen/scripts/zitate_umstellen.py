@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stellt Textzitate auf [@key] um, wenn Person und Jahr eindeutig in zotero.bib stehen."""
+"""Converts text citations to [@key] when person and year match zotero.bib uniquely."""
 import argparse
 import collections
 import glob

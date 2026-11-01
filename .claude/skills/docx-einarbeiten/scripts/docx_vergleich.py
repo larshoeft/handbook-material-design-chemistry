@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analysiert Word-Dateien, wandelt sie um und vergleicht sie Wort für Wort mit einer .qmd."""
+"""Analyzes Word files, converts them and compares them word by word with a .qmd."""
 import argparse
 import difflib
 import html

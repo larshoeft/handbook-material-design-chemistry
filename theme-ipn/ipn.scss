@@ -1,9 +1,9 @@
 /*-- scss:defaults --*/
-// Farben nach leibniz-ipn.de; Schriften: Source Serif 4 (Text) und
-// Source Sans 3 (Überschriften, Navigation), Code in Source Code Pro.
+// Colors after leibniz-ipn.de; fonts: Source Serif 4 (text),
+// Source Sans 3 (headings, navigation), Source Code Pro (code).
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap");
 
-// IPN-Blautöne
+// IPN blues
 $ipn-blue: #003f7d !default;
 $ipn-blue-hover: #00366a !default;
 $ipn-blue-dark: #003263 !default;
@@ -67,21 +67,21 @@ blockquote {
   background-color: $ipn-blue-pale;
 }
 
-// Abschnittsnummern (z. B. 5.1) in Überschriftenfarbe statt Grau
+// Section numbers (e.g. 5.1) in heading color instead of gray
 h1, h2, h3, h4, h5, h6 {
   .header-section-number {
     color: inherit;
   }
 }
 
-// Nummer des aktiven Eintrags in Inhaltsverzeichnis (rechts) und
-// Seitenleiste (links) wie der Eintrag selbst
+// Number of the active entry in the table of contents (right) and
+// sidebar (left) like the entry itself
 nav[role="doc-toc"] a.active .header-section-number,
 .sidebar-item .sidebar-link.active .chapter-number {
   color: $primary !important;
 }
 
-// Farben der TikZ-Abbildungen, siehe img/tikz/
+// Colors of the TikZ figures, see img/tikz/
 :root {
   --fig-dunkel: #{$fig-dunkel};
   --fig-mittel: #{$fig-mittel};

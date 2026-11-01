@@ -1,4 +1,4 @@
-"""Macht den weißen Hintergrund von Abbildungen transparent: Weiß am Rand und große weiße Flächen, Kästen bleiben."""
+"""Makes the white background of figures transparent: white at the border and large white areas, boxes stay."""
 import argparse
 import pathlib
 import sys

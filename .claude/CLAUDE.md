@@ -72,7 +72,7 @@ Beim Word-Import gelten diese Regeln nicht, dort bleibt der Wortlaut unveränder
 
 - Rendern mit `quarto render`, nicht parallel zu `quarto preview`.
 - Zeilenenden sind LF.
-- Im Code stehen möglichst wenige und nur sehr knappe Kommentare.
+- Im Code stehen möglichst wenige und nur sehr knappe Kommentare, immer auf Englisch.
 - Filter liegen in `_extensions/` und sind im [README](../README.md) beschrieben.
 
 ## Skills und Agenten

@@ -1,4 +1,4 @@
-# Standard-Theme (wird ohne --profile verwendet)
+# Default theme (used without --profile)
 format:
   html:
     theme:

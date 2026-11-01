@@ -1,5 +1,5 @@
-# Vergleichsprofil im Stil von socviz.co (Cosmo, angepasst)
-# Rendern: quarto render --profile socviz
+# Comparison profile in the style of socviz.co (adapted Cosmo)
+# Render: quarto render --profile socviz
 project:
   output-dir: _build/socviz
 

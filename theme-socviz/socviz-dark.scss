@@ -7,7 +7,7 @@ $fig-hell: #3a3a3a;
 $fig-blass: #242424;
 
 /*-- scss:rules --*/
-// Rastergrafiken mit transparentem Hintergrund bleiben lesbar
+// Keep raster figures with transparent background readable
 .quarto-figure img:not(.svg-inline) {
   background-color: #f5f5f5;
   border-radius: 0.25rem;

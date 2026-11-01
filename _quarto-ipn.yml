@@ -1,6 +1,6 @@
-# Vergleichsprofil: IPN-Farben mit Source Serif 4, Source Sans 3 und Source Code Pro;
-# Abbildungsunterschriften und Fußnoten im Rand wie socviz.co
-# Rendern: quarto render --profile ipn
+# IPN colors with Source Serif 4, Source Sans 3 and Source Code Pro;
+# captions and footnotes in the margin as on socviz.co (used for the website)
+# Render: quarto render --profile ipn
 project:
   output-dir: _build/ipn
 

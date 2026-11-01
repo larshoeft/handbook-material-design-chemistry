@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüft Zitate gegen zotero.bib; vergleicht und migriert Keys gegen einen Git-Stand."""
+"""Checks citations against zotero.bib; compares and migrates keys against a Git revision."""
 import argparse
 import collections
 import pathlib

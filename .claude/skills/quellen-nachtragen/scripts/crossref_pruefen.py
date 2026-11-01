@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gleicht die DOIs der offenen Quellen in STATUS.md mit Crossref ab."""
+"""Checks the DOIs of the open sources in STATUS.md against Crossref."""
 import json
 import pathlib
 import re
