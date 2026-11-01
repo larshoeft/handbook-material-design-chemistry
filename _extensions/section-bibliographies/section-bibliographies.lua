@@ -4,10 +4,7 @@
 --- (https://github.com/pandoc-ext/section-bibliographies, MIT License),
 --- adapted for Quarto books: nested sections, Quarto cross-references,
 --- inline citations linking to the nearest ancestor bibliography.
----
---- Usage in .qmd: put an empty `::: sectionrefs` div under its own heading
---- (e.g. `### Quellen`) at the end of the section that should collect the
---- references of all its subsections.
+--- Usage: see README.md.
 
 PANDOC_VERSION:must_be_at_least { 2, 19, 1 }
 
@@ -17,8 +14,6 @@ local List                      = require 'pandoc.List'
 local utils                     = require 'pandoc.utils'
 local citeproc, sha1, stringify = utils.citeproc, utils.sha1, utils.stringify
 
----Emit a warning prefixed with the extension name.
----@param message string
 local function log_warning(message)
   local full_message = '[' .. EXTENSION_NAME .. '] ' .. message
   if quarto and quarto.log then
@@ -37,9 +32,12 @@ else
   end
 end
 
--- ---------------------------------------------------------------------------
--- Helpers
--- ---------------------------------------------------------------------------
+-- Metadata keys citeproc reads; everything else stays out of its runs
+local CITEPROC_KEYS = {
+  'csl', 'lang', 'link-citations', 'link-bibliography',
+  'notes-after-punctuation', 'citation-abbreviations',
+  'reference-section-title',
+}
 
 -- Quarto cross-reference prefixes; such citation IDs are not bibliography keys
 local CROSSREF_PREFIXES = {
@@ -60,21 +58,21 @@ local function is_section_div(div)
       and (div.attributes.number or div.classes:includes 'unnumbered')
 end
 
-local function section_header(div)
-  local header = div.content and div.content[1]
-  if not (is_section_div(div) and header and header.t == 'Header') then
-    return nil, nil
-  end
-  local suffix = header.attributes.number or sha1(stringify(header.content))
-  return header, '--' .. suffix
+local function is_sectionrefs(blk)
+  return blk.t == 'Div' and blk.classes:includes('sectionrefs')
+end
+
+local function is_refs_section(div)
+  local c = div.content
+  return is_section_div(div) and #c >= 2
+      and c[1].t == 'Header' and is_sectionrefs(c[2])
 end
 
 local function flatten_sections(div)
-  local header = section_header(div)
-  if not header then return nil end
+  local header = is_section_div(div) and div.content[1]
+  if not (header and header.t == 'Header') then return nil end
   header.identifier = div.identifier
   header.attributes.number = nil
-  div.content[1] = header
   return div.content
 end
 
@@ -85,13 +83,43 @@ local function deepcopy(tbl)
   return copy
 end
 
-local function is_refs_section(div)
-  if not is_section_div(div) then return false end
-  local c = div.content
-  if #c < 2 then return false end
-  if c[1].t ~= 'Header' then return false end
-  if c[2].t ~= 'Div' then return false end
-  return c[2].classes:includes('sectionrefs')
+local function union(a, b)
+  for id in pairs(b) do a[id] = true end
+  return a
+end
+
+---Bibliography keys cited in blocks (cross-references excluded).
+local function collect_cite_ids(blocks)
+  local ids = {}
+  pandoc.Blocks(blocks):walk {
+    Cite = function(cite)
+      for _, c in ipairs(cite.citations) do
+        if not is_crossref_id(c.id) then ids[c.id] = true end
+      end
+    end,
+  }
+  return ids
+end
+
+local function rename_cites(blocks, suffix)
+  return pandoc.Blocks(blocks):walk {
+    Cite = function(cite)
+      cite.citations = cite.citations:map(function(c)
+        if not is_crossref_id(c.id) then c.id = c.id .. suffix end
+        return c
+      end)
+      return cite
+    end,
+  }
+end
+
+local function restore_placeholders(blocks, processed)
+  return blocks:map(function(blk)
+    if blk.t == 'RawBlock' and blk.format == 'placeholder' then
+      return processed[tonumber(blk.text)]
+    end
+    return blk
+  end)
 end
 
 -- Hides cross-references from citeproc, which would report them as missing
@@ -116,306 +144,178 @@ local function citeproc_without_crossrefs(doc)
 end
 
 -- ---------------------------------------------------------------------------
--- Collect raw citation IDs from a block list (recursively)
--- Excludes Quarto cross-reference IDs (sec-, fig-, tbl-, eq-, lst-, thm-)
+-- Section suffixes: section number, else a hash of the title, made unique
 -- ---------------------------------------------------------------------------
-local function collect_cite_ids(blocks)
-  local ids = {}
-  pandoc.Blocks(blocks):walk {
-    Cite = function(cite)
-      for _, c in ipairs(cite.citations) do
-        if not is_crossref_id(c.id) then
-          ids[c.id] = true
-        end
-      end
+local function make_suffixer()
+  local used = {}
+  return function(base)
+    local suffix, i = base, 1
+    while used[suffix] do
+      i = i + 1
+      suffix = base .. string.format('%x', i)
     end
-  }
-  return ids
+    used[suffix] = true
+    return '--' .. suffix
+  end
 end
 
 -- ---------------------------------------------------------------------------
--- Run citeproc on a flat block list containing a sectionrefs div.
--- extra_ids: {id -> true} of IDs from preceding siblings/children.
+-- Split content: refs sections inlined, other subsections placeholdered
 -- ---------------------------------------------------------------------------
-local function run_citeproc_for_section(blocks, suffix, meta, references, extra_ids)
-  local renamed = pandoc.Blocks(blocks):walk {
-    Cite = function(cite)
-      cite.citations = cite.citations:map(function(c)
-        if not is_crossref_id(c.id) then
-          c.id = c.id .. suffix
-        end
-        return c
-      end)
-      return cite
-    end,
-    Div = function(div)
-      if div.classes:includes('sectionrefs') then
-        div.identifier = 'refs'
-        return div
-      end
-    end,
-  }
-
-  local newmeta = deepcopy(meta)
-  newmeta.bibliography = nil
-  newmeta.nocite = nil
-  newmeta.references = deepcopy(references)
-  for i, ref in ipairs(newmeta.references) do
-    newmeta.references[i].id = ref.id .. suffix
-  end
-
-  if extra_ids and next(extra_ids) then
-    local nocite_cites = List {}
-    for id, _ in pairs(extra_ids) do
-      if not is_crossref_id(id) then
-        local base_id = id:gsub('%-%-[%x]+$', ''):gsub('%-%-[%d%.]+$', '')
-        nocite_cites:insert(pandoc.Citation(base_id .. suffix, 'NormalCitation'))
-      end
-    end
-    if #nocite_cites > 0 then
-      local nocite_inline = pandoc.Cite(
-        pandoc.Inlines { pandoc.Str('') },
-        nocite_cites
-      )
-      newmeta.nocite = pandoc.Inlines { nocite_inline }
+local function split_content(content)
+  local direct, subs, refs_header = List {}, {}, nil
+  for _, blk in ipairs(content) do
+    if is_refs_section(blk) then
+      refs_header = blk.content[1]
+      refs_header.attributes.number = nil
+      -- make_sections moved the id to the section div
+      if refs_header.identifier == '' then refs_header.identifier = blk.identifier end
+      direct:extend(blk.content)
+    elseif is_section_div(blk) then
+      subs[#subs + 1] = blk
+      direct:insert(pandoc.RawBlock('placeholder', tostring(#subs)))
+    else
+      direct:insert(blk)
     end
   end
-
-  local result = citeproc_without_crossrefs(pandoc.Pandoc(renamed, newmeta)).blocks
-
-  return result:walk {
-    Header = function(h)
-      if h.identifier == 'bibliography' then
-        h.identifier = 'bibliography' .. suffix
-        return h
-      end
-    end,
-    Div = function(d)
-      if d.identifier == 'refs' then
-        d.identifier = 'refs' .. suffix
-        return d
-      end
-    end,
-  }
-end
-
--- ---------------------------------------------------------------------------
--- Run citeproc on blocks WITHOUT a sectionrefs div (inline-citations only).
--- Crossref IDs are left unchanged; only bib keys get the suffix.
--- ---------------------------------------------------------------------------
-local function run_citeproc_inline_only(blocks, suffix, meta, references)
-  local renamed = pandoc.Blocks(blocks):walk {
-    Cite = function(cite)
-      cite.citations = cite.citations:map(function(c)
-        if not is_crossref_id(c.id) then
-          c.id = c.id .. suffix
-        end
-        return c
-      end)
-      return cite
-    end,
-  }
-
-  local newmeta = deepcopy(meta)
-  newmeta.bibliography = nil
-  newmeta.nocite = nil
-  newmeta.references = deepcopy(references)
-  for i, ref in ipairs(newmeta.references) do
-    newmeta.references[i].id = ref.id .. suffix
-  end
-
-  -- Run citeproc – this resolves inline Cite nodes to formatted links.
-  -- citeproc will also produce a bibliography div, but we strip it afterwards.
-  local result = citeproc_without_crossrefs(pandoc.Pandoc(renamed, newmeta)).blocks
-
-  -- Remove any generated bibliography divs and the References header
-  -- (we don't want them here – bibliography appears only in sectionrefs)
-  local in_refs_header = false
-  return result:filter(function(blk)
-    -- Remove the auto-generated "References" header from citeproc
-    if blk.t == 'Header' and (
-          blk.identifier == 'bibliography' or
-          blk.identifier:match('^bibliography') or
-          blk.identifier == 'references' or
-          blk.identifier:match('^references')
-        ) then
-      return false
-    end
-    -- Remove the refs div itself
-    if blk.t == 'Div' and (
-          blk.identifier == 'refs' or
-          blk.classes:includes('csl-bib-body')
-        ) then
-      return false
-    end
-    return true
-  end)
+  return direct, subs, refs_header
 end
 
 local function has_sectionrefs(blocks)
   for _, blk in ipairs(blocks) do
-    if blk.t == 'Div' and blk.classes:includes('sectionrefs') then
-      return true
-    end
+    if is_sectionrefs(blk) then return true end
   end
   return false
 end
 
 -- ---------------------------------------------------------------------------
--- Split content: refs-sections inlined, normal subsections placeholdered.
--- Also reports whether a sectionrefs div sits under its own heading
--- (e.g. `### Quellen`) rather than loose in the section text.
--- ---------------------------------------------------------------------------
-local function split_content(content)
-  local direct      = List {}
-  local subs        = {}
-  local n           = 0
-  local refs_headed = false
-  for _, blk in ipairs(content) do
-    if is_section_div(blk) then
-      if is_refs_section(blk) then
-        refs_headed = true
-        local ref_header = blk.content[1]
-        ref_header.attributes.number = nil
-        -- make_sections moved the id to the section div
-        if ref_header.identifier == '' then ref_header.identifier = blk.identifier end
-        direct:insert(ref_header)
-        for ci = 2, #blk.content do
-          direct:insert(blk.content[ci])
-        end
-      else
-        n = n + 1
-        subs[n] = blk
-        direct:insert(pandoc.RawBlock('placeholder', tostring(n)))
-      end
-    else
-      direct:insert(blk)
-    end
-  end
-  return direct, subs, n, refs_headed
-end
-
--- ---------------------------------------------------------------------------
--- Main recursive processor (bottom-up)
+-- Processor
 -- ---------------------------------------------------------------------------
 local function make_processor(meta, references)
-  local process
+  local suffixer = make_suffixer()
 
-  -- anc_suffix: suffix of the nearest ancestor section that renders a
-  -- bibliography (sectionrefs). Inline citations in sections without their
-  -- own bibliography must use this suffix so that they link to the entries
-  -- of that ancestor's bibliography.
-  process = function(div, anc_suffix)
-    local header, suffix = section_header(div)
-    if not header or not suffix then return div, {} end
+  ---Metadata for one citeproc run: only the cited references, renamed.
+  local function citeproc_meta(ids, suffix)
+    local m = {}
+    for _, key in ipairs(CITEPROC_KEYS) do m[key] = meta[key] end
+    m.references = List {}
+    for _, ref in ipairs(references) do
+      if ids[ref.id] then
+        local copy = deepcopy(ref)
+        copy.id = ref.id .. suffix
+        m.references:insert(copy)
+      end
+    end
+    return m
+  end
 
-    local direct, subs, nsubs, refs_headed = split_content(div.content)
-    local title = stringify(header.content)
+  ---Citeproc with the bibliography in the section's sectionrefs div.
+  ---`extra_ids` are keys cited in subsections, listed via nocite.
+  local function render_with_bibliography(direct, suffix, extra_ids)
+    local ids = union(collect_cite_ids(direct), extra_ids)
+    local blocks = rename_cites(direct, suffix):walk {
+      Div = function(div)
+        if is_sectionrefs(div) then
+          div.identifier = 'refs'
+          return div
+        end
+      end,
+    }
+    local m = citeproc_meta(ids, suffix)
+    local nocite = List {}
+    for id in pairs(extra_ids) do
+      nocite:insert(pandoc.Citation(id .. suffix, 'NormalCitation'))
+    end
+    if #nocite > 0 then
+      m.nocite = pandoc.Inlines { pandoc.Cite(pandoc.Inlines {}, nocite) }
+    end
+    return citeproc_without_crossrefs(pandoc.Pandoc(blocks, m)).blocks:walk {
+      Header = function(h)
+        if h.identifier == 'bibliography' then
+          h.identifier = 'bibliography' .. suffix
+          return h
+        end
+      end,
+      Div = function(d)
+        if d.identifier == 'refs' then
+          d.identifier = 'refs' .. suffix
+          return d
+        end
+      end,
+    }
+  end
 
+  ---Citeproc for inline citations only; they link to the bibliography of
+  ---the section with `suffix`. Citeproc links only to entries it renders,
+  ---so it renders them into a scratch div that is dropped afterwards.
+  local function render_inline(direct, suffix, ids)
+    local m = citeproc_meta(ids, suffix)
+    m['reference-section-title'] = nil
+    local blocks = rename_cites(direct, suffix)
+    blocks:insert(pandoc.Div({}, pandoc.Attr('refs', { 'section-bibs-scratch' })))
+    return citeproc_without_crossrefs(pandoc.Pandoc(blocks, m)).blocks:filter(function(blk)
+      return not (blk.t == 'Div' and blk.classes:includes('section-bibs-scratch'))
+    end)
+  end
+
+  ---Renders one block list (a section's content or the document root).
+  ---Returns the new blocks and the bibliography keys cited in them.
+  local function render(content, title, own_suffix, anc_suffix, process)
+    local direct, subs, refs_header = split_content(content)
     local here = has_sectionrefs(direct)
-    local target_suffix = here and suffix or anc_suffix
+    local target_suffix = here and own_suffix or anc_suffix
 
-    if here and not refs_headed then
+    if here and not refs_header then
       log_warning('"::: sectionrefs" in section "' .. title .. '" has no ' ..
         'heading of its own (e.g. "### Quellen"); the bibliography only ' ..
         'covers this section, citations in sibling sections will not link.')
     end
 
-    -- Process all subsections first (bottom-up), collecting their citation IDs
-    local processed_subs = {}
-    local sub_ids = {}
-    for i = 1, nsubs do
-      local processed_sub, sub_id_set = process(subs[i], target_suffix)
-      processed_subs[i] = processed_sub
-      for id, _ in pairs(sub_id_set) do
-        sub_ids[id] = true
-      end
+    local processed, sub_ids = {}, {}
+    for i, sub in ipairs(subs) do
+      local block, ids = process(sub, target_suffix)
+      processed[i] = block
+      union(sub_ids, ids)
     end
 
-    if here then
-      -- Rename + run citeproc with full bibliography output.
-      direct = run_citeproc_for_section(direct, suffix, meta, references, sub_ids)
+    local own_ids = collect_cite_ids(direct)
+    local all_ids = union(union({}, own_ids), sub_ids)
 
-      div.content = direct:map(function(blk)
-        if blk.t == 'RawBlock' and blk.format == 'placeholder' then
-          return processed_subs[tonumber(blk.text)]
-        end
-        return blk
+    if here and not next(all_ids) then
+      -- Nothing cited: drop the empty bibliography and its heading
+      local refs_id = refs_header and refs_header.identifier
+      direct = direct:filter(function(blk)
+        return not is_sectionrefs(blk)
+            and not (blk.t == 'Header' and refs_id and blk.identifier == refs_id)
       end)
-
-      local all_ids = collect_cite_ids(div.content)
-      return div, all_ids
-    else
-      -- No sectionrefs on this level.
-      -- If any sub had sectionrefs, all subs without sectionrefs have already
-      -- been processed (their inline cites rendered) inside process() recursion.
-      -- We still need to render inline cites in `direct` (the non-sub content).
-      local raw_ids = collect_cite_ids(direct)
-      local link_suffix = target_suffix or suffix
-
-      -- If there are inline citations in direct content, run citeproc on them
-      -- (inline-only, no bibliography) so they render as links to the
-      -- bibliography of the nearest ancestor with sectionrefs.
-      if next(raw_ids) then
-        if not target_suffix then
-          log_warning('citations in section "' .. title .. '" have no ' ..
-            '"::: sectionrefs" bibliography in an enclosing section; ' ..
-            'their links will not resolve.')
-        end
-        direct = run_citeproc_inline_only(direct, link_suffix, meta, references)
+    elseif here then
+      direct = render_with_bibliography(direct, own_suffix, sub_ids)
+    elseif next(own_ids) then
+      if not target_suffix then
+        log_warning('citations in section "' .. title .. '" have no ' ..
+          '"::: sectionrefs" bibliography in an enclosing section; ' ..
+          'their links will not resolve.')
       end
-
-      -- Build suffixed versions of raw_ids for parent accumulation
-      local suffixed_raw_ids = {}
-      for id, _ in pairs(raw_ids) do
-        suffixed_raw_ids[id .. link_suffix] = true
-      end
-      -- Also include suffixed IDs from children
-      for id, _ in pairs(sub_ids) do
-        suffixed_raw_ids[id] = true
-      end
-
-      div.content = direct:map(function(blk)
-        if blk.t == 'RawBlock' and blk.format == 'placeholder' then
-          return processed_subs[tonumber(blk.text)]
-        end
-        return blk
-      end)
-
-      return div, suffixed_raw_ids
+      direct = render_inline(direct, target_suffix or own_suffix, own_ids)
     end
+
+    return restore_placeholders(direct, processed), all_ids
   end
 
-  local function process_root(blocks, root_suffix)
-    local direct, subs, n = split_content(blocks)
+  local process
+  process = function(div, anc_suffix)
+    local header = div.content[1]
+    if not (header and header.t == 'Header') then return div, {} end
+    local base = header.attributes.number or sha1(stringify(header.content)):sub(1, 12)
+    local content, ids = render(div.content, stringify(header.content),
+      suffixer(base), anc_suffix, process)
+    div.content = content
+    return div, ids
+  end
 
-    local processed_subs = {}
-    local sub_ids = {}
-    for i = 1, n do
-      local processed_sub, sub_id_set = process(
-        subs[i], has_sectionrefs(direct) and root_suffix or nil)
-      processed_subs[i] = processed_sub
-      for id, _ in pairs(sub_id_set) do
-        sub_ids[id] = true
-      end
-    end
-
-    if has_sectionrefs(direct) then
-      direct = run_citeproc_for_section(direct, root_suffix, meta, references, sub_ids)
-    else
-      -- Render inline citations in root direct content
-      local raw_ids = collect_cite_ids(direct)
-      if next(raw_ids) then
-        direct = run_citeproc_inline_only(direct, root_suffix, meta, references)
-      end
-    end
-
-    return direct:map(function(blk)
-      if blk.t == 'RawBlock' and blk.format == 'placeholder' then
-        return processed_subs[tonumber(blk.text)]
-      end
-      return blk
-    end)
+  local function process_root(blocks, title)
+    local suffix = suffixer(sha1(title):sub(1, 12))
+    return (render(blocks, title, suffix, nil, process))
   end
 
   return process, process_root
@@ -438,7 +338,7 @@ local remove_previous_results = {
     return cite
   end,
   Div = function(d)
-    if d.classes:includes('sectionrefs') then
+    if is_sectionrefs(d) then
       d.identifier = ''
       d.content = pandoc.Blocks {}
       return d
@@ -449,9 +349,6 @@ local remove_previous_results = {
   end,
 }
 
--- ---------------------------------------------------------------------------
--- Options
--- ---------------------------------------------------------------------------
 local function get_options(meta)
   local opts = meta['section-bibliographies'] or {}
   opts.bibliography = opts.bibliography
@@ -473,70 +370,41 @@ return {
         doc = doc:walk(remove_previous_results)
       end
 
-      local newmeta        = deepcopy(doc.meta)
-      newmeta.bibliography = deepcopy(opts.bibliography)
-      newmeta.references   = deepcopy(opts.references)
-      newmeta.nocite       = pandoc.Inlines {
-        pandoc.Cite('@*', { pandoc.Citation('*', 'NormalCitation') })
+      -- `lang` decides how titles of entries without langid are cased
+      local refmeta = {
+        lang         = doc.meta.lang,
+        bibliography = deepcopy(opts.bibliography),
+        references   = deepcopy(opts.references),
+        nocite       = pandoc.Inlines {
+          pandoc.Cite('@*', { pandoc.Citation('*', 'NormalCitation') })
+        },
       }
-      local references     = utils.references(pandoc.Pandoc({}, newmeta))
+      local references = utils.references(pandoc.Pandoc({}, refmeta))
       if not next(references) then return doc end
 
       local process, process_root = make_processor(doc.meta, references)
-
-      local title = doc.meta.title and stringify(doc.meta.title) or ''
-      local root_suffix = '--' .. (sha1(title .. tostring(os.time())):sub(1, 8))
-
       local sectioned = make_sections(doc, { number_sections = true })
 
       local has_h1 = false
       for _, blk in ipairs(sectioned) do
-        if is_section_div(blk) then
-          local h = blk.content[1]
-          if h and h.t == 'Header' and h.level == 1 then
-            has_h1 = true
-            break
-          end
+        local h = is_section_div(blk) and blk.content[1]
+        if h and h.t == 'Header' and h.level == 1 then
+          has_h1 = true
+          break
         end
       end
 
+      local result
       if has_h1 then
-        local top_subs   = {}
-        local top_n      = 0
-        local top_direct = List {}
-        for _, blk in ipairs(sectioned) do
-          if is_section_div(blk) then
-            top_n = top_n + 1
-            top_subs[top_n] = blk
-            top_direct:insert(pandoc.RawBlock('placeholder', tostring(top_n)))
-          else
-            top_direct:insert(blk)
-          end
-        end
-
-        local processed_top = {}
-        local top_ids = {}
-        for i = 1, top_n do
-          local pdiv, id_set = process(top_subs[i])
-          processed_top[i] = pdiv
-          for id, _ in pairs(id_set) do
-            top_ids[id] = true
-          end
-        end
-
-        local result = top_direct:map(function(blk)
-          if blk.t == 'RawBlock' and blk.format == 'placeholder' then
-            return processed_top[tonumber(blk.text)]
-          end
-          return blk
+        result = List(sectioned):map(function(blk)
+          return is_section_div(blk) and (process(blk)) or blk
         end)
-
-        doc.blocks = pandoc.Blocks(result):walk { Div = flatten_sections }
       else
-        local result = process_root(sectioned, root_suffix)
-        doc.blocks = pandoc.Blocks(result):walk { Div = flatten_sections }
+        local title = doc.meta.title and stringify(doc.meta.title) or ''
+        result = process_root(sectioned, title)
       end
 
+      doc.blocks = pandoc.Blocks(result):walk { Div = flatten_sections }
       return doc
     end
   }
