@@ -11,6 +11,15 @@
   </div>
   $endif$
 
+  $if(section-authors-all)$
+  <div class="section-authors-all">
+    <div class="quarto-title-meta-heading">$section-authors-all.label$</div>
+    <div class="quarto-title-meta-contents">
+      $section-authors-all.names$
+    </div>
+  </div>
+  $endif$
+
   $if(date)$
   <div>
     <div class="quarto-title-meta-heading">$labels.published$</div>

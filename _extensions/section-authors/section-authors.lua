@@ -64,6 +64,9 @@
 --- authors a citation; `citation: false` in its entry turns it off.
 --- `extensions.section-authors.license` is their default license.
 ---
+--- A `::: section-authors-all` div lists everyone in `book.author` and
+--- `contributors` in the title block, sorted by family name.
+---
 --- Front matter of {{< include >}}d files is merged into the chapter key
 --- by key (a later file replaces a key, it does not merge into it).
 --- Hence one top-level key per section: it neither overrides the
@@ -73,7 +76,7 @@
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.7.0'
+local EXTENSION_VERSION = '0.8.0'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -695,6 +698,39 @@ local function meta_authors(value, id)
   return parse_authors(utils.stringify(value), id)
 end
 
+---All people in `book.author` and `contributors`, sorted by family name,
+---as metadata for the title block partial (see title-metadata.html).
+---The label ignores the title-block overrides, which name the editors.
+---@param meta Meta document metadata
+---@param base string base language code
+---@return table `label` and `names`
+local function all_authors(meta, base)
+  local authors = List {}
+  local book = utils.type(meta.book) == 'table' and meta.book or {}
+  for _, value in ipairs({ book.author, meta.contributors }) do
+    if utils.type(value) == 'List' then
+      for _, item in ipairs(value) do
+        local author = utils.type(item) == 'table'
+                       and author_record(item, 'section-authors-all')
+        if author then authors:insert(author) end
+      end
+    end
+  end
+  local function family(a) return (a.name:match('(%S+)$') or a.name):lower() end
+  table.sort(authors, function(a, b) return family(a) < family(b) end)
+  local names = pandoc.Inlines {}
+  for i, author in ipairs(authors) do
+    if i > 1 then names:extend { pandoc.Str(','), pandoc.Space() } end
+    names:insert(pandoc.Span(author_inlines(author),
+      pandoc.Attr('', { 'section-authors-name' })))
+  end
+  local labels = (#authors >= 2) and AUTHOR_PLURAL or AUTHOR_SINGLE
+  return {
+    label = labels[base] or labels['en'],
+    names = pandoc.MetaBlocks { pandoc.Para(names) },
+  }
+end
+
 ---Metadata entry for a section id: a map under that top-level key, or
 ---(deprecated) under `section-meta`.
 ---@param meta Meta document metadata
@@ -812,6 +848,8 @@ return {
               modified and format_date(modified, base),
               labels, reference, license))
           end
+        elseif blk.t == 'Div' and blk.classes:includes('section-authors-all') then
+          doc.meta['section-authors-all'] = all_authors(doc.meta, base)
         else
           new_blocks:insert(blk)
         end

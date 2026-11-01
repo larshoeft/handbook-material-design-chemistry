@@ -38,6 +38,18 @@
   grid-column: 1 / -1;
 }
 
+/* All authors of the book (::: section-authors-all) as one list across
+   the title block */
+.quarto-title-meta .section-authors-all {
+  grid-column: 1 / -1;
+  order: 2;
+}
+
+.section-authors-all .section-authors-name {
+  white-space: nowrap;
+  font-size: inherit;
+}
+
 .section-authors-citation {
   font-size: .9em;
 }

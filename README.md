@@ -163,6 +163,8 @@ sec-interest:
 
 The book's title page shows `book.author` as editors with the same icons, and section citations name them as editors of the book. It uses the template partial `_extensions/section-authors/title-metadata.html`, registered under `template-partials` in `_quarto.yml`.
 
+An empty div `::: section-authors-all` (used in `index.qmd`) adds a list of everyone in `book.author` and `contributors` to the title block, below the editors: one comma-separated list, sorted by family name, with the same icons.
+
 #### `section-bibliographies`
 
 Creates a separate reference list per section instead of one for the whole book (based on [pandoc-ext/section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)). For this reason `citeproc: false` is set in `_quarto.yml`. At the end of your section, add a heading with an empty `sectionrefs` div. It collects the references of all subsections:
@@ -195,7 +197,7 @@ The look of the website is defined by [Quarto profiles](https://quarto.org/docs/
 | `default` | Bootswatch `cosmo` + `simplex` (current website) | `_quarto-default.yml` | `_book/` |
 | `ipn` | IPN blues (leibniz-ipn.de); Source Serif 4 / Source Sans 3 / Source Code Pro | `_quarto-ipn.yml`, `theme-ipn/ipn.scss`, `theme-ipn/ipn-dark.scss` | `_build/ipn/` |
 | `ipn-alegreya` | IPN blues; Alegreya / Alegreya Sans / Alegreya Sans SC (small caps for labels) | `_quarto-ipn-alegreya.yml`, `theme-ipn/ipn.scss`, `theme-ipn/font-alegreya.scss`, `theme-ipn/ipn-dark.scss` | `_build/ipn-alegreya/` |
-| `socviz` | Recreation of [socviz.co](https://socviz.co) (paid fonts replaced by free Google Fonts) | `_quarto-socviz.yml`, `theme-socviz/socviz.scss`, `theme-socviz/socviz-dark.scss` | `_build/socviz/` |
+| `socviz` | Recreation of [socviz.co](https://socviz.co); Source Serif 4 / Roboto Flex / IBM Plex Mono (free replacements for the paid socviz fonts) | `_quarto-socviz.yml`, `theme-socviz/socviz.scss`, `theme-socviz/socviz-dark.scss` | `_build/socviz/` |
 
 All profiles except `default` have a light and a dark mode. They also place figure captions, table captions and footnotes in the margin.
 
