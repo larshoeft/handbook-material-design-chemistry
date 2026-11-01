@@ -7,7 +7,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 | Relevanz | `part_why/_importance.qmd` | `2_Relevanz/Entwurf_Einleitung_Relevanz_v2.docx` | nein | | noch nicht geprüft |
 | Ausrichtungen | `part_why/_orientations.qmd` | keine | | | |
 | Design-Based Research | `part_how/frameworks_dbr.qmd` | `4_Verfahren und Modelle/Steckbrief_DesignBasedResearch_Leander.docx` | nein | 11 Einfügungen, 11 Löschungen, 11 Kommentare | noch nicht geprüft |
-| Didaktische Rekonstruktion | `part_how/frameworks_rec.qmd` | `4_Verfahren und Modelle/Steckbrief_Didaktische Rekonstruktion.docx` | nein | | noch nicht geprüft |
+| Didaktische Rekonstruktion | `part_how/frameworks_rec.qmd` | `4_Verfahren und Modelle/Steckbrief_Didaktische Rekonstruktion.docx` | ja, 01.11.2026 | | 8, siehe unten |
 | Universal Design for Learning | `part_how/frameworks_udl.qmd` | keine | | | |
 | Adaptivität | `part_how/criteria_specific_adaptivity.qmd` | `6_Kriterien/Steckbrief_Adaptivität_Gyde.docx` | ja, 31.10.2026 | | 2, siehe unten |
 | Kognitive Belastung | `part_how/criteria_specific_cognitiveload.qmd` | `6_Kriterien/Steckbrief_Cognitive_load_Anja.docx` | ja, 30.10.2026 | 2 Einfügungen, 2 Löschungen (angenommen), 8 Kommentare, 2 Markierungen | 3, siehe unten |
@@ -71,3 +71,11 @@ Der Skill `docx-einarbeiten` ergänzt hier je Import die Quellen, die in der Bib
 | Kontextualisierung | Traub, M., Behrens, M., & Lenzer, S. (2026). Making chemistry labs more relevant -- development and evaluation of contextualised pre-lab materials for qualitative inorganic analysis. Chemistry Teacher International. https://doi.org/10.1515/cti-2025-0112 | Traub 2026 |
 | Kontextualisierung | University of York Science education group [UYSEG]. (2000). Salters advanced chemistry, chemical storylines, Chemical ideas, activities and assessment and teachers' guide (2. Aufl.). UYSEG/Heinemann Educational. | University of York 2000 |
 | Kontextualisierung | Van Vorst, H., & Aydogmus, H. (2021). One context fits all? -- Analysing students' context choice and their reasons for choosing a context-based task in chemistry education. International Journal of Science Education, 43(8), 1250--1272. https://doi.org/10.1080/09500693.2021.1908640 | Van Vorst 2021 |
+| Didaktische Rekonstruktion | Komorek, M., Wilbers, J., & Duit, R. (1997). Didaktische Rekonstruktion im Bereich Chaostheorie. In Zur Didaktik der Physik und Chemie: Tagung 1996 (S. 128--130). | Komorek 1997 |
+| Didaktische Rekonstruktion | Frerichs, V. (1999). Schülervorstellungen und wissenschaftliche Vorstellungen zu den Strukturen und Prozessen der Vererbung: Ein Beitrag zur didaktischen Rekonstruktion [Dissertation, Carl von Ossietzky Universität Oldenburg]. Didaktisches Zentrum. | Frerichs 1999 |
+| Didaktische Rekonstruktion | Grospietsch, F., & Mayer, J. (2021). Didaktische Rekonstruktion als Planungs- und Forschungsrahmen nutzen: Fachliche Klärung, Gestaltung und Evaluation einer universitären Lehrveranstaltung zum Thema Gehirn und Lernen. HLZ -- Herausforderung Lehrerinnenbildung, 4(2), 165--192. <https://doi.org/10.11576/hlz-2548> | Grospietsch 2021 |
+| Didaktische Rekonstruktion | Claussen, C. (2023). Zur Vermittlungsrolle von Naturwissenschaftsdidaktik in der forschungsbasierten Wissenschaftskommunikation: Stakeholderorientierte Weiterentwicklung eines Outreach-Formates für Schulen am Beispiel der Metaorganismus-Forschung [Dissertation, Christian-Albrechts-Universität zu Kiel]. | Claussen 2023 |
+| Didaktische Rekonstruktion | Reimann, M., Herzog, S., Parchmann, I., & Schwarzer, S. (2020). Wirksamkeit der schulischen Vor- und Nachbereitung eines Schülerlaborbesuches. In Zeitschrift für Didaktik der Naturwissenschaften, 26(1), 227--240. <https://doi.org/10.1007/s40573-020-00121-y> | Reimann 2020 |
+| Didaktische Rekonstruktion | Klafki (1969). Keine vollständige Angabe in Word | Klafki (1969) |
+| Didaktische Rekonstruktion | Heimann, Otto & Schulz (1969). Keine vollständige Angabe in Word | Heimann, Otto und Schulz (1969) |
+| Didaktische Rekonstruktion | Gerstenmeier & Mandl (1995). Keine vollständige Angabe in Word | (Gerstenmeier und Mandl, 1995) |
