@@ -60,6 +60,9 @@
 ---         affiliation:
 ---           - ref: ipn
 ---
+--- `extensions.section-authors.citation: true` gives every section with
+--- authors a citation; `citation: false` in its entry turns it off.
+---
 --- Front matter of {{< include >}}d files is merged into the chapter key
 --- by key (a later file replaces a key, it does not merge into it).
 --- Hence one top-level key per section: it neither overrides the
@@ -69,7 +72,7 @@
 local EXTENSION_NAME = 'section-authors'
 
 --- Extension version (keep in sync with _extension.yml)
-local EXTENSION_VERSION = '0.5.0'
+local EXTENSION_VERSION = '0.6.0'
 
 --- Load required modules
 local List  = require 'pandoc.List'
@@ -543,6 +546,7 @@ end
 
 local known_authors = {}
 local known_affiliations = {}
+local default_citation = nil
 
 local function index_by_id(value, index)
   index = index or {}
@@ -756,7 +760,9 @@ local function section_info(blk, meta)
                   or entry.license
   attrs.author  = nil
   attrs.license = nil
-  return authors, date, modified, entry.citation,
+  local citation = entry.citation
+  if citation == nil and next(authors) then citation = default_citation end
+  return authors, date, modified, citation,
          license and license_inlines(license)
 end
 
@@ -772,6 +778,9 @@ return {
       known_authors = index_by_id(
         utils.type(book) == 'table' and book.author or nil)
       index_by_id(doc.meta.contributors, known_authors)
+      local options = doc.meta.extensions
+                      and doc.meta.extensions[EXTENSION_NAME]
+      default_citation = options and options.citation or nil
       known_affiliations = index_by_id(doc.meta.affiliations)
       if doc.meta['section-meta'] then
         warn('"section-meta" is deprecated: put each entry at top level, '

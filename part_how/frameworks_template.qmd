@@ -6,7 +6,6 @@ sec-template-framework:
   license:
     text: "CC BY-NC 3.0 DE"
     url: "https://creativecommons.org/licenses/by-nc/3.0/de/"
-  citation: true
 ---
 
 <!-- Leitfragen sind Anregungen. Abschnitte dürfen leer bleiben. -->

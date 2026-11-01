@@ -116,7 +116,7 @@ sec-interest:
   date: 2026-10-02           # first publication
   date-modified: 2026-11-15  # optional; last revision ("Zuletzt überarbeitet")
   license: "CC BY-NC"        # CC abbreviations link to the license deed
-  citation: true             # optional; or a map with Quarto citation fields
+  citation: false            # optional; default from _quarto.yml, or a map with Quarto citation fields
 ---
 
 ## Interesse {#sec-interest}
@@ -142,7 +142,7 @@ sec-interest:
 ---
 ```
 
-Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.
+Sections with authors get a "cite as" reference by default (`extensions: section-authors: citation: true` in `_quarto.yml`). Heading attributes take precedence over the metadata block. Use exactly **one top-level key per section** (`sec-…`). Included files are merged key by key, so they do not override each other or the chapter's own `author`/`date`.
 
 Editors are listed in `book.author`, all other people in the top-level `contributors` of `_quarto.yml`, and affiliations in `affiliations`. Each needs an `id` and is defined once. Sections then refer to them. An unknown `ref` or a single unknown word produces a warning:
 

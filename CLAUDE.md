@@ -26,7 +26,8 @@ Bis zur Umstellung auf Git gilt die Word-Fassung in `_quellen_docx/`. Der Ordner
 
 ## Metadaten und Personen
 
-- Angaben stehen im Block `sec-…:` am Dateianfang (`author`, `date`, `date-modified`, `license`, `citation`).
+- Angaben stehen im Block `sec-…:` am Dateianfang (`author`, `date`, `date-modified`, `license`).
+- Jeder Abschnitt mit Autor:in bekommt automatisch einen Zitiervorschlag (`extensions.section-authors.citation` in `_quarto.yml`). `citation: false` im Block schaltet ihn ab.
 - Personen werden per ID aufgerufen. Herausgeber:innen stehen in `book.author`, alle anderen Beitragenden in `contributors` in `_quarto.yml`. Affiliationen stehen in `affiliations`.
 - E-Mail und ORCID werden nur mit Einverständnis der Person eingetragen.
 

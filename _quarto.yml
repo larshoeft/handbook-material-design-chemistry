@@ -105,6 +105,10 @@ reference-section-title: References
 section-bibliographies:
   cleanup-first: true
 
+extensions:
+  section-authors:
+    citation: true
+
 filters:
   - at: pre-quarto
     path: section-authors
