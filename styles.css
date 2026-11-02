@@ -19,6 +19,42 @@ html {
   }
 }
 
+/* Title block and section author blocks: smaller, in the theme's sans serif */
+.quarto-title-meta,
+.section-authors {
+  font-family: var(--bs-font-sans-serif);
+}
+
+#title-block-header.quarto-title-block .quarto-title-meta .quarto-title-meta-heading,
+.section-authors .section-authors-label {
+  font-size: .7rem;
+  margin-top: .75rem;
+}
+
+/* Same spacing in both: 1rem below the heading, .75rem between rows,
+   about 2rem to the next heading */
+#title-block-header.quarto-title-block .quarto-title-meta {
+  margin-top: .25rem;
+}
+
+.section-authors {
+  margin-bottom: .5rem;
+}
+
+.section-authors > div:nth-child(-n+2) .section-authors-label {
+  margin-top: 0;
+}
+
+.quarto-title-meta .quarto-title-meta-contents,
+.quarto-title-meta .quarto-title-meta-contents p,
+.section-authors .section-authors-name,
+.section-authors .section-authors-date,
+.section-authors .section-authors-modified,
+.section-authors .section-authors-license,
+.section-authors .section-authors-citation {
+  font-size: .875rem;
+}
+
 /* Wide tables scroll on their own on narrow screens */
 .quarto-float-tbl > div {
   overflow-x: auto;
