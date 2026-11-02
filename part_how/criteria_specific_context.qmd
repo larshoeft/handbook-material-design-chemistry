@@ -28,7 +28,7 @@ Die Effekte von variierten Kontextaufgaben sowie der Effekt von Kontextualisieru
 
 Das Beispiel stammt aus dem Teilprojekt Kontextualisierung im Projekt DiVEx (2024--2028). Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurden kontextualisierte Vorbereitungsmaterialien in einer Design-Based-Research-Studie [@easterday2014_designbased; @anderson2012_designbased] für ein qualitatives anorganisches Analysepraktikum in der Studieneingangsphase entwickelt [@traub2026_making], um fachspezifische Denk- und Arbeitsweisen (z. B. Einstellen des pH-Wertes) zu fördern. Dabei wurden unterschiedliche Kontexte ausgewählt und Verbindungen zu schulischen und industriellen Anwendungen der vermittelten chemischen Fachinhalte aufgezeigt. Der Materialaufbau ist in @fig-context-material dargestellt. Diese Materialien wurden in einer Interventionsstudie (*n* = 80) mit Erstsemesterstudierenden 2025 eingesetzt und der Einfluss auf Relevanzwahrnehmung, situationales Interesse und *sense of belonging* untersucht (Traub & Lenzer, in prep.).
 
-![Aufbau des kontextualisierten Lernmaterials für die Interventionsstudie. [@traub2026_making]](../img/criteria_specific_context_image2.png){#fig-context-material fig-alt="Aufbau des kontextualisierten Lernmaterials für die Interventionsstudie"}
+![Aufbau des kontextualisierten Lernmaterials für die Interventionsstudie. [@traub2026_making]](../img/criteria_specific_context_image2.svg){#fig-context-material fig-alt="Aufbau des kontextualisierten Lernmaterials für die Interventionsstudie"}
 
 ### Umsetzungsfacetten
 
