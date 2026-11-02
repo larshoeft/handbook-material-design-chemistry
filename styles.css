@@ -55,6 +55,13 @@ html {
   font-size: .875rem;
 }
 
+/* Quarto indents both the list and each entry; keep only the hanging
+   indent of the entries, so first lines align with the text */
+div.csl-bib-body.hanging-indent {
+  margin-left: 0;
+  text-indent: 0;
+}
+
 /* Wide tables scroll on their own on narrow screens */
 .quarto-float-tbl > div {
   overflow-x: auto;
