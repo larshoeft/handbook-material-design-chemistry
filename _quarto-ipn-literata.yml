@@ -1,0 +1,14 @@
+# Comparison profile: IPN colors with Literata, Source Sans 3 and
+# Source Code Pro; captions and footnotes in the margin as on socviz.co
+# Render: quarto render --profile ipn-literata
+project:
+  output-dir: _build/ipn-literata
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme-ipn/ipn.scss, theme-ipn/fonts.scss, theme-ipn/font-literata.scss]
+      dark: [cosmo, theme-ipn/ipn.scss, theme-ipn/fonts.scss, theme-ipn/font-literata.scss, theme-ipn/ipn-dark.scss]
+    fig-cap-location: margin
+    tbl-cap-location: margin
+    reference-location: margin

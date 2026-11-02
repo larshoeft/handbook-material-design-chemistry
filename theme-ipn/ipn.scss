@@ -1,7 +1,9 @@
 /*-- scss:defaults --*/
 // Colors after leibniz-ipn.de; fonts: Source Serif 4 (text),
 // Source Sans 3 (headings, navigation), Source Code Pro (code).
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap");
+
+// No Google Fonts request from the cosmo base theme
+$web-font-path: false !default;
 
 // IPN blues
 $ipn-blue: #003f7d !default;
@@ -21,9 +23,10 @@ $headings-font-family: $font-family-sans-serif !default;
 $headings-font-weight: 700 !default;
 $headings-color: $ipn-blue !default;
 
+// 20px, line height after newyorker.com
 $font-size-root: 17px !default;
-$font-size-base: 1.1rem !default;
-$line-height-base: 1.6 !default;
+$font-size-base: 1.176rem !default;
+$line-height-base: 1.5 !default;
 
 $body-color: rgba(0, 0, 0, 0.87) !default;
 $primary: $ipn-blue !default;
@@ -40,6 +43,21 @@ $fig-hell: $ipn-blue-light !default;
 $fig-blass: $ipn-blue-pale !default;
 
 /*-- scss:rules --*/
+body {
+  font-variant-numeric: proportional-nums;
+}
+
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+// Long German compounds need more characters per line on phones
+@media (max-width: 575.98px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
 .sidebar,
 div.quarto-float,
 figcaption,

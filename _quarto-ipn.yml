@@ -7,8 +7,8 @@ project:
 format:
   html:
     theme:
-      light: [cosmo, theme-ipn/ipn.scss]
-      dark: [cosmo, theme-ipn/ipn.scss, theme-ipn/ipn-dark.scss]
+      light: [cosmo, theme-ipn/ipn.scss, theme-ipn/fonts.scss]
+      dark: [cosmo, theme-ipn/ipn.scss, theme-ipn/fonts.scss, theme-ipn/ipn-dark.scss]
     fig-cap-location: margin
     tbl-cap-location: margin
     reference-location: margin

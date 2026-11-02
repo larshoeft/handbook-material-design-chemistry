@@ -175,8 +175,8 @@ The look of the website is defined by [Quarto profiles](https://quarto.org/docs/
 | Profile | Look | Files | Output |
 |---|---|---|---|
 | `default` | Bootswatch `cosmo` + `simplex` (current website) | `_quarto-default.yml` | `_book/` |
-| `ipn` | IPN blues (leibniz-ipn.de); Source Serif 4 / Source Sans 3 / Source Code Pro | `_quarto-ipn.yml`, `theme-ipn/ipn.scss`, `theme-ipn/ipn-dark.scss` | `_build/ipn/` |
-| `ipn-alegreya` | IPN blues; Alegreya / Alegreya Sans / Alegreya Sans SC (small caps for labels) | `_quarto-ipn-alegreya.yml`, `theme-ipn/ipn.scss`, `theme-ipn/font-alegreya.scss`, `theme-ipn/ipn-dark.scss` | `_build/ipn-alegreya/` |
+| `ipn` | IPN blues (leibniz-ipn.de); Source Serif 4 / Source Sans 3 / Source Code Pro | `_quarto-ipn.yml`, `theme-ipn/ipn.scss`, `theme-ipn/fonts.scss`, `theme-ipn/ipn-dark.scss` | `_build/ipn/` |
+| `ipn-literata` | IPN blues; Literata / Source Sans 3 / Source Code Pro | `_quarto-ipn-literata.yml`, `theme-ipn/ipn.scss`, `theme-ipn/fonts.scss`, `theme-ipn/font-literata.scss`, `theme-ipn/ipn-dark.scss` | `_build/ipn-literata/` |
 | `socviz` | Recreation of [socviz.co](https://socviz.co); Source Serif 4 / Roboto Flex / IBM Plex Mono (free replacements for the paid socviz fonts) | `_quarto-socviz.yml`, `theme-socviz/socviz.scss`, `theme-socviz/socviz-dark.scss` | `_build/socviz/` |
 
 All profiles except `default` have a light and a dark mode. They also place figure captions, table captions and footnotes in the margin.
@@ -190,11 +190,13 @@ Render with a profile:
 ```bash
 quarto render                          # default profile → _book/
 quarto render --profile ipn            # → _build/ipn/
-quarto render --profile ipn-alegreya   # → _build/ipn-alegreya/
+quarto render --profile ipn-literata   # → _build/ipn-literata/
 quarto render --profile socviz         # → _build/socviz/
 ```
 
-The `_build/` folder is ignored by git. It only holds output for comparing the variants. To change colors or fonts, edit the `.scss` files. The fonts are loaded from Google Fonts.
+The `_build/` folder is ignored by git. It only holds output for comparing the variants. To change colors or fonts, edit the `.scss` files.
+
+The `ipn` profiles host their fonts themselves, so no request goes to Google. `fonts/` holds the unmodified latin, latin-ext and greek files of the npm packages `@fontsource-variable/source-serif-4` (5.3.1), `source-sans-3` (5.3.1), `source-code-pro` (5.3.1) and `literata` (5.3.0), each with its OFL license. `theme-ipn/fonts.scss` and `theme-ipn/font-literata.scss` declare them with paths from the project root, and Quarto copies the files to `site_libs/bootstrap/fonts/`. The `socviz` profile still loads its fonts from Google Fonts.
 
 ### Pipeline
 
