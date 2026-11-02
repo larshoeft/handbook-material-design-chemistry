@@ -166,7 +166,7 @@ Pandoc writes English quotation marks even with `lang: de`. For German documents
 
 #### `svg-inline`
 
-In HTML output this filter embeds local SVG images directly in the page instead of linking them with `<img>`. The figures drawn with TikZ in `img/tikz/` use the CSS variables `--fig-dunkel`, `--fig-mittel`, `--fig-hell`, `--fig-blass`, `--fig-schrift` and `--fig-grund`, which the themes set, so the figures follow the active theme and its dark mode. Without a theme value the IPN colors apply. Rebuild the figures with `python img/tikz/build.py`. The filter prefixes the ids inside each SVG with its file name, so several figures can share a page, and keeps `width`, classes and the alt text (`fig-alt`) of the image.
+In HTML output this filter embeds local SVG images directly in the page instead of linking them with `<img>`. The figures drawn with TikZ in `img/tikz/` use the CSS variables `--fig-dunkel`, `--fig-mittel`, `--fig-hell`, `--fig-blass`, `--fig-akzent`, `--fig-schrift` and `--fig-grund`, which the themes set, so the figures follow the active theme and its dark mode. Without a theme value the IPN colors apply. Rebuild the figures with `quarto run img/tikz/build.lua` (LuaLaTeX, no Python needed). It writes one SVG per font variant: `name.svg` (Helvetica), `name.ipn.svg` (Source Sans 3) and `name.socviz.svg` (Roboto Flex); the fonts are in `img/tikz/fonts/`, screenshots and other bitmaps used in figures in `img/tikz/bitmaps/` (embedded into the SVG). A profile chooses its variant with `figure-variant` in `_quarto-<profile>.yml`. The filter prefixes the ids inside each SVG with its file name, so several figures can share a page, and keeps `width`, classes and the alt text (`fig-alt`) of the image.
 
 ### Website themes
 

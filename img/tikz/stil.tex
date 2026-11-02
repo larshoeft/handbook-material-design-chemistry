@@ -1,13 +1,18 @@
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[scaled]{helvet}
+% Font per theme variant, set by build.lua; default Helvetica
+\ifdefined\figfontsetup
+  \figfontsetup
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled]{helvet}
+\fi
 \renewcommand{\familydefault}{\sfdefault}
 \usetikzlibrary{arrows.meta,positioning,calc}
-% Use only these colors; build.py replaces them with --fig-<name>
+% Use only these colors; build.lua replaces them with --fig-<name>
 \definecolor{dunkel}{HTML}{003F7D}
 \definecolor{mittel}{HTML}{4D79A4}
 \definecolor{hell}{HTML}{CCD9E5}
 \definecolor{blass}{HTML}{E6ECF2}
+\definecolor{akzent}{HTML}{007EB1}
 \definecolor{schrift}{HTML}{212121}
 \definecolor{grund}{HTML}{FFFFFF}
 \tikzset{

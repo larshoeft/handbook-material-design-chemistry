@@ -41,6 +41,7 @@ $fig-dunkel: $ipn-blue !default;
 $fig-mittel: $ipn-blue-mid !default;
 $fig-hell: $ipn-blue-light !default;
 $fig-blass: $ipn-blue-pale !default;
+$fig-akzent: $ipn-azure !default;
 
 /*-- scss:rules --*/
 body {
@@ -105,6 +106,7 @@ nav[role="doc-toc"] a.active .header-section-number,
   --fig-mittel: #{$fig-mittel};
   --fig-hell: #{$fig-hell};
   --fig-blass: #{$fig-blass};
+  --fig-akzent: #{$fig-akzent};
   --fig-schrift: #{$body-color};
   --fig-grund: #{$body-bg};
 }

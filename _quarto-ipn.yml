@@ -4,6 +4,9 @@
 project:
   output-dir: _build/ipn
 
+# Font variant of the TikZ figures, see img/tikz/build.lua
+figure-variant: ipn
+
 format:
   html:
     theme:

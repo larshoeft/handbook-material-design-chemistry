@@ -1,0 +1,21 @@
+\documentclass[tikz,border=2mm]{standalone}
+\input{stil}
+\begin{document}
+\begin{tikzpicture}
+  \foreach \bild/\titel [count=\i from 0] in {real/Real World Example, version1/1. Version,
+      version2/2. Version, version3/3. Version} {
+    \begin{scope}[xshift=\i*4.35cm]
+      \begin{scope}
+        \clip (0,3.47) -- (0,0.45) arc[start angle=180,end angle=270,radius=0.45]
+          -- (3.55,0) arc[start angle=270,end angle=360,radius=0.45] -- (4,3.47) -- cycle;
+        \node[anchor=south west,inner sep=0] at (0,0)
+          {\includegraphics[width=4cm,height=3.47cm]{bitmaps/frameworks_dbr_\bild.jpg}};
+      \end{scope}
+      \draw[draw=dunkel,line width=1pt] (0,3.47) -- (0,0.45) arc[start angle=180,end angle=270,radius=0.45]
+        -- (3.55,0) arc[start angle=270,end angle=360,radius=0.45] -- (4,3.47);
+      \node[draw=dunkel,fill=grund,line width=1pt,rounded corners=1mm,minimum width=4cm,
+        minimum height=0.6cm,anchor=south west] at (0,3.47) {\titel};
+    \end{scope}
+  }
+\end{tikzpicture}
+\end{document}

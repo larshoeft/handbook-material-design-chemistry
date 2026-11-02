@@ -27,6 +27,7 @@ $fig-dunkel: #343a40 !default;
 $fig-mittel: $primary !default;
 $fig-hell: #dee2e6 !default;
 $fig-blass: #f1f3f5 !default;
+$fig-akzent: $info !default;
 
 /*-- scss:rules --*/
 .sidebar,
@@ -47,6 +48,7 @@ div.sidebar-item-container .active {
   --fig-mittel: #{$fig-mittel};
   --fig-hell: #{$fig-hell};
   --fig-blass: #{$fig-blass};
+  --fig-akzent: #{$fig-akzent};
   --fig-schrift: #{$body-color};
   --fig-grund: #{$body-bg};
 }
