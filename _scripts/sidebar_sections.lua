@@ -68,30 +68,39 @@ for _, page in ipairs(pages) do
   local first = text:find('<nav id="quarto-sidebar"', 1, true)
   local last = first and text:find('</nav>', first, true)
   if last then
-    local n = 0
-    local sidebar = text:sub(first, last - 1):gsub(
-      '(<a href="([^"]+)" class="sidebar%-item%-text sidebar%-link[^"]*">.-</a>)(%s*</div>)',
-      function(link, href, close)
-        local list = sections[resolve(page_key, href)]
-        if not list then return nil end
+    -- Link by link: only chapter links whose container ends right after the
+    -- link; part headings have a toggle there (a button since Quarto 1.11)
+    local sidebar, parts, pos, n = text:sub(first, last - 1), {}, 1, 0
+    while true do
+      local s, e, href = sidebar:find('<a href="([^"]+)" class="sidebar%-item%-text sidebar%-link[^"]*">', pos)
+      if not s then break end
+      local _, link_end = sidebar:find('</a>', e, true)
+      local _, close_end = sidebar:find('^%s*</div>', link_end + 1)
+      local list = close_end and sections[resolve(page_key, href)]
+      parts[#parts + 1] = sidebar:sub(pos, link_end)
+      pos = link_end + 1
+      if list then
         n = n + 1
         local id = 'sidebar-toc-' .. n
         local target = href:gsub('#.*$', '')
         local items = {}
-        for _, s in ipairs(list) do
-          items[#items + 1] = '<li><a href="' .. target .. '#' .. s.id .. '" class="nav-link">'
-            .. s.inner .. '</a></li>'
+        for _, sec in ipairs(list) do
+          items[#items + 1] = '<li><a href="' .. target .. '#' .. sec.id .. '" class="nav-link">'
+            .. sec.inner .. '</a></li>'
         end
-        return link
-          .. '<a class="sidebar-item-toggle text-start sidebar-page-toc-toggle" data-bs-toggle="collapse"'
-          .. ' data-bs-target="#' .. id .. '" role="button" aria-expanded="false" aria-label="Abschnitte">'
-          .. '<i class="bi bi-chevron-right ms-2"></i></a>'
-          .. close
+        parts[#parts + 1] = '<button type="button" class="sidebar-item-toggle text-start sidebar-page-toc-toggle"'
+          .. ' data-bs-toggle="collapse" data-bs-target="#' .. id .. '" aria-controls="' .. id .. '"'
+          .. ' aria-expanded="false" aria-label="Abschnitte">'
+          .. '<i class="bi bi-chevron-right ms-2" aria-hidden="true"></i></button>'
+          .. sidebar:sub(pos, close_end)
           .. '<ul id="' .. id .. '" class="collapse list-unstyled sidebar-page-toc">'
           .. table.concat(items) .. '</ul>'
-      end)
+        pos = close_end + 1
+      end
+    end
+    parts[#parts + 1] = sidebar:sub(pos)
     if n > 0 then
-      write(page, text:sub(1, first - 1) .. sidebar .. text:sub(last))
+      write(page, text:sub(1, first - 1) .. table.concat(parts) .. text:sub(last))
     end
   end
 end
