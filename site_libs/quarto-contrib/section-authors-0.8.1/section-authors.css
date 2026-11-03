@@ -45,9 +45,21 @@
   order: 2;
 }
 
+/* Citation of the whole book, below the list of all authors */
+.quarto-title-meta .section-authors-book-citation {
+  grid-column: 1 / -1;
+  order: 3;
+}
+
 .section-authors-all .section-authors-name {
   white-space: nowrap;
   font-size: inherit;
+}
+
+@media (max-width: 575.98px) {
+  .section-authors-all .section-authors-name {
+    white-space: normal;
+  }
 }
 
 .section-authors-citation {

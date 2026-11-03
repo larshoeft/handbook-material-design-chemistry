@@ -45,6 +45,23 @@ html {
   margin-top: 0;
 }
 
+/* Metadata centered under the centered headings */
+.section-authors > div,
+.quarto-title-meta > div {
+  text-align: center;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta > :is(.section-authors-all, .section-authors-book-citation) {
+  flex-basis: 100%;
+}
+
 .quarto-title-meta .quarto-title-meta-contents,
 .quarto-title-meta .quarto-title-meta-contents p,
 .section-authors .section-authors-name,
@@ -62,10 +79,167 @@ div.csl-bib-body.hanging-indent {
   text-indent: 0;
 }
 
-/* Wide tables scroll on their own on narrow screens */
+/* Few font sizes: body, .875em for references and tables, .875rem for
+   margin, sidebar and meta text */
+div.csl-bib-body,
+#quarto-document-content table {
+  font-size: .875em;
+}
+
+#quarto-document-content h4,
+.sidebar-title {
+  font-size: var(--bs-body-font-size);
+}
+
+#quarto-document-content .column-margin,
+#quarto-document-content .margin-caption,
+#quarto-sidebar .sidebar-item {
+  font-size: .875rem;
+}
+
+/* Same gap above headings everywhere: sections with margin content are
+   grids, where margins do not collapse */
+#quarto-document-content section > :last-child,
+#quarto-document-content section > :is(ul, ol):last-child > li:last-child > :last-child,
+#quarto-document-content section > :last-child table,
+#quarto-document-content section.page-columns > :has(+ section) {
+  margin-bottom: 0;
+}
+
+/* Chapter titles and ## centered (APA level 1); #### runs into its
+   paragraph with a period (APA level 4) */
+#title-block-header h1.title {
+  text-align: center;
+}
+
+#title-block-header .subtitle {
+  color: var(--bs-heading-color);
+  text-align: center;
+  font-family: var(--bs-font-sans-serif);
+  font-size: var(--bs-body-font-size);
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+#quarto-document-content > section.level1 > h1,
+#quarto-document-content h2 {
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Each criterion is its own article: clear break before the next one.
+   On the section, so a jump to it lands on the heading */
+#quarto-document-content > section.level2 ~ section.level2 {
+  margin-top: 4rem;
+}
+
+#quarto-document-content section {
+  scroll-margin-top: 1rem;
+}
+
+#quarto-document-content > section.level2 ~ section.level2 > h2 {
+  margin-top: 0;
+}
+
+/* ### in text size (APA level 2), all headings bold */
+#quarto-document-content h3 {
+  font-size: 1em;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+/* In-text citations and cross-references in text color, link color on
+   hover */
+#quarto-document-content :is(a[role="doc-biblioref"], a.quarto-xref) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#quarto-document-content :is(a[role="doc-biblioref"], a.quarto-xref):hover {
+  color: var(--bs-link-color);
+}
+
+#quarto-document-content section.level4 {
+  margin-top: 1.5rem;
+}
+
+#quarto-document-content h4 {
+  float: left;
+  margin: 0 .3em 0 0;
+  line-height: inherit;
+}
+
+#quarto-document-content h4::after {
+  content: ".";
+}
+
+/* Lists without extra indent: markers align with the text, nested
+   markers with the text of the parent item */
+#quarto-document-content ul,
+#quarto-document-content ol {
+  padding-left: 1.2em;
+}
+
+#quarto-document-content li > :is(ul, ol) {
+  margin-block: 0;
+}
+
+/* Wide tables scroll on their own on narrow screens; edge shadows show
+   that more columns follow */
 .quarto-float-tbl > div {
   overflow-x: auto;
   min-width: 0;
+  background:
+    linear-gradient(to right, var(--bs-body-bg) 30%, transparent) left / 2rem 100% no-repeat local,
+    linear-gradient(to left, var(--bs-body-bg) 30%, transparent) right / 2rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, .18), transparent) left / .75rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .18), transparent) right / .75rem 100% no-repeat scroll;
+}
+
+.quarto-float-tbl > div > table {
+  --bs-table-bg: transparent;
+}
+
+/* Two-column tables stack on phones: label above text */
+@media (max-width: 575.98px) {
+  #quarto-document-content table:not(:has(tr > :nth-child(3))),
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) :is(tbody, tr, td) {
+    display: block;
+  }
+
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) :is(thead, colgroup) {
+    display: none;
+  }
+
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) td:first-child:not(:last-child),
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) td[rowspan] {
+    font-weight: 600;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* German compounds: hyphenate running text and tables */
+#quarto-document-content {
+  hyphens: auto;
+}
+
+#quarto-document-content p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* Reserve the search box height, it is inserted by script after load */
+@media (min-width: 992px) {
+  .sidebar-search {
+    min-height: 29.3px;
+  }
 }
 
 /* Collapsible sidebar on phones: wrap entries instead of overflowing */
@@ -106,4 +280,50 @@ h1, h2, h3, h4 {
 .csl-entry a,
 .section-authors-citation a {
   overflow-wrap: anywhere;
+}
+
+/* Links in text color: icons and citations change only on hover, other
+   links keep a faint underline so they stay recognizable on touch screens */
+:is(.section-authors, .section-authors-all, .quarto-title-meta) :is(.section-authors-orcid, .section-authors-affiliation, .section-authors-email) {
+  color: inherit;
+}
+
+:is(#quarto-document-content, #title-block-header) a:not([role="doc-biblioref"], .quarto-xref, .section-authors-orcid, .section-authors-affiliation, .section-authors-email) {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .15em;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
+:is(#quarto-document-content, #title-block-header) a:hover {
+  color: var(--bs-link-color);
+  text-decoration-color: currentColor;
+}
+
+/* Enlarged figures, see figure-zoom.html */
+.zoomable {
+  cursor: zoom-in;
+}
+
+dialog.figure-zoom {
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 1rem;
+  border: 0;
+  border-radius: .5rem;
+  background: var(--bs-body-bg);
+  cursor: zoom-out;
+}
+
+dialog.figure-zoom::backdrop {
+  background: rgb(0 0 0 / .7);
+}
+
+dialog.figure-zoom > * {
+  display: block;
+  width: min(90vw, 1400px);
+  max-height: 85vh;
+  height: auto;
+  object-fit: contain;
 }

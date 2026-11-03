@@ -1,0 +1,1 @@
+Sitemap: https://larshoeft.github.io/handbook-material-design-chemistry/sitemap.xml
