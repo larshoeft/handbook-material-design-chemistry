@@ -50,9 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-73eb5fd7cb34d6615422a05ab90ec47e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-97401faaa17425fb75e11a8532b76b46.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-73eb5fd7cb34d6615422a05ab90ec47e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ec0ed451534bae06e4ecb81d340aee50.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d5665c09f93333c245300d54805287cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ec0ed451534bae06e4ecb81d340aee50.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/section-authors-0.8.1/section-authors.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -344,8 +344,8 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./part_how/_criteria_specific.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a><a class="sidebar-item-toggle text-start sidebar-page-toc-toggle" data-bs-toggle="collapse" data-bs-target="#sidebar-toc-1" role="button" aria-expanded="false" aria-label="Abschnitte"><i class="bi bi-chevron-right ms-2"></i></a>
+  </div><ul id="sidebar-toc-1" class="collapse list-unstyled sidebar-page-toc"><li><a href="./part_how/_criteria_specific.html#sec-criteria-structure" class="nav-link"><span class="header-section-number">4.1</span> Aufbau der Steckbriefe</a></li><li><a href="./part_how/_criteria_specific.html#sec-cumulative" class="nav-link"><span class="header-section-number">4.2</span> Kumulatives Lernen</a></li><li><a href="./part_how/_criteria_specific.html#sec-load" class="nav-link"><span class="header-section-number">4.3</span> Kognitive Belastung/Cognitive Load</a></li><li><a href="./part_how/_criteria_specific.html#sec-adaptivity" class="nav-link"><span class="header-section-number">4.4</span> Adaptivität</a></li><li><a href="./part_how/_criteria_specific.html#sec-context" class="nav-link"><span class="header-section-number">4.5</span> Kontextualisierung</a></li><li><a href="./part_how/_criteria_specific.html#sec-presence" class="nav-link"><span class="header-section-number">4.6</span> Präsenzerleben</a></li><li><a href="./part_how/_criteria_specific.html#sec-interest" class="nav-link"><span class="header-section-number">4.7</span> Interesse</a></li><li><a href="./part_how/_criteria_specific.html#sec-oer" class="nav-link"><span class="header-section-number">4.8</span> OER Verfügbarkeit</a></li></ul>
 </li>
       </ul>
   </li>
@@ -438,27 +438,12 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <script>
-// Narrow screens hide the page TOC; copy it, collapsed, below the active chapter in the sidebar
+// Sections in the sidebar come from _scripts/sidebar_sections.lua; a tap on one of this page closes the menu
 document.addEventListener('DOMContentLoaded', () => {
-  const toc = document.querySelector('#TOC > ul');
-  const active = document.querySelector('#quarto-sidebar .sidebar-link.active');
-  if (!toc || !active) return;
-  const copy = toc.cloneNode(true);
-  copy.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
-  copy.id = 'sidebar-page-toc';
-  copy.className = 'collapse list-unstyled sidebar-page-toc';
-  const toggle = document.createElement('a');
-  toggle.className = 'sidebar-item-toggle text-start sidebar-page-toc-toggle';
-  toggle.setAttribute('data-bs-toggle', 'collapse');
-  toggle.setAttribute('data-bs-target', '#sidebar-page-toc');
-  toggle.setAttribute('role', 'button');
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-label', 'Abschnitte dieser Seite');
-  toggle.innerHTML = '<i class="bi bi-chevron-right ms-2"></i>';
-  active.closest('.sidebar-item-container').appendChild(toggle);
-  active.closest('li.sidebar-item').appendChild(copy);
-  copy.addEventListener('click', event => {
-    if (event.target.closest('a')) document.querySelector('.quarto-btn-toggle')?.click();
+  document.querySelectorAll('#quarto-sidebar .sidebar-page-toc a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.pathname === location.pathname) document.querySelector('.quarto-btn-toggle')?.click();
+    });
   });
 });
 </script>

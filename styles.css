@@ -166,9 +166,10 @@ div.csl-bib-body,
   margin-top: 0;
 }
 
-/* ### in text size (APA level 2), all headings bold */
+/* ### slightly above text size: the sans serif looks smaller than the
+   serif text at the same size; all headings bold */
 #quarto-document-content h3 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 h1, h2, h3, h4 {
@@ -290,7 +291,7 @@ h1, h2, h3, h4 {
   white-space: normal;
 }
 
-/* Page TOC in the sidebar on narrow screens, see toc-in-sidebar.html */
+/* Chapter sections in the sidebar on narrow screens, see _scripts/sidebar_sections.lua */
 @media (min-width: 992px) {
   .sidebar-page-toc,
   .sidebar-page-toc-toggle {
