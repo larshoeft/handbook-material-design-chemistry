@@ -74,6 +74,14 @@ span.margin-aside,
   font-weight: 700;
 }
 
+// Touch screens keep :hover after a tap; no hover color there, so a tapped
+// entry does not look active
+@media (hover: none) {
+  div.sidebar-item-container:hover {
+    color: $ipn-secondary;
+  }
+}
+
 // Active entry in sidebar and page TOC: blue, semibold
 div.sidebar-item-container .active {
   color: $ipn-blue;

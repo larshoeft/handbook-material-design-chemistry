@@ -1,6 +1,8 @@
 project:
   type: book
-  post-render: _scripts/float_numbers.lua
+  post-render:
+    - _scripts/float_numbers.lua
+    - _scripts/sidebar_sections.lua
 
 profile:
   default: ipn

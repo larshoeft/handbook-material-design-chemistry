@@ -182,7 +182,7 @@ All profiles have a light and a dark mode. They also place figure captions, tabl
 
 Figures, tables and other floats are numbered per `##` section (e.g. Tabelle 4.6.2) instead of per chapter. Quarto has no option for this, so the Lua script `_scripts/float_numbers.lua` runs after rendering (`project: post-render`, executed by Quarto itself, no Python needed) and rewrites captions, cross-references and the search index.
 
-All profiles share `styles.css` (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and two scripts. `toc-in-sidebar.html`: below 992 px Quarto hides the page's table of contents; the script copies it, collapsed, below the active chapter in the sidebar. `figure-zoom.html`: a click (or Enter) on a figure opens an enlarged copy in a dialog; the copy stays in the page, so inlined SVGs keep the theme colors and fonts.
+All profiles share `styles.css` (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and two scripts. `toc-in-sidebar.html`: closes the menu after a tap on a section of the current page. Below 992 px Quarto hides the page's table of contents; instead the post-render script `_scripts/sidebar_sections.lua` adds the sections of every chapter (taken from its page TOC) to the sidebar of every page, collapsed under the chapter, so each chapter can be opened in the phone menu. `figure-zoom.html`: a click (or Enter) on a figure opens an enlarged copy in a dialog; the copy stays in the page, so inlined SVGs keep the theme colors and fonts.
 
 Render with a profile:
 
