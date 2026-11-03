@@ -115,6 +115,27 @@ div.csl-bib-body,
   text-align: center;
 }
 
+/* Centered titles without their number (it stays in sidebar and page
+   TOC); the chapter title row hides the number and the space after it */
+#quarto-document-content h2 .header-section-number,
+#title-block-header h1.title .chapter-number {
+  display: none;
+}
+
+#title-block-header h1.title:has(.chapter-title) {
+  font-size: 0;
+}
+
+#title-block-header h1.title .chapter-title {
+  font-size: calc(1.325rem + .9vw);
+}
+
+@media (min-width: 1200px) {
+  #title-block-header h1.title .chapter-title {
+    font-size: 2rem;
+  }
+}
+
 #title-block-header .subtitle {
   color: var(--bs-heading-color);
   text-align: center;
