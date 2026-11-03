@@ -1,8 +1,11 @@
 /* Shared by all profiles, on top of the themes */
 
-/* Reserve the scrollbar so columns do not shift between short and long pages */
-html {
-  scrollbar-gutter: stable;
+/* Reserve the scrollbar so columns do not shift between short and long
+   pages; one column below 992px, so the header spans the full width there */
+@media (min-width: 992px) {
+  html {
+    scrollbar-gutter: stable;
+  }
 }
 
 /* Pages without a page TOC use Quarto's slimcontent grid too, so the
@@ -167,9 +170,24 @@ h1, h2, h3, h4 {
 }
 
 #quarto-document-content h4 {
-  float: left;
-  margin: 0 .3em 0 0;
+  display: inline;
+  margin: 0;
   line-height: inherit;
+}
+
+#quarto-document-content h4 + p {
+  display: inline;
+}
+
+#quarto-document-content h4 + p::before {
+  content: " ";
+}
+
+/* Restores the paragraph spacing lost by the inline paragraph */
+#quarto-document-content h4 + p::after {
+  content: "";
+  display: block;
+  margin-bottom: 1rem;
 }
 
 #quarto-document-content h4::after {
