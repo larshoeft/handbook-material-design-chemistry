@@ -86,7 +86,9 @@ div.sidebar-item-container .active {
   display: block;
 }
 
-#TOC a.nav-link {
+#TOC a.nav-link,
+.sidebar-page-toc a.nav-link,
+.sidebar-page-toc a.nav-link.active {
   color: $ipn-secondary;
 }
 
@@ -103,6 +105,41 @@ figcaption,
 .quarto-title-meta-heading {
   color: $ipn-secondary;
   opacity: 1;
+}
+
+// Phone header: title centered in the bar, all in IPN blue; title 20px,
+// icons sized to it, long titles cut with an ellipsis. Taps pass through
+// to the menu link behind the title
+.quarto-secondary-nav > .container-fluid {
+  position: relative;
+  align-items: center;
+}
+
+// The empty menu link keeps the full bar height, so taps on the bar work
+.quarto-secondary-nav > .container-fluid > a.flex-grow-1 {
+  align-self: stretch;
+}
+
+.quarto-secondary-nav .quarto-secondary-nav-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 8rem);
+  margin: 0;
+  font-size: 1.176rem;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $ipn-blue;
+  pointer-events: none;
+}
+
+.quarto-secondary-nav i.bi {
+  font-size: 1rem;
+  color: $ipn-blue;
 }
 
 // The cover replaces the title text on wide screens; the tools stay
@@ -137,11 +174,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Number of the active entry in the table of contents (right) and
-// sidebar (left) like the entry itself
-nav[role="doc-toc"] a.active .header-section-number,
-.sidebar-item .sidebar-link.active .chapter-number {
-  color: $primary !important;
+// Numbers in the table of contents (right) and sidebar (left) in the color
+// of their entry
+nav[role="doc-toc"] .header-section-number,
+.sidebar-item .chapter-number {
+  color: inherit !important;
 }
 
 // Colors of the TikZ figures, see img/tikz/
