@@ -32,23 +32,23 @@ Im Projekt DiVEx (Diversitätssensible in Virtual Reality Experimentieren) wurde
 
 #### Darstellungstreue
 
-**Realistische Darstellung:** Um eine möglichst realistische Abbildung der Umgebung zu erreichen, wurde das Labor fotografiert, alle Objekte ausgemessen und anschließend in einer 3D-Modelling-Software erstellt (Siehe Abb. X). Die Fotos wurden als Texturen auf die 3D-Objekte gelegt, wodurch ein hohes Gefühl von Realismus entsteht. Für den Sound wurden Hintergrundgeräusche aus dem Labor gewählt, die vorher aufgenommen und beschrieben wurden.
+*Realistische Darstellung:* Um eine möglichst realistische Abbildung der Umgebung zu erreichen, wurde das Labor fotografiert, alle Objekte ausgemessen und anschließend in einer 3D-Modelling-Software erstellt (Siehe Abb. X). Die Fotos wurden als Texturen auf die 3D-Objekte gelegt, wodurch ein hohes Gefühl von Realismus entsteht. Für den Sound wurden Hintergrundgeräusche aus dem Labor gewählt, die vorher aufgenommen und beschrieben wurden.
 
-**Flüssige Darstellung und konsistentes Verhalten der Objekte:** Wurden technisch durch eine Optimierung für Standalone-Headsets umgesetzt und sind größtenteils durch die physikalischen Berechnungen in der Unity Game Engine abgedeckt. Das Erstellen von 3D-Modellen ist technisch aufwendig und benötigt Erfahrung. Alternativ können viele 3D-Modelle online erworben werden oder mit 360°-Bildern gearbeitet werden.
+*Flüssige Darstellung und konsistentes Verhalten der Objekte:* Wurden technisch durch eine Optimierung für Standalone-Headsets umgesetzt und sind größtenteils durch die physikalischen Berechnungen in der Unity Game Engine abgedeckt. Das Erstellen von 3D-Modellen ist technisch aufwendig und benötigt Erfahrung. Alternativ können viele 3D-Modelle online erworben werden oder mit 360°-Bildern gearbeitet werden.
 
-**Nutzendendarstellung** haben wir keine extra eingebaut, weil Nutzende die Umgebung aus Ego-Perspektive wahrnehmen und daher keinen eigenen Avatar benötigen. In vielen Fällen ist die Darstellung eines Körpers in VR auch irreführend, weil er sich nicht wie der echte Körper mitbewegt und daher das Gefühl von Präsenz verringert.
+*Nutzendendarstellung* haben wir keine extra eingebaut, weil Nutzende die Umgebung aus Ego-Perspektive wahrnehmen und daher keinen eigenen Avatar benötigen. In vielen Fällen ist die Darstellung eines Körpers in VR auch irreführend, weil er sich nicht wie der echte Körper mitbewegt und daher das Gefühl von Präsenz verringert.
 
-**Räumliches Audio:** In dem iVRCL werden Geräusche wie bspw. die Brennerflamme von den entsprechenden Objekten abgespielt. Zusätzlich werden Hintergrundgeräusche zu dem Labor abgespielt.
+*Räumliches Audio:* In dem iVRCL werden Geräusche wie bspw. die Brennerflamme von den entsprechenden Objekten abgespielt. Zusätzlich werden Hintergrundgeräusche zu dem Labor abgespielt.
 
-**Haptisches Feedback:** Die Controller vibrieren leicht, wenn man das Reagenzglas in der Klemme über den Bunsenbrenner hält.
+*Haptisches Feedback:* Die Controller vibrieren leicht, wenn man das Reagenzglas in der Klemme über den Bunsenbrenner hält.
 
 ![Umsetzung der Interaktion zum Einstellen des pH-Wertes (links) im Vergleich zu dem Video aus dem realen Labor (rechts).](../img/criteria_specific_presence_image3.png){#fig-presence-interaktion fig-alt="Umsetzung der Interaktion zum Einstellen des pH-Wertes (links) im Vergleich zu dem Video aus dem realen Labor (rechts)."}
 
 #### Kontrollfaktoren
 
-Für **Manipulation von Objekten** wurde auf die physikalische Simulation von Unity in Kombination mit Animationen zurückgegriffen. Für die Messung des pH-Wertes kann man beispielsweise den Glasstab an ein Gefäß halten und erhält visuelles Feedback durch die Verfärbung der Spitze. Anschließend kann man den Glasstab auf ein pH-Papier halten und das Papier verfärbt sich basierend auf dem pH-Wert der Flüssigkeit.
+Für *Manipulation von Objekten* wurde auf die physikalische Simulation von Unity in Kombination mit Animationen zurückgegriffen. Für die Messung des pH-Wertes kann man beispielsweise den Glasstab an ein Gefäß halten und erhält visuelles Feedback durch die Verfärbung der Spitze. Anschließend kann man den Glasstab auf ein pH-Papier halten und das Papier verfärbt sich basierend auf dem pH-Wert der Flüssigkeit.
 
-Die **Navigation** in der virtuellen Umgebung war sehr herausfordernd zu implementieren. Zum aktuellen Zeitpunkt gibt es fünf Möglichkeiten, die Navigation und Bewegung in der virtuellen Umgebung umzusetzen:
+Die *Navigation* in der virtuellen Umgebung war sehr herausfordernd zu implementieren. Zum aktuellen Zeitpunkt gibt es fünf Möglichkeiten, die Navigation und Bewegung in der virtuellen Umgebung umzusetzen:
 
 1)  Seated Experience/keine Bewegung: Wird in erster Linie bei 360°-Videos/Bildern eingesetzt und benötigt am wenigsten physischen Platz. Mithilfe von Pfeilen oder Bereichen kann man sich durch die virtuelle Umgebung bewegen.
 2)  Bei der Teleportation werden vorher Bereiche festgelegt oder man kann sich an alle Orte auf einer Fläche teleportieren und sich damit durch die virtuelle Umgebung begeben.
@@ -58,7 +58,7 @@ Die **Navigation** in der virtuellen Umgebung war sehr herausfordernd zu impleme
 
 Wir haben uns für die Teleportation in vorher festgelegte Bereiche entschieden. Anfangs hatten wir Bereiche mit einer Größe von 3 x 4 m, haben aber festgestellt, dass die physischen Räume in der Regel kleiner sind und man beim Teleportieren Probleme in der Ausrichtung erhält, wenn man keinen quadratischen Bereich hat. Schlussendlich sind wir auf 2,5 x 2,5 m gegangen, weil man dadurch einfach die automatischen Bereiche des VR-Headsets verwenden kann, nicht jedes Mal den Bereich neu zeichnen muss, weniger physischen Platz bei mehreren Nutzenden in dem gleichen Raum benötigt und es für die meisten Interaktionen vollkommen ausreichend war. Hier sollte man insbesondere die Interaktionen testen, die sich am Rand des 2,5 x 2,5 m großen Bereichs befinden und eher mit einem Kreis als mit einem Quadrat als Bereich planen. In der Überarbeitung der Anwendung haben wir zusätzlich die Möglichkeit zur Steuerung mittels Joysticks für Nutzende mit Geheinschränkung umgesetzt.
 
-**Kontrolle der Umgebung** und **Kommunikation** wurden nicht eingebaut, weil wir einen digitalen Zwilling der realen Umgebung haben und diese nicht manipulieren wollen und es in der VR-Anwendung nicht um die Kommunikation mit anderen ging. Im Projekt des digitalen Klassenzimmers wurde der Schwerpunkt auf Kommunikation gelegt und mittels des TeachR Frameworks umgesetzt.
+*Kontrolle der Umgebung* und *Kommunikation* wurden nicht eingebaut, weil wir einen digitalen Zwilling der realen Umgebung haben und diese nicht manipulieren wollen und es in der VR-Anwendung nicht um die Kommunikation mit anderen ging. Im Projekt des digitalen Klassenzimmers wurde der Schwerpunkt auf Kommunikation gelegt und mittels des TeachR Frameworks umgesetzt.
 
 ### Umsetzung im Prozess
 
