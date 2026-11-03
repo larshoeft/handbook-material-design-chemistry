@@ -45,6 +45,23 @@ html {
   margin-top: 0;
 }
 
+/* Metadata centered under the centered headings */
+.section-authors > div,
+.quarto-title-meta > div {
+  text-align: center;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta > :is(.section-authors-all, .section-authors-book-citation) {
+  flex-basis: 100%;
+}
+
 .quarto-title-meta .quarto-title-meta-contents,
 .quarto-title-meta .quarto-title-meta-contents p,
 .section-authors .section-authors-name,
@@ -89,6 +106,76 @@ div.csl-bib-body,
   margin-bottom: 0;
 }
 
+/* Chapter titles and ## centered (APA level 1); #### runs into its
+   paragraph with a period (APA level 4) */
+#title-block-header h1.title {
+  text-align: center;
+}
+
+#title-block-header .subtitle {
+  color: var(--bs-heading-color);
+  text-align: center;
+  font-family: var(--bs-font-sans-serif);
+  font-size: var(--bs-body-font-size);
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+#quarto-document-content > section.level1 > h1,
+#quarto-document-content h2 {
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Each criterion is its own article: clear break before the next one.
+   On the section, so a jump to it lands on the heading */
+#quarto-document-content > section.level2 ~ section.level2 {
+  margin-top: 4rem;
+}
+
+#quarto-document-content section {
+  scroll-margin-top: 1rem;
+}
+
+#quarto-document-content > section.level2 ~ section.level2 > h2 {
+  margin-top: 0;
+}
+
+/* ### in text size (APA level 2), all headings bold */
+#quarto-document-content h3 {
+  font-size: 1em;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+/* In-text citations and cross-references in text color, link color on
+   hover */
+#quarto-document-content :is(a[role="doc-biblioref"], a.quarto-xref) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#quarto-document-content :is(a[role="doc-biblioref"], a.quarto-xref):hover {
+  color: var(--bs-link-color);
+}
+
+#quarto-document-content section.level4 {
+  margin-top: 1.5rem;
+}
+
+#quarto-document-content h4 {
+  float: left;
+  margin: 0 .3em 0 0;
+  line-height: inherit;
+}
+
+#quarto-document-content h4::after {
+  content: ".";
+}
+
 /* Lists without extra indent: markers align with the text, nested
    markers with the text of the parent item */
 #quarto-document-content ul,
@@ -97,7 +184,7 @@ div.csl-bib-body,
 }
 
 #quarto-document-content li > :is(ul, ol) {
-  margin-bottom: 0;
+  margin-block: 0;
 }
 
 /* Wide tables scroll on their own on narrow screens; edge shadows show
@@ -195,13 +282,48 @@ h1, h2, h3, h4 {
   overflow-wrap: anywhere;
 }
 
-/* Quieter DOI links in reference lists */
-.csl-entry a {
+/* Links in text color: icons and citations change only on hover, other
+   links keep a faint underline so they stay recognizable on touch screens */
+:is(.section-authors, .section-authors-all, .quarto-title-meta) :is(.section-authors-orcid, .section-authors-affiliation, .section-authors-email) {
+  color: inherit;
+}
+
+:is(#quarto-document-content, #title-block-header) a:not([role="doc-biblioref"], .quarto-xref, .section-authors-orcid, .section-authors-affiliation, .section-authors-email) {
+  color: inherit;
+  text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: .15em;
   text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
 }
 
-.csl-entry a:hover {
+:is(#quarto-document-content, #title-block-header) a:hover {
+  color: var(--bs-link-color);
   text-decoration-color: currentColor;
+}
+
+/* Enlarged figures, see figure-zoom.html */
+.zoomable {
+  cursor: zoom-in;
+}
+
+dialog.figure-zoom {
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 1rem;
+  border: 0;
+  border-radius: .5rem;
+  background: var(--bs-body-bg);
+  cursor: zoom-out;
+}
+
+dialog.figure-zoom::backdrop {
+  background: rgb(0 0 0 / .7);
+}
+
+dialog.figure-zoom > * {
+  display: block;
+  width: min(90vw, 1400px);
+  max-height: 85vh;
+  height: auto;
+  object-fit: contain;
 }

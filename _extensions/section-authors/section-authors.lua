@@ -293,36 +293,44 @@ local function csl_names(value)
   return #names > 0 and names or nil
 end
 
----Format the section's `citation` metadata with citeproc (using the
----document's `csl` and `lang`). Missing title, author and issued are
----taken from the heading, the section authors and the section date;
----for `type: chapter`, missing container-title and editor from the
----book title and `book.author`.
----@param citation MetaValue|boolean `citation` entry (`true` = defaults)
----@param header Header the section heading
----@param authors table[] section authors (see meta_authors)
----@param date string|nil section date as written in the source
+---Book title for citations: `book.title`, with `book.subtitle` after a
+---colon as APA joins them.
+---@param book table book metadata
+---@return string|nil
+local function book_title(book)
+  if not book.title then return nil end
+  local title = utils.stringify(book.title)
+  if book.subtitle then
+    title = title .. ': ' .. utils.stringify(book.subtitle)
+  end
+  return title
+end
+
+---Web address of the current page from `book.site-url` (or `site-url`),
+---optionally with an anchor.
 ---@param meta Meta document metadata
+---@param anchor string|nil section id
+---@return string|nil
+local function page_url(meta, anchor)
+  local book = utils.type(meta.book) == 'table' and meta.book or {}
+  local base = book['site-url'] or meta['site-url']
+  if not base or not (quarto.project and quarto.project.directory) then return nil end
+  base = utils.stringify(base):gsub('/*$', '/')
+  local page = pandoc.path.make_relative(quarto.doc.input_file, quarto.project.directory)
+  page = page:gsub('\\', '/'):gsub('%.qmd$', '.html')
+  if page == 'index.html' then page = '' end
+  return base .. page .. (anchor and ('#' .. anchor) or '')
+end
+
+---Format one CSL item with citeproc (using the document's `csl` and
+---`lang`) and keep only the entry's content: ids and classes like `ref-…`
+---and `csl-bib-body` would be picked up by section-bibliographies.
+---@param item table CSL item
+---@param meta Meta document metadata
+---@param what string what is cited, for the warning
 ---@return Blocks|nil formatted reference, nil on failure
-local function format_citation(citation, header, authors, date, meta)
-  local item = {}
-  if utils.type(citation) == 'table' then  -- `citation: true` = defaults only
-    for k, v in pairs(citation) do item[k] = v end
-  end
-  item.id    = 'section-citation'
-  item.type  = item.type and utils.stringify(item.type) or 'chapter'
-  item.title = item.title or utils.stringify(header.content)
-  item.issued = item.issued or date
-
-  item.author = csl_names(item.author or authors)
-
-  -- `book.author` holds the book's editors
-  if item.type == 'chapter' then
-    local book = utils.type(meta.book) == 'table' and meta.book or {}
-    item['container-title'] = item['container-title'] or book.title
-    item.editor = csl_names(item.editor or book.author)
-  end
-
+local function run_citeproc(item, meta, what)
+  item.id = 'section-citation'
   local cite_meta = {
     references = { item },
     nocite     = pandoc.Inlines {
@@ -334,13 +342,9 @@ local function format_citation(citation, header, authors, date, meta)
   local ok, result = pcall(utils.citeproc,
     pandoc.Pandoc({ pandoc.Div({}, pandoc.Attr('refs')) }, cite_meta))
   if not ok then
-    warn('citation for #' .. header.identifier .. ' failed: '
-         .. tostring(result))
+    warn('citation for ' .. what .. ' failed: ' .. tostring(result))
     return nil
   end
-
-  -- Keep only the entry's content: ids and classes like `ref-…` and
-  -- `csl-bib-body` would be picked up by section-bibliographies.
   local entry
   result.blocks:walk {
     Div = function(d)
@@ -348,6 +352,55 @@ local function format_citation(citation, header, authors, date, meta)
     end,
   }
   return entry
+end
+
+---Format the section's `citation` metadata with citeproc. Missing title,
+---author and issued are taken from the heading, the section authors and
+---the section date; for `type: chapter`, missing container-title and
+---editor from the book title (see book_title) and `book.author`.
+---@param citation MetaValue|boolean `citation` entry (`true` = defaults)
+---@param header Header the section heading
+---@param authors table[] section authors (see meta_authors)
+---@param date string|nil section date as written in the source
+---@param meta Meta document metadata
+---@return Blocks|nil formatted reference, nil on failure
+local function format_citation(citation, header, authors, date, meta)
+  local item = {}
+  if utils.type(citation) == 'table' then  -- `citation: true` = defaults only
+    for k, v in pairs(citation) do item[k] = v end
+  end
+  item.type  = item.type and utils.stringify(item.type) or 'chapter'
+  item.title = item.title or utils.stringify(header.content)
+  item.issued = item.issued or date
+
+  item.author = csl_names(item.author or authors)
+
+  -- `book.author` holds the book's editors
+  if item.type == 'chapter' then
+    local book = utils.type(meta.book) == 'table' and meta.book or {}
+    item['container-title'] = item['container-title'] or book_title(book)
+    item.editor = csl_names(item.editor or book.author)
+  end
+  item.URL = item.URL or page_url(meta, header.identifier)
+
+  return run_citeproc(item, meta, '#' .. header.identifier)
+end
+
+---Citation of the whole book (editors from `book.author`), for the title
+---block next to `::: section-authors-all`.
+---@param meta Meta document metadata
+---@return Blocks|nil formatted reference, nil on failure
+local function format_book_citation(meta)
+  local book = utils.type(meta.book) == 'table' and meta.book or {}
+  local date = book.date or meta.date
+  local year = date and utils.stringify(date):match('%d%d%d%d') or os.date('%Y')
+  return run_citeproc({
+    type   = 'book',
+    title  = book_title(book),
+    editor = csl_names(book.author),
+    issued = year,
+    URL    = page_url(meta),
+  }, meta, 'the book')
 end
 
 ---One labelled field (label + contents), like Quarto's title block.
@@ -768,7 +821,13 @@ return {
               labels, reference, license))
           end
         elseif blk.t == 'Div' and blk.classes:includes('section-authors-all') then
-          doc.meta['section-authors-all'] = all_authors(doc.meta, base)
+          local all = all_authors(doc.meta, base)
+          local reference = default_citation and format_book_citation(doc.meta)
+          if reference then
+            all['citation-label'] = labels.citation
+            all.citation = pandoc.MetaBlocks(reference)
+          end
+          doc.meta['section-authors-all'] = all
         else
           new_blocks:insert(blk)
         end

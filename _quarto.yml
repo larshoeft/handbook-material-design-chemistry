@@ -8,7 +8,9 @@ profile:
 lang: de
 
 book:
-  title: "Handbuch zur Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung"
+  title: "Handbuch Materialentwicklung"
+  subtitle: "Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung"
+  site-url: "https://larshoeft.github.io/handbook-material-design-chemistry/"
   author:
     - name: "Sascha Bernholt"
       id: sb
@@ -126,9 +128,12 @@ filters:
 format:
   html:
     css: styles.css
-    include-after-body: toc-in-sidebar.html
+    include-after-body:
+      - toc-in-sidebar.html
+      - figure-zoom.html
     template-partials:
       - _extensions/section-authors/title-metadata.html
+    anchor-sections: false
     bread-crumbs: false
     page-navigation: false
     number-sections: true

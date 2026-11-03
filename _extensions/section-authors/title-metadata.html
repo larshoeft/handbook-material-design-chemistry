@@ -38,6 +38,15 @@
   </div>
   $endif$
 
+  $if(section-authors-all.citation)$
+  <div class="section-authors-book-citation">
+    <div class="quarto-title-meta-heading">$section-authors-all.citation-label$</div>
+    <div class="quarto-title-meta-contents section-authors-citation">
+      $section-authors-all.citation$
+    </div>
+  </div>
+  $endif$
+
   $if(doi)$
   <div>
     <div class="quarto-title-meta-heading">$labels.doi$</div>

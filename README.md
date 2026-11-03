@@ -141,9 +141,9 @@ sec-interest:
 ## Interesse {#sec-interest author="lh"}
 ```
 
-The book's title page shows `book.author` as editors with the same icons, and section citations name them as editors of the book. It uses the template partial `_extensions/section-authors/title-metadata.html`, registered under `template-partials` in `_quarto.yml`.
+The book's title page shows `book.author` as editors with the same icons, and section citations name them as editors of the book. The book is cited as `book.title: book.subtitle` (APA joins title and subtitle with a colon). With `book.site-url` set, each section citation ends with the address of its section and the book citation with the site address. It uses the template partial `_extensions/section-authors/title-metadata.html`, registered under `template-partials` in `_quarto.yml`.
 
-An empty div `::: section-authors-all` (used in `index.qmd`) adds a list of everyone in `book.author` and `contributors` to the title block, below the editors: one comma-separated list, sorted by family name, with the same icons.
+An empty div `::: section-authors-all` (used in `index.qmd`) adds a list of everyone in `book.author` and `contributors` to the title block, below the editors: one comma-separated list, sorted by family name, with the same icons. When citations are on, a citation of the whole book (editors, year, title, site address) follows below.
 
 #### `section-bibliographies`
 
@@ -182,7 +182,7 @@ All profiles have a light and a dark mode. They also place figure captions, tabl
 
 Figures, tables and other floats are numbered per `##` section (e.g. Tabelle 4.6.2) instead of per chapter. Quarto has no option for this, so the Lua script `_scripts/float_numbers.lua` runs after rendering (`project: post-render`, executed by Quarto itself, no Python needed) and rewrites captions, cross-references and the search index.
 
-All profiles share `styles.css` (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and `toc-in-sidebar.html`. Below 992 px Quarto hides the page's table of contents; the script copies it, collapsed, below the active chapter in the sidebar.
+All profiles share `styles.css` (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and two scripts. `toc-in-sidebar.html`: below 992 px Quarto hides the page's table of contents; the script copies it, collapsed, below the active chapter in the sidebar. `figure-zoom.html`: a click (or Enter) on a figure opens an enlarged copy in a dialog; the copy stays in the page, so inlined SVGs keep the theme colors and fonts.
 
 Render with a profile:
 

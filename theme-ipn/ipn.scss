@@ -14,6 +14,8 @@ $ipn-azure: #007eb1 !default;
 $ipn-cyan: #3dc0e9 !default;
 $ipn-blue-light: #ccd9e5 !default;
 $ipn-blue-pale: #e6ecf2 !default;
+// Secondary text: sidebar, page TOC, captions, footnotes, labels
+$ipn-secondary: hsl(0, 0%, 35%) !default;
 
 $font-family-sans-serif: "Source Sans 3", "Source Sans 3 Fallback", "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif: "Source Serif 4", "Source Serif 4 Fallback", Georgia, serif !default;
@@ -67,16 +69,51 @@ span.margin-aside,
   font-family: $font-family-sans-serif;
 }
 
-.sidebar-title,
-div.sidebar-item-container .active {
+.sidebar-title {
   color: $ipn-blue;
   font-weight: 700;
+}
+
+// Active entry in sidebar and page TOC: blue, semibold
+div.sidebar-item-container .active {
+  color: $ipn-blue;
+  font-weight: 600;
+}
+
+// Page TOC like the sidebar: secondary gray, active entry blue;
+// it is collapsed by default in book chapters
+#TOC > ul.collapse {
+  display: block;
+}
+
+#TOC a.nav-link {
+  color: $ipn-secondary;
+}
+
+#TOC a.nav-link.active {
+  color: $ipn-blue;
+  font-weight: 600;
+}
+
+figcaption,
+.quarto-float-caption,
+.column-margin,
+.footnotes,
+.section-authors-label,
+.quarto-title-meta-heading {
+  color: $ipn-secondary;
+  opacity: 1;
 }
 
 // The cover replaces the title text on wide screens; the tools stay
 @media (min-width: 992px) {
   .sidebar-header-stacked .sidebar-title > a {
     display: none;
+  }
+
+  .sidebar-logo {
+    width: 170px;
+    max-width: 100%;
   }
 }
 
