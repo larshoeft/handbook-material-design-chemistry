@@ -1,6 +1,0 @@
-# Default theme (used without --profile)
-format:
-  html:
-    theme:
-      - cosmo
-      - simplex

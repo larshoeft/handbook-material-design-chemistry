@@ -7,6 +7,13 @@ project:
 # Font variant of the TikZ figures, see img/tikz/build.lua
 figure-variant: ipn
 
+# Sidebar: cover on wide screens, short title on phones
+book:
+  sidebar:
+    logo: img/cover.ipn.svg
+    logo-alt: "Handbuch Materialentwicklung"
+    title: "Handbuch Materialentwicklung"
+
 format:
   html:
     theme:

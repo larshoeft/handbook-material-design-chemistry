@@ -27,13 +27,11 @@ Der gesamte Prozess ist aber nicht linear zu denken, sondern ist stets iterativ-
 Das Modell der didaktischen Rekonstruktion fußt auf -- bereits zum Zeitpunkt seiner Entwicklung -- etablierten fachdidaktischen und allgemeindidaktischen Theorien der Unterrichtsplanung und der Curriculumsentwicklung. Die wichtigsten sind:
 
 - Didaktische Analyse nach Klafki (1969), insbesondere die didaktische Prägung der Sachanalyse vor dem Hintergrund einer Elementarisierung (vgl. fachliche Analyse mit Vermittlungsabsicht)
-
 - Das "Berliner Modell" nach Heimann, Otto und Schulz (1969), insbesondere der Gedanke einer grundlegenden Interdependenz aller Variablen, die den Unterricht bestimmen
 
 Darüber hinaus weist es Prägungen bzw. Parallelen durch bzw. zu folgenden Theorien auf:
 
 - *Conceptual change*: enge Anbindung an bzw. Übereinstimmung mit der *conceptual change* *theory*; didaktische Strukturierung ist darauf ausgelegt, Lernumgebungen zu schaffen, die Vorstellungsänderungen ermöglichen (d. h. Abgrenzung von einem Begriffsverständnis einer simplen Ersetzung von Vorstellungen)
-
 - Moderater Konstruktivismus (Gerstenmeier und Mandl, 1995)
 
 #### Schwerpunktlegungen
@@ -49,15 +47,10 @@ Die Begründer des Modells beschreiben in der zentralen Publikation [@kattmann19
 Im Vergleich zu den Qualitätskriterien des Handbuchs ist die Wirkung von entwicklungsleitenden Verfahren und Modellen, wie der hier präsentierten didaktischen Rekonstruktion, prinzipiell nicht streng auf bestimmte Zielvariablen beschränkt. Vor dem Hintergrund der Vermittlungsabsicht und dem Schwerpunkt der Vorstellungsänderung durch didaktisch strukturierte Lernangebote stehen die letztgenannten häufig im Fokus einer mit der Didaktischen Rekonstruktion verbundenen Wirkforschung. Insgesamt finden sich folgende Variablen vermehrt in Studien:
 
 - Konzeptverständnis
-
   - in Form von (Fach)Wissen
-
   - in Form alternativer Vorstellungen
-
 - Motivation
-
 - Interesse
-
 - Berufsorientierung
 
 Diesbezügliche Studien sind schwer zu bündeln, da sie eine enorme thematische Breite umfassen und fallbezogen sind. Literaturbeispiele werden im Folgenden genannt.
@@ -88,9 +81,7 @@ Die systematische Umsetzung zeichnet sich explizit durch die skizzierte iterativ
 Mit Blick auf das Triplett können unterschiedliche Methoden der Absicherung gewählt werden:
 
 - **Fachliche Klärung:** Design-Based-Research (mit evaluativen Elementen) durch Fachexpert:innen und fachdidaktische Expert:innen, Gütekriterien qualitativer Forschung bei materialanalytischem Vorgehen (vgl. hermeneutisch-analytisches Vorgehen)
-
 - **Erhebung von Lernendenperspektiven:** Je nach Umsetzung der Erfassung/des Forschungsstandes: Gütekriterien qualitativer (z. B. dokumentatorische Transparenz des Forschungs- und Auswertungsvorgehens, Berechnung der intersubjektiven Übereinstimmung) oder quantitativer (z. B. psychometrische Gütekriterien zur Testreliabilität) Forschung
-
 - **Didaktische Strukturierung insgesamt:** Strukturindikatoren in der Dokumentation des iterativen Prozesses durch Anwender:innen, aber auch in der Dokumentenanalyse erstellter Produkte, Design-Based-Research (mit evaluativen Elementen)
 
 ### Ansätze zur Untersuchung der Zielsetzung (Effect-Check)
@@ -98,9 +89,7 @@ Mit Blick auf das Triplett können unterschiedliche Methoden der Absicherung gew
 Wie bereits angedeutet, kann die anvisierte Wirkforschung mit Bezug zu Materialien, die einer Didaktischen Rekonstruktion entstammen, sehr breitgefächert sein. Dies liegt u. a. auch daran, dass aus diesem Prozess in der Regel nicht ein einzelnes Material, sondern vielmehr ein Pool an Materialien entsteht. Diese Materialien können dabei auch unterschiedliche Qualitätskriterien fokussieren. Es sind demnach verschiedene Szenarien denkbar. Einige Beispiele sind im Folgenden beschrieben:
 
 - **Interventionsdesigns mit Vergleichsgruppe:** Auf Basis neuer (ggf. sogar selbst erhobener) Kenntnisse zu Lernendenperspektiven zu einem bestimmten Fachgegenstand wird dieser neuartig didaktisch strukturiert, um die Lernendenperspektiven besser zu adressieren. In einem Interventions-Kontrollgruppen-Design kann untersucht werden, inwieweit das Aufgreifen dieser Perspektiven bspw. zu einem erhöhten Interesse im Vergleich zum "bewährten" Unterricht führt.
-
 - **Prä/Post-Designs**: In einem Prä-Post-Vergleich in einer verbundenen Stichprobe kann untersucht werden, inwiefern das didaktisch strukturierte Lernangebot zu einer Veränderung von alternativen Vorstellungen führt. Aus dem Veränderungsmuster können Hinweise auf die Wirksamkeit der (materialgestützten) Lernumgebung abgeleitet werden. Überraschende bzw. nicht-intendierte Ergebnisse können eine iterativ-wechselseitige Überarbeitung anstoßen.
-
 - **Qualitative Erfassung der Materialnutzung:** Erstelltes Material, das einem didaktisch rekonstruktiven Prozess entstammt, kann hinsichtlich seiner Nutzung durch Lernende untersucht werden und dabei beispielhaft folgende Fragestellungen beantworten: Welche Elemente erregen Aufmerksamkeit und unterstützen den Lernprozess in einer intendierten Weise? Welche Elemente führen zu (Verständnis)Schwierigkeiten, sind irreführend oder sogar überflüssig? Der *effect check* ist hierbei weniger streng kausal, sondern vielmehr als empirisch gestützte Rückmeldung zur Funktionalität und Wirkung der didaktischen Strukturierung zu verstehen.
 
 ### Quellen

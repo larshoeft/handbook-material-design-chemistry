@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 // Font variant of ipn.scss: Literata (text), loaded after ipn.scss and
 // fonts.scss. Literata has no sans, so Source Sans 3 stays.
-$font-family-serif: "Literata", Georgia, serif !default;
+$font-family-serif: "Literata", "Literata Fallback", Georgia, serif !default;
 $font-family-base: $font-family-serif !default;
 // Larger x-height than Source Serif 4, hence smaller (19px)
 $font-size-base: 1.118rem !default;
@@ -59,4 +59,23 @@ $font-size-base: 1.118rem !default;
   font-weight: 200 900;
   src: url("fonts/literata/literata-latin-standard-italic.woff2") format("woff2");
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Literata Fallback";
+  src: local("Georgia");
+  size-adjust: 107.1%;
+  ascent-override: 109.9%;
+  descent-override: 28.8%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Literata Fallback";
+  font-weight: 700;
+  src: local("Georgia Bold"), local("Georgia-Bold");
+  size-adjust: 107.1%;
+  ascent-override: 109.9%;
+  descent-override: 28.8%;
+  line-gap-override: 0%;
 }

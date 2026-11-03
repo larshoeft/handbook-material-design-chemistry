@@ -12,7 +12,7 @@ Du prüfst, ob neu eingetragene Quellen korrekt im Buch ankommen. Du änderst ke
 2. **Identität:** Für jeden Key, der seit dem letzten Commit neu in den `.qmd`-Dateien steht, vergleichst du Erstautor:in und Jahr im Key mit dem Text davor, wenn der Name dort genannt wird. Bei Sammelzitaten vergleichst du mit der alten Fassung aus `git diff`. Jedes alte Textzitat muss als Key oder als Text erhalten sein. Vergleiche auch den Titel im Key und in `zotero.bib` mit den Angaben in Word oder `STATUS.md`, denn gleiche Person und gleiches Jahr beweisen nicht dasselbe Werk.
 3. **DOI:** Stichprobe aus `zotero.bib` mit `crossref_pruefen.py` oder der Crossref-API. Der Titel muss zur DOI passen.
 4. **Vollständigkeit:** Einträge in `zotero.bib` ohne Jahr, ohne Autor:in oder ohne Zeitschrift bzw. Buchtitel melden, sofern sie zitiert sind.
-5. **Ausgabe:** `quarto render` ausführen, falls `quarto preview` nicht läuft. In `_book/` keine `Citeproc`-Warnungen, keine Fragezeichen-Marker wie `<strong>…?</strong>` und keine leeren Literaturlisten bei Texten mit `[@…]`.
+5. **Ausgabe:** `quarto render` ausführen, falls `quarto preview` nicht läuft. In `_build/ipn/` keine `Citeproc`-Warnungen, keine Fragezeichen-Marker wie `<strong>…?</strong>` und keine leeren Literaturlisten bei Texten mit `[@…]`.
 6. **Status:** Quellen, die jetzt als Key zitiert werden, stehen nicht mehr unter „Für Zotero offene Quellen“ in `STATUS.md`. Noch offene stehen dort.
 
 ## Bericht

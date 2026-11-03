@@ -62,10 +62,97 @@ div.csl-bib-body.hanging-indent {
   text-indent: 0;
 }
 
-/* Wide tables scroll on their own on narrow screens */
+/* Few font sizes: body, .875em for references and tables, .875rem for
+   margin, sidebar and meta text */
+div.csl-bib-body,
+#quarto-document-content table {
+  font-size: .875em;
+}
+
+#quarto-document-content h4,
+.sidebar-title {
+  font-size: var(--bs-body-font-size);
+}
+
+#quarto-document-content .column-margin,
+#quarto-document-content .margin-caption,
+#quarto-sidebar .sidebar-item {
+  font-size: .875rem;
+}
+
+/* Same gap above headings everywhere: sections with margin content are
+   grids, where margins do not collapse */
+#quarto-document-content section > :last-child,
+#quarto-document-content section > :is(ul, ol):last-child > li:last-child > :last-child,
+#quarto-document-content section > :last-child table,
+#quarto-document-content section.page-columns > :has(+ section) {
+  margin-bottom: 0;
+}
+
+/* Lists without extra indent: markers align with the text, nested
+   markers with the text of the parent item */
+#quarto-document-content ul,
+#quarto-document-content ol {
+  padding-left: 1.2em;
+}
+
+#quarto-document-content li > :is(ul, ol) {
+  margin-bottom: 0;
+}
+
+/* Wide tables scroll on their own on narrow screens; edge shadows show
+   that more columns follow */
 .quarto-float-tbl > div {
   overflow-x: auto;
   min-width: 0;
+  background:
+    linear-gradient(to right, var(--bs-body-bg) 30%, transparent) left / 2rem 100% no-repeat local,
+    linear-gradient(to left, var(--bs-body-bg) 30%, transparent) right / 2rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, .18), transparent) left / .75rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .18), transparent) right / .75rem 100% no-repeat scroll;
+}
+
+.quarto-float-tbl > div > table {
+  --bs-table-bg: transparent;
+}
+
+/* Two-column tables stack on phones: label above text */
+@media (max-width: 575.98px) {
+  #quarto-document-content table:not(:has(tr > :nth-child(3))),
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) :is(tbody, tr, td) {
+    display: block;
+  }
+
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) :is(thead, colgroup) {
+    display: none;
+  }
+
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) td:first-child:not(:last-child),
+  #quarto-document-content table:not(:has(tr > :nth-child(3))) td[rowspan] {
+    font-weight: 600;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* German compounds: hyphenate running text and tables */
+#quarto-document-content {
+  hyphens: auto;
+}
+
+#quarto-document-content p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* Reserve the search box height, it is inserted by script after load */
+@media (min-width: 992px) {
+  .sidebar-search {
+    min-height: 29.3px;
+  }
 }
 
 /* Collapsible sidebar on phones: wrap entries instead of overflowing */
@@ -106,4 +193,15 @@ h1, h2, h3, h4 {
 .csl-entry a,
 .section-authors-citation a {
   overflow-wrap: anywhere;
+}
+
+/* Quieter DOI links in reference lists */
+.csl-entry a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .15em;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
+.csl-entry a:hover {
+  text-decoration-color: currentColor;
 }

@@ -3,7 +3,7 @@ project:
   post-render: _scripts/float_numbers.lua
 
 profile:
-  default: default
+  default: ipn
 
 lang: de
 

@@ -35,13 +35,9 @@ Das Beispiel stammt aus dem Teilprojekt Kontextualisierung im Projekt DiVEx (202
 Bei der systematischen Umsetzung von Kontextualisierung gibt es unterschiedliche Design-Kriterien, die sich aus der Forschung ableiten lassen:
 
 - Chemie im Kontext [@habig2018_context; @nentwig2007_chemie; @parchmann2006_chemie]:
-
   - Kontexte als authentische Startpunkte für Einheiten, die einen Alltagsbezug aufweisen sollten oder sozial bzw. gesellschaftlich relevant sein sollten
-
   - Strukturierung kontextualisierter Lerneinheiten erfolgt anhand von Basiskonzepten
-
   - Vielfältige Methoden
-
 - Durchgehende Kontextualisierung/Kontext als "roter Faden"
 
 Die Kontextualisierung kann dabei sowohl digital gestützt als auch auf klassische, analoge Lernmaterialien angewendet werden.

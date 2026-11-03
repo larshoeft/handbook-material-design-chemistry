@@ -1,0 +1,22 @@
+\documentclass[tikz,border=0.5mm]{standalone}
+\input{stil}
+\usepackage{fontawesome5}
+\begin{document}
+\begin{tikzpicture}
+  % Pages behind the cover
+  \fill[hell,rounded corners=1mm] (0.2,-0.15) rectangle (3.62,4.45);
+  \fill[dunkel,rounded corners=1mm] (0,0) rectangle (3.5,4.6);
+  % Spine
+  \fill[mittel,rounded corners=1mm] (0,0) rectangle (0.5,4.6);
+  \fill[mittel] (0.3,0) rectangle (0.5,4.6);
+  \draw[hell,line width=0.4pt] (0.5,0) -- (0.5,4.6);
+  \node[text=grund,anchor=north west,inner sep=0,font=\small] at (0.8,4.05) {Handbuch};
+  \node[text=grund,anchor=north west,inner sep=0,align=left,font=\large\bfseries] at (0.8,3.5)
+    {Material-\\entwicklung};
+  \draw[akzent,line width=1.5pt] (0.82,2.2) -- (1.8,2.2);
+  % Physics, chemistry, biology
+  \node[text=hell,font=\large] at (1.25,0.6) {\faAtom};
+  \node[text=hell,font=\large] at (2.0,0.6) {\faFlask};
+  \node[text=hell,font=\large] at (2.75,0.6) {\faDna};
+\end{tikzpicture}
+\end{document}

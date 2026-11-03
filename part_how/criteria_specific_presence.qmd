@@ -51,13 +51,9 @@ Für **Manipulation von Objekten** wurde auf die physikalische Simulation von Un
 Die **Navigation** in der virtuellen Umgebung war sehr herausfordernd zu implementieren. Zum aktuellen Zeitpunkt gibt es fünf Möglichkeiten, die Navigation und Bewegung in der virtuellen Umgebung umzusetzen:
 
 1)  Seated Experience/keine Bewegung: Wird in erster Linie bei 360°-Videos/Bildern eingesetzt und benötigt am wenigsten physischen Platz. Mithilfe von Pfeilen oder Bereichen kann man sich durch die virtuelle Umgebung bewegen.
-
 2)  Bei der Teleportation werden vorher Bereiche festgelegt oder man kann sich an alle Orte auf einer Fläche teleportieren und sich damit durch die virtuelle Umgebung begeben.
-
 3)  Mithilfe des Joysticks auf dem Controller bewegt man sich kontinuierlich durch die Umgebung. Dies ist jedoch insbesondere für unerfahrene Nutzende eine große Herausforderung und kann leicht zu Motion Sickness führen.
-
 4)  Laufmaschinen können genutzt werden, in denen sich der Boden mitbewegt und Nutzende das Gefühl haben, sich zu bewegen, aber auf der Stelle gehen. Diese sind in der Regel sehr teuer und die Implementation aufwendig.
-
 5)  Raumskalierte Lösungen, in denen man sich in dem gesamten physischen und virtuellen Raum bewegen kann (wie bspw. im Projekt zum virtuellen Klassenzimmer von Höft & Bernholt), hier benötigt man entsprechend große Räume zur Umsetzung.
 
 Wir haben uns für die Teleportation in vorher festgelegte Bereiche entschieden. Anfangs hatten wir Bereiche mit einer Größe von 3 x 4 m, haben aber festgestellt, dass die physischen Räume in der Regel kleiner sind und man beim Teleportieren Probleme in der Ausrichtung erhält, wenn man keinen quadratischen Bereich hat. Schlussendlich sind wir auf 2,5 x 2,5 m gegangen, weil man dadurch einfach die automatischen Bereiche des VR-Headsets verwenden kann, nicht jedes Mal den Bereich neu zeichnen muss, weniger physischen Platz bei mehreren Nutzenden in dem gleichen Raum benötigt und es für die meisten Interaktionen vollkommen ausreichend war. Hier sollte man insbesondere die Interaktionen testen, die sich am Rand des 2,5 x 2,5 m großen Bereichs befinden und eher mit einem Kreis als mit einem Quadrat als Bereich planen. In der Überarbeitung der Anwendung haben wir zusätzlich die Möglichkeit zur Steuerung mittels Joysticks für Nutzende mit Geheinschränkung umgesetzt.

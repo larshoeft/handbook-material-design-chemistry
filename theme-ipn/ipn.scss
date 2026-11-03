@@ -15,8 +15,8 @@ $ipn-cyan: #3dc0e9 !default;
 $ipn-blue-light: #ccd9e5 !default;
 $ipn-blue-pale: #e6ecf2 !default;
 
-$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif: "Source Serif 4", Georgia, serif !default;
+$font-family-sans-serif: "Source Sans 3", "Source Sans 3 Fallback", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Source Serif 4", "Source Serif 4 Fallback", Georgia, serif !default;
 $font-family-base: $font-family-serif !default;
 $font-family-monospace: "Source Code Pro", monospace !default;
 $headings-font-family: $font-family-sans-serif !default;
@@ -71,6 +71,13 @@ span.margin-aside,
 div.sidebar-item-container .active {
   color: $ipn-blue;
   font-weight: 700;
+}
+
+// The cover replaces the title text on wide screens; the tools stay
+@media (min-width: 992px) {
+  .sidebar-header-stacked .sidebar-title > a {
+    display: none;
+  }
 }
 
 .quarto-title-banner,
