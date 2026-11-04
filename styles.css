@@ -44,25 +44,55 @@
   margin-bottom: .5rem;
 }
 
-.section-authors > div:nth-child(-n+2) .section-authors-label {
-  margin-top: 0;
+/* Both blocks in rows, centered under the centered headings: people,
+   then dates and license side by side, then the citation */
+.section-authors,
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1.25rem;
 }
 
-/* Metadata centered under the centered headings */
+@media (max-width: 575.98px) {
+  .section-authors,
+  #title-block-header.quarto-title-block.default .quarto-title-meta {
+    column-gap: 1rem;
+  }
+}
+
 .section-authors > div,
 .quarto-title-meta > div {
   text-align: center;
 }
 
-#title-block-header.quarto-title-block.default .quarto-title-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 3rem;
+.section-authors > :is(div:has(.section-authors-names), .section-authors-wide),
+#title-block-header.quarto-title-block.default .quarto-title-meta > :is(div:first-child, .section-authors-all, .section-authors-book-citation) {
+  flex-basis: 100%;
 }
 
-#title-block-header.quarto-title-block.default .quarto-title-meta > :is(.section-authors-all, .section-authors-book-citation) {
-  flex-basis: 100%;
+.section-authors > div:has(.section-authors-date) { order: 1; }
+.section-authors > div:has(.section-authors-modified) { order: 2; }
+.section-authors > div:has(.section-authors-license) { order: 3; }
+.section-authors > .section-authors-wide { order: 4; }
+
+#title-block-header .quarto-title-meta :is(.section-authors-all, .section-authors-book-citation) {
+  order: 0;
+}
+
+.section-authors > div:first-child .section-authors-label,
+#title-block-header.quarto-title-block.default .quarto-title-meta > div:first-child .quarto-title-meta-heading {
+  margin-top: 0;
+}
+
+/* Editors as one centered list, like all authors of the book */
+#title-block-header.quarto-title-block.default .quarto-title-meta > div:first-child p.author {
+  display: inline-block;
+  margin: 0;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta > div:first-child p.author:not(:last-child)::after {
+  content: ",";
 }
 
 .quarto-title-meta .quarto-title-meta-contents,
@@ -271,8 +301,12 @@ h1, h2, h3, h4 {
   text-wrap: pretty;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   text-wrap: balance;
+}
+
+h3, h4 {
+  text-wrap: pretty;
 }
 
 /* Reserve the search box height, it is inserted by script after load */
