@@ -2,7 +2,6 @@
 language:
   title-block-author-single: "Herausgeber:in"
   title-block-author-plural: "Herausgeber:innen"
-  title-block-modified: "Zuletzt überarbeitet"
 date-modified: today
 ---
 

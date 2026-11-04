@@ -94,7 +94,7 @@ Specify the information either as heading attributes or as a metadata block at t
 sec-interest:
   author: "Max Mustermann"   # or a list of names
   date: 2026-10-02           # first publication
-  date-modified: 2026-11-15  # optional; last revision ("Zuletzt überarbeitet")
+  date-modified: 2026-11-15  # optional; last revision ("Aktualisiert")
   license: "CC BY-NC"        # CC abbreviations link to the license deed
   citation: false            # optional; default from _quarto.yml, or a map with Quarto citation fields
 ---

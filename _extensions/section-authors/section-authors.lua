@@ -117,15 +117,15 @@ local AUTHOR_PLURAL = {
 
 -- Quarto's `title-block-published` per language; extend as needed.
 local PUBLISHED = {
-  de = 'Veröffentlichungsdatum',
+  de = 'Veröffentlicht',
   en = 'Published',
 }
 
 -- Label for `date-modified` per language; extend as needed.
 -- (Quarto's own `title-block-modified` reads "Geändert" / "Modified".)
 local MODIFIED = {
-  de = 'Zuletzt überarbeitet',
-  en = 'Last revised',
+  de = 'Aktualisiert',
+  en = 'Updated',
 }
 
 -- Long date formats matching Quarto's title block; extend as needed.
@@ -485,14 +485,16 @@ local function author_block(authors, date, modified, labels, reference,
                             license)
   local fields = List {}
   if #authors > 0 then
-    local names = List {}
-    for _, author in ipairs(authors) do
-      names:insert(pandoc.Div(pandoc.Plain(author_inlines(author)),
+    local names = pandoc.Inlines {}
+    for i, author in ipairs(authors) do
+      if i > 1 then names:extend { pandoc.Str(','), pandoc.Space() } end
+      names:insert(pandoc.Span(author_inlines(author),
         pandoc.Attr('', { 'section-authors-name' })))
     end
     local label = (#authors >= 2) and labels.plural or labels.single
     fields:insert(field(label,
-      pandoc.Div(names, pandoc.Attr('', { 'section-authors-names' }))))
+      pandoc.Div(pandoc.Plain(names),
+        pandoc.Attr('', { 'section-authors-names' }))))
   end
   if date then
     fields:insert(field(labels.published,
@@ -826,6 +828,11 @@ return {
           if reference then
             all['citation-label'] = labels.citation
             all.citation = pandoc.MetaBlocks(reference)
+          end
+          local license = default_license and license_inlines(default_license)
+          if license then
+            all['license-label'] = labels.license
+            all.license = pandoc.MetaInlines(license)
           end
           doc.meta['section-authors-all'] = all
         else

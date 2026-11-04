@@ -8,6 +8,9 @@ profile:
   default: ipn
 
 lang: de
+language:
+  title-block-published: "Veröffentlicht"
+  title-block-modified: "Aktualisiert"
 
 book:
   title: "Handbuch Materialentwicklung"
@@ -18,12 +21,6 @@ book:
       id: sb
       orcid: 0000-0003-4045-3795
       email: bernholt@leibniz-ipn.de
-      affiliation:
-        - ref: ipn
-    - name: "Lars Höft"
-      id: lh
-      orcid: 0000-0002-9040-8995
-      email: hoeft@leibniz-ipn.de
       affiliation:
         - ref: ipn
     - name: "Stefanie Lenzer"
@@ -64,6 +61,12 @@ contributors:
     id: mt
     orcid: 0009-0009-4244-8958
     email: traub@leibniz-ipn.de
+    affiliation:
+      - ref: ipn
+  - name: "Lars Höft"
+    id: lh
+    orcid: 0000-0002-9040-8995
+    email: hoeft@leibniz-ipn.de
     affiliation:
       - ref: ipn
   - name: "Johannes Kröger"

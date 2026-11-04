@@ -38,6 +38,15 @@
   </div>
   $endif$
 
+  $if(section-authors-all.license)$
+  <div class="section-authors-book-license">
+    <div class="quarto-title-meta-heading">$section-authors-all.license-label$</div>
+    <div class="quarto-title-meta-contents">
+      <p class="license">$section-authors-all.license$</p>
+    </div>
+  </div>
+  $endif$
+
   $if(section-authors-all.citation)$
   <div class="section-authors-book-citation">
     <div class="quarto-title-meta-heading">$section-authors-all.citation-label$</div>

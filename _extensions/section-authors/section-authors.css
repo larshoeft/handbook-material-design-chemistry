@@ -51,6 +51,7 @@
   order: 3;
 }
 
+.section-authors-names .section-authors-name,
 .section-authors-all .section-authors-name {
   white-space: nowrap;
   font-size: inherit;
