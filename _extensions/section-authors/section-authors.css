@@ -1,70 +1,17 @@
-/* Author/date block below ## headings (see section-authors.lua),
-   laid out like Quarto's chapter title block */
-.section-authors {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1em;
-  margin-bottom: 1em;
-  grid-auto-flow: dense;
-}
-
-/* Authors and license on the left, publication and revision date on the
-   right, whichever of them a section has */
-.section-authors > div {
-  grid-column: 1;
-}
-
-.section-authors > .section-authors-right {
-  grid-column: 2;
-}
-
-.section-authors-label {
-  text-transform: uppercase;
-  margin-top: 1em;
-  font-size: .8em;
-  opacity: .8;
-  font-weight: 400;
-}
-
-.section-authors-name,
-.section-authors-date,
-.section-authors-modified,
-.section-authors-license {
-  font-size: .9em;
-  margin-bottom: .1em;
-}
-
-.section-authors > .section-authors-wide {
+/* All people (::: section-authors-all) and the citation across the title
+   block, see title-metadata.html */
+.quarto-title-meta :is(.section-authors-all, .section-authors-cite) {
   grid-column: 1 / -1;
 }
 
-/* All authors of the book (::: section-authors-all) as one list across
-   the title block */
-.quarto-title-meta .section-authors-all {
-  grid-column: 1 / -1;
-  order: 2;
-}
-
-/* Citation of the whole book, below the list of all authors */
-.quarto-title-meta .section-authors-book-citation {
-  grid-column: 1 / -1;
-  order: 3;
-}
-
-.section-authors-names .section-authors-name,
 .section-authors-all .section-authors-name {
   white-space: nowrap;
-  font-size: inherit;
 }
 
 @media (max-width: 575.98px) {
   .section-authors-all .section-authors-name {
     white-space: normal;
   }
-}
-
-.section-authors-citation {
-  font-size: .9em;
 }
 
 .section-authors-citation p {

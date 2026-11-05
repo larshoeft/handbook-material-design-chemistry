@@ -1,9 +1,8 @@
 ---
-sec-interest:
-  author:
-    - ref: lh
-  date: 2026-10-02
-  date-modified: 2026-11-01
+author:
+  - ref: lh
+date: 2026-10-02
+date-modified: 2026-11-01
 ---
 
 ## Interesse {#sec-interest}

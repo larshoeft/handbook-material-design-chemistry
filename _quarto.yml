@@ -1,11 +1,6 @@
 project:
   type: book
-  post-render:
-    - _scripts/float_numbers.lua
-    - _scripts/sidebar_sections.lua
-
-profile:
-  default: ipn
+  output-dir: _build
 
 lang: de
 language:
@@ -16,6 +11,11 @@ book:
   title: "Handbuch Materialentwicklung"
   subtitle: "Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung"
   site-url: "https://larshoeft.github.io/handbook-material-design-chemistry/"
+  # Cover on wide screens, short title on phones
+  sidebar:
+    logo: img/cover.svg
+    logo-alt: "Handbuch Materialentwicklung"
+    title: "Handbuch Materialentwicklung"
   author:
     - name: "Sascha Bernholt"
       id: sb
@@ -33,15 +33,27 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - part: _why.qmd
+    - part: "Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?"
+      chapters: []
+    - part_why/_importance.qmd
+    # - part_why/_orientations.qmd
+    - part: "Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?"
+      chapters: []
+    - part: part_how/_frameworks.qmd
       chapters:
-        - part_why/_importance.qmd
-        # - part_why/_orientations.qmd
-    - part: _how.qmd
+        - part_how/frameworks_rec.qmd
+        - part_how/frameworks_udl.qmd
+        - part_how/frameworks_dbr.qmd
+    # - part_how/_criteria_general.qmd
+    - part: part_how/_criteria_specific.qmd
       chapters:
-        - part_how/_frameworks.qmd
-        # - part_how/_criteria_general.qmd
-        - part_how/_criteria_specific.qmd
+        - part_how/criteria_specific_cumulative.qmd
+        - part_how/criteria_specific_cognitiveload.qmd
+        - part_how/criteria_specific_adaptivity.qmd
+        - part_how/criteria_specific_context.qmd
+        - part_how/criteria_specific_presence.qmd
+        - part_how/criteria_specific_interest.qmd
+        - part_how/criteria_specific_oer.qmd
     - summary.qmd
 
 contributors:
@@ -132,9 +144,14 @@ filters:
 
 format:
   html:
+    theme:
+      light: [cosmo, theme-ipn/ipn.scss, theme-ipn/fonts.scss]
+      dark: [cosmo, theme-ipn/ipn.scss, theme-ipn/fonts.scss, theme-ipn/ipn-dark.scss]
     css: styles.css
+    fig-cap-location: margin
+    tbl-cap-location: margin
+    reference-location: margin
     include-after-body:
-      - toc-in-sidebar.html
       - figure-zoom.html
     template-partials:
       - _extensions/section-authors/title-metadata.html

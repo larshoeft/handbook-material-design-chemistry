@@ -8,10 +8,10 @@ Du prüfst formale Einheitlichkeit und änderst nichts. Lies zuerst `.claude/CLA
 
 ## Prüfpunkte
 
-- **Einbindung:** Die Datei ist in einem Hauptkapitel eingebunden und steht in `STATUS.md`.
+- **Einbindung:** Die Datei steht in `_quarto.yml` unter `book.chapters` und in `STATUS.md`.
 - **Abschnitte:** Die Reihenfolge entspricht der Vorlage. Kurzformen, leere Abschnitte und das Fehlen von „Einsatzbedingungen/Umsetzungswissen“ und „Transferwissen“ sind keine Befunde. Am Ende steht `### Quellen` mit `::: sectionrefs`.
 - **Überschrift:** Genau eine `##`-Überschrift mit `sec-`-ID. IDs sind im Buch eindeutig.
-- **Metadaten:** Block `sec-…` passt zur ID und enthält `author` und `date`. Personen stehen in `book.author` oder `contributors`.
+- **Metadaten:** Der Kopf der Datei enthält `author` und `date`. Personen stehen in `book.author` oder `contributors`.
 - **Querverweise:** Jedes `@sec-…`, `@fig-…` und `@tbl-…` hat ein Ziel.
 - **Abbildungen und Tabellen:** Sie haben IDs, Abbildungen auch einen Alt-Text und vorhandene Bilddateien.
 - **Zeichen:** Keine typografischen Zeichen laut Tabelle in `.claude/CLAUDE.md`. Melde die Anzahl je Zeichen, nicht jede Fundstelle.

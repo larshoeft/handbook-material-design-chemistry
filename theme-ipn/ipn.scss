@@ -82,10 +82,11 @@ span.margin-aside,
   }
 }
 
-// Active entry in sidebar and page TOC: blue, semibold
+// Active entry in sidebar and page TOC: blue, semibold look; a stroke
+// instead of a heavier weight keeps the width, so entries do not rewrap
 div.sidebar-item-container .active {
   color: $ipn-blue;
-  font-weight: 600;
+  -webkit-text-stroke: .03em currentColor;
 }
 
 // Page TOC like the sidebar: secondary gray, active entry blue;
@@ -94,22 +95,19 @@ div.sidebar-item-container .active {
   display: block;
 }
 
-#TOC a.nav-link,
-.sidebar-page-toc a.nav-link,
-.sidebar-page-toc a.nav-link.active {
+#TOC a.nav-link {
   color: $ipn-secondary;
 }
 
 #TOC a.nav-link.active {
   color: $ipn-blue;
-  font-weight: 600;
+  -webkit-text-stroke: .03em currentColor;
 }
 
 figcaption,
 .quarto-float-caption,
 .column-margin,
 .footnotes,
-.section-authors-label,
 .quarto-title-meta-heading {
   color: $ipn-secondary;
   opacity: 1;

@@ -1,9 +1,8 @@
 ---
-sec-cumulative:
-  author:
-    - ref: sb
-  date: 2026-10-02
-  date-modified: 2026-10-03
+author:
+  - ref: sb
+date: 2026-10-02
+date-modified: 2026-10-03
 ---
 
 ## Kumulatives Lernen {#sec-cumulative}

@@ -1,9 +1,8 @@
 ---
-sec-rec:
-  author:
-    - ref: jl
-  date: 2026-11-01
-  date-modified: 2026-11-01
+author:
+  - ref: jl
+date: 2026-11-01
+date-modified: 2026-11-01
 ---
 
 ## Fachliche Klärung und Didaktische Rekonstruktion {#sec-rec}
@@ -20,7 +19,9 @@ Die *didaktische Strukturierung* stellt schließlich das verknüpfende Element z
 
 Der gesamte Prozess ist aber nicht linear zu denken, sondern ist stets iterativ-wechselseitig. So kann die didaktische Strukturierung dazu führen, dass in der fachlichen Klärung mit Vermittlungsabsicht Unschärfen offengelegt werden, die nachgeschärft werden müssen (vgl. @fig-rec-modell).
 
+::: {.column-margin}
 ![Modell der didaktischen Rekonstruktion nach @kattmann1997_modell](../img/frameworks_rec_image1.svg){#fig-rec-modell fig-alt="Modell der didaktischen Rekonstruktion nach Kattmann et al. (1997)"}
+:::
 
 #### Prägungen und zentrale Theorien
 

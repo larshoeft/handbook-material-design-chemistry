@@ -21,15 +21,7 @@ local function prefix_ids(svg, prefix)
   return svg
 end
 
--- `figure-variant: ipn` prefers name.ipn.svg over name.svg (fonts per theme)
-local variant
-
 return {
-  {
-    Meta = function(meta)
-      variant = meta['figure-variant'] and pandoc.utils.stringify(meta['figure-variant'])
-    end,
-  },
   {
     Image = function(img)
       if not quarto.doc.is_format('html') or not img.src:match('%.svg$') or img.src:match('^%a+:') then
@@ -37,7 +29,7 @@ return {
       end
       local dir = pandoc.path.directory(quarto.doc.input_file)
       local file = pandoc.path.join({ dir, img.src })
-      local svg = variant and read(file:gsub('%.svg$', '.' .. variant .. '.svg')) or read(file)
+      local svg = read(file)
       if not svg then
         quarto.log.warning('svg-inline: file not found: ' .. img.src)
         return nil

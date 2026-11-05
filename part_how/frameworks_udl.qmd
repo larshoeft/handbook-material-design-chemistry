@@ -1,9 +1,8 @@
 ---
-sec-udl:
-  author:
-    - ref: sl
-  date: 2026-11-01
-  date-modified: 2026-11-01
+author:
+  - ref: sl
+date: 2026-11-01
+date-modified: 2026-11-01
 ---
 
 ## Universal Design for Learning {#sec-udl}

@@ -1,9 +1,8 @@
 ---
-sec-presence:
-  author:
-    - ref: lm
-  date: 2026-11-01
-  date-modified: 2026-11-01
+author:
+  - ref: lm
+date: 2026-11-01
+date-modified: 2026-11-01
 ---
 
 ## Präsenzerleben {#sec-presence}

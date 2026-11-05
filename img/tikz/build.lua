@@ -1,25 +1,9 @@
--- Builds img/<name>.pdf (print) and one SVG per font variant from each
+-- Builds img/<name>.pdf (print) and img/<name>.svg (web) from each
 -- img/tikz/<name>.tex. Run from the project root:
 --   quarto run img/tikz/build.lua
 
 local system, path = pandoc.system, pandoc.path
 local here = path.join({ 'img', 'tikz' })
-
-local function fontspec(dir, regular, bold, italic)
-  return '\\usepackage{fontspec}\\setsansfont{' .. regular .. '}[Path=fonts/' .. dir
-    .. '/, BoldFont=' .. bold .. ', ItalicFont=' .. italic .. ']'
-end
-
-local SOURCE_SANS = fontspec('source-sans-3', 'SourceSans3-Regular.otf', 'SourceSans3-Bold.otf', 'SourceSans3-It.otf')
-local ROBOTO_FLEX = fontspec('roboto-flex', 'RobotoFlex-Regular.ttf', 'RobotoFlex-Bold.ttf', 'RobotoFlex-Italic.ttf')
-
--- Profiles pick a variant with `figure-variant` (see svg-inline)
-local VARIANTS = {
-  { suffix = '' },
-  { suffix = '.ipn', setup = SOURCE_SANS },
-  { suffix = '.socviz', setup = ROBOTO_FLEX },
-}
-local PRINT_SETUP = SOURCE_SANS
 
 local function read(file)
   local f = assert(io.open(file, 'rb'))
@@ -87,11 +71,10 @@ local function embed_bitmaps(svg)
   end))
 end
 
-local function tex(engine, tmp, name, setup, svg_driver)
+local function tex(engine, tmp, name, svg_driver)
   pandoc.pipe(engine, {
     '-interaction=nonstopmode', '-halt-on-error', '-output-directory=' .. tmp,
-    (setup and ('\\def\\figfontsetup{' .. setup .. '}') or '')
-      .. (svg_driver and '\\def\\pgfsysdriver{pgfsys-dvisvgm.def}\\PassOptionsToPackage{dvisvgm}{graphicx}' or '')
+    (svg_driver and '\\def\\pgfsysdriver{pgfsys-dvisvgm.def}\\PassOptionsToPackage{dvisvgm}{graphicx}' or '')
       .. '\\input{' .. name .. '.tex}',
   }, '')
 end
@@ -106,16 +89,14 @@ local target = path.join({ system.get_working_directory(), 'img' })
 for _, name in ipairs(names) do
   system.with_temporary_directory('tikz', function(tmp)
     system.with_working_directory(here, function()
-      tex('lualatex', tmp, name, PRINT_SETUP, false)
+      tex('lualatex', tmp, name, false)
       write(path.join({ target, name .. '.pdf' }), read(path.join({ tmp, name .. '.pdf' })))
-      for _, variant in ipairs(VARIANTS) do
-        tex('dvilualatex', tmp, name, variant.setup, true)
-        local svg = path.join({ tmp, name .. '.svg' })
-        pandoc.pipe('dvisvgm', { '-v0', '--no-fonts', '--exact-bbox', '--optimize', '-o', svg,
-          path.join({ tmp, name .. '.dvi' }) }, '')
-        write(path.join({ target, name .. variant.suffix .. '.svg' }),
-          embed_bitmaps((read(svg):gsub('<[^!?][^>]*>', theme_colors))))
-      end
+      tex('dvilualatex', tmp, name, true)
+      local svg = path.join({ tmp, name .. '.svg' })
+      pandoc.pipe('dvisvgm', { '-v0', '--no-fonts', '--exact-bbox', '--optimize', '-o', svg,
+        path.join({ tmp, name .. '.dvi' }) }, '')
+      write(path.join({ target, name .. '.svg' }),
+        embed_bitmaps((read(svg):gsub('<[^!?][^>]*>', theme_colors))))
     end)
   end)
   print(name)

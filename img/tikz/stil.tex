@@ -1,10 +1,6 @@
-% Font per theme variant, set by build.lua; default Helvetica
-\ifdefined\figfontsetup
-  \figfontsetup
-\else
-  \usepackage[T1]{fontenc}
-  \usepackage[scaled]{helvet}
-\fi
+% Source Sans 3 as on the website (LuaLaTeX)
+\usepackage{fontspec}
+\setsansfont{SourceSans3-Regular.otf}[Path=fonts/source-sans-3/, BoldFont=SourceSans3-Bold.otf, ItalicFont=SourceSans3-It.otf]
 \renewcommand{\familydefault}{\sfdefault}
 \usetikzlibrary{arrows.meta,positioning,calc}
 % Use only these colors; build.lua replaces them with --fig-<name>

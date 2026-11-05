@@ -11,11 +11,11 @@
   </div>
   $endif$
 
-  $if(section-authors-all)$
+  $if(section-authors.names)$
   <div class="section-authors-all">
-    <div class="quarto-title-meta-heading">$section-authors-all.label$</div>
+    <div class="quarto-title-meta-heading">$section-authors.label$</div>
     <div class="quarto-title-meta-contents">
-      $section-authors-all.names$
+      $section-authors.names$
     </div>
   </div>
   $endif$
@@ -38,20 +38,20 @@
   </div>
   $endif$
 
-  $if(section-authors-all.license)$
-  <div class="section-authors-book-license">
-    <div class="quarto-title-meta-heading">$section-authors-all.license-label$</div>
+  $if(section-authors.license)$
+  <div class="section-authors-license">
+    <div class="quarto-title-meta-heading">$section-authors.license-label$</div>
     <div class="quarto-title-meta-contents">
-      <p class="license">$section-authors-all.license$</p>
+      <p class="license">$section-authors.license$</p>
     </div>
   </div>
   $endif$
 
-  $if(section-authors-all.citation)$
-  <div class="section-authors-book-citation">
-    <div class="quarto-title-meta-heading">$section-authors-all.citation-label$</div>
+  $if(section-authors.citation)$
+  <div class="section-authors-cite">
+    <div class="quarto-title-meta-heading">$section-authors.citation-label$</div>
     <div class="quarto-title-meta-contents section-authors-citation">
-      $section-authors-all.citation$
+      $section-authors.citation$
     </div>
   </div>
   $endif$

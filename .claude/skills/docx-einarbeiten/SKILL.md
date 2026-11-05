@@ -23,7 +23,7 @@ Skript: `.claude/skills/docx-einarbeiten/scripts/docx_vergleich.py`
 
 6. **Weitere Inhalte.** Bilder nach `img/` kopieren, mit Dateiname `<ziel>_<name>`. Bei Diagrammen danach `.venv/Scripts/python scripts/hintergrund_transparent.py img/<datei>` ausführen und das Ergebnis auf hellem und dunklem Grund ansehen, Fotos überspringt das Skript. Fußnoten übernehmen. Tabellen möglichst als Pipe-Tabellen, sonst melden.
 
-7. **Ersetzen.** Text in der Zieldatei ersetzen, weil Word führend ist. `sec-…`-Block, ID und `### Quellen` bleiben. Die wegfallenden Passagen aus dem Diff gehören in den Bericht.
+7. **Ersetzen.** Text in der Zieldatei ersetzen, weil Word führend ist. Kopf der Datei, ID und `### Quellen` bleiben. Die wegfallenden Passagen aus dem Diff gehören in den Bericht.
 
 8. **Wortvergleich.** `python <skript> vergleich "<datei>" <qmd> --aenderungen <wahl> --zitate` ausführen. Mit `--ohne-kopf <n>` werden die Wörter einer Word-Kopfzeile übersprungen. Exit-Code 1 bedeutet Abweichungen. Jede Abweichung korrigieren oder begründen, bis nur erklärte übrig sind. Die Zitatlisten beider Seiten vergleichen, weil der Textvergleich Zitate ausblendet.
 

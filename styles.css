@@ -1,4 +1,4 @@
-/* Shared by all profiles, on top of the themes */
+/* Layout rules on top of the theme */
 
 /* Reserve the scrollbar so columns do not shift between short and long
    pages; one column below 992px, so the header spans the full width there */
@@ -22,70 +22,44 @@
   }
 }
 
-/* Title block and section author blocks: smaller, in the theme's sans serif */
-.quarto-title-meta,
-.section-authors {
+/* Title block: smaller, in the theme's sans serif, in rows centered under
+   the title: people, then dates and license side by side, then the citation */
+.quarto-title-meta {
   font-family: var(--bs-font-sans-serif);
 }
 
-#title-block-header.quarto-title-block .quarto-title-meta .quarto-title-meta-heading,
-.section-authors .section-authors-label {
+#title-block-header.quarto-title-block .quarto-title-meta .quarto-title-meta-heading {
   font-size: .7rem;
   margin-top: .75rem;
 }
 
-/* Same spacing in both: 1rem below the heading, .75rem between rows,
-   about 2rem to the next heading */
-#title-block-header.quarto-title-block .quarto-title-meta {
-  margin-top: .25rem;
-}
-
-.section-authors {
-  margin-bottom: .5rem;
-}
-
-/* Both blocks in rows, centered under the centered headings: people,
-   then dates and license side by side, then the citation */
-.section-authors,
 #title-block-header.quarto-title-block.default .quarto-title-meta {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 1.25rem;
+  margin-top: .25rem;
 }
 
 @media (max-width: 575.98px) {
-  .section-authors,
   #title-block-header.quarto-title-block.default .quarto-title-meta {
     column-gap: 1rem;
   }
 }
 
-.section-authors > div,
 .quarto-title-meta > div {
   text-align: center;
 }
 
-.section-authors > :is(div:has(.section-authors-names), .section-authors-wide),
-#title-block-header.quarto-title-block.default .quarto-title-meta > :is(div:first-child, .section-authors-all, .section-authors-book-citation) {
+#title-block-header.quarto-title-block.default .quarto-title-meta > :is(div:first-child, .section-authors-all, .section-authors-cite) {
   flex-basis: 100%;
 }
 
-.section-authors > div:has(.section-authors-date) { order: 1; }
-.section-authors > div:has(.section-authors-modified) { order: 2; }
-.section-authors > div:has(.section-authors-license) { order: 3; }
-.section-authors > .section-authors-wide { order: 4; }
-
-#title-block-header .quarto-title-meta :is(.section-authors-all, .section-authors-book-citation) {
-  order: 0;
-}
-
-.section-authors > div:first-child .section-authors-label,
 #title-block-header.quarto-title-block.default .quarto-title-meta > div:first-child .quarto-title-meta-heading {
   margin-top: 0;
 }
 
-/* Editors as one centered list, like all authors of the book */
+/* Several people as one centered list, like all authors of the book */
 #title-block-header.quarto-title-block.default .quarto-title-meta > div:first-child p.author {
   display: inline-block;
   margin: 0;
@@ -96,12 +70,7 @@
 }
 
 .quarto-title-meta .quarto-title-meta-contents,
-.quarto-title-meta .quarto-title-meta-contents p,
-.section-authors .section-authors-name,
-.section-authors .section-authors-date,
-.section-authors .section-authors-modified,
-.section-authors .section-authors-license,
-.section-authors .section-authors-citation {
+.quarto-title-meta .quarto-title-meta-contents p {
   font-size: .875rem;
 }
 
@@ -125,9 +94,15 @@ div.csl-bib-body,
 }
 
 #quarto-document-content .column-margin,
+#quarto-document-content .column-margin figcaption,
 #quarto-document-content .margin-caption,
 #quarto-sidebar .sidebar-item {
   font-size: .875rem;
+}
+
+/* Inlined SVGs miss Quarto's .figure-img: same gap to the caption */
+#quarto-document-content figure svg.svg-inline {
+  margin-bottom: .5rem;
 }
 
 /* Same gap above headings everywhere: sections with margin content are
@@ -180,20 +155,6 @@ div.csl-bib-body,
   text-align: center;
   border-bottom: none;
   padding-bottom: 0;
-}
-
-/* Each criterion is its own article: clear break before the next one.
-   On the section, so a jump to it lands on the heading */
-#quarto-document-content > section.level2 ~ section.level2 {
-  margin-top: 4rem;
-}
-
-#quarto-document-content section {
-  scroll-margin-top: 1rem;
-}
-
-#quarto-document-content > section.level2 ~ section.level2 > h2 {
-  margin-top: 0;
 }
 
 /* ### slightly above text size: the sans serif looks smaller than the
@@ -292,9 +253,17 @@ h1, h2, h3, h4 {
   }
 }
 
-/* German compounds: hyphenate running text and tables */
-#quarto-document-content {
+/* German compounds: hyphenate running text, tables, sidebar and page TOC;
+   a word that still does not fit breaks instead of widening the column */
+#quarto-document-content,
+#quarto-sidebar,
+#quarto-margin-sidebar {
   hyphens: auto;
+}
+
+#quarto-sidebar,
+#quarto-margin-sidebar {
+  overflow-wrap: break-word;
 }
 
 #quarto-document-content p {
@@ -325,26 +294,6 @@ h3, h4 {
   white-space: normal;
 }
 
-/* Chapter sections in the sidebar on narrow screens, see _scripts/sidebar_sections.lua */
-@media (min-width: 992px) {
-  .sidebar-page-toc,
-  .sidebar-page-toc-toggle {
-    display: none !important;
-  }
-}
-
-.sidebar-page-toc,
-.sidebar-page-toc ul {
-  list-style: none;
-  padding-left: 1em;
-  font-size: .9em;
-}
-
-.sidebar-page-toc a {
-  display: block;
-  padding: .2em 0;
-}
-
 /* Long words and links such as DOIs may break */
 h1, h2, h3, h4 {
   hyphens: auto;
@@ -358,7 +307,7 @@ h1, h2, h3, h4 {
 
 /* Links in text color: icons and citations change only on hover, other
    links keep a faint underline so they stay recognizable on touch screens */
-:is(.section-authors, .section-authors-all, .quarto-title-meta) :is(.section-authors-orcid, .section-authors-affiliation, .section-authors-email) {
+:is(.section-authors-all, .quarto-title-meta) :is(.section-authors-orcid, .section-authors-affiliation, .section-authors-email) {
   color: inherit;
 }
 
@@ -400,4 +349,46 @@ dialog.figure-zoom > * {
   max-height: 85vh;
   height: auto;
   object-fit: contain;
+}
+
+/* Text-only parts as headings in the sidebar, and a chapter after a group
+   (e.g. the summary after the criteria) set apart by the same rule */
+#quarto-sidebar li.sidebar-item-section > span.sidebar-item-text,
+#quarto-sidebar li.sidebar-item-section:has(> ul) + li.sidebar-item:not(.sidebar-item-section) {
+  display: block;
+  margin-top: 1rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+#quarto-sidebar li.sidebar-item-section > span.sidebar-item-text {
+  color: var(--bs-body-color);
+  line-height: 1.3;
+}
+
+@media (max-width: 991.98px) {
+  #quarto-sidebar li.sidebar-item-section > span.sidebar-item-text {
+    font-size: 1rem;
+  }
+}
+
+/* Figures across text and margin (.column-page-right): image at full
+   width, caption below it at the same width instead of the margin */
+#quarto-document-content .quarto-float.column-page-right > figure > div > :is(svg, img) {
+  width: 100%;
+}
+
+#quarto-document-content .quarto-float.column-page-right > figure > figcaption {
+  grid-column: body-content-start / page-end !important;
+}
+
+/* Quarto stretches the float and figure across the whole page grid,
+   over the sidebar; only image and caption take clicks */
+#quarto-document-content .quarto-float.column-page-right,
+#quarto-document-content .quarto-float.column-page-right > figure {
+  pointer-events: none;
+}
+
+#quarto-document-content .quarto-float.column-page-right > figure > * {
+  pointer-events: auto;
 }

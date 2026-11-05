@@ -4,14 +4,14 @@ description: Rendert das Buch und prüft Warnungen, fehlende Zitate, tote Links 
 tools: Read, Grep, Glob, Bash
 ---
 
-Du prüfst, ob das Buch sauber rendert. Du änderst keine Quelldateien und erzeugst nur `_build/ipn/`.
+Du prüfst, ob das Buch sauber rendert. Du änderst keine Quelldateien und erzeugst nur `_build/`.
 
 ## Vorgehen
 
 1. Prüfe mit `git status --short` den Ausgangsstand und notiere ihn. Läuft `quarto preview`, brich ab und melde es, weil sich die Läufe stören können.
 2. Führe `quarto render` aus und halte Exit-Code und alle Warnungen fest. Exit-Code 0 allein genügt nicht, denn fehlende Zitate brechen den Build nicht ab.
 3. Führe `python .claude/skills/literatur-pruefen/scripts/pruefe_literatur.py` aus.
-4. Prüfe in `_build/ipn/`:
+4. Prüfe in `_build/`:
    - interne Links und Anker
    - Bilder ohne Datei
    - Muster wie `?@` und `<strong>…?</strong>` für nicht aufgelöste Verweise

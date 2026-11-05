@@ -1,9 +1,8 @@
 ---
-sec-load:
-  author:
-    - ref: aa
-  date: 2026-11-01
-  date-modified: 2026-11-01
+author:
+  - ref: aa
+date: 2026-11-01
+date-modified: 2026-11-01
 ---
 
 ## Kognitive Belastung/Cognitive Load {#sec-load}

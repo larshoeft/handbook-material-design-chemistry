@@ -19,17 +19,18 @@ Bis zur Umstellung auf Git gilt die Word-Fassung in `_quellen_docx/`. Der Ordner
 
 ## Struktur
 
-- Hauptkapitel sind `part_*/_*.qmd` und binden ihre Texte per `{{< include >}}` ein, zum Beispiel `part_how/_criteria_specific.qmd`. Die Kriterien werden später auf mehrere Hauptkapitel aufgeteilt.
-- Ein Kriterium oder Verfahren ist eine eigene Datei mit `##`-Überschrift und `sec-`-ID.
+- Jedes Kriterium und jedes Verfahren ist ein eigenes Kapitel. Es steht in `book.chapters` in `_quarto.yml` unter seinem Teil, zum Beispiel `part_how/_criteria_specific.qmd`. Die Kriterien werden später auf mehrere Teile aufgeteilt.
+- Die Datei beginnt mit einer `##`-Überschrift mit `sec-`-ID, die Quarto als Kapiteltitel übernimmt.
 - Die Vorlagen [criteria_specific_template.qmd](../part_how/criteria_specific_template.qmd) und [frameworks_template.qmd](../part_how/frameworks_template.qmd) geben die Abschnitte vor. Die `###`-Überschriften heißen wie in der Vorlage, Abschnitte dürfen fehlen, und „Einsatzbedingungen/Umsetzungswissen“ und „Transferwissen“ sind optional. Am Ende steht immer `### Quellen` mit `::: sectionrefs`.
 - Tabellen und Abbildungen tragen IDs wie `#tbl-…` und `#fig-…`, Abbildungen zusätzlich einen Alt-Text.
-- Gezeichnete Abbildungen liegen als TikZ in `img/tikz/`. `quarto run img/tikz/build.lua` erzeugt daraus mit LuaLaTeX die PDF und je Theme-Schrift eine SVG in `img/`, eingebunden wird die SVG. Die TikZ-Dateien nutzen nur die Farben aus `img/tikz/stil.tex`, die Themes setzen sie als `--fig-…`.
+- Eine Abbildung am Rand steht in `::: {.column-margin}`. Über Text und Rand reicht sie mit `{#fig-… .column-page-right fig-cap-location="bottom"}`.
+- Gezeichnete Abbildungen liegen als TikZ in `img/tikz/`. `quarto run img/tikz/build.lua` erzeugt daraus mit LuaLaTeX je eine PDF und eine SVG in Source Sans 3 in `img/`, eingebunden wird die SVG. Die TikZ-Dateien nutzen nur die Farben aus `img/tikz/stil.tex`, die Themes setzen sie als `--fig-…`.
 
 ## Metadaten und Personen
 
-- Angaben stehen im Block `sec-…:` am Dateianfang (`author`, `date`, `date-modified`).
-- Jeder Abschnitt mit Autor:in bekommt automatisch einen Zitiervorschlag (`extensions.section-authors.citation` in `_quarto.yml`). `citation: false` im Block schaltet ihn ab.
-- Die Lizenz gilt zentral (`extensions.section-authors.license`, CC BY-NC 4.0) und steht nicht im Block.
+- Angaben stehen im Kopf der Datei (`author` mit `ref`, `date`, `date-modified`).
+- Jedes Kapitel mit Autor:in bekommt automatisch einen Zitiervorschlag (`extensions.section-authors.citation` in `_quarto.yml`). `citation: false` im Kopf schaltet ihn ab.
+- Die Lizenz gilt zentral (`extensions.section-authors.license`, CC BY-NC 4.0) und steht nicht im Kopf der Datei.
 - Personen werden per ID aufgerufen. Herausgeber:innen stehen in `book.author`, alle anderen Beitragenden in `contributors` in `_quarto.yml`. Affiliationen stehen in `affiliations`.
 - E-Mail und ORCID werden nur mit Einverständnis der Person eingetragen.
 

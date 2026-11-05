@@ -1,9 +1,8 @@
 ---
-sec-oer:
-  author:
-    - ref: cf
-  date: 2026-11-01
-  date-modified: 2026-11-01
+author:
+  - ref: cf
+date: 2026-11-01
+date-modified: 2026-11-01
 ---
 
 <!-- Leitfragen sind Anregungen. Abschnitte dürfen leer bleiben. -->

@@ -1,9 +1,8 @@
 ---
-sec-dbr:
-  author:
-    - ref: lm
-  date: 2026-11-01
-  date-modified: 2026-11-01
+author:
+  - ref: lm
+date: 2026-11-01
+date-modified: 2026-11-01
 ---
 
 ## Design-Based Research {#sec-dbr}
@@ -12,7 +11,7 @@ sec-dbr:
 
 Design-Based Research (DBR) ist ein Studiendesign, das Design- und wissenschaftliche Methoden integriert, um in realen Lernkontexten [@barab2004_designbased] gleichzeitig 1) praxistaugliche Interventionen und 2) theoretisch fundiertes Wissen zu generieren [@easterday2014_designbased; @anderson2012_designbased]. Ann @brown1992_design, die als Begründerin des DBR gilt, schrieb: *"an effective intervention should be able to migrate from our experimental classroom to average classrooms operated by and for average students and teachers, supported by realistic technological and personal support"* [@brown1992_design] und greift damit ein zentrales Problem der Bildungsforschung auf: Viele Interventionen werden für experimentelle Forschungszwecke konzeptioniert und entwickelt, aber können den Anforderungen regulärer Klassenzimmer nicht standhalten. Durch den iterativen Ansatz unter Einbezug verschiedener Perspektiven sollen Interventionen zur langfristigen Implementation entwickelt werden.
 
-![Design-Based-Research-Zyklus mit a) Design, b) Evaluation und c) Analyse.](../img/frameworks_dbr_image1.svg){#fig-dbr-zyklus fig-alt="Design-Based-Research-Zyklus mit a) Design, b) Evaluation und c) Analyse."}
+![Design-Based-Research-Zyklus mit a) Design, b) Evaluation und c) Analyse.](../img/frameworks_dbr_image1.svg){#fig-dbr-zyklus .column-page-right fig-cap-location="bottom" fig-alt="Design-Based-Research-Zyklus mit a) Design, b) Evaluation und c) Analyse."}
 
 Charakteristisch sind iterative Zyklen aus den drei Phasen (siehe @fig-dbr-zyklus) -- Design, Analyse und Evaluation [@mundy2024_designbased] -- bzw. sechs Phasen -- focus, understand, define, conceive, build, test [@easterday2014_designbased]. In der Evaluations- bzw. Testphase werden verschiedene Perspektiven einbezogen, um die Intervention zu verbessern und theoretisches Verständnis zu gewinnen [@mundy2024_designbased]. Zur Auswertung der Ergebnisse werden häufig *mixed methods* verwendet [@anderson2012_designbased].
 
