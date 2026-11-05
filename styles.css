@@ -88,7 +88,6 @@ div.csl-bib-body,
   font-size: .875em;
 }
 
-#quarto-document-content h4,
 .sidebar-title {
   font-size: var(--bs-body-font-size);
 }
@@ -181,9 +180,12 @@ h1, h2, h3, h4 {
   margin-top: 1.5rem;
 }
 
+/* Run into the paragraph, so in its size and serif text face */
 #quarto-document-content h4 {
   display: inline;
   margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: 1em;
   line-height: inherit;
 }
 
