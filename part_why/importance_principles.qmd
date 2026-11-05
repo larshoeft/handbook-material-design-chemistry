@@ -1,0 +1,39 @@
+# Die fünf Kernprinzipien für qualitätsvollen Chemieunterricht {#sec-importance-principles}
+
+Die folgenden Prinzipien bilden das Rückgrat dieser Handreichung. Sie transformieren abstrakte Qualitätskriterien in handlungsleitende Strategien für die Materialgestaltung:
+
+## 1. Verstehensorientierung: Konzepte und Verfahren fundieren {.unnumbered}
+
+Naturwissenschaftliche Grundbildung entsteht nicht durch das Auswendiglernen von Fakten, sondern durch die aktive Auseinandersetzung mit Konzepten. Lehrmaterialien sollen Lernende dazu anregen, Phänomene in sinnstiftenden Kontexten zu erschließen und dabei fachinhaltliches mit fachmethodischem Verständnis zu verknüpfen.
+
+- *Vernetzung:* Fokus auf den Wechsel zwischen Repräsentationsformen (Modelle, Formeln, Fachsprache).
+- *Reflexion:* Explizites Thematisieren der Beziehungen zwischen Konzepten, um oberflächliches "Rezeptwissen" zu vermeiden.
+
+## 2. Durchgängigkeit und Vernetzung: Langfristiges Lernen sichern {.unnumbered}
+
+Lernen ist ein kumulativer Prozess. Das Prinzip der Durchgängigkeit (Spiralprinzip) stellt sicher, dass Inhalte über Schuljahre hinweg anschlussfähig bleiben.
+
+- *Anknüpfung:* Gezieltes Aufgreifen von Vorwissen und explizite Verknüpfung mit neuen Lernzielen.
+- *Anschlussfähigkeit:* Auswahl von Inhalten, die eine tragfähige Basis für spätere Lernstufen bilden.
+- *Aufarbeitung:* Frühzeitige Diagnose und Schließung von Verstehenslücken.
+
+## 3. Kognitive und motivationale Aktivierung: Aktive Denkprozesse anregen {.unnumbered}
+
+Ein hoher Beschäftigungsgrad im Unterricht garantiert noch keinen Lernerfolg. Entscheidend ist die Tiefe der kognitiven Verarbeitung.
+
+- *Forschend-entdeckendes Lernen:* Lehrmaterialien sollten komplexe Phänomene so aufbereiten, dass Zusammenhänge selbstständig entdeckt werden können.
+- *Produktives Üben:* Statt repetitiver Aufgaben fördern Transferleistungen, Begründungen und Vergleiche ein flexibles, vernetztes Wissen.
+
+## 4. Lernenden-Orientierung und Adaptivität: Lernstände als Ausgangspunkt {.unnumbered}
+
+Wirksamer Unterricht ist adaptiv -- er passt sich der Heterogenität der Lernenden an. Materialien müssen so konzipiert sein, dass sie unterschiedliche Lernwege ermöglichen.
+
+- *Diagnosegeleitetheit:* Systematisches Aufgreifen typischer Fehlvorstellungen und individueller Lernstände.
+- *Differenzierung:* Bereitstellung von gestuften Hilfen (Scaffolding), Visualisierungshilfen und unterschiedlichen Anforderungsprofilen, um Barrieren abzubauen und individuelle Lernpfade zu unterstützen.
+
+## 5. Kommunikationsförderung: Fachsprache als Werkzeug des Denkens {.unnumbered}
+
+Der Austausch über Naturwissenschaften ist sowohl Methode als auch Lernziel. Nur wer über Phänomene präzise sprechen kann, durchdringt sie geistig.
+
+- *Lernen durch Austausch:* Förderung von Argumentation und Perspektivwechsel im sozialen Miteinander.
+- *Sprachbildung:* Sukzessiver Aufbau von der Alltagssprache zur Fachsprache durch explizite Hilfsmittel, um gesellschaftliche Teilhabe und fachliche Vertiefung zu ermöglichen.

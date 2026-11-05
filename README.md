@@ -136,7 +136,7 @@ The look of the website is set in `_quarto.yml` with the theme from `theme-ipn/i
 
 Each criterion and each framework is a chapter of its own, so floats are numbered per chapter (e.g. Tabelle 10.2). A figure goes into the margin with `::: {.column-margin}` around it, or across text and margin with `{#fig-… .column-page-right fig-cap-location="bottom"}`; for the latter `styles.css` scales the image to the full width and keeps the caption below it.
 
-`styles.css` adds layout rules (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and `figure-zoom.html`: a click (or Enter) on a figure opens an enlarged copy in a dialog; the copy stays in the page, so inlined SVGs keep the theme colors and fonts.
+`styles.css` adds layout rules (the scrollbar space is reserved so columns do not shift between pages, wide tables scroll on their own, long words and DOIs break, the sidebar wraps on phones) and two scripts. `figure-zoom.html`: a click (or Enter) on a figure opens an enlarged copy in a dialog; the copy stays in the page, so inlined SVGs keep the theme colors and fonts. `sidebar-state.html`: the sidebar groups start collapsed (`collapse-level: 1`, the group of the current page is open); groups the reader opens or closes stay so on the next page, for the browser tab (`sessionStorage`). A page TOC with a single entry is hidden.
 
 Render with `quarto render`. The `_build/` folder is ignored by git. To change colors or fonts, edit the `.scss` files.
 

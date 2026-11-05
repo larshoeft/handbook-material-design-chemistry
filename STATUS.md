@@ -4,7 +4,7 @@ Word-Dateien liegen in `_quellen_docx/Kapitel/`. Die Spalte „Word-Stand“ nen
 
 | Text | Zuständig | Datei im Repo | Word-Datei | Importiert | Word-Stand | Offene Quellen |
 |---|---|---|---|---|---|---|
-| Relevanz | Sascha Bernholt | `part_why/_importance.qmd` | `2_Relevanz/Entwurf_Einleitung_Relevanz_v2.docx` | ja, 01.11.2026 | | 1, siehe unten |
+| Relevanz | Sascha Bernholt | `part_why/_importance.qmd` und die Kapitel `part_why/importance_*.qmd` (nach Import wieder aufteilen) | `2_Relevanz/Entwurf_Einleitung_Relevanz_v2.docx` | ja, 01.11.2026 | | 1, siehe unten |
 | Ausrichtungen | Sascha Bernholt | `part_why/_orientations.qmd` | keine | | | |
 | Design-Based Research | Leander Mecklenburg | `part_how/frameworks_dbr.qmd` | `4_Verfahren und Modelle/Steckbrief_DesignBasedResearch_Leander.docx` | ja, 01.11.2026 | 11 Einfügungen, 11 Löschungen (angenommen), 11 Kommentare | 11, siehe unten |
 | Didaktische Rekonstruktion | Jannik Lossjew | `part_how/frameworks_rec.qmd` | `4_Verfahren und Modelle/Steckbrief_Didaktische Rekonstruktion.docx` | ja, 01.11.2026 | | 8, siehe unten |

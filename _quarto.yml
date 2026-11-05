@@ -13,6 +13,7 @@ book:
   site-url: "https://larshoeft.github.io/handbook-material-design-chemistry/"
   # Cover on wide screens, short title on phones
   sidebar:
+    collapse-level: 1
     logo: img/cover.svg
     logo-alt: "Handbuch Materialentwicklung"
     title: "Handbuch Materialentwicklung"
@@ -35,8 +36,12 @@ book:
     - intro.qmd
     - part: "Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?"
       chapters: []
-    - part_why/_importance.qmd
-    # - part_why/_orientations.qmd
+    - part: part_why/_importance.qmd
+      chapters:
+        - part_why/importance_bridge.qmd
+        - part_why/importance_principles.qmd
+        - part_why/importance_design.qmd
+        # - part_why/_orientations.qmd
     - part: "Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?"
       chapters: []
     - part: part_how/_frameworks.qmd
@@ -153,6 +158,7 @@ format:
     reference-location: margin
     include-after-body:
       - figure-zoom.html
+      - sidebar-state.html
     template-partials:
       - _extensions/section-authors/title-metadata.html
     anchor-sections: false

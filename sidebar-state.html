@@ -1,0 +1,23 @@
+<script>
+// Sidebar groups the reader opened or closed stay so on the next page (per tab)
+document.addEventListener('DOMContentLoaded', () => {
+  const key = 'sidebar-groups';
+  let state = {};
+  try { state = JSON.parse(sessionStorage.getItem(key)) || {}; } catch (e) {}
+  document.querySelectorAll('#quarto-sidebar ul.sidebar-section[id]').forEach(group => {
+    const toggle = document.querySelector(`[data-bs-target="#${group.id}"]`);
+    if (group.id in state && !group.querySelector('.active')) {
+      group.classList.toggle('show', state[group.id]);
+      toggle?.setAttribute('aria-expanded', state[group.id]);
+      toggle?.classList.toggle('collapsed', !state[group.id]);
+    }
+    const save = open => event => {
+      if (event.target !== group) return;
+      state[group.id] = open;
+      try { sessionStorage.setItem(key, JSON.stringify(state)); } catch (e) {}
+    };
+    group.addEventListener('shown.bs.collapse', save(true));
+    group.addEventListener('hidden.bs.collapse', save(false));
+  });
+});
+</script>

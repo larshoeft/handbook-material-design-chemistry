@@ -1,0 +1,8 @@
+# Von der Theorie zur Gestaltung {#sec-importance-design}
+
+Diese Handreichung möchte Sie dabei unterstützen, diese abstrakten Prinzipien in konkretes Handeln zu übersetzen. Im folgenden Abschnitt finden Sie deshalb einen detaillierten Katalog von Gestaltungskriterien. Diese sind kein starres Regelwerk, sondern vielmehr eine Checkliste für die Qualitätsentwicklung, die Ihnen hilft, Ihre Materialien kritisch zu prüfen und gezielt zu optimieren. Denn am Ende zählt nicht, wie viel Stoff wir "behandelt" haben, sondern was in den Köpfen der Lernenden tatsächlich hängen geblieben ist.
+
+## Quellen {.unnumbered}
+
+::: sectionrefs
+:::
