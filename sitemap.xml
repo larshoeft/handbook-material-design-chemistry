@@ -2,34 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://larshoeft.github.io/handbook-material-design-chemistry/index.html</loc>
-    <lastmod>2026-11-04T12:38:01.051Z</lastmod>
+    <lastmod>2026-11-05T11:31:44.343Z</lastmod>
   </url>
   <url>
     <loc>https://larshoeft.github.io/handbook-material-design-chemistry/intro.html</loc>
-    <lastmod>2026-11-04T12:38:01.051Z</lastmod>
-  </url>
-  <url>
-    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/_why.html</loc>
-    <lastmod>2026-11-04T12:38:01.011Z</lastmod>
+    <lastmod>2026-11-05T11:31:44.343Z</lastmod>
   </url>
   <url>
     <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_why/_importance.html</loc>
-    <lastmod>2026-11-04T12:38:01.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/_how.html</loc>
-    <lastmod>2026-11-04T12:38:01.010Z</lastmod>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
   </url>
   <url>
     <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/_frameworks.html</loc>
-    <lastmod>2026-11-04T12:38:01.053Z</lastmod>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/frameworks_rec.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/frameworks_udl.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/frameworks_dbr.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
   </url>
   <url>
     <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/_criteria_specific.html</loc>
-    <lastmod>2026-11-04T12:38:01.053Z</lastmod>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_cumulative.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_cognitiveload.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_adaptivity.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_context.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_presence.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_interest.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_oer.html</loc>
+    <lastmod>2026-11-05T11:31:44.344Z</lastmod>
   </url>
   <url>
     <loc>https://larshoeft.github.io/handbook-material-design-chemistry/summary.html</loc>
-    <lastmod>2026-11-04T12:38:01.054Z</lastmod>
+    <lastmod>2026-11-05T11:31:44.345Z</lastmod>
   </url>
 </urlset>

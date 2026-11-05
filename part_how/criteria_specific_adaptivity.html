@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Adaptivität – Handbuch Materialentwicklung</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bb83184a9fe1dbeb64b964cddead3734.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9c7070e54dcfda39f3419115b1c9f674.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-c71323e0b15928f406c2b9d7f35705fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9c7070e54dcfda39f3419115b1c9f674.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/section-authors-0.9.0/section-authors.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Zum Hauptinhalt springen</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Symbolleiste">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span id="sec-adaptivity" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Adaptivität</span></span></h1>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Website">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/cover.svg" alt="Handbuch Materialentwicklung" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../img/cover.svg" alt="Handbuch Materialentwicklung" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Handbuch Materialentwicklung</a> 
+        <div class="sidebar-tools-main">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten" aria-label="Dunkelmodus umschalten"><i class="bi"></i></button>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_why/_importance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part_how/_frameworks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Verfahren und Rahmenmodelle</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten: Verfahren und Rahmenmodelle">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/frameworks_rec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fachliche Klärung und Didaktische Rekonstruktion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/frameworks_udl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Universal Design for Learning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/frameworks_dbr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Design-Based Research</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part_how/_criteria_specific.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Kriterien</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten: Kriterien">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_cumulative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Kumulatives Lernen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_cognitiveload.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Kognitive Belastung/Cognitive Load</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_adaptivity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Adaptivität</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_context.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kontextualisierung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_presence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Präsenzerleben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_interest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interesse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_oer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">OER Verfügbarkeit</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zusammenfassung</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#allgemeine-einführungbeschreibung" id="toc-allgemeine-einführungbeschreibung" class="nav-link active" data-scroll-target="#allgemeine-einführungbeschreibung">Allgemeine Einführung/Beschreibung</a></li>
+  <li><a href="#befunde-zur-wirkung" id="toc-befunde-zur-wirkung" class="nav-link" data-scroll-target="#befunde-zur-wirkung">Befunde zur Wirkung</a></li>
+  <li><a href="#literaturbeispiele-zur-umsetzung" id="toc-literaturbeispiele-zur-umsetzung" class="nav-link" data-scroll-target="#literaturbeispiele-zur-umsetzung">Literaturbeispiele zur Umsetzung</a></li>
+  <li><a href="#umsetzungsbeispiel-eigene-projekteforschung" id="toc-umsetzungsbeispiel-eigene-projekteforschung" class="nav-link" data-scroll-target="#umsetzungsbeispiel-eigene-projekteforschung">Umsetzungsbeispiel (eigene Projekte/Forschung)</a></li>
+  <li><a href="#umsetzungsfacetten" id="toc-umsetzungsfacetten" class="nav-link" data-scroll-target="#umsetzungsfacetten">Umsetzungsfacetten</a></li>
+  <li><a href="#umsetzung-im-prozess" id="toc-umsetzung-im-prozess" class="nav-link" data-scroll-target="#umsetzung-im-prozess">Umsetzung im Prozess</a></li>
+  <li><a href="#quellen" id="toc-quellen" class="nav-link" data-scroll-target="#quellen">Quellen</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span id="sec-adaptivity" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Adaptivität</span></span></h1>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor:in</div>
+    <div class="quarto-title-meta-contents">
+            <p class="author">Gyde Asmussen <a href="https://orcid.org/0000-0001-6935-2563" class="section-authors-orcid" title="ORCID 0000-0001-6935-2563"><span class="visually-hidden">ORCID 0000-0001-6935-2563</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a></p>
+          </div>
+  </div>
+  
+  
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlicht</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1. November 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Aktualisiert</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">1. November 2026</p>
+    </div>
+  </div>
+  
+    <div class="section-authors-license">
+    <div class="quarto-title-meta-heading">Lizenz</div>
+    <div class="quarto-title-meta-contents">
+      <p class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license">CC BY-NC 4.0</a></p>
+    </div>
+  </div>
+  
+    <div class="section-authors-cite">
+    <div class="quarto-title-meta-heading">Zitat</div>
+    <div class="quarto-title-meta-contents section-authors-citation">
+      <p>Asmussen, G. (2026). Adaptivität. In S. Bernholt &amp; S. Lenzer (Hrsg.), <em>Handbuch Materialentwicklung: Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</em>. <a href="https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_adaptivity.html">https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_adaptivity.html</a></p>
+    </div>
+  </div>
+  
+  </div>
+
+
+
+</header>
+
+
+<section id="allgemeine-einführungbeschreibung" class="level3 page-columns page-full">
+<h3 data-anchor-id="allgemeine-einführungbeschreibung">Allgemeine Einführung/Beschreibung</h3>
+<p>Adaptivität beschreibt die Anpassung von Lernumgebungen<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> an die individuellen Voraussetzungen, Bedürfnisse oder Lernprozesse der Lernenden. Diese Anpassung basiert auf der Annahme, dass Lernen effektiver ist, wenn Lernumgebungen auf die Lernenden zugeschnitten werden: entweder indem der Lernweg und Unterstützungsangebote für das Erreichen eines gemeinsamen Lernziels differenziert werden, oder indem für Lernende, die das Lernziel bereits erreicht haben, anspruchsvollere Lernziele und Lerngelegenheiten bereitgestellt werden, um das volle Lernpotenzial auszuschöpfen <span class="citation" data-cites="deunk2015_differentiation--638f720a2641">(<a href="#ref-deunk2015_differentiation--638f720a2641" role="doc-biblioref">Deunk et al., 2015</a>)</span>. Eine solche Anpassung erfordert stets die Erhebung und Nutzung von Lernendendaten, an die die Anpassung stattfinden kann. Hierbei ist zum einen entscheidend an WAS und zum anderen WIE sich die Lernumgebung anpasst.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Lernumgebung umfasst hierbei alles von ganzen Unterrichtskursen bis hin zu spezifischen Einzelmaterialien</p></div></div><p><em>WAS:</em> Es gibt eine Vielzahl an Lernendendaten, an die sich die Lernumgebung anpassen kann. Zu diesen gehören Vorwissen, Wissenszuwachs, Lösungsstrategien, Fehler, Lernstrategien, Einstellungen, Werte, Motivation, Interesse, Kultur und noch viele weitere <span class="citation" data-cites="plass2020_taxonomy--638f720a2641">(Aleven et al., 2017; <a href="#ref-plass2020_taxonomy--638f720a2641" role="doc-biblioref">Plass &amp; Pawar, 2020</a>)</span>. Diese können als <em>kognitive, motivationale, affektive</em> und <em>sozio-kulturelle</em> Variablen zusammengefasst werden <span class="citation" data-cites="plass2020_taxonomy--638f720a2641">(<a href="#ref-plass2020_taxonomy--638f720a2641" role="doc-biblioref">Plass &amp; Pawar, 2020</a>)</span>.</p>
+<p><em>WIE:</em> Lernumgebungen können auf unterschiedlichen Ebenen angepasst werden. Aleven et al.&nbsp;(2017) unterscheiden hierbei in <em>Design-Loop</em>, <em>Task-Loop</em> und <em>Step-Loop</em>. In der Design-Loop wird die gesamte Lernumgebung basierend auf vorab erhobenen Lernendendaten entwickelt und auf deren Bedürfnisse abgestimmt. In der Task-Loop werden basierend auf der vorherigen Aufgabenbearbeitung der Lernenden innerhalb der Lernumgebung weitere geeignete instruktionale Aufgaben ausgewählt. In der Step-Loop werden innerhalb der Aufgabenbearbeitung basierend auf der aktuellen Bearbeitung der Lernenden Anpassungen an der Lernumgebung vorgenommen. Bei <span class="citation" data-cites="plass2020_taxonomy--638f720a2641">Plass &amp; Pawar (<a href="#ref-plass2020_taxonomy--638f720a2641" role="doc-biblioref">2020</a>)</span> sind das das <em>Makro-Level</em> und <em>Mikro-Level</em>. Das Makro-Level beschreibt die Anpassung der Lernumgebung innerhalb der Planung, während das Mikro-Level die Anpassung der Lernumgebung innerhalb der Situation beschreibt.</p>
+</section>
+<section id="befunde-zur-wirkung" class="level3">
+<h3 data-anchor-id="befunde-zur-wirkung">Befunde zur Wirkung</h3>
+<p>Studien zur Effektivität von Adaptivität zeigen insgesamt eine positive Tendenz, allerdings gibt es auch gemischte Befunde. <span class="citation" data-cites="kulik2016_effectiveness--638f720a2641">Kulik &amp; Fletcher (<a href="#ref-kulik2016_effectiveness--638f720a2641" role="doc-biblioref">2016</a>)</span> haben in ihrer Meta-Analyse zu intelligenten tutoriellen Systemen einen positiven mittleren Effekt berichtet, bei <span class="citation" data-cites="steenbergen-hu2013_metaanalysis--638f720a2641">Steenbergen-Hu &amp; Cooper (<a href="#ref-steenbergen-hu2013_metaanalysis--638f720a2641" role="doc-biblioref">2013</a>)</span> war dieser Effekt klein, mit sehr großen Variationen zwischen den Studien. <span class="citation" data-cites="letourneau2025_systematic--638f720a2641">Létourneau et al. (<a href="#ref-letourneau2025_systematic--638f720a2641" role="doc-biblioref">2025</a>)</span> haben ein systematisches Review zu intelligenten tutoriellen Systemen, die AI einsetzen, durchgeführt. Auch hier zeigte sich insgesamt ein positiver Effekt. Allerdings zeigte sich übergreifend, dass die Wirksamkeit von der Umsetzung der Adaptivität und der Art der Messung abhängt.</p>
+</section>
+<section id="literaturbeispiele-zur-umsetzung" class="level3">
+<h3 data-anchor-id="literaturbeispiele-zur-umsetzung">Literaturbeispiele zur Umsetzung</h3>
+<p>Es gibt zahlreiche Beispiele, die Adaptivität innerhalb eines Projekts umgesetzt haben. Die folgenden Beispiele stammen vorwiegend aus der Hochschule, meist aus der organischen Chemie und fokussieren auf kognitive Variablen <span class="citation" data-cites="ariely2024_causalmechanical--638f720a2641 dood2020_using--638f720a2641 lieber2022_closing--638f720a2641 young2021_tired--638f720a2641 martin2026_adaptive--638f720a2641">(<a href="#ref-ariely2024_causalmechanical--638f720a2641" role="doc-biblioref">Ariely et al., 2024</a>; <a href="#ref-dood2020_using--638f720a2641" role="doc-biblioref">Dood et al., 2020</a>; <a href="#ref-lieber2022_closing--638f720a2641" role="doc-biblioref">Lieber et al., 2022</a>; <a href="#ref-martin2026_adaptive--638f720a2641" role="doc-biblioref">Martin et al., 2026</a>; <a href="#ref-young2021_tired--638f720a2641" role="doc-biblioref">Young et al., 2021</a>)</span>.</p>
+</section>
+<section id="umsetzungsbeispiel-eigene-projekteforschung" class="level3">
+<h3 data-anchor-id="umsetzungsbeispiel-eigene-projekteforschung">Umsetzungsbeispiel (eigene Projekte/Forschung)</h3>
+<p>Im Promotionsprojekt von Gyde Asmussen wurde adaptive Unterstützung für das Problemlösen in der organischen Chemie, speziell für die Reaktionsmechanismen nukleophile Substitution und Eliminierung zweiter Ordnung, entwickelt. Die adaptive Unterstützung wurde in Form von gestuften Hilfekarten, die aus Prompts und Informationen zusammengesetzt waren, entwickelt. Der Entwicklung ging eine Studie voraus, in der die Schwierigkeiten von Studierenden mit diesen Reaktionsmechanismen erhoben und systematisiert wurden. Die Entwicklung der Hilfekarten basierte auf dieser Systematik (<em>kognitive Variablen</em>). Die Hilfekarten wurden innerhalb einer Interviewstudie erprobt. Die Studierenden erhielten die Hilfekarten, wenn sie im Problemlöseprozess auf Schwierigkeiten stießen (<em>Step-Loop</em>). Hierbei wurde der Umgang der Studierenden mit der adaptiven Unterstützung untersucht, um Implikationen für die Entwicklung eines intelligenten tutoriellen Systems abzuleiten. Es hat sich gezeigt, dass die Hilfekarten wirksam waren und von den Studierenden genutzt wurden. Gleichzeitig hat sich auch gezeigt, dass die Analyse der Lernendendaten ein Schlüsselpunkt für die Auswahl geeigneter Unterstützung ist und dass ein intelligentes tutorielles System hoch flexibel sein muss, da die Problemlöseprozesse und die Auswirkung der adaptiven Unterstützung auf diese sehr unterschiedlich sein kann. Die digitale Umsetzung der Unterstützung erfolgt im Projekt ATP-OC.</p>
+<p>Bei einer erneuten Entwicklung von adaptiver Unterstützung sollte darauf geachtet werden, dass neben kognitiven Variablen auch metakognitive Aspekte eingebunden werden. Insbesondere sollte den Lernenden Raum für Selbstreflexion gegeben werden. Dieses wurde bei der beschriebenen Umsetzung von Adaptivität nicht gemacht und hätte den Studierenden an vielen Punkten weitergeholfen. Ganz speziell wären Hilfekarten sinnvoll gewesen, die zur Reflexion der eigenen Lösung, vielleicht sogar mit Beispielen, welche Aspekte der Lösung speziell reflektiert werden sollten, anregen.</p>
+<p>In folgenden Artikeln können Details der Umsetzung nachgelesen werden <span class="citation" data-cites="asmussen2023_blooming--638f720a2641 asmussen2025_stepping--638f720a2641">(<a href="#ref-asmussen2023_blooming--638f720a2641" role="doc-biblioref">Asmussen et al., 2023</a>, <a href="#ref-asmussen2025_stepping--638f720a2641" role="doc-biblioref">2025</a>)</span>.</p>
+</section>
+<section id="umsetzungsfacetten" class="level3">
+<h3 data-anchor-id="umsetzungsfacetten">Umsetzungsfacetten</h3>
+<p>Eine systematische Umsetzung von Adaptivität zeichnet sich durch folgende Indikatoren aus:</p>
+<ul>
+<li>Lernendendaten werden oder wurden in irgendeiner Form (z. B. Lernende dürfen nach eigener Präferenz entscheiden, Lernende füllen einen Vorwissenstest aus usw.) erhoben</li>
+<li>Lernende erhalten in irgendeiner Form ein unterschiedliches Treatment (der Grad der Differenzierung kann dabei sehr unterschiedlich ausfallen: z. B. zwei vorgefertigte Treatments und Lernende erhalten, je nach genutzten Lernendendaten, das, was besser zu ihnen passt; jeder erhält ein individuelles Treatment usw.)</li>
+</ul>
+</section>
+<section id="umsetzung-im-prozess" class="level3">
+<h3 data-anchor-id="umsetzung-im-prozess">Umsetzung im Prozess</h3>
+<p>siehe <em>Design-Loop, Task-Loop, Step-Loop. Makro-Level, Mikro-Level</em></p>
+</section>
+<section id="quellen" class="level3">
+<h3 data-anchor-id="quellen">Quellen</h3>
+<div id="refs--638f720a2641" class="sectionrefs references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ariely2024_causalmechanical--638f720a2641" class="csl-entry" role="listitem">
+Ariely, M., Nazaretsky, T., &amp; Alexandron, G. (2024). Causal‐mechanical Explanations in Biology: <span>Applying</span> Automated Assessment for Personalized Learning in the Science Classroom. <em>Journal of Research in Science Teaching</em>, <em>61</em>(8), 1858–1889. <a href="https://doi.org/10.1002/tea.21929">https://doi.org/10.1002/tea.21929</a>
+</div>
+<div id="ref-asmussen2023_blooming--638f720a2641" class="csl-entry" role="listitem">
+Asmussen, G., Rodemer, M., &amp; Bernholt, S. (2023). Blooming Student Difficulties in Dealing with Organic Reaction Mechanisms – an Attempt at Systemization. <em>Chemistry Education Research and Practice</em>, <em>24</em>(3), 1035–1054. <a href="https://doi.org/10.1039/D2RP00204C">https://doi.org/10.1039/D2RP00204C</a>
+</div>
+<div id="ref-asmussen2025_stepping--638f720a2641" class="csl-entry" role="listitem">
+Asmussen, G., Rodemer, M., &amp; Bernholt, S. (2025). Stepping Stones to Success: <span>A</span> Qualitative Investigation of the Effectiveness of Adaptive Stepped Supporting Tools for Problem-Solving in Organic Chemistry to Design an Intelligent Tutoring System. <em>International Journal of Science Education</em>, <em>47</em>(10), 1252–1274. <a href="https://doi.org/10.1080/09500693.2024.2361933">https://doi.org/10.1080/09500693.2024.2361933</a>
+</div>
+<div id="ref-deunk2015_differentiation--638f720a2641" class="csl-entry" role="listitem">
+Deunk, M., Doolaard, S., Smale-Jacobse, A., &amp; Bosker, R. J. (2015). <em>Differentiation within and across Classrooms: <span>A</span> Systematic Review of Studies into the Cognitive Effects of Differentiation Practices</em>. RUG/GION.
+</div>
+<div id="ref-dood2020_using--638f720a2641" class="csl-entry" role="listitem">
+Dood, A. J., Dood, J. C., Cruz-Ramírez De Arellano, D., Fields, K. B., &amp; Raker, J. R. (2020). Using the <span>Research Literature</span> to <span>Develop</span> an <span>Adaptive Intervention</span> to <span>Improve Student Explanations</span> of an <span>S</span><span><sub>N</sub></span> 1 <span>Reaction Mechanism</span>. <em>Journal of Chemical Education</em>, <em>97</em>(10), 3551–3562. <a href="https://doi.org/10.1021/acs.jchemed.0c00569">https://doi.org/10.1021/acs.jchemed.0c00569</a>
+</div>
+<div id="ref-kulik2016_effectiveness--638f720a2641" class="csl-entry" role="listitem">
+Kulik, J. A., &amp; Fletcher, J. D. (2016). Effectiveness of <span>Intelligent Tutoring Systems</span>: <span>A Meta-Analytic Review</span>. <em>Review of Educational Research</em>, <em>86</em>(1), 42–78. <a href="https://doi.org/10.3102/0034654315581420">https://doi.org/10.3102/0034654315581420</a>
+</div>
+<div id="ref-letourneau2025_systematic--638f720a2641" class="csl-entry" role="listitem">
+Létourneau, A., Deslandes Martineau, M., Charland, P., Karran, J. A., Boasen, J., &amp; Léger, P. M. (2025). A Systematic Review of <span>AI</span>-Driven Intelligent Tutoring Systems (<span>ITS</span>) in <span>K-12</span> Education. <em>Npj Science of Learning</em>, <em>10</em>(1), 29. <a href="https://doi.org/10.1038/s41539-025-00320-7">https://doi.org/10.1038/s41539-025-00320-7</a>
+</div>
+<div id="ref-lieber2022_closing--638f720a2641" class="csl-entry" role="listitem">
+Lieber, L. S., Ibraj, K., Caspari-Gnann, I., &amp; Graulich, N. (2022). Closing the Gap of Organic Chemistry Students’ Performance with an Adaptive Scaffold for Argumentation Patterns. <em>Chemistry Education Research and Practice</em>, <em>23</em>(4), 811–828. <a href="https://doi.org/10.1039/D2RP00016D">https://doi.org/10.1039/D2RP00016D</a>
+</div>
+<div id="ref-martin2026_adaptive--638f720a2641" class="csl-entry" role="listitem">
+Martin, P. P., Kubsch, M., Yik, B. J., Burlingham, B. T., &amp; Graulich, N. (2026). Adaptive, but <span>Equitable</span>? <span>Exploring</span> the <span>Impact</span> of <span>Machine Learning</span>‐<span>Based Adaptive Support</span> on <span>Educational Debts</span> in <span>Undergraduate Chemistry</span>. <em>Science Education</em>, <em>110</em>(3), 928–946. <a href="https://doi.org/10.1002/sce.70042">https://doi.org/10.1002/sce.70042</a>
+</div>
+<div id="ref-plass2020_taxonomy--638f720a2641" class="csl-entry" role="listitem">
+Plass, J. L., &amp; Pawar, S. (2020). Toward a Taxonomy of Adaptivity for Learning. <em>Journal of Research on Technology in Education</em>, <em>52</em>(3), 275–300. <a href="https://doi.org/10.1080/15391523.2020.1719943">https://doi.org/10.1080/15391523.2020.1719943</a>
+</div>
+<div id="ref-steenbergen-hu2013_metaanalysis--638f720a2641" class="csl-entry" role="listitem">
+Steenbergen-Hu, S., &amp; Cooper, H. (2013). A Meta-Analysis of the Effectiveness of Intelligent Tutoring Systems on <span>K</span>–12 Students’ Mathematical Learning. <em>Journal of Educational Psychology</em>, <em>105</em>(4), 970–987. <a href="https://doi.org/10.1037/a0032447">https://doi.org/10.1037/a0032447</a>
+</div>
+<div id="ref-young2021_tired--638f720a2641" class="csl-entry" role="listitem">
+Young, K. R., Schaffer, H. E., James, J. B., &amp; Gallardo-Williams, M. T. (2021). Tired of <span>Failing Students</span>? <span>Improving Student Learning Using Detailed</span> and <span>Automated Individualized Feedback</span> in a <span>Large Introductory Science Course</span>. <em>Innovative Higher Education</em>, <em>46</em>(2), 133–151. <a href="https://doi.org/10.1007/s10755-020-09527-5">https://doi.org/10.1007/s10755-020-09527-5</a>
+</div>
+</div>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script>
+// Click or Enter on a figure opens an enlarged copy; the copy stays in the page, so theme colors apply
+document.addEventListener('DOMContentLoaded', () => {
+  const dialog = document.createElement('dialog');
+  dialog.className = 'figure-zoom';
+  dialog.addEventListener('click', () => dialog.close());
+  document.body.appendChild(dialog);
+  document.querySelectorAll('#quarto-document-content figure :is(svg.svg-inline, img)').forEach(figure => {
+    const open = () => {
+      const copy = figure.cloneNode(true);
+      copy.removeAttribute('id');
+      copy.removeAttribute('style');
+      copy.removeAttribute('tabindex');
+      dialog.replaceChildren(copy);
+      dialog.showModal();
+    };
+    figure.classList.add('zoomable');
+    figure.tabIndex = 0;
+    figure.addEventListener('click', open);
+    figure.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        open();
+      }
+    });
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Dunkelmodus umschalten");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Dunkelmodus umschalten");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/larshoeft\.github\.io\/handbook-material-design-chemistry\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollbarer Code","output":"Scrollbare Ausgabe"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

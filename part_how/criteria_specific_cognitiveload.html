@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie? – Handbuch Materialentwicklung</title>
+<title>7&nbsp; Kognitive Belastung/Cognitive Load – Handbuch Materialentwicklung</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,31 +26,51 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bb83184a9fe1dbeb64b964cddead3734.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ec0ed451534bae06e4ecb81d340aee50.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d5665c09f93333c245300d54805287cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-ec0ed451534bae06e4ecb81d340aee50.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/section-authors-0.8.1/section-authors.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bb83184a9fe1dbeb64b964cddead3734.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00e69191a930b42b155058873613fefc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9c7070e54dcfda39f3419115b1c9f674.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-c71323e0b15928f406c2b9d7f35705fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9c7070e54dcfda39f3419115b1c9f674.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/section-authors-0.9.0/section-authors.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Zum Hauptinhalt springen</a><script id="quarto-html-before-body" type="application/javascript">
@@ -262,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?</h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span id="sec-load" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Kognitive Belastung/Cognitive Load</span></span></h1>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -276,12 +296,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Website">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/cover.ipn.svg" alt="Handbuch Materialentwicklung" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./img/cover.ipn.svg" alt="Handbuch Materialentwicklung" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/cover.svg" alt="Handbuch Materialentwicklung" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../img/cover.svg" alt="Handbuch Materialentwicklung" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Handbuch Materialentwicklung</a> 
+      <a href="../">Handbuch Materialentwicklung</a> 
         <div class="sidebar-tools-main">
   <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten" aria-label="Dunkelmodus umschalten"><i class="bi"></i></button>
 </div>
@@ -296,60 +316,116 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vorwort</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_why/_importance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_why.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten: Qualitätsvolle Lehr-Lernmaterialien für die Praxis und Forschung entwickeln, einsetzen und evaluieren – Warum?">
+            <a href="../part_how/_frameworks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Verfahren und Rahmenmodelle</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten: Verfahren und Rahmenmodelle">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part_why/_importance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evidenzbasierte Qualitätskriterien als Fundament guter Lehrmaterialien</span></span></a><button type="button" class="sidebar-item-toggle text-start sidebar-page-toc-toggle" data-bs-toggle="collapse" data-bs-target="#sidebar-toc-1" aria-controls="sidebar-toc-1" aria-expanded="false" aria-label="Abschnitte"><i class="bi bi-chevron-right ms-2" aria-hidden="true"></i></button>
-  </div><ul id="sidebar-toc-1" class="collapse list-unstyled sidebar-page-toc"><li><a href="./part_why/_importance.html#die-brücke-zwischen-forschung-und-praxis" class="nav-link"><span class="header-section-number">2.1</span> Die Brücke zwischen Forschung und Praxis</a></li><li><a href="./part_why/_importance.html#die-fünf-kernprinzipien-für-qualitätsvollen-chemieunterricht" class="nav-link"><span class="header-section-number">2.2</span> Die fünf Kernprinzipien für qualitätsvollen Chemieunterricht</a></li><li><a href="./part_why/_importance.html#von-der-theorie-zur-gestaltung" class="nav-link"><span class="header-section-number">2.3</span> Von der Theorie zur Gestaltung</a></li></ul>
+  <a href="../part_how/frameworks_rec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fachliche Klärung und Didaktische Rekonstruktion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/frameworks_udl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Universal Design for Learning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/frameworks_dbr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Design-Based Research</span></span></a>
+  </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_how.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text" id="quarto-sidebar-section-2-label">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten: Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?">
+            <a href="../part_how/_criteria_specific.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Kriterien</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten: Kriterien">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part_how/_frameworks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Verfahren und Rahmenmodelle</span></span></a><button type="button" class="sidebar-item-toggle text-start sidebar-page-toc-toggle" data-bs-toggle="collapse" data-bs-target="#sidebar-toc-2" aria-controls="sidebar-toc-2" aria-expanded="false" aria-label="Abschnitte"><i class="bi bi-chevron-right ms-2" aria-hidden="true"></i></button>
-  </div><ul id="sidebar-toc-2" class="collapse list-unstyled sidebar-page-toc"><li><a href="./part_how/_frameworks.html#sec-rec" class="nav-link"><span class="header-section-number">3.1</span> Fachliche Klärung und Didaktische Rekonstruktion</a></li><li><a href="./part_how/_frameworks.html#sec-udl" class="nav-link"><span class="header-section-number">3.2</span> Universal Design for Learning</a></li><li><a href="./part_how/_frameworks.html#sec-dbr" class="nav-link"><span class="header-section-number">3.3</span> Design-Based Research</a></li></ul>
+  <a href="../part_how/criteria_specific_cumulative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Kumulatives Lernen</span></span></a>
+  </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part_how/_criteria_specific.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kriterien</span></span></a><button type="button" class="sidebar-item-toggle text-start sidebar-page-toc-toggle" data-bs-toggle="collapse" data-bs-target="#sidebar-toc-3" aria-controls="sidebar-toc-3" aria-expanded="false" aria-label="Abschnitte"><i class="bi bi-chevron-right ms-2" aria-hidden="true"></i></button>
-  </div><ul id="sidebar-toc-3" class="collapse list-unstyled sidebar-page-toc"><li><a href="./part_how/_criteria_specific.html#sec-criteria-structure" class="nav-link"><span class="header-section-number">4.1</span> Aufbau der Steckbriefe</a></li><li><a href="./part_how/_criteria_specific.html#sec-cumulative" class="nav-link"><span class="header-section-number">4.2</span> Kumulatives Lernen</a></li><li><a href="./part_how/_criteria_specific.html#sec-load" class="nav-link"><span class="header-section-number">4.3</span> Kognitive Belastung/Cognitive Load</a></li><li><a href="./part_how/_criteria_specific.html#sec-adaptivity" class="nav-link"><span class="header-section-number">4.4</span> Adaptivität</a></li><li><a href="./part_how/_criteria_specific.html#sec-context" class="nav-link"><span class="header-section-number">4.5</span> Kontextualisierung</a></li><li><a href="./part_how/_criteria_specific.html#sec-presence" class="nav-link"><span class="header-section-number">4.6</span> Präsenzerleben</a></li><li><a href="./part_how/_criteria_specific.html#sec-interest" class="nav-link"><span class="header-section-number">4.7</span> Interesse</a></li><li><a href="./part_how/_criteria_specific.html#sec-oer" class="nav-link"><span class="header-section-number">4.8</span> OER Verfügbarkeit</a></li></ul>
+  <a href="../part_how/criteria_specific_cognitiveload.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Kognitive Belastung/Cognitive Load</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_adaptivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Adaptivität</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_context.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kontextualisierung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_presence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Präsenzerleben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_interest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interesse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part_how/criteria_specific_oer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">OER Verfügbarkeit</span></span></a>
+  </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zusammenfassung</span></a>
   </div>
 </li>
     </ul>
@@ -357,8 +433,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#allgemeine-einführungbeschreibung" id="toc-allgemeine-einführungbeschreibung" class="nav-link active" data-scroll-target="#allgemeine-einführungbeschreibung">Allgemeine Einführung/Beschreibung</a></li>
+  <li><a href="#befunde-zur-wirkung" id="toc-befunde-zur-wirkung" class="nav-link" data-scroll-target="#befunde-zur-wirkung">Befunde zur Wirkung</a></li>
+  <li><a href="#literaturbeispiele-zur-umsetzung" id="toc-literaturbeispiele-zur-umsetzung" class="nav-link" data-scroll-target="#literaturbeispiele-zur-umsetzung">Literaturbeispiele zur Umsetzung</a></li>
+  <li><a href="#umsetzungsbeispiel-eigene-projekteforschung" id="toc-umsetzungsbeispiel-eigene-projekteforschung" class="nav-link" data-scroll-target="#umsetzungsbeispiel-eigene-projekteforschung">Umsetzungsbeispiel (eigene Projekte/Forschung)</a></li>
+  <li><a href="#umsetzungsfacetten" id="toc-umsetzungsfacetten" class="nav-link" data-scroll-target="#umsetzungsfacetten">Umsetzungsfacetten</a></li>
+  <li><a href="#umsetzung-im-prozess" id="toc-umsetzung-im-prozess" class="nav-link" data-scroll-target="#umsetzung-im-prozess">Umsetzung im Prozess</a></li>
+  <li><a href="#ansätze-zur-absicherung-der-umsetzung-implementation-check" id="toc-ansätze-zur-absicherung-der-umsetzung-implementation-check" class="nav-link" data-scroll-target="#ansätze-zur-absicherung-der-umsetzung-implementation-check">Ansätze zur Absicherung der Umsetzung (Implementation-Check)</a></li>
+  <li><a href="#ansätze-zur-untersuchung-der-wirkung-effect-check" id="toc-ansätze-zur-untersuchung-der-wirkung-effect-check" class="nav-link" data-scroll-target="#ansätze-zur-untersuchung-der-wirkung-effect-check">Ansätze zur Untersuchung der Wirkung (Effect-Check)</a></li>
+  <li><a href="#quellen" id="toc-quellen" class="nav-link" data-scroll-target="#quellen">Quellen</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
@@ -366,17 +456,47 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Qualitätskriterien bei der Entwicklung von Lehr-Lernmaterialien – Wie?</h1>
+<h1 class="title d-none d-lg-block"><span id="sec-load" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Kognitive Belastung/Cognitive Load</span></span></h1>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor:in</div>
+    <div class="quarto-title-meta-contents">
+            <p class="author">Anja Annemüller <a href="https://orcid.org/0009-0008-8762-1243" class="section-authors-orcid" title="ORCID 0009-0008-8762-1243"><span class="visually-hidden">ORCID 0009-0008-8762-1243</span></a> <a href="https://www.leibniz-ipn.de" class="section-authors-affiliation" title="IPN"><span class="visually-hidden">IPN</span></a> <a href="mailto:annemueller@leibniz-ipn.de" class="section-authors-email" title="annemueller@leibniz-ipn.de"><span class="visually-hidden">annemueller@leibniz-ipn.de</span></a></p>
+          </div>
+  </div>
   
   
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlicht</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1. November 2026</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Aktualisiert</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">1. November 2026</p>
+    </div>
+  </div>
   
+    <div class="section-authors-license">
+    <div class="quarto-title-meta-heading">Lizenz</div>
+    <div class="quarto-title-meta-contents">
+      <p class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license">CC BY-NC 4.0</a></p>
+    </div>
+  </div>
   
+    <div class="section-authors-cite">
+    <div class="quarto-title-meta-heading">Zitat</div>
+    <div class="quarto-title-meta-contents section-authors-citation">
+      <p>Annemüller, A. (2026). Kognitive Belastung/Cognitive Load. In S. Bernholt &amp; S. Lenzer (Hrsg.), <em>Handbuch Materialentwicklung: Entwicklung qualitätsvoller Lehr-Lernmaterialien für die Praxis und Forschung</em>. <a href="https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_cognitiveload.html">https://larshoeft.github.io/handbook-material-design-chemistry/part_how/criteria_specific_cognitiveload.html</a></p>
+    </div>
+  </div>
   
   </div>
 
@@ -385,24 +505,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.</p>
-<p>Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.</p>
-<p>Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst. Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst.</p>
+<section id="allgemeine-einführungbeschreibung" class="level3">
+<h3 data-anchor-id="allgemeine-einführungbeschreibung">Allgemeine Einführung/Beschreibung</h3>
+<p>Der Begriff Cognitive Load beschreibt die kognitiven Anforderungen, die eine Lernaufgabe an das Arbeitsgedächtnis stellt. Die zugrunde liegende Cognitive Load Theory (CLT) geht davon aus, dass das menschliche Arbeitsgedächtnis nur eine begrenzte Menge an Informationen gleichzeitig verarbeiten kann, während das Langzeitgedächtnis über eine sehr große Kapazität zur Speicherung von Wissensstrukturen verfügt. Lernen wird daher maßgeblich davon beeinflusst, wie stark das Arbeitsgedächtnis durch eine Lernaufgabe beansprucht wird <span class="citation" data-cites="sweller1998_cognitive--7a6f83ec31d0 sweller2019_cognitive--7a6f83ec31d0">(<a href="#ref-sweller1998_cognitive--7a6f83ec31d0" role="doc-biblioref">Sweller et al., 1998</a>; <a href="#ref-sweller2019_cognitive--7a6f83ec31d0" role="doc-biblioref">Sweller et al., 2019</a>)</span>.</p>
+<p>Ziel instruktionalen Designs ist es daher, dass kognitive Ressourcen effizient genutzt werden und der Aufbau von Wissensstrukturen (Schemas) unterstützt wird.</p>
+<p>Die Cognitive Load Theory unterscheidet drei Arten kognitiver Belastung <span class="citation" data-cites="sweller1998_cognitive--7a6f83ec31d0">(<a href="#ref-sweller1998_cognitive--7a6f83ec31d0" role="doc-biblioref">Sweller et al., 1998</a>)</span>:</p>
+<ul>
+<li>Intrinsic cognitive load: ergibt sich aus der inhärenten Komplexität des Lerngegenstands bzw. aus der Anzahl gleichzeitig zu verarbeitender Informationselemente.</li>
+<li>Extraneous cognitive load: entsteht durch die Art der Präsentation von Informationen oder durch Aufgabenformate, die zusätzliche kognitive Verarbeitung erfordern, ohne direkt zum Lernen beizutragen.</li>
+<li>Germane cognitive load: bezeichnet kognitive Ressourcen, die tatsächlich für den Aufbau und die Organisation von Wissensstrukturen eingesetzt werden.</li>
+</ul>
+<p>Ein zentrales Ziel instruktionalen Designs besteht daher darin, extraneous load zu reduzieren, intrinsic load angemessen zu steuern und germane load zu fördern.</p>
+</section>
+<section id="befunde-zur-wirkung" class="level3">
+<h3 data-anchor-id="befunde-zur-wirkung">Befunde zur Wirkung</h3>
+<p>Zahlreiche empirische Studien zeigen, dass instruktionale Designs, die unnötige kognitive Belastung reduzieren, positive Effekte auf Lernerfolg, Problemlösefähigkeit und Wissenstransfer haben. Besonders gut untersucht sind dabei instruktionale Maßnahmen, die Suchprozesse beim Problemlösen reduzieren oder die Aufmerksamkeit gezielt auf relevante Informationen lenken.</p>
+<p>Ein besonders gut untersuchter Ansatz ist das Lernen mit Worked Examples. Dabei werden Aufgaben gemeinsam mit ihren vollständigen Lösungsschritten präsentiert. Dies reduziert Suchprozesse beim Problemlösen und ermöglicht es Lernenden, sich stärker auf den Aufbau von Problemlöseschemata zu konzentrieren <span class="citation" data-cites="renkl2014_instructionally--7a6f83ec31d0">(<a href="#ref-renkl2014_instructionally--7a6f83ec31d0" role="doc-biblioref">Renkl, 2014</a>)</span>.</p>
+<p>Auch Designprinzipien aus der Multimediaforschung zeigen konsistente Effekte. Beispielsweise konnte gezeigt werden, dass Signalling – also das Hervorheben zentraler Elemente in komplexen Darstellungen – die Aufmerksamkeit von Lernenden gezielt auf relevante Informationen lenkt, extraneous cognitive load reduziert und Lernleistungen verbessert <span class="citation" data-cites="rodemer2022_dynamic--7a6f83ec31d0">(<a href="#ref-rodemer2022_dynamic--7a6f83ec31d0" role="doc-biblioref">Rodemer et al., 2022</a>)</span>.</p>
+<p>Gerade in naturwissenschaftlichen Fächern mit komplexen visuellen Darstellungen, wie der Chemie, kann eine gezielte Gestaltung von Lernmaterialien dazu beitragen, dass Lernende relevante Merkmale schneller erkennen und kognitive Ressourcen stärker für konzeptuelles Verständnis genutzt werden.</p>
+</section>
+<section id="literaturbeispiele-zur-umsetzung" class="level3">
+<h3 data-anchor-id="literaturbeispiele-zur-umsetzung">Literaturbeispiele zur Umsetzung</h3>
+<p>Eine Studie von <span class="citation" data-cites="rodemer2022_dynamic--7a6f83ec31d0">Rodemer et al. (<a href="#ref-rodemer2022_dynamic--7a6f83ec31d0" role="doc-biblioref">2022</a>)</span> untersuchte die Wirkung unterschiedlicher Signalling-Formen in instruktionalen Videos zu organischen Reaktionsmechanismen. In einem Eye-Tracking-Experiment mit Studierenden wurden drei Bedingungen verglichen: Videos ohne, mit statischen und mit dynamischen Hervorhebungen. Neben Blickbewegungen wurden auch Lernleistungen sowie subjektiv berichtete kognitive Belastung erhoben. Die Ergebnisse zeigen, dass dynamische Hervorhebungen die Aufmerksamkeit der Lernenden stärker auf relevante Bereiche der Repräsentationen lenken und gleichzeitig extraneous cognitive load reduzieren können. Zudem zeigten Lernende in dieser Bedingung höhere Retentionsleistungen. Die Studie verdeutlicht damit die Bedeutung von instruktionalem Design bei der Arbeit mit komplexen fachlichen Darstellungen und zeigt exemplarisch, wie Prinzipien der Cognitive Load Theory in multimedialen Lernumgebungen umgesetzt werden können.</p>
+</section>
+<section id="umsetzungsbeispiel-eigene-projekteforschung" class="level3">
+<h3 data-anchor-id="umsetzungsbeispiel-eigene-projekteforschung">Umsetzungsbeispiel (eigene Projekte/Forschung)</h3>
+<p>Im Rahmen des Forschungsprojekts „Adaptive Unterstützung beim Problemlösen in der Organischen Chemie“ (ATP-OC) wurde untersucht, wie unterschiedliche instruktionale Ansätze Lernprozesse bei der Arbeit mit Reaktionsmechanismen beeinflussen und welche Formen instruktionaler Unterstützung das Problemlösen von Studierenden besonders effektiv fördern können. Ausgangspunkt ist die Annahme, dass mechanistisches Problemlösen sowohl hohe repräsentationale Anforderungen als auch hohe kognitive Belastung mit sich bringt.</p>
+<p>In einer experimentellen Studie mit Studierenden wurden zwei instruktionale Ansätze verglichen: perceptual learning tasks, die darauf abzielen, diagnostisch relevante strukturelle Merkmale in Molekülrepräsentationen schneller zu erkennen, sowie worked examples, die Lösungswege schrittweise darstellen und so Suchprozesse beim Problemlösen reduzieren und den Aufbau von Problemlöseschemata unterstützen.</p>
+<p>Bei der Entwicklung der Lernmaterialien wurden zentrale Designprinzipien der Cognitive Load Theory berücksichtigt, insbesondere solche, die auf eine Reduktion von extraneous cognitive load abzielen (z. B. klare Strukturierung der Materialien, Hervorhebung relevanter Informationen sowie eine schrittweise Darstellung von Lösungsprozessen). Die Materialien wurden in mehreren Iterationsschritten entwickelt und im Rahmen von Expert:innenbefragungen sowie Testdurchläufen mit der Zielgruppe überprüft und überarbeitet, um potenzielle Verständnishürden zu identifizieren und unnötige kognitive Belastung zu reduzieren.</p>
+</section>
+<section id="umsetzungsfacetten" class="level3">
+<h3 data-anchor-id="umsetzungsfacetten">Umsetzungsfacetten</h3>
+<p>Eine systematische Umsetzung von Cognitive-Load-Prinzipien in Lernmaterialien kann sich durch verschiedene Gestaltungsmerkmale auszeichnen:</p>
+<p>Reduktion extraneous load:</p>
+<ul>
+<li>klare Strukturierung von Materialien</li>
+<li>räumliche Nähe zusammengehöriger Informationen</li>
+<li>Vermeidung redundanter Darstellungen</li>
+<li>Hervorhebung relevanter Elemente (Signalling)</li>
+</ul>
+<p>Steuerung intrinsic load:</p>
+<ul>
+<li>Segmentierung komplexer Inhalte</li>
+<li>schrittweiser Aufbau von Lösungsprozessen</li>
+<li>Anpassung der Aufgabenkomplexität an das Vorwissen der Lernenden</li>
+</ul>
+<p>Förderung germane load:</p>
+<ul>
+<li>explizite Darstellung von Lösungsstrategien</li>
+<li>Nutzung von worked examples</li>
+<li>Aufgabenformate, die den Aufbau konzeptueller Zusammenhänge unterstützen</li>
+</ul>
+<p>Die genannten Gestaltungsprinzipien lassen sich aus zentralen Instructional-Design-Effekten der Cognitive Load Theory ableiten, wie etwa dem worked example effect, split-attention effect oder redundancy effect <span class="citation" data-cites="mayer2020_multimedia--7a6f83ec31d0 sweller1998_cognitive--7a6f83ec31d0 sweller2011_cognitiveloadtheory--7a6f83ec31d0">(<a href="#ref-mayer2020_multimedia--7a6f83ec31d0" role="doc-biblioref">Mayer, 2020</a>; <a href="#ref-sweller1998_cognitive--7a6f83ec31d0" role="doc-biblioref">Sweller et al., 1998</a>; <a href="#ref-sweller2011_cognitiveloadtheory--7a6f83ec31d0" role="doc-biblioref">Sweller et al., 2011</a>)</span>.</p>
+</section>
+<section id="umsetzung-im-prozess" class="level3">
+<h3 data-anchor-id="umsetzung-im-prozess">Umsetzung im Prozess</h3>
+<p>Die Berücksichtigung kognitiver Belastung kann in verschiedenen Phasen der Materialentwicklung erfolgen.</p>
+<p>Zunächst kann analysiert werden, welche Aspekte eines Lerngegenstands besonders hohe intrinsic cognitive load erzeugen (z. B. viele miteinander verknüpfte Konzepte oder komplexe Repräsentationen). Darauf aufbauend können Lernmaterialien so gestaltet werden, dass diese Komplexität schrittweise eingeführt wird.</p>
+<p>Für die Entwicklung entsprechender Materialien eignen sich insbesondere iterative Entwicklungsansätze wie Design-Based Research, bei denen Materialien wiederholt entwickelt, erprobt und überarbeitet werden.</p>
+</section>
+<section id="ansätze-zur-absicherung-der-umsetzung-implementation-check" class="level3">
+<h3 data-anchor-id="ansätze-zur-absicherung-der-umsetzung-implementation-check">Ansätze zur Absicherung der Umsetzung (Implementation-Check)</h3>
+<p>Die Umsetzung von Cognitive-Load-Prinzipien kann auf unterschiedliche Weise überprüft werden, beispielsweise:</p>
+<ul>
+<li>Expert:innenanalysen von Lernmaterialien, z. B. hinsichtlich der Einhaltung von Multimedia-Designprinzipien</li>
+<li>Qualitative Nutzungsstudien mit Lernenden (z. B. Think-Aloud-Protokolle während der Bearbeitung), um zu untersuchen, wie Aufgaben verarbeitet werden, welche Informationsquellen genutzt werden und an welchen Stellen unnötige kognitive Belastung oder Verständnisschwierigkeiten entstehen.</li>
+</ul>
+</section>
+<section id="ansätze-zur-untersuchung-der-wirkung-effect-check" class="level3">
+<h3 data-anchor-id="ansätze-zur-untersuchung-der-wirkung-effect-check">Ansätze zur Untersuchung der Wirkung (Effect-Check)</h3>
+<ul>
+<li>Befragungen von Lernenden zur wahrgenommenen kognitiven Belastung (Krieglstein)</li>
+<li>Analyse von Bearbeitungszeiten oder Prozessdaten in digitalen Lernumgebungen</li>
+<li>Analyse der Lernleistung</li>
+</ul>
+</section>
+<section id="quellen" class="level3">
+<h3 data-anchor-id="quellen">Quellen</h3>
+<div id="refs--7a6f83ec31d0" class="sectionrefs references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-mayer2020_multimedia--7a6f83ec31d0" class="csl-entry" role="listitem">
+Mayer, R. (2020). <em>Multimedia <span>Learning</span></em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
+</div>
+<div id="ref-renkl2014_instructionally--7a6f83ec31d0" class="csl-entry" role="listitem">
+Renkl, A. (2014). Toward an <span>Instructionally Oriented Theory</span> of <span>Example</span>‐<span>Based Learning</span>. <em>Cognitive Science</em>, <em>38</em>(1), 1–37. <a href="https://doi.org/10.1111/cogs.12086">https://doi.org/10.1111/cogs.12086</a>
+</div>
+<div id="ref-rodemer2022_dynamic--7a6f83ec31d0" class="csl-entry" role="listitem">
+Rodemer, M., Lindner, M. A., Eckhard, J., Graulich, N., &amp; Bernholt, S. (2022). Dynamic Signals in Instructional Videos Support Students to Navigate through Complex Representations: <span>An</span> Eye‐tracking Study. <em>Applied Cognitive Psychology</em>, <em>36</em>(4), 852–863. <a href="https://doi.org/10.1002/acp.3973">https://doi.org/10.1002/acp.3973</a>
+</div>
+<div id="ref-sweller2011_cognitiveloadtheory--7a6f83ec31d0" class="csl-entry" role="listitem">
+Sweller, J., Ayres, P., &amp; Kalyuga, S. (2011). <em>Cognitive <span>Load Theory</span></em>. Springer New York. <a href="https://doi.org/10.1007/978-1-4419-8126-4">https://doi.org/10.1007/978-1-4419-8126-4</a>
+</div>
+<div id="ref-sweller1998_cognitive--7a6f83ec31d0" class="csl-entry" role="listitem">
+Sweller, J., Van Merrienboer, J. J. G., &amp; Paas, F. G. W. C. (1998). Cognitive <span>Architecture</span> and <span>Instructional Design</span>. <em>Educational Psychology Review</em>, <em>10</em>(3), 251–296. <a href="https://doi.org/10.1023/A:1022193728205">https://doi.org/10.1023/A:1022193728205</a>
+</div>
+<div id="ref-sweller2019_cognitive--7a6f83ec31d0" class="csl-entry" role="listitem">
+Sweller, J., Van Merriënboer, J. J. G., &amp; Paas, F. (2019). Cognitive <span>Architecture</span> and <span>Instructional Design</span>: 20&nbsp;<span>Years Later</span>. <em>Educational Psychology Review</em>, <em>31</em>(2), 261–292. <a href="https://doi.org/10.1007/s10648-019-09465-5">https://doi.org/10.1007/s10648-019-09465-5</a>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
-<script>
-// Sections in the sidebar come from _scripts/sidebar_sections.lua; a tap on one of this page closes the menu
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('#quarto-sidebar .sidebar-page-toc a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (link.pathname === location.pathname) document.querySelector('.quarto-btn-toggle')?.click();
-    });
-  });
-});
-</script>
 <script>
 // Click or Enter on a figure opens an enlarged copy; the copy stays in the page, so theme colors apply
 document.addEventListener('DOMContentLoaded', () => {
